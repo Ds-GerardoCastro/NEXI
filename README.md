@@ -4,7 +4,7 @@
 
 ## What is this
 
-NEXI is the application catalog produced by the **Nature Intelligence Project**, a research effort by _Juan Gerardo Castro Sanchez_.
+NEXI is the application catalog produced by the **Nature Intelligence Project**, a research effort by [_Juan Gerardo Castro Sanchez_](https://www.linkedin.com/in/juan-gerardo-castro-s%C3%A1nchez-7b85b21b6/).
 
 The Nature Intelligence Project addresses two converging problems in modern AI:
 
