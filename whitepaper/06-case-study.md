@@ -4,7 +4,7 @@
 
 ## 6.1 The source
 
-Planned coverage: the bioRxiv preprint _Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)_ (Loning et al. 2026), studying multi-level social structure and acoustic communication in arid-zone Australian zebra finch populations. Field methodology, study period, scope of claims, peer-review status caveat.
+Planned coverage: the bioRxiv preprint _Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)_ (Hagedoorn et al. 2026), studying multi-level social structure and acoustic communication in arid-zone Australian zebra finch populations. Field methodology, study period, scope of claims, peer-review status caveat.
 
 ## 6.2 The 12 atomic principles
 

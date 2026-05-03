@@ -31,7 +31,7 @@ Two independent biological sources converge on niche-conditional cognitive desig
 
 1. **Turner et al. (2026)** — formal mathematical model with explicit "information-processing niches" framing. Niche conditions (task complexity, cue reliability, metabolic-energy availability) translate into the metabolic-cost-to-recall-benefit ratio that places a species in a regime. Specialisation emerges via canalisation of an initially domain-general substrate under niche pressure.
 
-2. **Loning et al. (2026, _Communication Networks of Wild Zebra Finches_)** — wild ethological documentation. Fission-fusion social architecture as a niche-conditional response to arid-zone non-stationarity. Same signal type (song) takes different functions in different contexts (breeding-colony vs. social-hotspot vs. dawn). Cognition is shaped by the ecological niche, not abstracted from it.
+2. **Hagedoorn et al. (2026, _Communication Networks of Wild Zebra Finches_)** — wild ethological documentation. Fission-fusion social architecture as a niche-conditional response to arid-zone non-stationarity. Same signal type (song) takes different functions in different contexts (breeding-colony vs. social-hotspot vs. dawn). Cognition is shaped by the ecological niche, not abstracted from it.
 
 The convergence between an evolutionary-modelling paper and an ethological field study on the same architectural claim is non-trivial. They approach niche-binding from opposite methodological poles and arrive at compatible structural commitments.
 
@@ -148,4 +148,4 @@ A third claim about implementability: **out-of-niche graceful-decline behaviour 
 
 ## References
 
-See [`references.md`](references.md) for the full citation chain — Turner et al. 2026 + Loning et al. 2026 as primary biological sources, plus computational analogs in No-Free-Lunch theorems (Wolpert & Macready 1997), domain adaptation, ecological-validity literature in cognitive science, and benchmark-design work (BIG-Bench, HELM).
+See [`references.md`](references.md) for the full citation chain — Turner et al. 2026 + Hagedoorn et al. 2026 as primary biological sources, plus computational analogs in No-Free-Lunch theorems (Wolpert & Macready 1997), domain adaptation, ecological-validity literature in cognitive science, and benchmark-design work (BIG-Bench, HELM).

@@ -94,7 +94,7 @@ See [`skill/skill.md`](skill/skill.md).
 
 ## Theoretical background & evidence
 
-The pattern connects to **collective behaviour in animal-communication ecology** (information centre hypothesis; Ward & Zahavi 1973), to **swarm robotics** (where agent-density is a first-class signal), and to **distributed cognition** more broadly (Hutchins 1995). The zebra finch literature (Loning et al. 2026; Waas et al. 2005) provides direct empirical evidence that hotspots are structured information hubs, not anonymous aggregations.
+The pattern connects to **collective behaviour in animal-communication ecology** (information centre hypothesis; Ward & Zahavi 1973), to **swarm robotics** (where agent-density is a first-class signal), and to **distributed cognition** more broadly (Hutchins 1995). The zebra finch literature (Hagedoorn et al. 2026; Waas et al. 2005) provides direct empirical evidence that hotspots are structured information hubs, not anonymous aggregations.
 
 Computational analogs:
 

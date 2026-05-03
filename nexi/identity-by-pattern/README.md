@@ -93,7 +93,7 @@ See [`skill/skill.md`](skill/skill.md).
 
 ## Theoretical background & evidence
 
-The pattern draws on **animal-communication ecology** (Snijders & Naguib 2017; Loning et al. 2026) and on parallel ML research on **face recognition and re-identification**, where within-class discriminability is the central problem. Convergent: nature and ML face the same gap — pattern statistics aggregate well at category level, fail at particular level.
+The pattern draws on **animal-communication ecology** (Snijders & Naguib 2017; Hagedoorn et al. 2026) and on parallel ML research on **face recognition and re-identification**, where within-class discriminability is the central problem. Convergent: nature and ML face the same gap — pattern statistics aggregate well at category level, fail at particular level.
 
 Computational analogs:
 

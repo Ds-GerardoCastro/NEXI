@@ -2,7 +2,7 @@
 
 ## Primary natural-system literature
 
-- **Loning et al. (2026).** _Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)._ bioRxiv preprint, posted 2026-04-27. License CC-BY-NC-ND 4.0.
+- **Hagedoorn, K., Tschirren, N., ter Avest, E., Tyson, C., Snijders, L., Griffith, S. C., Naguib, M., & Loning, H. (2026).** _Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)._ bioRxiv preprint, posted 2026-04-27. DOI: [10.1101/2025.09.11.675577](https://doi.org/10.1101/2025.09.11.675577). License CC-BY-NC-ND 4.0.
   _Empirical study of zebra-finch communication networks in arid-zone Australia, documenting eavesdropping behaviour in social hotspots and breeding-colony coordination._
 
 - **McGregor, P. K., & Dabelsteen, T. (1996).** _Communication networks._ In: Kroodsma, D. E., & Miller, E. H. (Eds.), _Ecology and Evolution of Acoustic Communication in Birds_ (pp. 409–425). Cornell University Press.

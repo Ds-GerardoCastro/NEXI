@@ -9,8 +9,18 @@ natural_exemplars:
   - species: 'Taeniopygia castanotis (zebra finch)'
     paper:
       title: 'Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)'
+      authors:
+        - 'Hagedoorn, K.'
+        - 'Tschirren, N.'
+        - 'ter Avest, E.'
+        - 'Tyson, C.'
+        - 'Snijders, L.'
+        - 'Griffith, S. C.'
+        - 'Naguib, M.'
+        - 'Loning, H.'
       venue: 'bioRxiv preprint'
       date: '2026-04-27'
+      doi: '10.1101/2025.09.11.675577'
     notes: >
       Wild zebra finches in arid-zone social hotspots extract information from
       observed third-party song interactions, informing mate choice, breeding

@@ -2,7 +2,7 @@
 
 ## Primary natural-system literature
 
-- **Loning et al. (2026).** _Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)._ bioRxiv preprint, posted 2026-04-27. License CC-BY-NC-ND 4.0.
+- **Hagedoorn, K., Tschirren, N., ter Avest, E., Tyson, C., Snijders, L., Griffith, S. C., Naguib, M., & Loning, H. (2026).** _Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)._ bioRxiv preprint, posted 2026-04-27. DOI: [10.1101/2025.09.11.675577](https://doi.org/10.1101/2025.09.11.675577). License CC-BY-NC-ND 4.0.
   _Documents social hotspots in arid-zone zebra finch populations as structured information hubs (not anonymous gathering points), with repeated encounters mixing known and unknown individuals._
 
 - **Waas, J. R., Caulfield, M., Colgan, P. W., & Boag, P. T. (2005).** _Colony sound facilitates sexual reproduction in wild zebra finches._ Animal Behaviour, 70(6), 1265–1272.

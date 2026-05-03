@@ -114,7 +114,7 @@ The skill spec includes translation notes for Claude skills, OpenAI function cal
 
 ## Theoretical background & evidence
 
-The pattern is described in animal-communication ecology under the term _communication networks_ — networks of potential information flow among individuals, in which signalling interactions are observable to non-target receivers. The foundational reference is **McGregor & Dabelsteen (1996)**. Recent work in wild zebra finches documents the role of eavesdropping in social hotspots and breeding-colony coordination (**Loning et al., bioRxiv preprint 2026-04-27**).
+The pattern is described in animal-communication ecology under the term _communication networks_ — networks of potential information flow among individuals, in which signalling interactions are observable to non-target receivers. The foundational reference is **McGregor & Dabelsteen (1996)**. Recent work in wild zebra finches documents the role of eavesdropping in social hotspots and breeding-colony coordination (**Hagedoorn et al., bioRxiv preprint 2026-04-27**).
 
 In computational AI literature, eavesdropping has analogs in:
 

@@ -2,7 +2,7 @@
 
 ## Primary natural-system literature
 
-- **Loning et al. (2026).** _Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)._ bioRxiv preprint, posted 2026-04-27. License CC-BY-NC-ND 4.0.
+- **Hagedoorn, K., Tschirren, N., ter Avest, E., Tyson, C., Snijders, L., Griffith, S. C., Naguib, M., & Loning, H. (2026).** _Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)._ bioRxiv preprint, posted 2026-04-27. DOI: [10.1101/2025.09.11.675577](https://doi.org/10.1101/2025.09.11.675577). License CC-BY-NC-ND 4.0.
   _Documents individual identification of zebra finches from distinctive song motifs; reports the empirical wall — BirdNET works at species level, not yet case-by-case reliable at individual level._
 
 - **Snijders, L., & Naguib, M. (2017).** _Communication in animal social networks: a missing link?_ Advances in the Study of Behavior, 49, 297–359.

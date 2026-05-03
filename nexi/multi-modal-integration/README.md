@@ -90,7 +90,7 @@ See [`skill/skill.md`](skill/skill.md).
 
 The pattern is described in **multimodal machine learning** literature broadly, with foundational architectures including CLIP (Radford et al. 2021), ALIGN (Jia et al. 2021), and successors. The architectural choice between _joint encoding_ and _late fusion_ is a long-running debate in the field; this NEXI takes a position on it grounded in animal-cognition evidence.
 
-In animal-communication ecology, the convergence of acoustic and spatial networks (Snijders & Naguib 2017; Loning et al. 2026) is empirical support for the proposition that nature has solved the multi-modal integration problem by maintaining a single underlying state representation that multiple channels constrain — rather than running per-modality inference pipelines.
+In animal-communication ecology, the convergence of acoustic and spatial networks (Snijders & Naguib 2017; Hagedoorn et al. 2026) is empirical support for the proposition that nature has solved the multi-modal integration problem by maintaining a single underlying state representation that multiple channels constrain — rather than running per-modality inference pipelines.
 
 Computational analogs:
 

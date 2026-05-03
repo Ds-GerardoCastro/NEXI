@@ -104,7 +104,7 @@ See [`skill/skill.md`](skill/skill.md).
 
 ## Theoretical background & evidence
 
-The pattern connects to **pragmatics in linguistics** (Grice 1975; Rational Speech Acts framework, Goodman & Frank 2016) and to **counterfactual reasoning in machine learning** (Pearl 2009; conditional generative modelling). The animal-communication literature provides empirical grounding for context-conditional signal function in non-human cognition (Snijders & Naguib 2017; Loning et al. 2026).
+The pattern connects to **pragmatics in linguistics** (Grice 1975; Rational Speech Acts framework, Goodman & Frank 2016) and to **counterfactual reasoning in machine learning** (Pearl 2009; conditional generative modelling). The animal-communication literature provides empirical grounding for context-conditional signal function in non-human cognition (Snijders & Naguib 2017; Hagedoorn et al. 2026).
 
 A specific computational instantiation: **conditional decoders with FiLM (Feature-wise Linear Modulation; Perez et al. 2018)** modulate the decoder's parameters as a function of context, achieving the architectural shape this NEXI specifies.
 
