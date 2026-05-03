@@ -1,0 +1,120 @@
+id: bounded-cognitive-architecture
+name: Bounded Cognitive Architecture
+status: draft
+version: 0.1.0
+created: 2026-05-03
+
+problem_class: >
+  How to design a cognitive architecture under metabolic / compute / memory cost
+  constraint, when the deployment niche dictates which architectural commitments are
+  optimal. The cluster addresses architecture-design decisions for any AI system that
+  must allocate finite cognitive resources across capacity and control components
+  within a specific deployment niche — and explicitly rejects the framing in which
+  one architecture is universally optimal across niches.
+
+member_nexis:
+  - niche-specification
+  - cognitive-regime-selection
+  - capacity-first-scaling
+
+system_falsifiable_hypothesis: >
+  Architectures designed using the full pipeline (niche specification → regime
+  classification → capacity-first allocation) outperform same-budget architectures
+  designed via single-axis scaling on niche-specific evaluation, by a margin larger
+  than the sum of individual-NEXI gains. Refutation: if pipeline-designed systems
+  perform no better than the best individual-NEXI baseline on equivalent tasks at
+  matched compute, the cluster's compositional claim is refuted (the patterns may
+  still be individually useful as standalone NEXIs).
+
+natural_exemplars:
+  - species: 'Cross-species cognitive evolution (jellyfish, sea anemones, nematodes, flatworms, tardigrades, corvids, elephants, cetaceans, great apes, humans, rhesus macaques)'
+    paper:
+      title: 'Cognitive capacity and control in the evolution of intelligence'
+      authors:
+        - 'Turner, Cameron Rouse'
+        - 'Russek, Evan M.'
+        - 'Seed, Amanda'
+        - 'McEwen, Emma Suvi'
+        - 'Vélez, Natalia'
+        - 'Morgan, Thomas J. H.'
+        - 'Griffiths, Thomas L.'
+      venue: 'bioRxiv preprint'
+      date: '2026-03-09'
+      doi: '10.1101/2026.03.07.710317'
+    notes: >
+      Mathematical model bridging cognitive science and evolutionary biology. The model
+      derives the discrete regime structure (passive-storage, control-enhanced,
+      capacity-heavy) from the interaction of capacity-control synergy non-monotonicity
+      with metabolic-cost selection, and provides empirical validation through retro-cue
+      task fits to humans and macaques.
+
+  - species: 'Taeniopygia castanotis (zebra finch)'
+    paper:
+      title: 'Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)'
+      venue: 'bioRxiv preprint'
+      date: '2026-04-27'
+    notes: >
+      Fission-fusion social architecture documented as niche-conditional cognitive design.
+      The same source independently supports the niche-specification component — same
+      signal type takes different function depending on context, social structure adapts
+      to non-stationary environment.
+
+when_to_adopt: >
+  Any architecture-design or deployment-tier-design conversation where deployment niche,
+  cost budget, signal environment, and error tolerance matter. Production AI systems
+  that must serve specific deployment contexts (vs. exploratory research). Multi-tier
+  model-family planning (edge / mid-tier / flagship). Decisions about whether to scale
+  context, retrieval, attention sophistication, or agentic-loop depth.
+
+when_not_to_adopt: >
+  Foundation-model pretraining (substrate construction, not niche-bound). Deployments
+  where architecture is fixed upstream by external constraints. Multi-niche services
+  where router-of-specialists is more appropriate than a single niche commitment.
+  Research architectures deliberately exploring the design space without deployment
+  commitments.
+
+tradeoffs: >
+  Pipeline-discipline imposes design-time overhead (niche specification, regime
+  classification, capacity-tagging) that ad-hoc scaling avoids. Architectural
+  discontinuities across deployment tiers complicate code-sharing. In return, decisions
+  become principled, evaluation becomes meaningful, and downstream components compose
+  rather than collide.
+
+complementarity_notes: >
+  The three patterns compose into a strict design-time pipeline:
+
+  - niche-specification produces the typed niche object. Without it, regime selection
+    has no input and capacity-first allocation cannot establish the task-complexity
+    threshold.
+  - cognitive-regime-selection consumes the niche, classifies the deployment into one
+    of three regimes, and recommends the regime's characteristic component mix. Without
+    it, capacity-first allocation lacks an architectural target — capacity-first is
+    not "always more capacity"; it operates within a regime's component budget.
+  - capacity-first-scaling consumes the regime + budget, returns an allocation that
+    prioritises capacity components until the threshold is crossed. Without it, regime
+    selection produces a component mix but not an allocation policy under a specific
+    budget increase.
+
+  Removing any one component degrades the others; this is the cluster's compositional
+  claim. The pipeline is also distinct in shape from the existing distributed-social-
+  cognition cluster, which is a constellation of mutually-enabling runtime patterns
+  rather than a sequenced design-time pipeline.
+
+tags:
+  - cluster
+  - design-time
+  - architecture-design
+  - niche-conditional
+  - resource-bounded
+  - scaling
+  - agi-critique
+  - non-human-template
+
+provenance:
+  vault_consolidation_hubs:
+    - 'Non-Human Intelligence Patterns'
+    - 'Niche-Bound Cognition'
+  vault_metamodels:
+    - 'MM3 — Prerequisite Ordering of Primitives'
+    - 'MM4 — Discrete Regime Topology'
+    - 'MM5 — Niche-Conditional Cognition'

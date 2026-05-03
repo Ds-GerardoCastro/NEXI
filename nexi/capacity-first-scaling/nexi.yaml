@@ -1,0 +1,116 @@
+id: capacity-first-scaling
+name: Capacity-First Scaling
+status: draft
+version: 0.1.0
+created: 2026-05-03
+audience_voice: builder
+
+natural_exemplars:
+  - species: 'Cross-species evolutionary model (mathematical)'
+    paper:
+      title: 'Cognitive capacity and control in the evolution of intelligence'
+      authors:
+        - 'Turner, Cameron Rouse'
+        - 'Russek, Evan M.'
+        - 'Seed, Amanda'
+        - 'McEwen, Emma Suvi'
+        - 'Vélez, Natalia'
+        - 'Morgan, Thomas J. H.'
+        - 'Griffiths, Thomas L.'
+      venue: 'bioRxiv preprint'
+      date: '2026-03-09'
+      doi: '10.1101/2026.03.07.710317'
+    notes: >
+      Mathematical evolutionary-optimality model in which capacity contributes linearly
+      to recall efficacy while control contributes sublinearly, producing severe
+      diminishing returns on regulation once representational space is saturated.
+      Capacity-prioritization is robust across all examined metabolic-benefit levels.
+
+  - species: 'Major brain-evolution transitions (across phyla)'
+    paper:
+      title: 'The major transitions in the evolution of cognition'
+      authors:
+        - 'See Turner et al. 2026 references 57, 58'
+      venue: 'composite literature'
+      date: 'multi-decade'
+    notes: >
+      Independent of the formal model, the comparative-neuroscience record of major
+      transitions in the control of information over brain evolution broadly coheres
+      with capacity-first ordering — storage capabilities expand before regulation
+      sophistication does.
+
+abstract_claim: >
+  When scaling a cognitive system, expand storage capacity before scaling control or
+  regulation sophistication. Capacity contributes linearly to the system's effective
+  ability to maintain useful representations; control contributes sublinearly, with
+  severe diminishing returns once capacity is sufficient. Without capacity, control
+  has no substrate to operate on — making capacity the prerequisite primitive in any
+  cognitive architecture.
+
+falsifiable_hypothesis: >
+  At matched parameter / FLOP / cost budget, AI architectures that allocate marginal
+  resources to capacity components (context window length, retrieval store size,
+  KV-cache budget, memory-token slots, MoE expert count) outperform identical systems
+  that allocate marginal resources to control components (attention-head count,
+  attention-routing sophistication, agentic-loop iteration depth, planner branching
+  factor, reasoning-chain depth) on memory-intensive and long-context evaluations
+  by a measurable margin (>=10% improvement at matched budget). Refutation: if no
+  systematic margin appears across an appropriate task suite, this NEXI is refuted
+  as a scaling primitive.
+
+applies_to:
+  - scaling-laws
+  - llm-architecture
+  - retrieval-augmented-generation
+  - long-context-architectures
+  - memory-augmented-networks
+  - mixture-of-experts
+  - world-models
+
+formats:
+  - architecture
+  - skill
+
+when_to_use: >
+  Any architecture-design or scaling decision under a fixed budget increase, especially
+  when the deployment's task complexity is at or above existing capacity. The rule
+  applies most strongly near the capacity-bound regime — where adding storage produces
+  outsize returns relative to adding regulation.
+
+when_not_to_use: >
+  Deployments where capacity already exceeds task complexity by a wide margin (the
+  marginal returns from more capacity are then small); joint-scaling architectures
+  where capacity and control scale together with parameter count without separable
+  decisions; settings where capacity-component cost grows non-linearly faster than
+  control-component cost (e.g. quadratic full-attention over very long context).
+
+tradeoffs: >
+  Clarity-of-decomposition (tagging each component capacity vs. control) requires
+  upfront work and may surface joint components that resist clean split. Strict
+  capacity-first discipline can under-invest in control during phases where the
+  niche-specific synergy regime makes balanced scaling locally optimal. The rule is
+  best read as prerequisite-ordering ("capacity first, then control becomes useful"),
+  not as terminal-investment ("capacity always dominates").
+
+related_nexi:
+  - cognitive-regime-selection
+  - niche-specification
+
+clusters:
+  - bounded-cognitive-architecture
+
+tags:
+  - scaling-rule
+  - capacity
+  - control
+  - design-time
+  - world-model
+  - prerequisite-ordering
+  - non-human-template
+
+provenance:
+  vault_consolidation_hub: 'Non-Human Intelligence Patterns'
+  vault_principles:
+    - 'P17 — Capacity Prioritized in Joint Evolution'
+    - 'P20 — Capacity-First Evolutionary Sequence'
+  vault_metamodel: 'MM3 — Prerequisite Ordering of Primitives'

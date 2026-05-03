@@ -1,0 +1,116 @@
+id: niche-specification
+name: Niche Specification
+status: draft
+version: 0.1.0
+created: 2026-05-03
+audience_voice: builder
+
+natural_exemplars:
+  - species: 'Cross-species evolutionary model (mathematical, with information-processing niches)'
+    paper:
+      title: 'Cognitive capacity and control in the evolution of intelligence'
+      authors:
+        - 'Turner, Cameron Rouse'
+        - 'Russek, Evan M.'
+        - 'Seed, Amanda'
+        - 'McEwen, Emma Suvi'
+        - 'Vélez, Natalia'
+        - 'Morgan, Thomas J. H.'
+        - 'Griffiths, Thomas L.'
+      venue: 'bioRxiv preprint'
+      date: '2026-03-09'
+      doi: '10.1101/2026.03.07.710317'
+    notes: >
+      Explicit "information-processing niches" framing — niche conditions (task complexity,
+      cue reliability, metabolic-energy availability) translate into the metabolic-cost-to-
+      recall-benefit ratio that places a species in a regime. Domain-general capabilities
+      become canalised under niche pressure into domain-specific specialisations.
+
+  - species: 'Taeniopygia castanotis (zebra finch)'
+    paper:
+      title: 'Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)'
+      venue: 'bioRxiv preprint'
+      date: '2026-04-27'
+    notes: >
+      Fission-fusion social architecture documented as a niche-conditional response to
+      arid-zone non-stationarity. Same signal type (song) takes different functions in
+      different contexts (breeding-colony vs. social-hotspot vs. dawn). Cognition is
+      shaped by the ecological niche the organism inhabits, not abstracted from it.
+
+abstract_claim: >
+  There is no architecture without a niche. Cognitive design is shaped by ecological
+  or deployment-niche parameters (task structure, signal reliability, resource envelope,
+  error profile, social surround), and architectures should be specified, designed, and
+  evaluated against the niche they target — not against generic benchmarks. The niche
+  is the typed input upstream of architecture selection; specifying it is the most
+  upstream step in any architecture-design pipeline.
+
+falsifiable_hypothesis: >
+  Niche-specified architectures outperform same-budget general-purpose architectures on
+  niche-specific evaluation, when the niche is genuinely specified along the canonical
+  axes (task structure, signal environment, resource envelope, error profile, social
+  surround) and evaluation is in-niche. Refutation: if niche-specific and general-purpose
+  architectures perform indistinguishably on in-niche evaluation at matched cost, the
+  niche-binding claim is structurally weak. A second testable claim: a model that wins
+  on a generic benchmark should not, on average, win on niche-specific benchmarks for
+  niches it was not optimised for; if generic-benchmark winners transfer at the same rate
+  as niche-specific competitors, niche binding is weaker than the claim asserts.
+
+applies_to:
+  - deployment-context-design
+  - model-card-style-specification
+  - evaluation-design
+  - distribution-shift-robustness
+  - architecture-selection
+
+formats:
+  - architecture
+  - skill
+
+when_to_use: >
+  At the very start of any architecture-design conversation, before regime classification
+  or scaling decisions; whenever a deployment context is being specified or revised.
+  Mandatory upstream of cognitive-regime-selection and capacity-first-scaling — the
+  niche is their typed input.
+
+when_not_to_use: >
+  Foundation-model pretraining (substrate construction, not niche-bound — see
+  bounded-cognitive-architecture cluster's complementarity_notes for the canalisation
+  framing). Single-architecture services that genuinely must serve many niches — use
+  a router-of-niche-specialists pattern instead, where each specialist is niche-bound
+  and the router classifies incoming requests. Research / exploratory architectures
+  deliberately operating without niche commitment.
+
+tradeoffs: >
+  Niche-discipline costs upfront specification effort and forces "general purpose for
+  everyone" deployments to confront their actual niche heterogeneity. In return,
+  downstream architecture decisions become principled and evaluation becomes meaningful.
+  Implicit-niche deployments are cheap to spec and expensive to debug; explicit-niche
+  deployments are the inverse.
+
+related_nexi:
+  - cognitive-regime-selection
+  - capacity-first-scaling
+
+clusters:
+  - bounded-cognitive-architecture
+
+tags:
+  - niche-specification
+  - design-time
+  - deployment-context
+  - agi-critique
+  - evaluation-design
+  - non-human-template
+
+provenance:
+  vault_consolidation_hub: 'Niche-Bound Cognition'
+  vault_principles:
+    - 'P06 — Environmental Unpredictability Drives Social Strategy'
+    - 'P07 — Context-Dependent Song Function'
+    - 'P11 — Dynamic Social Structure as Evolutionary Adaptation'
+    - 'P18 — Three Cognitive Regimes Across Species'
+    - 'P19 — Metabolic Energy as Evolutionary Constraint'
+    - 'P23 — Task Compressibility Shapes Cognitive Design'
+    - 'P24 — Domain-General vs Domain-Specific Cognition Trade-off'
+  vault_metamodel: 'MM5 — Niche-Conditional Cognition'
