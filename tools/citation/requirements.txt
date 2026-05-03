@@ -1,0 +1,4 @@
+# Citation-verification toolkit dependencies.
+# Pin requests to a recent stable; the scripts are simple and not
+# version-sensitive, but reproducibility is cheap to enforce.
+requests>=2.31,<3
