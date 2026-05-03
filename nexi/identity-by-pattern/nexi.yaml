@@ -1,0 +1,90 @@
+id: identity-by-pattern
+name: Identity by Pattern
+status: draft
+version: 0.1.0
+created: 2026-05-03
+audience_voice: builder
+
+natural_exemplars:
+  - species: 'Taeniopygia castanotis (zebra finch)'
+    paper:
+      title: 'Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)'
+      venue: 'bioRxiv preprint'
+      date: '2026-04-27'
+    notes: >
+      Wild zebra finches are individually identifiable from distinctive song
+      motifs. Researchers map social networks acoustically by individual
+      signature alone, without physical tagging. The same paper reports the
+      empirical wall: BirdNET embeddings work at species level but are not
+      yet case-by-case reliable at individual level.
+
+abstract_claim: >
+  Individual identity is encoded in distinctive sensory patterns and is
+  recoverable from observation alone — but only with embedding spaces
+  explicitly trained for within-class discriminability. Models that
+  aggregate at category level systematically lose particular-level
+  information; the gap is structural, not a function of dataset size alone.
+
+falsifiable_hypothesis: >
+  Embedding architectures trained with within-class-discriminability
+  objectives (margin-based contrastive losses, triplet objectives,
+  ArcFace-style margins) achieve higher accuracy on individual-level
+  re-identification tasks than embeddings trained only on category-level
+  objectives, at equal training compute. Operationalised on benchmarks
+  of speaker / person / individual-animal re-identification, the
+  particularity-preserving embeddings should achieve >=10% relative gain
+  in top-1 accuracy. Refutation: if category-only embeddings match
+  particularity-preserving ones on individual-level tasks at equal
+  compute, this pattern's claim is refuted.
+
+applies_to:
+  - multi-agent-systems
+  - perception
+  - re-identification
+  - social-cognition
+  - belief-modelling
+
+formats:
+  - architecture
+  - skill
+
+when_to_use: >
+  Multi-agent settings where peers have stable, distinctive sensory
+  signatures and the system needs persistent re-identification across
+  observations. Tasks include longitudinal tracking, social-network
+  mapping, persistent agent modelling. Used jointly with eavesdropping —
+  observation without identity is noise.
+
+when_not_to_use: >
+  Tasks where category-level recognition suffices; settings where signals
+  are not naturally distinctive (anonymous crowds, fungible inputs);
+  adversarial settings where peers can spoof signatures.
+
+tradeoffs: >
+  Within-class discriminability training requires careful sampling
+  (anchor / positive / negative tuples) and is more expensive per step.
+  Identity-preserving embeddings tend to be larger. Evaluation is harder
+  — individual-level metrics need longitudinal datasets.
+
+related_nexi:
+  - eavesdropping
+  - multi-modal-integration
+  - context-bound-semantics
+  - social-hotspots
+
+clusters:
+  - distributed-social-cognition
+
+tags:
+  - identity
+  - re-identification
+  - perception
+  - embedding
+  - multi-agent
+
+provenance:
+  vault_consolidation_hub: 'Sensor Coverage Limits'
+  vault_principles:
+    - 'P03 — Individual Distinctiveness Enables Network Mapping'
+    - 'P09 — Song Individuality Enables Tracking in Nomadic Species'
+  vault_metamodel: 'MM4 — Identity Through Distinctive Patterning'

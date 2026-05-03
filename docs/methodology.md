@@ -2,9 +2,13 @@
 
 > How patterns enter the NEXI catalog, what makes an entry defensible, and the curation gate that keeps signal high.
 
+> **Note:** patterns are organised into **clusters** (intelligence models — coherent systems of co-dependent patterns). For the cluster framework specifically, see [`clusters.md`](clusters.md). Most builders should adopt clusters, not isolated patterns; the patterns in NEXI are co-dependent.
+
 ## What is one NEXI entry?
 
 One NEXI = **one named pattern**. A pattern can draw evidence from multiple species, papers, and natural-system studies; one species can produce multiple NEXIs. Each NEXI is presented as a _layered document_: a builder-friendly quick-start surface with a peer-reviewable theoretical core below.
+
+Patterns are typically members of one or more **clusters**. The pattern layer is the _engineering ingredient_ layer; the cluster layer is the _architecture-and-theory_ layer. See [`clusters.md`](clusters.md).
 
 ## Promotion path
 

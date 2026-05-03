@@ -1,0 +1,88 @@
+id: multi-modal-integration
+name: Multi-Modal Integration
+status: draft
+version: 0.1.0
+created: 2026-05-03
+audience_voice: builder
+
+natural_exemplars:
+  - species: 'Taeniopygia castanotis (zebra finch)'
+    paper:
+      title: 'Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)'
+      venue: 'bioRxiv preprint'
+      date: '2026-04-27'
+    notes: >
+      Zebra finch song-based social networks mirror spatial co-occurrence
+      networks: vocal signals and movement carry convergent information
+      about the same underlying social state. Male song acts as a proxy
+      for pair co-presence; the two channels are mutually confirming.
+
+abstract_claim: >
+  A single underlying state is observable through multiple sensory
+  channels. Joint latent representations that explain multiple streams
+  simultaneously preserve cross-channel coherence (and benefit from it),
+  while late-fusion architectures throw away the structural alignment
+  between modalities. Single-modality systems are structurally
+  incomplete — they can only see what their channel reveals.
+
+falsifiable_hypothesis: >
+  Architectures with joint multi-modal encoders (single shared latent
+  space across modalities) achieve better cross-modal grounding than
+  late-fusion architectures (separate per-modality encoders, fused at
+  output) on tasks requiring cross-modal inference, at equal training
+  compute. Operationalised on benchmarks of cross-modal retrieval,
+  audio-visual grounding, and embodied navigation, joint architectures
+  should outperform late-fusion ones by >=10% relative on cross-modal
+  metrics. Refutation: if late-fusion matches joint encoding on
+  cross-modal benchmarks at equal compute, this pattern's claim is
+  refuted.
+
+applies_to:
+  - multi-agent-systems
+  - perception
+  - grounded-language
+  - robotics
+  - world-models
+
+formats:
+  - architecture
+  - skill
+
+when_to_use: >
+  Settings with multiple sensory channels carrying complementary or
+  confirming information: vision + audio in robotics, vision + language
+  in grounded models, acoustic + spatial in animal-monitoring systems,
+  text + structured data in agent-based systems. Tasks that require
+  cross-channel inference or that benefit from redundancy.
+
+when_not_to_use: >
+  Single-modality settings; tasks where one modality strictly dominates
+  (additional channels add noise without signal); strict latency budgets
+  that preclude joint encoders.
+
+tradeoffs: >
+  Joint encoders are larger and harder to train than late-fusion
+  baselines. They require aligned multi-modal training data, which can
+  be costly to curate. They are also harder to debug — failure modes
+  cross channels rather than localising to one.
+
+related_nexi:
+  - identity-by-pattern
+  - eavesdropping
+  - context-bound-semantics
+  - social-hotspots
+
+clusters:
+  - distributed-social-cognition
+
+tags:
+  - multimodal
+  - perception
+  - sensory-fusion
+  - world-models
+
+provenance:
+  vault_consolidation_hub: 'Multi-Modal Integration'
+  vault_principles:
+    - 'P04 — Integration of Communication & Spatial Networks'
+  vault_metamodel: 'MM2 — Multi-Channel × Multi-Level Coherence'

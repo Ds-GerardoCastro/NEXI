@@ -74,7 +74,14 @@ tradeoffs: >
   privacy and robustness (third-party observability creates attack surface); memory
   pressure (observed-interaction history grows unbounded without summarisation).
 
-related_nexi: []
+related_nexi:
+  - identity-by-pattern
+  - context-bound-semantics
+  - multi-modal-integration
+  - social-hotspots
+
+clusters:
+  - distributed-social-cognition
 
 tags:
   - multi-agent

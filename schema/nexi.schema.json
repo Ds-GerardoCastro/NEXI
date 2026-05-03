@@ -119,6 +119,14 @@
       },
       "description": "Slugs of related NEXIs in the catalog."
     },
+    "clusters": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9-]*$"
+      },
+      "description": "Slugs of clusters this NEXI belongs to. A cluster is a coherent intelligence model — see docs/clusters.md."
+    },
     "tags": {
       "type": "array",
       "items": { "type": "string" }

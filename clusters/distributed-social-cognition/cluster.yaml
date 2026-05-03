@@ -1,0 +1,101 @@
+id: distributed-social-cognition
+name: Distributed Social Cognition
+status: template
+version: 0.1.0
+created: 2026-05-03
+
+problem_class: >
+  How an agent in a multi-agent setting builds and maintains models of its
+  peers (their goals, knowledge, capabilities, relationships) under partial
+  observability, without paying the cost of direct interaction with each
+  one. The cluster addresses social-state inference in environments where
+  direct interaction is costly, observation is partial, and the population
+  is too large for exhaustive engagement.
+
+member_nexis:
+  - eavesdropping
+  - identity-by-pattern
+  - multi-modal-integration
+  - context-bound-semantics
+  - social-hotspots
+
+system_falsifiable_hypothesis: >
+  Multi-agent systems that adopt the full distributed-social-cognition
+  cluster (eavesdropping + identity-by-pattern + multi-modal-integration +
+  context-bound-semantics + social-hotspots) outperform systems that adopt
+  any proper subset of these patterns on cooperative social-inference
+  benchmarks at equal training compute, by a margin larger than the sum of
+  individual-pattern gains. Refutation: if subsetting the cluster produces
+  no degradation beyond what is predicted by the individual-pattern losses,
+  the cluster's synergy claim is refuted (the patterns may still be
+  individually useful).
+
+natural_exemplars:
+  - species: "Taeniopygia castanotis (zebra finch)"
+    paper:
+      title: "Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)"
+      venue: "bioRxiv preprint"
+      date: "2026-04-27"
+    notes: >
+      Wild zebra finches in arid-zone social hotspots demonstrate the
+      integrated operation of all five member patterns: they eavesdrop on
+      third-party interactions, identify individuals from distinctive song
+      motifs, integrate acoustic and spatial channels, bind meaning to
+      context (breeding colony vs. hotspot), and concentrate interactions
+      at hotspots. Removing any one capability would degrade the others.
+
+when_to_adopt: >
+  Multi-agent settings with partial observability, where building accurate
+  models of peers matters and direct exhaustive interaction is impractical.
+  Examples: cooperative AI assistants in shared workspaces, multi-robot
+  coordination, decentralized POMDPs at moderate population scale, social-
+  inference benchmarks (Hanabi, Overcooked-AI multi-agent variants).
+
+when_not_to_adopt: >
+  Single-agent systems; adversarial or privacy-sensitive contexts where
+  observation creates attack surface; strictly compute-bound deployments
+  (the cluster multiplies cost relative to a baseline agent); tasks where
+  direct interaction suffices and inferring others adds no signal.
+
+tradeoffs: >
+  Compute and memory cost scale with the cluster (additional encoders,
+  attention over observation streams, spatial memory structures).
+  Engineering complexity rises — multiple co-dependent components mean
+  more to debug and tune. In return, the cluster is what enables sample-
+  efficient social-state inference; isolated patterns underperform.
+
+complementarity_notes: >
+  The five patterns are mutually enabling:
+
+  - Eavesdropping is the mechanism that extracts information from observed
+    third-party interactions, but it is meaningless without
+    identity-by-pattern (you cannot attribute what you hear) and
+    context-bound-semantics (you cannot interpret what you hear).
+  - Identity-by-pattern is more robust when multi-modal-integration adds
+    spatial confirmation to acoustic identification.
+  - Social-hotspots is where observation density is highest, making the
+    eavesdropping pattern empirically valuable rather than incidental.
+  - Context-bound-semantics modulates what every observation means, and
+    is itself derivable in part from multi-modal context (where, when,
+    with whom).
+
+  Removing any one component degrades the others; this is the cluster's
+  synergy claim.
+
+tags:
+  - cluster
+  - multi-agent
+  - social-cognition
+  - partial-observability
+  - belief-modelling
+
+provenance:
+  vault_consolidation_hubs:
+    - "Eavesdropping"
+    - "Multi-Modal Integration"
+    - "Context-Dependent Semantics"
+  vault_metamodels:
+    - "MM1 — Distributed Information Substrate"
+    - "MM2 — Multi-Channel × Multi-Level Coherence"
+    - "MM3 — Context-Bound Semantics"
+    - "MM4 — Identity Through Distinctive Patterning"

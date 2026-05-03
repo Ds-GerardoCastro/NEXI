@@ -17,9 +17,25 @@ The project mines peer-reviewed research on intelligence across biological speci
 
 **Private. Pre-release.** This repository will be made public once a critical mass of patterns has been populated and reviewed.
 
-## How to use a NEXI entry
+## Clusters and patterns
 
-Each entry under `nexi/<pattern-slug>/` contains:
+The catalog has two layers:
+
+- **Clusters** (under `clusters/`) are _intelligence models_ — coherent systems of co-dependent patterns that solve a class of cognitive problems together. A cluster is the recommended unit of adoption: it tells builders what to combine, not just what exists.
+- **Patterns** (under `nexi/`) are individual NEXIs — the architectural primitives that constitute clusters. A pattern can belong to one or more clusters.
+
+Most builders should browse clusters first. Patterns are the engineering ingredient layer; clusters are the architecture-and-theory layer.
+
+See [`docs/clusters.md`](docs/clusters.md) for the cluster framework and curation rules.
+
+## How to use a cluster or pattern
+
+A **cluster** under `clusters/<cluster-slug>/` contains:
+
+- `README.md` — the layered cluster card (system-level claim, member patterns, complementarity notes)
+- `cluster.yaml` — structured metadata, validated against [`schema/cluster.schema.json`](schema/cluster.schema.json)
+
+A **pattern** under `nexi/<pattern-slug>/` contains:
 
 - `README.md` — the layered pattern card (quick-start at top, theoretical depth below)
 - `nexi.yaml` — structured metadata, validated against [`schema/nexi.schema.json`](schema/nexi.schema.json)
@@ -29,7 +45,7 @@ Each entry under `nexi/<pattern-slug>/` contains:
 
 Browse [`CATALOG.md`](CATALOG.md) for the full index.
 
-For methodology and curation rules, see [`docs/methodology.md`](docs/methodology.md).
+For methodology and curation rules, see [`docs/methodology.md`](docs/methodology.md) and [`docs/clusters.md`](docs/clusters.md).
 
 ## Audience
 

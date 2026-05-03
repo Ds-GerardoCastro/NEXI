@@ -1,0 +1,91 @@
+id: social-hotspots
+name: Social Hotspots
+status: draft
+version: 0.1.0
+created: 2026-05-03
+audience_voice: builder
+
+natural_exemplars:
+  - species: 'Taeniopygia castanotis (zebra finch)'
+    paper:
+      title: 'Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)'
+      venue: 'bioRxiv preprint'
+      date: '2026-04-27'
+    notes: >
+      Wild zebra finch social hotspots are not anonymous gathering points
+      but structured information hubs where repeated encounters mix
+      known and unknown individuals. Functions span foraging-info,
+      predation dilution, breeding synchronisation, and condition
+      signalling. Information density concentrates spatially.
+
+abstract_claim: >
+  In multi-agent systems with shared environments, information density
+  concentrates at specific locations (or virtual loci) where many
+  agents converge — not uniformly across the environment. Architectures
+  that explicitly model these hotspots and weight observation /
+  retrieval / attention by spatial-or-virtual proximity outperform
+  architectures that treat the population uniformly. Where bodies
+  converge, information aggregates.
+
+falsifiable_hypothesis: >
+  Multi-agent systems with location-keyed memory and proximity-weighted
+  retrieval outperform agents with uniform memory access on tasks where
+  the distribution of relevant information is spatially structured, at
+  equal training compute. Operationalised on benchmarks of multi-agent
+  navigation, foraging-with-information-sharing, and crowd-density
+  inference, hotspot-aware agents should reach target performance in
+  >=10% fewer episodes. Refutation: if uniform-memory baselines match
+  hotspot-aware agents on spatially-structured tasks at equal compute,
+  this pattern's claim is refuted.
+
+applies_to:
+  - multi-agent-systems
+  - robotics
+  - foraging
+  - distributed-cognition
+  - spatial-reasoning
+
+formats:
+  - architecture
+  - skill
+
+when_to_use: >
+  Multi-agent systems where the environment has spatial structure (or
+  virtual analogs like topic-clusters) and information distribution
+  is non-uniform; tasks where convergence-to-density itself is a
+  signal (foraging, social inference, market-making, swarm robotics).
+
+when_not_to_use: >
+  Single-agent systems; environments without spatial or topical
+  structure; tasks with strictly uniform information distribution;
+  privacy-sensitive contexts where revealing convergence patterns is
+  itself a leak.
+
+tradeoffs: >
+  Spatial memory adds storage and retrieval cost (proximity-weighted
+  queries are more expensive than uniform retrievals). Hotspot
+  detection may produce false positives in noisy environments.
+  Architectural complexity rises — hotspots are an additional state
+  the system must maintain.
+
+related_nexi:
+  - eavesdropping
+  - identity-by-pattern
+  - multi-modal-integration
+  - context-bound-semantics
+
+clusters:
+  - distributed-social-cognition
+
+tags:
+  - spatial
+  - aggregation
+  - distributed-cognition
+  - multi-agent
+  - hotspots
+
+provenance:
+  vault_consolidation_hub: 'Eavesdropping'
+  vault_principles:
+    - 'P10 — Social Hotspots as Information Hubs'
+  vault_metamodel: 'MM1 — Distributed Information Substrate'

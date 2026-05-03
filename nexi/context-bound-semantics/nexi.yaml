@@ -1,0 +1,96 @@
+id: context-bound-semantics
+name: Context-Bound Semantics
+status: draft
+version: 0.1.0
+created: 2026-05-03
+audience_voice: builder
+
+natural_exemplars:
+  - species: 'Taeniopygia castanotis (zebra finch)'
+    paper:
+      title: 'Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)'
+      venue: 'bioRxiv preprint'
+      date: '2026-04-27'
+    notes: >
+      Zebra finch song serves different functions in different social
+      contexts — pair-bond reinforcement and reproductive cueing in the
+      breeding colony, broader social bonding and breeding synchronisation
+      at the social hotspot. The same signal carries different meaning
+      depending on context. The paper also documents inference from
+      *absence* of signal: the lack of a dawn-song peak distinguishes
+      this species' non-territorial system from territorial ones.
+
+abstract_claim: >
+  Meaning is a function of signal × context, not of signal alone.
+  Architectures that bind interpretation to context — including the
+  state of the world, the participants involved, and what is *not*
+  observed (negative evidence) — capture semantics that token-statistical
+  models systematically miss. Absence of expected signal carries
+  information equal to presence of unexpected signal.
+
+falsifiable_hypothesis: >
+  Architectures with explicit context-conditional decoders and
+  negative-evidence reasoning capacity outperform context-independent
+  baselines on tasks where semantic interpretation shifts across
+  contexts, at equal training compute. Operationalised on benchmarks
+  of pragmatic language understanding, contextual classification under
+  distribution shift, and counterfactual reasoning, context-bound
+  architectures should achieve >=10% relative gain on context-shift
+  metrics. Refutation: if context-independent baselines match context-
+  conditional ones at equal compute on explicitly context-shifted
+  evaluations, this pattern's claim is refuted.
+
+applies_to:
+  - llm-agents
+  - grounded-language
+  - multi-agent-systems
+  - world-models
+  - pragmatics
+
+formats:
+  - architecture
+  - skill
+
+when_to_use: >
+  Tasks where the same signal can mean different things in different
+  contexts (multi-domain agents, pragmatic dialogue, role-aware tools);
+  systems that need to reason about absences (what should be there but
+  is not) and counterfactuals (what would change the meaning); domains
+  with non-stationary semantics.
+
+when_not_to_use: >
+  Tasks where signals have stable, context-independent meaning (most
+  classification, most code interpretation); strict latency budgets
+  that preclude conditional reasoning; settings where context cannot
+  be reliably observed.
+
+tradeoffs: >
+  Context-conditional decoders have larger effective parameter counts
+  (the conditional distribution over interpretations is richer than
+  the marginal). Training data must include the same signal in
+  multiple contexts, which is harder to curate than i.i.d. samples.
+  Negative-evidence reasoning is computationally expensive (you have
+  to enumerate or sample what you would expect to see).
+
+related_nexi:
+  - eavesdropping
+  - identity-by-pattern
+  - multi-modal-integration
+  - social-hotspots
+
+clusters:
+  - distributed-social-cognition
+
+tags:
+  - semantics
+  - context
+  - pragmatics
+  - negative-evidence
+  - llm-limitations
+
+provenance:
+  vault_consolidation_hub: 'Context-Dependent Semantics'
+  vault_principles:
+    - 'P07 — Context-Dependent Song Function'
+    - 'P08 — No Dawn Song as Non-Territorial Signal'
+  vault_metamodel: 'MM3 — Context-Bound Semantics'
