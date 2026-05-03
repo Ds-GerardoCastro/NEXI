@@ -51,6 +51,12 @@ For methodology and curation rules, see [`docs/methodology.md`](docs/methodology
 
 This catalog is written for **builders working on AI systems** — multi-agent systems, LLM-based agents, reinforcement learning, robotics. We do not assume graduate-level machine learning expertise. Each pattern uses a layered format: a usable summary first, theoretical depth available below.
 
+## Where this fits in your stack
+
+If you are building agentic systems and reaching for **context engineering**, **memory engineering**, or **harness engineering** patterns, NEXI is a design library that names what you are doing, cites peer-reviewed comparative cognition that supports it, and commits to falsifiable hypotheses you can test.
+
+See [`docs/positioning.md`](docs/positioning.md) for the full mapping of NEXI patterns to each engineering discipline.
+
 ## Companion artifacts
 
 - A research vault (private) holds the upstream literature review and principle-extraction work that feeds this catalog.
