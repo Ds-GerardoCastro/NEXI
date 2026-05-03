@@ -1,0 +1,90 @@
+id: eavesdropping
+name: Eavesdropping
+status: template
+version: 0.1.0
+created: 2026-05-03
+audience_voice: builder
+
+natural_exemplars:
+  - species: 'Taeniopygia castanotis (zebra finch)'
+    paper:
+      title: 'Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)'
+      venue: 'bioRxiv preprint'
+      date: '2026-04-27'
+    notes: >
+      Wild zebra finches in arid-zone social hotspots extract information from
+      observed third-party song interactions, informing mate choice, breeding
+      synchronisation, and social hotspot formation.
+
+  - species: 'Multiple songbird species'
+    paper:
+      title: 'Communication networks'
+      authors: ['McGregor, P. K.', 'Dabelsteen, T.']
+      venue: 'in: Ecology and Evolution of Acoustic Communication in Birds (Cornell University Press)'
+      date: '1996'
+    notes: >
+      Foundational reference establishing 'communication networks' — networks of
+      potential information flow among individuals — in animal-communication ecology.
+
+abstract_claim: >
+  Agents that observe but do not directly participate in interactions can still
+  extract information about the participants — their goals, knowledge, capabilities,
+  relationships. By granting agents structured access to third-party communications
+  they observe (rather than restricting input to self-addressed messages), multi-agent
+  systems can build richer models of social state with less direct interaction cost.
+
+falsifiable_hypothesis: >
+  Multi-agent reinforcement-learning systems with attention over observed third-party
+  interactions achieve higher sample efficiency on partially-observable cooperative
+  tasks than identical systems restricted to self-directed observation. Specifically:
+  at equal training compute on a benchmark of N>=3-agent partially-observable cooperative
+  tasks (e.g. Overcooked-AI multi-agent variants, Hanabi, or comparable social-inference
+  benchmarks), eavesdropping-enabled agents reach a target performance threshold in
+  fewer training episodes by a measurable margin (>=10% reduction in episode count to
+  threshold). Refutation: if no such margin appears across an appropriate benchmark
+  suite, this NEXI is refuted as an architectural primitive.
+
+applies_to:
+  - multi-agent-systems
+  - social-cognition
+  - world-models
+  - llm-agent-orchestration
+  - decentralized-pomdp
+
+formats:
+  - architecture
+  - skill
+
+when_to_use: >
+  Multi-agent settings with shared, partially observable environment, where tasks
+  benefit from inferring others' goals, knowledge, or relationships, and where direct
+  interaction is costly, infrequent, or noisy. Population size moderate (small enough
+  that observation is tractable, large enough that eavesdropping adds signal beyond
+  direct interaction).
+
+when_not_to_use: >
+  Single-agent settings (nothing to eavesdrop on); privacy-preserving or adversarial
+  contexts where observed agents may signal deceptively or eavesdroppers may exfiltrate
+  sensitive context; strict compute constraints (eavesdropping multiplies the input
+  stream by approximately the number of observable agents); tasks where direct
+  experience suffices and inferring others adds no signal.
+
+tradeoffs: >
+  Information richness vs. compute cost (attention scales with observable population);
+  privacy and robustness (third-party observability creates attack surface); memory
+  pressure (observed-interaction history grows unbounded without summarisation).
+
+related_nexi: []
+
+tags:
+  - multi-agent
+  - social-cognition
+  - observation
+  - belief-update
+  - non-human-template
+
+provenance:
+  vault_consolidation_hub: 'Eavesdropping'
+  vault_principles:
+    - 'P02 — Eavesdropping as Network Mechanism'
+  vault_metamodel: 'MM1 — Distributed Information Substrate'

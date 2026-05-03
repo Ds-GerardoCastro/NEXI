@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Ds-GerardoCastro/NEXI/schema/nexi.schema.json",
+  "title": "NEXI entry metadata",
+  "description": "Schema for nexi.yaml — structured metadata for one NEXI pattern.",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "status",
+    "version",
+    "natural_exemplars",
+    "abstract_claim",
+    "falsifiable_hypothesis",
+    "formats",
+    "when_to_use",
+    "when_not_to_use"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Kebab-case slug. Must match the entry's folder name."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "description": "Human-readable name."
+    },
+    "status": {
+      "enum": ["template", "draft", "canonical", "deprecated"],
+      "description": "template = canonical exemplar; draft = single-source evidence; canonical = multi-source, passed curation; deprecated = replaced or refuted."
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Semantic version."
+    },
+    "created": {
+      "type": "string",
+      "format": "date"
+    },
+    "updated": {
+      "type": "string",
+      "format": "date"
+    },
+    "audience_voice": {
+      "enum": ["builder", "researcher"],
+      "default": "builder",
+      "description": "Primary voice the layered card is written for. 'builder' is the v1 default."
+    },
+    "natural_exemplars": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["species", "paper"],
+        "additionalProperties": false,
+        "properties": {
+          "species": { "type": "string" },
+          "paper": {
+            "type": "object",
+            "required": ["title"],
+            "additionalProperties": false,
+            "properties": {
+              "title": { "type": "string" },
+              "authors": { "type": "array", "items": { "type": "string" } },
+              "venue": { "type": "string" },
+              "date": { "type": "string" },
+              "doi": { "type": "string" },
+              "url": { "type": "string", "format": "uri" }
+            }
+          },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "abstract_claim": {
+      "type": "string",
+      "minLength": 50,
+      "description": "What the pattern claims, in plain language. The 'what' of the entry."
+    },
+    "falsifiable_hypothesis": {
+      "type": "string",
+      "minLength": 80,
+      "description": "A specific, testable architectural prediction. Required — see docs/methodology.md."
+    },
+    "applies_to": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Domains or AI subfields this pattern applies to (multi-agent-systems, social-cognition, world-models, etc.)."
+    },
+    "formats": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": ["architecture", "skill", "communication", "coordination"]
+      },
+      "description": "Which subfolders are populated for this entry."
+    },
+    "when_to_use": {
+      "type": "string",
+      "minLength": 20
+    },
+    "when_not_to_use": {
+      "type": "string",
+      "minLength": 20
+    },
+    "tradeoffs": {
+      "type": "string"
+    },
+    "related_nexi": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9-]*$"
+      },
+      "description": "Slugs of related NEXIs in the catalog."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Reference to upstream vault notes (private). Useful for catalog maintainers; transparent to engineering users.",
+      "properties": {
+        "vault_consolidation_hub": { "type": "string" },
+        "vault_principles": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "vault_metamodel": { "type": "string" }
+      }
+    }
+  }
+}
