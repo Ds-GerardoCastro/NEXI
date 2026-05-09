@@ -1,33 +1,47 @@
 # 7. Discussion
 
-> **Status: stub.** Section to be developed in a subsequent revision.
+The catalog and methodology of Sections 4–6 are foundational artefacts of an extended program. This section discusses the limitations they currently carry, the levels at which the program is falsifiable, the relationship of the work to mainstream AI research, and the principal counter-arguments the program engages with.
 
 ## 7.1 Limitations
 
-Planned coverage:
+Five limitations apply to the catalog at version 1, and each is the subject of explicit work going forward.
 
-- **Single-source dependence of the first cluster.** The Distributed Social Cognition cluster rests on one source group; multi-source evidence is in progress. The cluster is a _template_ for the methodology, not a final contribution.
-- **Biology-to-engineering translation gaps.** Architectural primitives that work in biological systems may fail in engineered ones for reasons not visible in the biology literature. Per-pattern falsifiability is the discipline that catches these failures, but it cannot prevent the work of testing.
-- **Curation is judgment-laden.** Project-relevance grading and metamodel extraction rest on interpretation. The audit trail (regrade notes, provenance chain) makes interpretation transparent but does not eliminate it.
-- **Selection bias toward narrative-rich species.** Sources whose findings are easy to articulate as principles enter the catalog faster than equally-relevant sources whose findings are subtler. The bias is real and worth flagging.
+**Source-coverage asymmetry across the three clusters.** Distributed Social Cognition rests on a single peer-reviewed source [Hagedoorn et al. 2026]; the cluster's structural shape (constellation) is well-evidenced by the source's network analysis, but the generality of each member pattern beyond zebra finches awaits multi-source corroboration. Bounded Cognitive Architecture and Acerebrate Decision-Making are two-source, but the second source plays a corroborating rather than co-equal role in each. Only one pattern (`niche-specification`) is currently `canonical`; all three clusters carry `template` or `draft` status. The methodology mandates this transparency — the catalog must show its draft status rather than smooth it over (§4.6, §5.7).
+
+**Biology-to-engineering translation gaps.** Architectural primitives that work in biological systems may fail in engineered ones for reasons not visible in the biology literature. The transfer caveats vary by cluster shape: constellation transfer to multi-agent reinforcement learning is the most direct, pipeline transfer to deployment-tier architecture decisions is intermediate, and composition transfer (prokaryotic regulatory networks to AI substrates) is the farthest. Per-pattern falsifiability (§4.6) is the discipline that catches transfer failures, but it does not eliminate the engineering work of testing.
+
+**Curation is judgement-laden.** Project-relevance grading and atomic-principle extraction rest on human judgement. The audit trail (rationale notes, provenance chain, tensions log) makes that judgement transparent and auditable but does not eliminate it. A reviewer who disagrees with a principle's grade can challenge the grade specifically; the disagreement does not reduce to "the agent decided," but it does require that the grader be willing to defend specific calls.
+
+**Selection bias toward narrative-rich species.** Sources whose findings are easy to articulate as principles (zebra finch communication networks, well-mapped bacterial regulatory pathways) enter the catalog faster than equally-relevant sources whose findings are more diffuse (collective insect behaviour at scale, plant signalling beyond well-studied model species). The bias is real and worth flagging; the Watch List (§4.8) deliberately includes candidates from harder-to-articulate sources to counter it over time.
+
+**Scope of the cluster-shape finding.** Three shapes from three clusters is suggestive of structural diversity, not conclusive. The framework anticipates additional shapes from future sources; the diversity-of-shapes claim should harden as the catalog grows. The current finding is framed accordingly — _shape diversity is real_ rather than _these are the only shapes_.
 
 ## 7.2 Falsifiability of the overall program
 
-Planned coverage: revisits the three-level falsifiability discussion from Section 3.4 in light of the catalog's actual structure. Distinguishes program-level claims (the two pillars) from cluster-level claims (synergy across member patterns) from pattern-level claims (individual NEXI hypotheses). Notes that the three levels can be supported or refuted independently, allowing the catalog to update gracefully under new evidence.
+The three-level falsifiability structure introduced in §3.4 acquires concrete examples now that the catalog has three clusters. At the program level, the architectural pillar is refuted if a token-prediction system at sufficient scale demonstrably achieves human-level reliability on physical-world tasks with sample efficiency comparable to natural learners; the template pillar is refuted if perceptron-lineage architectures are shown to span the full intelligence-design space across the lineages the catalog draws on. Neither refutation is currently in evidence; both are formally available.
+
+At the cluster level, three system-level hypotheses are currently in play: the Distributed Social Cognition synergy claim (subsetting → non-linear capability loss); the Bounded Cognitive Architecture pipeline claim (pipeline-discipline > single-axis scaling at matched compute on niche-specific evaluation); the Acerebrate Decision-Making composition claim (layered-composition > single-axis on unpredictability-heavy tasks). Each is independently testable and independently refutable. The framework's commitment is that refutation of any one cluster does not refute the program — the patterns may still be individually useful and the program-level pillars unaffected.
+
+At the pattern level, eleven individual NEXIs each carry a falsifiable architectural hypothesis specifying what is being compared, under what conditions, with what metric, and at what threshold. A pattern whose hypothesis is later refuted is marked `deprecated` and retained for traceability; the catalog tracks negative results.
+
+The three-level structure is deliberate. It allows the program to grow incrementally — each entry standing or falling on its own evidence — while keeping the program-level thesis empirically anchored to the aggregate behaviour of its components. Over- or under-confidence at any one level does not propagate to the others.
 
 ## 7.3 Relationship to mainstream AI research
 
-Planned coverage:
+**What NEXI complements.** The world-model research direction [Schmidhuber 1990; Ha & Schmidhuber 2018; Assran et al. 2023; Bardes et al. 2024] is congruent with the architectural pillar; NEXI does not displace it. The catalog is a _design library_, not a rival architecture. A V-JEPA-style world model that adopts the Distributed Social Cognition cluster for multi-agent inference, the Bounded Cognitive Architecture pipeline for niche-bound deployment design, and the Acerebrate Decision-Making composition for runtime adaptation under unpredictability is a perfectly coherent system. NEXI's goal is to make that combination available as named, defensible, falsifiable building blocks rather than as ad-hoc design choices.
 
-- **What NEXI complements.** The world-model research direction (JEPA / V-JEPA / I-JEPA family) is congruent with the architectural pillar; NEXI does not displace it. The catalog is a _design library_, not a rival architecture.
-- **What NEXI challenges.** Scaling-only claims, AGI as a coherent target abstracted from niche, and pattern bolt-on practices that ignore complementarity.
-- **Where NEXI is silent.** Training infrastructure, deployment economics, governance, and most empirical-evaluation engineering are out of scope. The catalog focuses on _design primitives_.
+**What NEXI challenges.** Three specific positions in current AI practice. First, scaling-only claims that abstract from deployment niche — the position critiqued in §3.1 and operationalised against in §6.2. Second, AGI as a coherent target abstracted from niche, which the niche-bound cognition evidence calls into question (§7.4 below). Third, pattern-bolt-on practices — adding a single architectural primitive in isolation and expecting cluster-level benefits — which the constellation, pipeline, and composition shapes all argue against in different ways.
+
+**Where NEXI is silent.** Training infrastructure, deployment economics, governance, alignment as commonly framed, and most empirical-evaluation engineering are out of scope. The catalog focuses on _design primitives_; downstream use of those primitives is a separate concern that the catalog does not aspire to address comprehensively. Silence here is principled — a catalog that tries to address everything addresses nothing well.
 
 ## 7.4 Engagement with counter-arguments
 
-Planned coverage:
+Four counter-arguments deserve explicit response.
 
-- **Sutton's Bitter Lesson.** The lesson observes that general methods plus compute have repeatedly defeated structure-imposing approaches in AI history. The position taken here is that the lesson applies _within_ a substrate; it does not show _any_ substrate is equally capable. The template critique argues the perceptron substrate is one biased sample.
-- **"Biology is not engineering."** Acknowledged. Per-pattern falsifiability is the discipline that earns transfer rather than assuming it.
-- **"AI does not need to imitate biology."** True; NEXI does not propose imitation. It proposes _mining_ biology for design primitives, with engineering judgement applied per-primitive.
-- **"AGI as a unified target."** The Niche-Bound Cognition metamodel (MM7 in the case study) raises a deeper question: whether AGI is a coherent target at all, or whether the right targets are families of niche-specific intelligences. The white paper does not commit on this question; it surfaces it.
+**Sutton's Bitter Lesson [Sutton 2019].** The lesson observes that general methods plus compute have repeatedly defeated approaches that build in human-derived structure. The position taken here is that the lesson applies _within_ a substrate — within the perceptron lineage's design space, general methods plus compute have indeed defeated structure-imposing alternatives. The lesson does not show that _any_ substrate is equally capable. The template critique (§3.2) argues the perceptron substrate is one biased sample of the intelligence-design space, and the catalog's job is to widen the sample with peer-reviewable evidence. The Bitter Lesson does not refute that project; it predicts that within each new substrate, general methods plus compute will likely outperform structure-imposing alternatives — exactly what per-pattern falsifiability (§4.6) is designed to test.
+
+**"Biology is not engineering."** Acknowledged. The methodology's response is per-pattern falsifiability — every NEXI commits to a testable architectural hypothesis, and transfer failures are caught at the pattern level rather than absorbed into the program's overall claims. The approach earns transfer per pattern rather than assuming it wholesale. The historical precedent that grounds this position is the convolutional network [LeCun et al. 1989] — biologically motivated by visual cortex, then engineered into a primitive that owes more to gradient descent than to neuroscience. NEXI works in the same key.
+
+**"AI does not need to imitate biology."** True; NEXI does not propose imitation. It proposes _mining_ biology for design primitives, with engineering judgement applied per primitive (§3.2). The distinction between _imitation_ and _mining_ is load-bearing: an imitative project keeps the biological substrate; a mining project keeps the architectural pattern and engineers a new substrate to host it. NEXI is the second.
+
+**"AGI as a unified target."** The Niche-Bound Cognition evidence raises the deepest counter-question this paper engages: whether AGI is a coherent target at all, or whether the right targets are families of niche-specific intelligences. Turner et al.'s three-regime mathematical model and the zebra finch fission-fusion architecture both cut against a single domain-general intelligence as the optimal endpoint of evolutionary-or-engineering pressure. The white paper does not commit on whether this implies AGI as commonly framed should be abandoned; it surfaces the question as a productive direction for the longer research program (§8.4).

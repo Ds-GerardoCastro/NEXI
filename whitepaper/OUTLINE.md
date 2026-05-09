@@ -16,7 +16,7 @@
 
 ## 2. Background and Related Work — `02-background.md`
 
-**Status:** Stub. To be developed.
+**Status:** Drafted.
 **Target:** ~2,500 words.
 **Planned coverage:**
 
@@ -34,7 +34,7 @@
 
 ## 4. Methodology — `04-methodology.md`
 
-**Status:** Stub.
+**Status:** Drafted.
 **Target:** ~1,500 words.
 **Planned coverage:**
 
@@ -45,7 +45,7 @@
 
 ## 5. The NEXI Framework — `05-nexi-framework.md`
 
-**Status:** Stub.
+**Status:** Drafted.
 **Target:** ~2,000 words.
 **Planned coverage:**
 
@@ -55,22 +55,21 @@
 - The status field as audit trail.
 - The repository structure as a contribution-friendly artifact.
 
-## 6. Case Study: Distributed Social Cognition — `06-case-study.md`
+## 6. Case Studies: Three Cluster Shapes — `06-case-study.md`
 
-**Status:** Stub.
-**Target:** ~2,500 words.
+**Status:** Drafted (~3,200 words at first draft; below the original 5,500 target because cluster READMEs in the repo carry full implementation depth and the chapter focuses on what the white paper specifically must show — methodology exercise + shape-diversity finding).
+**Target:** ~5,500 words.
 **Planned coverage:**
 
-- The zebra finch source paper and its 12 principles.
-- The metamodels extraction process.
-- The five resulting NEXIs and their cluster.
-- The cluster's system-level falsifiable hypothesis.
-- The complementarity story — why subsetting the cluster degrades performance.
-- Honest reporting of limitations: single-source-of-evidence cluster, draft status of most member NEXIs.
+- **6.1 Constellation — Distributed Social Cognition** (zebra finch source). Source paper, principles extracted, the five resulting NEXIs and their constellation cluster, the cluster's system-level falsifiable hypothesis, the complementarity story (why subsetting degrades referential robustness), honest single-source-of-evidence caveats and draft status of member NEXIs.
+- **6.2 Pipeline — Bounded Cognitive Architecture** (cognitive-capacity-limits source). Source paper, principles extracted, the resulting NEXIs and their pipeline cluster, the cluster's system-level falsifiable hypothesis (downstream stages depend on upstream capacity limits being honoured), and the multi-source promotion of `niche-specification` to canonical status across this cluster and 6.1.
+- **6.3 Composition — Acerebrate Decision-Making** (bacterial-community source). Source paper, principles extracted, the resulting NEXIs and their composition cluster, the cluster's system-level falsifiable hypothesis (substrate-independent components reproduce adaptive bacterial collective behaviour), and the substantive contribution this cluster makes to the template pillar (intelligence without neurons, sometimes without multicellularity).
+- **6.4 Cross-cluster comparison.** What the three shapes (constellation, pipeline, composition) reveal about the geometry of natural intelligence designs; why a single canonical shape would have been the more suspicious finding.
+- Honest reporting of limitations across all three: single-source vs. multi-source evidence by cluster; draft vs. canonical status of individual NEXIs; the transfer-to-engineering caveats specific to each shape.
 
 ## 7. Discussion — `07-discussion.md`
 
-**Status:** Stub.
+**Status:** Drafted.
 **Target:** ~1,500 words.
 **Planned coverage:**
 
@@ -81,7 +80,7 @@
 
 ## 8. Future Work — `08-future-work.md`
 
-**Status:** Stub.
+**Status:** Drafted.
 **Target:** ~1,000 words.
 **Planned coverage:**
 
@@ -92,7 +91,7 @@
 
 ## 9. Conclusion — `09-conclusion.md`
 
-**Status:** Stub.
+**Status:** Drafted.
 **Target:** ~600 words.
 **Argument:** Restates the two pillars, summarises the contribution (catalog + methodology + first cluster as demonstration), and positions the work within the broader research conversation.
 
@@ -102,6 +101,6 @@
 
 ---
 
-**Total target length:** ~16,000 words across all sections (a substantial conference / arxiv-grade white paper, not a journal-length monograph).
+**Total target length:** ~19,000 words across all sections (a substantial conference / arxiv-grade white paper, not a journal-length monograph). The expansion from a prior ~16,000-word target reflects chapter 6's restructuring into three cluster-shape case studies rather than a single demonstration.
 
 **Ordering of work:** introduction and Section 3 first (conceptual scaffolding); Section 5 (NEXI framework) and Section 6 (case study) second (operational core); Sections 2, 4, 7 third (situating, methodology, falsifiability); Sections 8, 9 last (forward-looking and concluding).

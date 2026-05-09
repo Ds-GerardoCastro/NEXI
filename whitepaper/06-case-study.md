@@ -1,31 +1,173 @@
-# 6. Case Study: Distributed Social Cognition
+# 6. Case Studies: Three Cluster Shapes
 
-> **Status: stub.** Section to be developed in a subsequent revision.
+This section walks through the three demonstration clusters as worked examples of the methodology of Section 4 and the framework of Section 5. Each sub-study follows the same structure: the source, the atomic principles that crossed the relevance gate, the resulting NEXI patterns, the cluster's structural shape and system-level falsifiable hypothesis, the status of the cluster and its members, and the cluster-specific limitations honestly attached. Section 6.4 compares the three side-by-side; Section 6.5 reports limitations that span all three.
 
-## 6.1 The source
+The three clusters were not chosen to demonstrate three different shapes — that finding emerged from their construction. Each cluster was extracted from one peer-reviewed source independently, following the methodology, and the shape difference (§5.6) became visible only after all three were structured.
 
-Planned coverage: the bioRxiv preprint _Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)_ (Hagedoorn et al. 2026), studying multi-level social structure and acoustic communication in arid-zone Australian zebra finch populations. Field methodology, study period, scope of claims, peer-review status caveat.
+## 6.1 Constellation — Distributed Social Cognition
 
-## 6.2 The 12 atomic principles
+### Source
 
-Planned coverage: the principles extracted from the source and graded for project relevance. The grading rationale (9 core, 3 supporting under the expanded rubric that includes "diverges from the human / mammalian template").
+Hagedoorn et al. 2026, _Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)_, bioRxiv preprint posted 2026-04-27 (DOI 10.1101/2025.09.11.675577, license CC-BY-NC-ND 4.0). The paper documents communication-network behaviour in wild zebra finches in the Australian arid zone, with attention to the social hotspots where many individuals converge under unpredictable timing.
 
-## 6.3 The metamodels extraction
+### Atomic principles and consolidation
 
-Planned coverage: the seven metamodels distilled from the principles — Distributed Information Substrate, Multi-Channel × Multi-Level Coherence, Context-Bound Semantics with Negative Evidence, Identity through Distinctive Patterning, Structural Flexibility under Non-Stationarity, Sensor-Coverage Bounds, Niche-Bound Cognition. The role of metamodels as the bridge between species-specific observations and engineering primitives.
+Section-by-section reading of the source produced atomic principles in five clusters of claims, each grounded in specific paper sections (Methods, Results on hotspot density, Discussion of multi-channel signalling): (a) eavesdropping on third-party song interactions; (b) individual identification from distinctive song motifs; (c) acoustic + spatial integration as mutually-confirming channels; (d) context-binding such that the same signal carries different meanings in different settings (breeding colony vs. hotspot); (e) the social hotspot itself as a structured aggregator rather than an anonymous gathering. Each claim was graded CORE under both rubric conditions: it load-bears the architectural pillar (sample-efficient inference about other agents under partial observability) _and_ reveals an intelligence-design pattern that diverges from the human / mammalian template (peer-modelling distributed across observation, identity, context, and spatial substrate).
 
-## 6.4 The five member patterns
+The consolidation hubs `Eavesdropping`, `Multi-Modal Integration`, and `Context-Dependent Semantics` materialised within this single source — each hub backed by multiple atomic principles drawn from independent measurement contexts within the paper. Full multi-source promotion of any member NEXI awaits additional independent sources at the pattern level.
 
-Planned coverage: each NEXI in the cluster — Eavesdropping, Identity by Pattern, Multi-Modal Integration, Context-Bound Semantics, Social Hotspots. For each: the abstract claim, the AI gap it addresses, the architectural primitive, the falsifiable hypothesis.
+### Member NEXIs
 
-## 6.5 The cluster
+| Slug                      | Role                                                                  | Status   |
+| ------------------------- | --------------------------------------------------------------------- | -------- |
+| `eavesdropping`           | Extract information from observed third-party interactions            | template |
+| `identity-by-pattern`     | Attribute observed behaviour to specific individuals from signatures  | draft    |
+| `multi-modal-integration` | Mutually confirm identity and observation through cross-channel pairs | draft    |
+| `context-bound-semantics` | Bind meaning to context, including reasoning from absence             | draft    |
+| `social-hotspots`         | Aggregate observation where interaction density is highest            | draft    |
 
-Planned coverage: the Distributed Social Cognition cluster — its problem class, its system-level falsifiable hypothesis ("the full cluster outperforms any proper subset by a margin larger than the sum of individual-pattern gains"), its complementarity story (eavesdropping needs identity needs multi-modal needs hotspots needs context-binding).
+`eavesdropping` carries `status: template` rather than `draft` because it is the structural exemplar that propagates the per-pattern subfolder layout to the rest of the catalog (§5.7). The template designation is a methodological role, not an evidence claim — the underlying evidence is currently single-source and would otherwise be `draft`.
 
-## 6.6 Honest limitations
+### The constellation shape
 
-Planned coverage: the cluster currently rests on a single source group. Most member patterns are `status: draft`. The case study demonstrates the _methodology_; it is not yet a fully canonical contribution. The next source ingestion will test whether the cluster's structure holds under cross-source evidence.
+The five patterns form a graph of mutual dependencies rather than a sequence. Eavesdropping requires identity (to know whose interaction is being observed) and context-bound semantics (to interpret the interaction's meaning); identity benefits from multi-modal integration (to confirm whose voice this is); social hotspots are the spatial substrate that makes eavesdropping cheap (because observation density is highest where interactions concentrate). There is no privileged member and no temporal ordering: in a deployed agent, the patterns run concurrently during inference, each enabling the others.
 
-## 6.7 What the case study demonstrates
+This is what distinguishes the constellation shape from the pipeline shape (§6.2) and the composition shape (§6.3). A constellation cluster's load-bearing claim is the _graph_ of mutual enablement, not an order or a layering.
 
-Planned coverage: the methodology produces engineering-ready design primitives with peer-reviewable provenance, surfaces co-dependency explicitly, commits to falsifiable predictions, and carries an honest audit trail. This is the operational form of the program.
+### System-level falsifiable hypothesis
+
+> Multi-agent systems that adopt the full distributed-social-cognition cluster outperform systems that adopt any proper subset of its member patterns on cooperative social-inference benchmarks at equal training compute, by a margin larger than the sum of the individual-pattern gains.
+
+Operationalisation: a benchmark suite of N ≥ 3-agent partially-observable cooperative tasks (Hanabi-family, Overcooked-AI multi-agent variants, social-inference benchmarks) is run for (a) baseline (no patterns), (b) each member pattern in isolation, (c) all proper subsets, (d) the full cluster. The cluster's gain over baseline must exceed the sum of single-pattern gains by ≥10% for the synergy claim to be supported; every subset-vs-cluster comparison must show degradation when any member is removed. Refutation: if subsetting never produces degradation beyond additive loss, the synergy claim fails — the patterns may still be individually useful, but the cluster does not constitute a coherent intelligence model.
+
+### Limitations
+
+Single-source-of-evidence cluster: all five member NEXIs trace back to a single peer-reviewed source. The cluster as a whole therefore carries `status: template` (anchored in the eavesdropping exemplar) rather than `canonical`; promotion to canonical requires at least one additional independent source for each member pattern. The honest reporting here is that the cluster's _shape_ is well-evidenced by the source's network analysis, but the _generality_ of each pattern beyond zebra finches awaits multi-source corroboration. The cluster also assumes _honest_ observation; adversarial robustness (peers actively deceiving observers) is out of scope and a known failure mode.
+
+## 6.2 Pipeline — Bounded Cognitive Architecture
+
+### Source
+
+Turner, C. R., Russek, E. M., Seed, A., McEwen, E. S., Vélez, N., Morgan, T. J. H., & Griffiths, T. L. (2026), _Cognitive capacity and control in the evolution of intelligence_, bioRxiv preprint posted 2026-03-09 (DOI 10.1101/2026.03.07.710317, license CC-BY 4.0). The paper develops a mathematical model of working-memory selection under metabolic cost, derives three discrete cognitive regimes as evolutionary attractors, and cross-validates with retro-cue task data from humans and rhesus macaques. Phylogenetic placements span jellyfish, sea anemones, nematodes, flatworms, tardigrades, corvids, elephants, cetaceans, and great apes. The DOI's CrossRef indexing is pending at the time of writing; verification is deferred to the biorxiv resolver and re-validated before any external submission (§4.9).
+
+### Atomic principles and consolidation
+
+The mathematical core of the source produced three architecturally-consequential atomic principles: (a) cognition is allocation under cost — finite metabolic budget shapes optimal architecture; (b) the deployment niche shapes the optimum — three discrete regimes (passive-storage, control-enhanced, capacity-heavy) emerge as attractors of the optimisation, not as tier-labels on a single scaling curve; (c) storage capacity is prerequisite to regulation — capacity contributes linearly to recall efficacy while control contributes sublinearly. Each principle was graded CORE under condition (a) of the rubric (architectural-pillar load) and most also under condition (b) (the regime structure is a non-mammalian-template architectural claim).
+
+Independent corroboration arrived from the Hagedoorn et al. 2026 source — niche-conditional cognitive design appears as a fission-fusion social architecture in zebra finches, with the same signal type carrying different functions in different niches. This is the cross-source convergence that promoted `niche-specification` to `canonical` (§5.7).
+
+### Member NEXIs
+
+| Slug                         | Role in the pipeline                                                                     | Status                |
+| ---------------------------- | ---------------------------------------------------------------------------------------- | --------------------- |
+| `niche-specification`        | Specify the deployment niche as a typed object (entry point of the pipeline)             | **canonical** (1.0.0) |
+| `cognitive-regime-selection` | Map the niche to one of three regime attractors and recommend the regime's component mix | draft                 |
+| `capacity-first-scaling`     | Within the regime, allocate budget to capacity components before control components      | draft                 |
+
+### The pipeline shape
+
+The three patterns form a strict design-time pipeline:
+
+```
+niche-specification → cognitive-regime-selection → capacity-first-scaling → in-niche evaluation
+```
+
+Each stage's output is the next stage's typed input. Skipping niche specification leaves regime selection without an input; skipping regime selection leaves allocation without an architectural target; skipping capacity-first leaves the regime as a tier-label without an allocation policy. Crucially, this is a _design-time_ pipeline — the three patterns run before the deployed system exists, in sequence, producing the architecture the system will then run. This is the structural difference from the constellation: a constellation is a graph of runtime mutual enablement; a pipeline is a sequence of design-time typed-input dependencies.
+
+### System-level falsifiable hypothesis
+
+> Architectures designed using the full pipeline (niche specification → regime classification → capacity-first allocation) outperform same-budget architectures designed via single-axis scaling on niche-specific evaluation, by a margin larger than the sum of individual-NEXI gains.
+
+Refutation: if pipeline-designed systems perform no better than the best individual-NEXI baseline at matched compute, the cluster's compositional claim is refuted (the patterns may still be individually useful as standalone NEXIs). The bet the cluster makes is that _composition is load-bearing_ — that the design-time discipline of forcing niche-then-regime-then-allocation, in that order, produces architectures that single-pattern application does not.
+
+### Tension resolution: g-factor versus niche-binding
+
+The source's P22 (the domain-general capacity-axis hypothesis, sympathetic to a g-factor view) sits in tension with niche-bound specialisation evidence from the zebra finch source and from the comparative-cognition literature more broadly. The methodology's response (§4.7) is to log the tension rather than pick a side. The synthesis recorded inside the `niche-specification` entry is that domain-general substrate is real, but specialisation emerges via canalisation under niche pressure — a position the entry takes explicitly and defends in its theoretical-grounding section. The tension and its resolution are both first-class catalog content.
+
+### Computational analogs
+
+The pipeline has partial analogs in current AI practice that the cluster's references survey explicitly: Chinchilla compute-optimal scaling [Hoffmann et al. 2022] is consistent with capacity-first when read as "data is a capacity expansion;" long-context architectures (RoPE, ALiBi, sparse attention, FlashAttention) and retrieval-augmented generation (REALM, RAG, RETRO) are capacity expansions at low marginal control cost; mixture-of-experts (Switch Transformer, Mixtral) scales capacity via expert pool size; the No Free Lunch theorems [Wolpert & Macready 1997] formally ground the niche-specification step. Each analog is partial — none implements the full design-time pipeline — and the cluster's contribution is precisely the discipline of composing them in the right order.
+
+### Limitations
+
+Cluster status is `draft` even though one member is canonical: cluster-level promotion requires multi-source evidence for the cluster as a coherent intelligence model, not for any single member. The pipeline-shape claim itself rests primarily on the Turner et al. mathematical derivation; corroborating empirical work for the regime-as-attractor structure across additional independent sources is preliminary. The pipeline assumes deployment-niche commitment is meaningful; foundation-model pretraining (substrate construction) and multi-niche services (router-of-niche-specialists) are out of scope by design.
+
+## 6.3 Composition — Acerebrate Decision-Making
+
+### Source
+
+Nesin, S. M., & Chandrankunnel, M. (2025), _The need for a new perspective on decision-making in bacteria_, _Communicative & Integrative Biology_, 18(1), 2463926 (DOI 10.1080/19420889.2025.2463926, peer-reviewed review article, CC BY 4.0). Corroborating phylogenetic evidence comes from Turner et al. 2026, which places jellyfish and sea anemones (nerve net, no brain) in the passive-storage regime — independent support for the substrate-independence claim that motivates this cluster.
+
+### Atomic principles and consolidation
+
+Section-by-section reading of the bacterial source produced three architecturally-consequential atomic principles, each documented in a specific paper section: (a) _Vibrio cholerae_ biofilm commitment requires multi-stream coincidence detection (LuxPQ AND CqsS — both must agree) before the major behavioural transition fires; (b) bacterial decision-making under environmental unpredictability pairs stochastic gene-expression switching (random state-population) with iron-based cellular memory (persistent retention of beneficial states), producing exploration-with-retention; (c) anti-σ proteins act as runtime regulators of the σ factors that themselves regulate gene expression — an explicit control-over-control layer. Each principle was graded CORE under condition (b) of the rubric (intelligence-design pattern divergent from the human / mammalian template, in this case strikingly so: organisms with no nervous system at all).
+
+The corroborating jellyfish / sea anemone placements in Turner et al. produced a fourth atomic principle (_intelligent behaviour is implementable on nerve nets without a brain_) that, paired with the bacterial evidence, satisfies the multi-source rule for the upstream consolidation hub `Embodiment Without Cortex`.
+
+### Member NEXIs
+
+| Slug                           | Layer                                                                       | Status |
+| ------------------------------ | --------------------------------------------------------------------------- | ------ |
+| `coincidence-detection-gating` | Commitment-gate: major transitions require multi-stream alignment           | draft  |
+| `stochastic-memory-coupling`   | Exploration-with-retention: random state-switching + persistent memory      | draft  |
+| `meta-regulation`              | Control-over-control: explicit regulators of regulators, dynamic at runtime | draft  |
+
+### The composition shape
+
+The three patterns are layered, not sequenced — they run concurrently within a single agent at runtime:
+
+```
+   meta-regulation               (regulators of regulators)
+         │  regulates
+         ▼
+   coincidence-detection-gating  (multi-stream AND-gates on transitions)
+         │  informs commitment
+         ▼
+   stochastic-memory-coupling    (exploration with retention)
+```
+
+This is not a temporal pipeline — all three layers run continuously. It is also not a constellation in the §6.1 sense — the layers are differentiated by _function_, not by mutual reinforcement around a shared niche. The composition shape's load-bearing claim is that the three layers are _substrate-independent components_: any implementation that preserves the component logic (molecular regulation in bacteria, simulated regulation in software, hybrid implementations) reproduces the cluster's adaptive behaviour. Substrate independence is the property that makes the bacterial pattern engineerable in AI substrates at all, and the cluster's structural distinctness rests on it.
+
+### System-level falsifiable hypothesis
+
+> AI architectures that adopt the full acerebrate-decision-making cluster (multi-stream coincidence-detection gating + stochastic-memory paired exploration + explicit meta-regulation) outperform same-budget single-axis architectures on decision-making tasks under unpredictability and partial observability, by margins larger than the sum of individual-pattern gains.
+
+Refutation: if composition-designed systems perform no better than the best individual-NEXI baseline at matched compute on appropriately heterogeneous benchmarks (varying environmental predictability, multi-stream context availability, non-stationarity), the cluster's compositional claim is refuted. The cluster bets that _layered composition is load-bearing_ — that the three layers operating concurrently produce decision quality that none of them in isolation can produce.
+
+### Computational analogs
+
+Multi-stream attention and multi-modal fusion are partial analogs of coincidence-detection-gating, but typically not used as AND-gates on commitment decisions. Reinforcement learning with replay buffers (DQN, PPO with prioritised experience replay) is a partial analog of stochastic-memory-coupling, but treats stochasticity (exploration policy) and memory (replay) as separable engineering concerns rather than as a coupled architectural commitment. Meta-learning and learned optimisers [Hochreiter et al. 2001; Andrychowicz et al. 2016] are partial analogs of meta-regulation, but operate at training time rather than as a runtime architectural layer. Mixture-of-Experts gating is a partial flat (one-level) analog; the bacterial pattern is hierarchical. HyperNet-style architectures (networks generating parameters of other networks) are the closest existing architectural analog of meta-regulation, currently research-frontier rather than deployment-default.
+
+### Limitations
+
+Cluster status is `draft`: although the upstream consolidation hub `Embodiment Without Cortex` clears the multi-source rule (Nesin & Chandrankunnel 2025 plus Turner et al. 2026), the individual member NEXIs are still single-source for their specific architectural primitives — Turner et al. provides phylogenetic placement, not atomic principles for coincidence detection, stochastic-memory coupling, or meta-regulation as named architectural patterns. Member-level promotion to canonical waits for additional independent sources at the pattern level. The biology-to-engineering transfer for prokaryotic regulatory networks is also farther from existing AI substrates than the other two clusters; the engineering caveat is correspondingly larger.
+
+## 6.4 Cross-cluster comparison
+
+The three clusters can be compared on four axes that together describe what makes the shape difference architecturally meaningful:
+
+| Cluster                        | Shape         | Composition mode                 | Time mode   | Direction     |
+| ------------------------------ | ------------- | -------------------------------- | ----------- | ------------- |
+| Distributed Social Cognition   | Constellation | Graph of mutual dependencies     | Runtime     | Across agents |
+| Bounded Cognitive Architecture | Pipeline      | Sequenced typed inputs / outputs | Design-time | Through time  |
+| Acerebrate Decision-Making     | Composition   | Layered concurrent regulators    | Runtime     | Across layers |
+
+The three rows are not exhaustive — the framework anticipates that future sources may produce cluster shapes the catalog has not yet encountered (lattice, hierarchy, swarm, market). What the three rows already establish is that _shape diversity is real_: nature does not assemble adaptive behaviour in one canonical way, and a catalog that recognises this can place architectural claims at the shape level, not only at the pattern level.
+
+The shape difference also has practical implications for adoption. A constellation cluster invites an engineer to instantiate all members concurrently in the deployed agent; a pipeline cluster invites the engineer to walk through stages at design-time before any deployment exists; a composition cluster invites concurrent layered runtime regulators. Misclassifying a cluster's shape — for example, attempting to instantiate the bounded-cognitive-architecture pipeline at runtime as if it were a constellation — produces specific predictable failures, and the framework's `complementarity_notes` field exists to document those.
+
+A further observation: the three demonstration clusters span the runtime / design-time axis (two runtime clusters and one design-time cluster) and the within-agent / across-agent axis (one across-agent cluster, two within-agent). The catalog is therefore not a stack of variations on a single problem class; it is a small but structurally diverse first sample of the design space. That diversity is part of the case for the program more broadly (Section 3) — the program predicts that comparative cognition contains structurally distinct intelligence models, and the first three clusters bear out the prediction.
+
+## 6.5 Limitations across the three case studies
+
+Several limitations apply to all three clusters and warrant explicit reporting before the discussion in Section 7:
+
+**Single-source vs. multi-source asymmetry.** Distributed Social Cognition is single-source (Hagedoorn et al. 2026). Bounded Cognitive Architecture is two-source (Turner et al. 2026 plus Hagedoorn et al. 2026 corroboration on niche-conditional design). Acerebrate Decision-Making is two-source (Nesin & Chandrankunnel 2025 plus Turner et al. 2026 phylogenetic placement). Cluster-level promotion to canonical requires multi-source evidence for the cluster as a coherent intelligence model; the only canonical promotion at the time of writing is the pattern-level `niche-specification` (1.0.0). The catalog therefore contains three exemplary clusters, none yet at canonical status — exactly the visibility the methodology mandates.
+
+**Pre-empirical falsifiability.** Every cluster commits to a system-level falsifiable hypothesis stated in operational form (a metric, a benchmark family, a direction of effect, a threshold). None of the hypotheses has yet been empirically tested. The validation level (per §4.6) is _literature + falsifiable hypothesis_, not _literature + toy implementation_; this is the deliberate v1 trade-off between defensibility and growth velocity. A toy-implementation track is part of the future work in Section 8.
+
+**Biology-to-engineering transfer caveats per shape.** Constellation transfer is the most direct: the zebra-finch patterns map onto multi-agent reinforcement learning with multi-modal observation, an active area of current AI research. Pipeline transfer is intermediate: the regime / capacity / niche pattern maps onto deployment-tier architecture decisions but requires the AI engineer to commit to deployment niche before training, which is not the dominant practice. Composition transfer is the farthest: prokaryotic regulatory networks are structurally distant from current AI substrates, and the engineering analogs (HyperNets, hierarchical MoE) are research-frontier. Each cluster's `when not to adopt` section catalogs the corresponding caveat.
+
+**Honest in-progress status.** The catalog is at version 1 of an extended program. The case studies in this section are presented as worked examples of methodology and framework, not as final canonical content. The Watch List (§4.8) carries nine active candidates that may produce additional clusters and may produce additional shapes; the framework is open to both. The honesty of the in-progress reporting is itself a methodological commitment: a catalog that conceals its draft status fails the reviewer-defensibility bar that is otherwise the program's load-bearing constraint.
+
+The three clusters together exercise the framework against three distinct shapes, three sources, and three problem classes. The discussion in Section 7 returns to what they collectively support and what they leave open.

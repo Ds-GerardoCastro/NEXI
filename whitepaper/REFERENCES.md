@@ -8,6 +8,8 @@
 
 **Andreas, J., & Klein, D. (2016).** _Reasoning about Pragmatics with Neural Listeners and Speakers._ EMNLP 2016.
 
+**Andrychowicz, M., Denil, M., Gomez, S., Hoffman, M. W., Pfau, D., Schaul, T., Shillingford, B., & de Freitas, N. (2016).** _Learning to learn by gradient descent by gradient descent._ Advances in Neural Information Processing Systems 29 (NIPS 2016). arXiv preprint [arXiv:1606.04474](https://arxiv.org/abs/1606.04474). _arXiv DOI not registered in CrossRef as of 2026-05-09; verified via arXiv directly. Re-validate via the citation toolkit before any external submission._
+
 **Assran, M., Duval, Q., Misra, I., Bojanowski, P., Vincent, P., Rabbat, M., LeCun, Y., & Ballas, N. (2023).** _Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture (I-JEPA)._ CVPR 2023.
 
 ## B
@@ -54,9 +56,13 @@
 
 **Ha, D., & Schmidhuber, J. (2018).** _World Models._ NeurIPS 2018.
 
+**Hagedoorn, K., Tschirren, N., ter Avest, E., Tyson, C., Snijders, L., Griffith, S. C., Naguib, M., & Loning, H. (2026).** _Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)._ bioRxiv preprint, posted 2026-04-27. DOI: [10.1101/2025.09.11.675577](https://doi.org/10.1101/2025.09.11.675577). License CC-BY-NC-ND 4.0.
+
 **Hochner, B. (2012).** _An embodied view of octopus neurobiology._ Current Biology, 22(20), R887–R892.
 
 **Hochreiter, S., & Schmidhuber, J. (1997).** _Long Short-Term Memory._ Neural Computation, 9(8), 1735–1780.
+
+**Hochreiter, S., Younger, A. S., & Conwell, P. R. (2001).** _Learning to learn using gradient descent._ In _Artificial Neural Networks — ICANN 2001_ (Lecture Notes in Computer Science, Vol. 2130, pp. 87–94). Springer. DOI: [10.1007/3-540-44668-0_13](https://doi.org/10.1007/3-540-44668-0_13).
 
 **Hoffmann, J., et al. (2022).** _Training Compute-Optimal Large Language Models (Chinchilla)._ NeurIPS 2022.
 
@@ -82,8 +88,6 @@
 
 **LeCun, Y., Boser, B., Denker, J. S., Henderson, D., Howard, R. E., Hubbard, W., & Jackel, L. D. (1989).** _Backpropagation Applied to Handwritten Zip Code Recognition._ Neural Computation, 1(4), 541–551.
 
-**Hagedoorn, K., Tschirren, N., ter Avest, E., Tyson, C., Snijders, L., Griffith, S. C., Naguib, M., & Loning, H. (2026).** _Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)._ bioRxiv preprint, posted 2026-04-27. DOI: [10.1101/2025.09.11.675577](https://doi.org/10.1101/2025.09.11.675577). License CC-BY-NC-ND 4.0.
-
 ## M
 
 **Marcus, G. (2022).** _Deep Learning Is Hitting a Wall._ Nautilus / arXiv-style essay.
@@ -95,6 +99,8 @@
 ## N
 
 **Nakagaki, T., Yamada, H., & Tóth, Á. (2000).** _Maze-solving by an amoeboid organism._ Nature, 407(6803), 470.
+
+**Nesin, S. M., & Chandrankunnel, M. (2025).** _The need for a new perspective on decision-making in bacteria._ Communicative & Integrative Biology, 18(1), 2463926. DOI: [10.1080/19420889.2025.2463926](https://doi.org/10.1080/19420889.2025.2463926). License CC BY 4.0. Peer-reviewed review article.
 
 ## O
 
@@ -130,6 +136,8 @@
 
 **Trewavas, A. (2014).** _Plant Behaviour and Intelligence._ Oxford University Press.
 
+**Turner, C. R., Russek, E. M., Seed, A., McEwen, E. S., Vélez, N., Morgan, T. J. H., & Griffiths, T. L. (2026).** _Cognitive capacity and control in the evolution of intelligence._ bioRxiv preprint, posted 2026-03-09. DOI: [10.1101/2026.03.07.710317](https://doi.org/10.1101/2026.03.07.710317). License CC-BY 4.0. _CrossRef indexing pending as of 2026-05-09; DOI verified against the biorxiv preprint server. Re-validate via the citation toolkit before any external submission._
+
 ## V
 
 **Vaswani, A., et al. (2017).** _Attention Is All You Need._ NeurIPS 2017.
@@ -143,6 +151,8 @@
 **Ward, P., & Zahavi, A. (1973).** _The importance of certain assemblages of birds as "information-centres" for food-finding._ Ibis, 115(4), 517–534.
 
 **Webb, B. (2002).** _Robots in invertebrate neuroscience._ Nature, 417(6886), 359–363.
+
+**Wolpert, D. H., & Macready, W. G. (1997).** _No free lunch theorems for optimization._ IEEE Transactions on Evolutionary Computation, 1(1), 67–82. DOI: [10.1109/4235.585893](https://doi.org/10.1109/4235.585893).
 
 ---
 
