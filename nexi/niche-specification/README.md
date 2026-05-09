@@ -6,7 +6,7 @@
 >
 > The most upstream design-time pattern in the cluster: **before any architecture decision, specify the niche**. The niche is a typed bundle of deployment parameters — task structure, signal environment, resource envelope, error profile, social surround, evaluation protocol — that downstream patterns consume as input. There is no architecture without a niche.
 >
-> **First `canonical` NEXI in the catalog.** Multi-source evidence: 7 supporting principles spanning two independent sources (Hagedoorn et al. 2026 zebra finch + Turner et al. 2026 mathematical model). Schema has been stable across three subsequent ingestions (Turner cluster, deep-read protocol upgrade, bacteria cluster). Falsifiable hypothesis is sharply stated and operationally testable. The promotion meets all three `canonical`-status criteria per `docs/methodology.md`.
+> **First `canonical` NEXI in the catalog.** Multi-source evidence: 7 supporting principles spanning two independent sources (Hagedoorn et al. 2026 zebra finch + Turner et al. 2026 mathematical model). Schema has been stable across three subsequent ingestions (Turner cluster, methodology refinement, bacteria cluster). Falsifiable hypothesis is sharply stated and operationally testable. The promotion meets all three `canonical`-status criteria per `docs/methodology.md`.
 
 ---
 

@@ -45,5 +45,5 @@
 
 - Source ingestion: `Decision-Making in Bacteria` (sources/)
 - Atomic principles: `P38 — Meta-Regulation (Regulators of Regulators)`, `P31 — Sigma-Factor Frequency Modulation` (principles/)
-- Metamodel: `MM7 — Meta-Regulation as a First-Class Architectural Layer` (in `Metamodels — Decision-Making in Bacteria` deep-read addendum)
+- Metamodel: `MM7 — Meta-Regulation as a First-Class Architectural Layer` (in `Metamodels — Decision-Making in Bacteria`)
 - Consolidation hub: `Embodiment Without Cortex` (concepts/)

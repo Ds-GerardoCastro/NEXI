@@ -130,4 +130,4 @@ provenance:
     - 'P37 — Stochastic-Memory Coupling'
     - 'P29 — Bacterial Anticipatory Behavior and Cellular Memory'
     - 'P36 — Clone Individuality'
-  vault_metamodel: 'MM4 / MM5 — paired stochastic-memory primitive (deep-read finding)'
+  vault_metamodel: 'MM4 / MM5 — paired stochastic-memory primitive'

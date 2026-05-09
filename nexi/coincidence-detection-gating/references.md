@@ -30,6 +30,6 @@
 ## Vault references (private)
 
 - Source ingestion: `Decision-Making in Bacteria` (sources/)
-- Atomic principle: `P28 — Cell-Density Switched Behavior` (principles/) — including the deep-read addendum that surfaces the author's explicit "coincidence detection" terminology
+- Atomic principle: `P28 — Cell-Density Switched Behavior` (principles/) — including the secondary analysis that surfaces the author's explicit "coincidence detection" terminology
 - Metamodel: `MM6 — Multi-Stream Coincidence Detection as Decision Gating` (in `Metamodels — Decision-Making in Bacteria`)
 - Consolidation hub: `Embodiment Without Cortex` (concepts/)

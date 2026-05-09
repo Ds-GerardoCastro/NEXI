@@ -41,5 +41,5 @@
 
 - Source ingestion: `Decision-Making in Bacteria` (sources/)
 - Atomic principles: `P37 — Stochastic-Memory Coupling`, `P29 — Bacterial Anticipatory Behavior and Cellular Memory`, `P36 — Clone Individuality` (principles/)
-- Metamodel: paired primitive emerging from MM4 + MM5 in `Metamodels — Decision-Making in Bacteria` deep-read addendum
+- Metamodel: paired primitive emerging from MM4 + MM5 in `Metamodels — Decision-Making in Bacteria`
 - Consolidation hub: `Embodiment Without Cortex`, `Niche-Bound Cognition` (concepts/)
