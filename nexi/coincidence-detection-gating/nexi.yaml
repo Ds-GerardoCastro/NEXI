@@ -1,0 +1,106 @@
+id: coincidence-detection-gating
+name: Coincidence-Detection Gating
+status: draft
+version: 0.1.0
+created: 2026-05-09
+audience_voice: builder
+
+natural_exemplars:
+  - species: 'Vibrio cholerae'
+    paper:
+      title: 'The need for a new perspective on decision-making in bacteria'
+      authors:
+        - 'Nesin, Sibin Mathew'
+        - 'Chandrankunnel, Mathew'
+      venue: 'Communicative & Integrative Biology'
+      date: '2025-02-12'
+      doi: '10.1080/19420889.2025.2463926'
+      url: 'https://doi.org/10.1080/19420889.2025.2463926'
+    notes: >
+      Vibrio cholerae biofilm formation requires coincidence detection across
+      two independent receptor systems: BOTH LuxPQ (responding to AI-2) AND
+      CqsS (responding to CAI-1) must be activated for the bacterium to
+      commit to colony behaviour. If either receptor is in the inactivated
+      state, individualistic behaviour persists. The paper itself uses the
+      explicit phrase "coincidence detection" for this gating mechanism.
+
+abstract_claim: >
+  Commitment to a major behavioural mode (regime switch, capacity expansion,
+  modal transition) should require multiple independent context streams to
+  align. A single signal is insufficient; coincidence detection across
+  qualitatively different context channels is the gating primitive that
+  prevents premature commitment under noisy or partial single-stream input.
+  The pattern operates at the architectural level — explicit AND-gates over
+  qualitatively different evidence streams — not at the parameter or training-
+  loss level.
+
+falsifiable_hypothesis: >
+  At matched compute and identical task budgets, AI architectures with
+  explicit multi-stream coincidence-detection gating on major behavioural
+  transitions outperform single-channel-gated architectures on tasks where
+  decision regret is high and single-stream evidence is noisy. Specifically,
+  on benchmarks where the cost of premature commitment is high (e.g.
+  irreversible tool calls, write actions to external systems, multi-step
+  agentic loops with no rollback), coincidence-gated systems should show a
+  measurably lower premature-commitment rate (>=20% reduction) and a
+  measurably higher average decision quality after commitment, compared to
+  single-channel baselines. Refutation: if no such margin appears across an
+  appropriate task suite, this NEXI is refuted as an architectural primitive.
+
+applies_to:
+  - decision-gating
+  - multi-agent-systems
+  - tool-using-agents
+  - irreversible-action-deployments
+  - non-stationary-environments
+  - regime-switching
+
+formats:
+  - architecture
+  - skill
+
+when_to_use: >
+  Any deployment where the system commits to a behavioural mode whose reversal
+  is costly (irreversible tool calls, agentic loops without rollback, mode
+  changes that incur setup overhead). Especially when single-stream evidence
+  is noisy or under-determined and multiple independent context channels
+  exist. Multi-agent settings where commitment to a coordinated behaviour
+  needs multi-channel evidence alignment.
+
+when_not_to_use: >
+  Deployments where commitments are cheap to reverse (simple chat turns with
+  no external side effects, classification tasks, retrieval-only systems).
+  Settings where only one context stream is meaningfully available — adding
+  artificial coincidence-gates across one stream provides no signal.
+  Compute-budget-constrained deployments where multi-stream wiring is too
+  expensive relative to its decision-quality return.
+
+tradeoffs: >
+  Coincidence-gating costs architectural complexity (multi-stream input
+  wiring, explicit AND-gate logic, evidence accumulation state) against
+  decision-quality. The pattern pays when premature commitment is the
+  dominant failure mode; it adds overhead without payoff when single-channel
+  decisions are already reliable. Phase-boundary handling: if one of the
+  required streams becomes consistently unavailable, the gating logic must
+  degrade gracefully rather than block forever.
+
+related_nexi:
+  - stochastic-memory-coupling
+  - meta-regulation
+
+clusters:
+  - acerebrate-decision-making
+
+tags:
+  - decision-gating
+  - multi-stream
+  - coincidence-detection
+  - acerebrate
+  - non-human-template
+  - design-time-and-runtime
+
+provenance:
+  vault_consolidation_hub: 'Embodiment Without Cortex'
+  vault_principles:
+    - 'P28 — Cell-Density Switched Behavior'
+  vault_metamodel: 'MM6 — Multi-Stream Coincidence Detection as Decision Gating'

@@ -1,0 +1,133 @@
+id: stochastic-memory-coupling
+name: Stochastic-Memory Coupling
+status: draft
+version: 0.1.0
+created: 2026-05-09
+audience_voice: builder
+
+natural_exemplars:
+  - species: 'Bacteria (Escherichia coli swarming, Vibrio cholerae sugar switching, multiple species under environmental unpredictability)'
+    paper:
+      title: 'The need for a new perspective on decision-making in bacteria'
+      authors:
+        - 'Nesin, Sibin Mathew'
+        - 'Chandrankunnel, Mathew'
+      venue: 'Communicative & Integrative Biology'
+      date: '2025-02-12'
+      doi: '10.1080/19420889.2025.2463926'
+      url: 'https://doi.org/10.1080/19420889.2025.2463926'
+    notes: >
+      Bacterial decision-making under environmental unpredictability depends
+      on the *paired* primitive of stochastic state-switching plus persistent
+      cellular memory. The paper cites Landmann et al. 2021 (eLife) as the
+      theoretical model for the pairing: phenotypic heterogenicity depends on
+      stochastic switching across different states; the stochastic switching
+      requires cellular memory as a crucial component; cellular memory
+      produces more accurate and beneficial decision-making. Iron-based
+      signal transduction is the molecular substrate of cellular memory in
+      bacteria; multi-generational examples include 4-generation swarming
+      memory in E. coli.
+
+  - species: 'Theoretical model (Landmann et al. 2021)'
+    paper:
+      title: 'A dynamic regulatory architecture for environmental learning'
+      authors:
+        - 'Landmann, S.'
+        - '(et al., per Nesin & Chandrankunnel ref [12])'
+      venue: 'eLife'
+      date: '2021'
+    notes: >
+      Cited as ref [12] in Nesin & Chandrankunnel 2025. Provides the
+      theoretical model showing that stochastic switching of gene expression
+      requires cellular memory as a crucial component for adaptive decision-
+      making under unpredictable environments. Independent corroboration that
+      the pairing — not either component alone — is the load-bearing primitive.
+
+abstract_claim: >
+  Decision-making under environmental unpredictability requires the *paired*
+  primitive of (a) stochastic state-switching and (b) persistent memory of
+  which states proved beneficial. Stochasticity alone is noise; memory alone
+  is rigid. The coupling — random transitions selected and retained by
+  accumulated state — is the load-bearing design pattern. AI design vocabulary
+  today treats stochasticity (sampling, exploration, noise) and memory (KV-
+  cache, RAG, replay buffers) as separate concerns; the bacterial pattern
+  argues they must be coupled at the architectural level.
+
+falsifiable_hypothesis: >
+  At matched compute and equivalent task budgets, AI agents combining
+  stochastic state-transition with persistent state-memory (where memory
+  tracks which transitions proved beneficial and biases future stochastic
+  switching toward those) outperform agents with either component alone on
+  tasks involving partial-observability and environmental unpredictability.
+  Specifically: on benchmarks varying environmental predictability, the
+  stochastic-memory-coupled architecture should show a measurable advantage
+  (>=15% improvement in average task success or sample efficiency) over
+  pure-stochastic and pure-memory baselines, with the advantage scaling with
+  the unpredictability of the environment. Refutation: if either pure-
+  stochastic or pure-memory baselines match the coupled architecture across
+  the predictability spectrum, the pairing claim is refuted (one of them is
+  doing the work, not the coupling).
+
+applies_to:
+  - reinforcement-learning
+  - agentic-systems
+  - decision-making-under-uncertainty
+  - non-stationary-environments
+  - exploration-exploitation
+  - multi-agent-systems
+
+formats:
+  - architecture
+  - skill
+
+when_to_use: >
+  Decision-making under environmental unpredictability where the system has
+  to balance exploration with exploitation, and where retaining state across
+  decisions is feasible. Especially appropriate for non-stationary
+  environments, multi-step agentic tasks, and deployments where the task
+  distribution is heterogeneous enough that no single fixed policy will
+  perform well.
+
+when_not_to_use: >
+  Stable / stationary single-task deployments where the optimal policy is
+  knowable in advance — the stochastic-exploration overhead provides no
+  payoff. Cases where persistent memory is structurally unavailable
+  (memoryless protocols, strict stateless service interfaces). Tasks where
+  the cost of stochastic exploration is unbounded (irreversible production
+  side effects without rollback) — the pattern presupposes that stochastic
+  switching is bounded in cost.
+
+tradeoffs: >
+  The coupling costs both stochastic-exploration overhead (sampling cost,
+  potentially worse short-term outcomes) and memory-storage overhead
+  (persistent state, retrieval costs at decision time). It pays when
+  unpredictability is high enough that fixed-policy or fixed-memory baselines
+  fail. The coupling specifically must avoid two failure modes:
+  (a) memory-domination (all transitions become deterministic, eliminating
+  exploration), and (b) stochasticity-domination (memory has insufficient
+  weight, decisions stay random). The architecture must keep both
+  components active and balance their relative contribution.
+
+related_nexi:
+  - coincidence-detection-gating
+  - meta-regulation
+
+clusters:
+  - acerebrate-decision-making
+
+tags:
+  - stochasticity
+  - memory
+  - paired-primitive
+  - exploration-exploitation
+  - unpredictability-handling
+  - acerebrate
+  - non-human-template
+
+provenance:
+  vault_consolidation_hub: 'Embodiment Without Cortex'
+  vault_principles:
+    - 'P37 — Stochastic-Memory Coupling'
+    - 'P29 — Bacterial Anticipatory Behavior and Cellular Memory'
+    - 'P36 — Clone Individuality'
+  vault_metamodel: 'MM4 / MM5 — paired stochastic-memory primitive (deep-read finding)'

@@ -1,0 +1,116 @@
+id: meta-regulation
+name: Meta-Regulation
+status: draft
+version: 0.1.0
+created: 2026-05-09
+audience_voice: builder
+
+natural_exemplars:
+  - species: 'Bacteria (multiple species; canonical example Bacillus subtilis σB-factor regulation)'
+    paper:
+      title: 'The need for a new perspective on decision-making in bacteria'
+      authors:
+        - 'Nesin, Sibin Mathew'
+        - 'Chandrankunnel, Mathew'
+      venue: 'Communicative & Integrative Biology'
+      date: '2025-02-12'
+      doi: '10.1080/19420889.2025.2463926'
+      url: 'https://doi.org/10.1080/19420889.2025.2463926'
+    notes: >
+      Bacteria implement explicit *meta-regulation*: anti-σ proteins control
+      the synthesis or proteolysis of σ factors, which themselves regulate
+      RNA polymerase, which regulates gene transcription. Three-level
+      regulatory hierarchy with explicit meta-control over the control system
+      itself. Each bacterial strain has different *types* of σ-factors AND
+      different anti-σ factors — diversity exists at the regulator-level,
+      not only at the gene-level. Extracytoplasmic-function (ECF) σ-factors
+      bridge environmental sensing and gene expression, providing a dedicated
+      meta-regulatory linking layer between outside and inside.
+
+abstract_claim: >
+  Decision-making systems should carry an explicit *regulator-of-regulators*
+  layer that dynamically up- or down-regulates the regulators themselves at
+  runtime. This is qualitatively distinct from amplitude scaling (turning
+  control up or down) and from learned-optimiser meta-learning (which is a
+  training-time technique). Meta-regulation is a runtime architectural
+  commitment: components whose explicit job is to control other controllers,
+  with their own dynamics, accessible during deployment. Diversity at the
+  regulator-level (multiple σ-factor types, multiple anti-σ types) produces
+  diversity at the regulator-of-regulator level — the meta-regulatory layer
+  is itself differentiated, not a single global controller.
+
+falsifiable_hypothesis: >
+  At matched compute and equivalent task budgets, AI architectures with
+  explicit dynamic meta-regulators (components that runtime up- or down-
+  regulate other regulators, with their own dynamics) outperform flat-
+  regulation architectures on tasks involving distribution shift or non-
+  stationarity. Specifically: on benchmarks where the input distribution
+  changes mid-deployment, meta-regulated architectures should show a
+  measurable advantage (>=10% reduction in performance degradation under
+  distribution shift) over architectures with single-level routing or
+  flat-attention regulation, at matched parameter count and compute.
+  Additionally, removing the meta-regulator layer (lesion experiment) should
+  produce a measurably worse result than removing equivalent compute from
+  any other layer. Refutation: if no such margin appears, or if removing
+  the meta-regulator does not produce disproportionate degradation, this
+  NEXI is refuted as a runtime architectural primitive.
+
+applies_to:
+  - meta-learning
+  - hypernet-architectures
+  - mixture-of-experts-routing
+  - distribution-shift-robustness
+  - non-stationary-deployments
+  - dynamic-architecture-search
+
+formats:
+  - architecture
+  - skill
+
+when_to_use: >
+  Deployments expected to encounter distribution shift, non-stationarity,
+  or heterogeneous task families that require the system to adapt its own
+  regulatory behaviour at runtime. Multi-tier deployments where the base
+  controller's behaviour should itself be modulated by deployment-context
+  signals. Systems that cannot afford full retraining or redeployment to
+  adjust to new conditions and need runtime adaptive regulation instead.
+
+when_not_to_use: >
+  Stable single-task deployments with no expected distribution shift —
+  meta-regulator overhead provides no payoff. Compute-budget-constrained
+  deployments where the meta-regulator's runtime cost is not justified
+  by the magnitude of expected adaptation. Settings where the regulator
+  layer itself is hand-tuned and stable; meta-regulation makes sense only
+  when the regulator is dynamic enough to need its own controller.
+
+tradeoffs: >
+  Meta-regulation costs additional architectural complexity: an explicit
+  meta-layer with its own dynamics, parameters, and runtime cost. It pays
+  when the deployment encounters genuine non-stationarity that fixed
+  regulators cannot handle. It can fail if the meta-regulator is itself
+  fragile (control-of-control-of-control regress); architectural design
+  must terminate the regress at a stable layer (typically a hand-tuned or
+  pre-trained meta-regulator that is not itself regulated dynamically).
+
+related_nexi:
+  - coincidence-detection-gating
+  - stochastic-memory-coupling
+
+clusters:
+  - acerebrate-decision-making
+
+tags:
+  - meta-regulation
+  - hierarchical-control
+  - runtime-adaptation
+  - distribution-shift
+  - acerebrate
+  - non-human-template
+  - design-time-and-runtime
+
+provenance:
+  vault_consolidation_hub: 'Embodiment Without Cortex'
+  vault_principles:
+    - 'P38 — Meta-Regulation (Regulators of Regulators)'
+    - 'P31 — Sigma-Factor Frequency Modulation'
+  vault_metamodel: 'MM7 — Meta-Regulation as a First-Class Architectural Layer'
