@@ -1,0 +1,136 @@
+id: heuristics-as-habits-fusion
+name: Heuristics as Habits Fusion
+status: draft
+version: 0.1.0
+created: '2026-05-10'
+audience_voice: builder
+
+natural_exemplars:
+  - species: 'Humans (recognition-heuristic decision-making and motor-habit-formation)'
+    paper:
+      title: >
+        Embodied and embedded ecological rationality: A common vertebrate
+        mechanism for action selection underlies cognition and heuristic
+        decision-making in humans
+      authors:
+        - 'Nordli, Samuel A.'
+        - 'Todd, Peter M.'
+      venue: 'Frontiers in Psychology'
+      date: '2022-11-17'
+      doi: '10.3389/fpsyg.2022.841972'
+      url: 'https://doi.org/10.3389/fpsyg.2022.841972'
+    notes: >
+      Source paper develops the formal equivalence between heuristic
+      decision-making and motor-habit-formation in §6 and §7. The
+      recognition-heuristic worked example (Tokyo / Yokohama / Nagasaki,
+      drawing on Goldstein & Gigerenzer 2002) demonstrates that heuristic-
+      based errors are formally indistinguishable from habit-based errors
+      via the Ecological Context Model's equation (3). The same context-
+      overlap-driven mechanism that selects motor habits selects heuristics
+      under cognitive contexts; the same failure mode (overlap of g and P
+      between contexts where the underlying E differs in goal-relevant ways
+      the agent cannot perceive) explains both heuristic-decision errors
+      and motor-habit errors.
+
+abstract_claim: >
+  Heuristic decision-making (e.g. recognition heuristic, elimination-by-
+  aspects, take-the-best) and motor-habit-formation are the *same
+  architectural mechanism* operating on different repertoires (cognitive
+  operations vs. motor actions). The well-known dichotomy between Type 1
+  (heuristic, fast) and Type 2 (deliberative, slow) reasoning may be
+  misframed at the architectural level: both can be implemented by the
+  same context-overlap-driven action-selection mechanism, with the
+  difference being which repertoire (cognitive Br vs. motor Br) is being
+  selected from. AI systems should treat habits and heuristics as a
+  unified architectural pattern — runtime-chunked behavioural protocols
+  triggered by context-overlap — rather than as separate fast-path and
+  deliberative-path modules.
+
+falsifiable_hypothesis: >
+  At matched compute and identical task budgets, AI architectures that
+  unify habit-style and heuristic-style decision-making under a single
+  context-overlap-driven selection mechanism (drawing from a unified
+  repertoire spanning motor and cognitive operations) outperform same-
+  budget architectures that implement Type 1 / Type 2 reasoning as
+  separate modules on tasks mixing motor and cognitive commitments.
+  Specifically, error patterns should be structurally similar across
+  motor and cognitive domains: when a heuristic fails (e.g. recognition
+  heuristic misapplied to Tokyo / Yokohama / Nagasaki), the failure
+  signature should match the structure of motor-habit failure (e.g.
+  shifter-grasping in unfamiliar rental car) — both arising from
+  overlap of g and P between contexts where E differs in goal-relevant
+  ways the agent cannot perceive. A second testable claim: training
+  improvements to the unified selection mechanism should transfer
+  symmetrically across motor and cognitive domains. Refutation: if
+  unified-mechanism systems do not show structurally similar error
+  signatures across domains and do not show symmetric transfer of
+  training improvements, the heuristics-as-habits formal equivalence
+  is empirically weak.
+
+applies_to:
+  - decision-making
+  - dual-process-architectures
+  - cognitive-shortcuts
+  - habit-formation
+  - cross-domain-error-analysis
+  - bounded-rationality
+
+formats:
+  - architecture
+  - skill
+
+when_to_use: >
+  AI deployments that currently implement Type 1 (fast / heuristic) and
+  Type 2 (deliberative / chunked) reasoning as separate modules, where
+  unification under one context-overlap-driven mechanism would simplify
+  architecture and enable cross-domain error analysis. Embodied agents
+  that mix motor and cognitive commitments under shared goal stacks.
+  Research / engineering work testing whether dual-process architectures
+  can be replaced with single-mechanism architectures that handle both
+  fast and deliberative regimes via repertoire selection rather than
+  module switching. Bounded-cognition contexts where the adaptive-
+  toolbox framing (Gigerenzer, Todd) is the natural design lens.
+
+when_not_to_use: >
+  Deployments where Type 1 and Type 2 reasoning are genuinely
+  implemented by different substrates that should remain separate
+  (e.g. hardware accelerators for fast paths vs. general-purpose CPUs
+  for deliberative paths). Pure-perception or pure-classification
+  systems with no decision-among-alternatives structure. Cases where
+  the dual-process architecture is performing well at low cost and
+  unification would add complexity without payoff.
+
+tradeoffs: >
+  Heuristics-as-habits unification trades architectural simplification
+  (one mechanism instead of two) and cross-domain error-analysis
+  capability against the descriptive convenience of the dual-process
+  framing. For deployments where dual-process is doing real work (e.g.
+  hardware-accelerated fast paths), unification may not pay. For
+  deployments where dual-process is a description rather than an
+  architectural commitment, unification simplifies and exposes shared
+  error signatures.
+
+related_nexi:
+  - action-selection-as-common-substrate
+  - ecological-context-model
+  - exaptation-architectural-reuse
+
+clusters:
+  - embodied-action-selection
+
+tags:
+  - heuristics
+  - habits
+  - dual-process
+  - bounded-rationality
+  - adaptive-toolbox
+  - non-human-template
+  - design-time-and-runtime
+
+provenance:
+  vault_consolidation_hub: 'Niche-Bound Cognition'
+  vault_principles:
+    - 'P44 — Heuristics-as-Habits Formal Equivalence'
+    - 'P40 — Habit Formation as Sequence Chunking under Contextual Stability'
+    - 'P45 — Context-Overlap-Driven Behavior Transfer'
+  vault_metamodel: 'MM2 — Generalised Implementation: Motor↔Cognitive Isomorphism (Nordli & Todd)'

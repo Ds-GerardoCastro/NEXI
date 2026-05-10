@@ -1,0 +1,207 @@
+id: embodied-action-selection
+name: Embodied Action Selection
+status: draft
+version: 0.1.0
+created: '2026-05-10'
+problem_class: >
+  How an agent selects what to do next, given a goal and a context, when
+  "doing" can mean either physical action or cognitive operation. The cluster
+  addresses the architectural function of action selection as a substrate-
+  general invariant — the same default-inhibit / selective-disinhibit gating,
+  goal-directed sequence construction, and contextual reinforcement appearing
+  across substrates as different as molecular regulatory networks (bacteria),
+  nerve nets (cnidarians), and recurrent neural circuits (vertebrate CBGTC).
+  Critically, the cluster also addresses how a single action-selection
+  mechanism, originally evolved for motor control, gets redeployed to operate
+  on cognitive operations via exaptation — yielding heuristic decision-making
+  as a domain-shifted instance of motor habit-formation.
+
+member_nexis:
+  - action-selection-as-common-substrate
+  - ecological-context-model
+  - exaptation-architectural-reuse
+  - heuristics-as-habits-fusion
+
+system_falsifiable_hypothesis: >
+  AI architectures that adopt the full embodied-action-selection cluster
+  (action-selection as a first-class substrate-general primitive, formalised
+  via the Ecological Context Model's agent-goal-environment-behaviour
+  relation, with explicit exaptive reuse of the same selection mechanism
+  across motor and cognitive domains, producing heuristic-style decisions as
+  a subset of habit-style chunked sequences) outperform same-budget
+  architectures that treat action selection as implicit, that separate motor
+  and cognitive control into distinct modules, and that treat heuristics as
+  a categorically separate fast-path. The performance margin is expected on
+  tasks that mix domains (e.g. embodied agents that must plan motor actions
+  and cognitive operations under shared context) and on tasks where the cost
+  of premature commitment is high. Refutation: if isomorphism-designed
+  systems perform no better than the best individual-NEXI baseline at
+  matched compute on cross-domain benchmarks, the cluster's isomorphism
+  claim is refuted (the patterns may still be individually useful as
+  standalone NEXIs).
+
+natural_exemplars:
+  - species: 'Vertebrates (multiple species: lamprey, zebra finch, primate, human)'
+    paper:
+      title: >
+        Embodied and embedded ecological rationality: A common vertebrate
+        mechanism for action selection underlies cognition and heuristic
+        decision-making in humans
+      authors:
+        - 'Nordli, Samuel A.'
+        - 'Todd, Peter M.'
+      venue: 'Frontiers in Psychology'
+      date: '2022-11-17'
+      doi: '10.3389/fpsyg.2022.841972'
+      url: 'https://doi.org/10.3389/fpsyg.2022.841972'
+    notes: >
+      Conceptual-analysis article (CC BY) that develops the Ecological Context
+      Model — a symbolic framework with three numbered equations
+      (C = {A(g), E}; B(C) = f(Br, Ba(g, P)); g+(C) = f(B, E)) — and argues that
+      the cortico-basal ganglia-thalamo-cortical (CBGTC) loop is the universal
+      vertebrate mechanism for action selection (conserved virtually unchanged
+      from lamprey ~560 Mya to human), with cognition and heuristic decision-
+      making implemented as exaptations of the same motor-control machinery.
+      Anchors all four cluster member NEXIs.
+
+  - species: 'Bacteria (multiple species: Escherichia coli, Vibrio cholerae, Bacillus subtilis)'
+    paper:
+      title: 'The need for a new perspective on decision-making in bacteria'
+      authors:
+        - 'Nesin, Sibin Mathew'
+        - 'Chandrankunnel, Mathew'
+      venue: 'Communicative & Integrative Biology'
+      date: '2025-02-12'
+      doi: '10.1080/19420889.2025.2463926'
+      url: 'https://doi.org/10.1080/19420889.2025.2463926'
+    notes: >
+      Peer-reviewed review article (CC BY 4.0) documenting action-selection-
+      like architecture in organisms with no nervous system at all —
+      convergent-divergent molecular pathways, cell-density-switched
+      behaviour, modular regulatory hierarchy. Provides the second-substrate
+      evidence (bacterial molecular networks) that establishes
+      action-selection-as-common-substrate as multi-source.
+
+  - species: 'Acerebrate metazoans (jellyfish, sea anemones)'
+    paper:
+      title: 'Cognitive capacity and control in the evolution of intelligence'
+      authors:
+        - 'Turner, Cameron Rouse'
+        - 'Russek, Evan M.'
+        - 'Seed, Amanda'
+        - 'McEwen, Emma Suvi'
+        - 'Vélez, Natalia'
+        - 'Morgan, Thomas J. H.'
+        - 'Griffiths, Thomas L.'
+      venue: 'bioRxiv preprint'
+      date: '2026-03-09'
+      doi: '10.1101/2026.03.07.710317'
+    notes: >
+      Phylogenetic placement of jellyfish and sea anemones in the passive-
+      storage cognitive regime — nerve net, no brain, but documented action
+      selection via sensitisation. Provides the third-substrate evidence
+      (cnidarian nerve nets) that completes the cross-substrate triangulation
+      for the action-selection-as-common-substrate NEXI.
+
+when_to_adopt: >
+  Embodied-AI deployments where a single agent selects across motor actions
+  and cognitive operations under a shared goal-context schema; cross-domain
+  agentic systems (e.g. agents that must both manipulate the world and reason
+  about it) where architectural duplication is expensive and the same
+  underlying selection machinery would benefit both domains; systems where
+  heuristic / habit-style fast decisions and deliberative-style chunked
+  sequences are both needed and currently implemented as separate modules;
+  research / engineering work where a citable formal framework for
+  action-selection (with verbatim equations) is preferable to ad-hoc
+  pattern descriptions.
+
+when_not_to_adopt: >
+  Pure-perception or pure-classification systems with no commitment to action
+  (no motor outputs, no irreversible cognitive operations, no choice among
+  alternatives). Deployments where centralised, opaque action-selection (e.g.
+  a transformer's autoregressive decoding) is performing well and exposing
+  the selection mechanism as a first-class architectural commitment would add
+  cost without payoff. Pre-training / foundation-model substrate construction
+  (the cluster operates at deployment-time architecture and design, not at
+  the substrate-construction layer).
+
+tradeoffs: >
+  The cluster trades architectural-discipline cost (committing to a single
+  action-selection module shared across domains, formalising context as
+  agent-goal-environment-behaviour, treating exaptation as a deployment-time
+  reuse pattern) against modularity and separation of concerns. For
+  deployments where motor and cognitive domains are genuinely separable and
+  share little context, the discipline is wasted. For embodied-agent
+  deployments where motor and cognitive control share the agent's goal stack
+  and perceptual state, the cluster pays — duplicated machinery is the
+  default cost; reuse is the saving.
+
+complementarity_notes: >
+  The four patterns compose by isomorphism — same machinery, different
+  domains — distinct in shape from the bacteria cluster's layered
+  composition, the bounded-cognitive-architecture cluster's design-time
+  pipeline, and the distributed-social-cognition cluster's mutually-enabling
+  constellation:
+
+  - ecological-context-model is the *formalism layer*: the three numbered
+    equations specify what context, behaviour, and goal-achievement mean as
+    relational structures. Every other member NEXI is an instance of patterns
+    expressed in this formalism.
+
+  - action-selection-as-common-substrate is the *substrate-invariant layer*:
+    the architectural function (default-inhibit / selective-disinhibit
+    gating, goal-directed sequence construction, contextual reinforcement)
+    that recurs across substrates. The formalism describes what it does;
+    this NEXI documents that it recurs.
+
+  - exaptation-architectural-reuse is the *generative layer*: the operating
+    principle by which a single action-selection mechanism originally evolved
+    for motor control gets redeployed to operate on cognitive operations.
+    Without exaptation, the substrate-invariant claim would be a
+    convergent-evolution observation only; with it, the claim becomes a
+    design pressure (reuse over specialisation).
+
+  - heuristics-as-habits-fusion is the *behavioural-instance layer*: a
+    specific consequence of the cluster's other three layers — heuristic
+    decision-making formally expressible as habit-style chunked sequences via
+    the formalism, on the same substrate, via exaptation.
+
+  Removing any one component degrades the others:
+
+  - Without the ecological-context-model formalism, the substrate-invariant
+    claim has no citable formal expression; downstream pattern derivations
+    (heuristics-as-habits) lose their formal grounding.
+  - Without action-selection-as-common-substrate, the formalism describes a
+    structure with no documented cross-substrate occurrence; exaptation
+    becomes a vertebrate-only claim.
+  - Without exaptation-architectural-reuse, the substrate-invariant pattern
+    is a parallel-evolution coincidence rather than a usable design pressure.
+  - Without heuristics-as-habits-fusion, the cluster has formalism + invariant
+    + reuse but no concrete behavioural-level instance demonstrating the
+    cluster's predictive content. The fusion NEXI is what makes the
+    isomorphism claim falsifiable at task-level evaluation.
+
+  This is the cluster's compositional claim under the *isomorphism* shape:
+  the same machinery, formalised by a shared framework, redeployed across
+  domains, manifests as patterns previously studied as distinct phenomena.
+
+tags:
+  - cluster
+  - embodied-cognition
+  - action-selection
+  - exaptation
+  - ecological-rationality
+  - vertebrate-deep
+  - isomorphism-cluster
+  - non-human-template
+
+provenance:
+  vault_consolidation_hubs:
+    - 'Non-Human Intelligence Patterns'
+    - 'Niche-Bound Cognition'
+    - 'Context-Dependent Semantics'
+  vault_metamodels:
+    - 'MM1 — The Ecological Context Model formalism (Nordli & Todd)'
+    - 'MM2 — Generalised Implementation: Motor↔Cognitive Isomorphism (Nordli & Todd)'
+    - 'MM3 — Goal-Cyclic Reinforcement (Nordli & Todd)'
+    - 'MM4 — Embodiment-as-State-Merger (Nordli & Todd)'

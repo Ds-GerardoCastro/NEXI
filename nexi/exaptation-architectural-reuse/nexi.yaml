@@ -1,0 +1,131 @@
+id: exaptation-architectural-reuse
+name: Exaptation Architectural Reuse
+status: draft
+version: 0.1.0
+created: '2026-05-10'
+audience_voice: builder
+
+natural_exemplars:
+  - species: 'Vertebrates (humans; broader vertebrate-CBGTC machinery)'
+    paper:
+      title: >
+        Embodied and embedded ecological rationality: A common vertebrate
+        mechanism for action selection underlies cognition and heuristic
+        decision-making in humans
+      authors:
+        - 'Nordli, Samuel A.'
+        - 'Todd, Peter M.'
+      venue: 'Frontiers in Psychology'
+      date: '2022-11-17'
+      doi: '10.3389/fpsyg.2022.841972'
+      url: 'https://doi.org/10.3389/fpsyg.2022.841972'
+    notes: >
+      Source paper's master architectural claim: the cortico-basal ganglia-
+      thalamo-cortical loop, originally evolved for sequential goal-directed
+      motor control, was redeployed in human evolution to regulate cognitive
+      control — sequences of cognitive operations in pursuit of cognitive
+      goals. Cognition is therefore not implemented by a separate cognitive
+      module; it is implemented by the same procedural-learning / habit-
+      formation machinery, applied to a different domain. The internal-
+      external search homology (Hills/Todd/Miller research programme) is a
+      specific instance: physical search is phylogenetically older and
+      ubiquitous; cognitive search arose much later via exaptation of the
+      physical-search machinery.
+
+abstract_claim: >
+  Architectural reuse via exaptation should be a first-class deployment-time
+  design pressure, not an incidental property of pre-training. When a
+  well-developed mechanism originally built for one domain (e.g. motor
+  control, physical search) can be redeployed to operate on a different
+  domain (e.g. cognitive control, information search) without architectural
+  duplication, the redeployment should be made explicit and lesionable. AI
+  architectures that favour reuse over specialisation extract efficiency the
+  modular alternatives cannot: one well-tuned mechanism handles N domains;
+  improvements in one domain transfer to all. Natural intelligence has
+  repeatedly used this pattern; the perceptron lineage has overwhelmingly
+  favoured the opposite (specialised modules per task).
+
+falsifiable_hypothesis: >
+  At matched compute and identical task budgets, AI architectures that
+  redeploy a single well-developed mechanism across multiple domains via
+  explicit exaptation (e.g. one action-selection module handling both motor
+  and cognitive selection; one search mechanism handling both physical-space
+  and information-space search) outperform same-budget architectures with
+  duplicate domain-specific modules on cross-domain tasks, with measurably
+  lower marginal cost per new domain added. A second testable claim:
+  improvements made to the redeployed mechanism in one domain should
+  transfer at measurably higher rates to other redeployment domains than
+  improvements made to one of N duplicate modules transfer to its siblings.
+  Refutation: if exaptation-architecture systems perform indistinguishably
+  from duplicate-module architectures on cross-domain benchmarks at matched
+  compute and matched added-domain marginal cost, the architectural-reuse
+  claim is empirically weak. The internal-external search analog (Hills et
+  al. 2008, 2015a, 2015b; Todd & Hills, 2020; Todd & Miller, 2018) provides
+  the strongest existing evidence pattern; AI replications would
+  corroborate.
+
+applies_to:
+  - cross-domain-deployment
+  - embodied-ai
+  - tool-using-agents
+  - long-horizon-planning
+  - architectural-component-reuse
+  - mechanism-interpretability
+
+formats:
+  - architecture
+  - skill
+
+when_to_use: >
+  Cross-domain agentic systems where the same underlying mechanism could
+  benefit multiple domains if shared (motor + cognitive selection;
+  physical + information search; reasoning + tool use as same-mechanism
+  applications). Embodied-AI deployments where domain-duplicate machinery
+  is the current default and reduction in marginal cost per new domain is
+  valued. Research / engineering work explicitly testing whether the same
+  mechanism can serve N domains as opposed to N copies of similar
+  mechanisms. Mechanism-interpretability projects where exposing the
+  reuse pattern is a deliverable.
+
+when_not_to_use: >
+  Single-domain deployments where there is no second domain to redeploy
+  to. Deployments where the candidate mechanisms are domain-specifically
+  optimised in ways that make reuse counterproductive (the marginal cost
+  of forcing reuse exceeds the benefit). Pre-training / foundation-model
+  substrate construction (the NEXI operates at deployment-time architecture,
+  not at substrate-construction layer; pre-training already implicitly
+  shares parameters across domains via end-to-end learning).
+
+tradeoffs: >
+  Architectural-reuse via exaptation trades specialisation efficiency
+  (a domain-specific module can be tuned to its domain alone) against
+  cross-domain reuse efficiency (one tuned module amortises across N
+  domains, with cross-domain transfer of improvements). For deployments
+  where one or two domains dominate cost, specialisation pays. For
+  deployments adding N domains over time (typical of agentic systems
+  growing capability surfaces), exaptation pays. Engineers should
+  explicitly audit whether their growth path is "few domains, deep
+  specialisation" or "many domains, shared substrate" before committing.
+
+related_nexi:
+  - action-selection-as-common-substrate
+  - ecological-context-model
+  - heuristics-as-habits-fusion
+
+clusters:
+  - embodied-action-selection
+
+tags:
+  - exaptation
+  - architectural-reuse
+  - cross-domain
+  - design-pressure
+  - non-human-template
+  - mechanism-interpretability
+
+provenance:
+  vault_consolidation_hub: 'Non-Human Intelligence Patterns'
+  vault_principles:
+    - 'P41 — Exaptation of Motor Circuitry for Cognitive Control'
+    - 'P46 — Internal-External Search Homology'
+  vault_metamodel: 'MM2 — Generalised Implementation: Motor↔Cognitive Isomorphism (Nordli & Todd)'
