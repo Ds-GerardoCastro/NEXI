@@ -48,6 +48,8 @@
 
 **Girdhar, R., et al. (2023).** _ImageBind: One Embedding Space To Bind Them All._ CVPR 2023.
 
+**Goldstein, D. G., & Gigerenzer, G. (2002).** _Models of ecological rationality: The recognition heuristic._ Psychological Review, 109(1), 75–90. DOI: [10.1037/0033-295X.109.1.75](https://doi.org/10.1037/0033-295X.109.1.75).
+
 **Goodman, N. D., & Frank, M. C. (2016).** _Pragmatic language interpretation as probabilistic inference._ Trends in Cognitive Sciences, 20(11), 818–829.
 
 **Grice, H. P. (1975).** _Logic and conversation._ In: Cole, P. & Morgan, J. (Eds.), _Syntax and Semantics, Vol. 3: Speech Acts_. Academic Press.
@@ -102,6 +104,8 @@
 
 **Nesin, S. M., & Chandrankunnel, M. (2025).** _The need for a new perspective on decision-making in bacteria._ Communicative & Integrative Biology, 18(1), 2463926. DOI: [10.1080/19420889.2025.2463926](https://doi.org/10.1080/19420889.2025.2463926). License CC BY 4.0. Peer-reviewed review article.
 
+**Nordli, S. A., & Todd, P. M. (2022).** _Embodied and embedded ecological rationality: A common vertebrate mechanism for action selection underlies cognition and heuristic decision-making in humans._ Frontiers in Psychology, 13, 841972. DOI: [10.3389/fpsyg.2022.841972](https://doi.org/10.3389/fpsyg.2022.841972). License CC BY. Peer-reviewed conceptual-analysis article.
+
 ## O
 
 **Oliehoek, F. A., & Amato, C. (2016).** _A Concise Introduction to Decentralized POMDPs._ Springer Briefs in Intelligent Systems.
@@ -133,6 +137,8 @@
 **Sutton, R. S. (2019).** _The Bitter Lesson._ incompleteideas.net essay.
 
 ## T
+
+**Todd, P. M., & Hills, T. T. (2020).** _Foraging in mind._ Current Directions in Psychological Science, 29(3), 309–315. DOI: [10.1177/0963721420915861](https://doi.org/10.1177/0963721420915861).
 
 **Trewavas, A. (2014).** _Plant Behaviour and Intelligence._ Oxford University Press.
 
