@@ -59,8 +59,9 @@ class CitationValidator:
         
         entries = []
         
-        # Match BibTeX entries
-        pattern = r'@(\w+)\s*\{\s*([^,\s]+)\s*,(.*?)\n\}'
+        # Match BibTeX entries (handle both single-line and multi-line entries)
+        # Greedy (.*) so we match to the LAST closing brace, not the first inner one
+        pattern = r'@(\w+)\s*\{\s*([^,\s]+)\s*,(.*)\s*\}'
         matches = re.finditer(pattern, content, re.DOTALL | re.IGNORECASE)
         
         for match in matches:
@@ -317,6 +318,7 @@ class CitationValidator:
         if not entries:
             return {
                 'total_entries': 0,
+                'valid_entries': 0,
                 'errors': [],
                 'warnings': [],
                 'duplicates': []
