@@ -120,6 +120,8 @@
 
 **Radford, A., et al. (2021).** _Learning Transferable Visual Models from Natural Language Supervision (CLIP)._ ICML 2021.
 
+**Roth, G. (2015).** _Convergent evolution of complex brains and high intelligence._ Philosophical Transactions of the Royal Society B: Biological Sciences, **370**(1684), 20150049. DOI: [10.1098/rstb.2015.0049](https://doi.org/10.1098/rstb.2015.0049). Peer-reviewed review article in a themed issue on the origins of intelligence.
+
 **Rosenblatt, F. (1958).** _The perceptron: a probabilistic model for information storage and organization in the brain._ Psychological Review, 65(6), 386–408.
 
 **Rumelhart, D. E., Hinton, G. E., & Williams, R. J. (1986).** _Learning representations by back-propagating errors._ Nature, 323(6088), 533–536.
