@@ -1,8 +1,9 @@
 id: action-selection-as-common-substrate
 name: Action Selection as Common Substrate
 status: canonical
-version: 1.0.0
+version: 1.1.0
 created: '2026-05-10'
+updated: '2026-05-17'
 audience_voice: builder
 
 natural_exemplars:
@@ -21,12 +22,8 @@ natural_exemplars:
       url: 'https://doi.org/10.3389/fpsyg.2022.841972'
     notes: >
       Documents the cortico-basal ganglia-thalamo-cortical (CBGTC) loop as
-      the universal vertebrate mechanism for action selection. The basal
-      ganglia inhibit most behaviour by default and selectively disinhibit
-      chosen actions in sequence; this circuit has remained virtually
-      unchanged from lamprey (most ancestral living vertebrate, ~560 Mya
-      divergence) to modern humans. Action selection is therefore a
-      vertebrate-deep substrate invariant.
+      the universal vertebrate mechanism for action selection. Conserved
+      virtually unchanged from lamprey (~560 Mya) to modern humans.
 
   - species: 'Bacteria (Escherichia coli, Vibrio cholerae, and others)'
     paper:
@@ -39,13 +36,11 @@ natural_exemplars:
       doi: '10.1080/19420889.2025.2463926'
       url: 'https://doi.org/10.1080/19420889.2025.2463926'
     notes: >
-      Documents action-selection-like architecture in organisms with no
-      nervous system at all. Convergent-divergent molecular pathways perform
-      the equivalent of default-inhibit / selective-disinhibit gating;
-      cell-density-switched behaviour produces sequence construction;
-      operon-regulon-module hierarchy produces contextual reinforcement of
-      successful behavioural protocols. Architectural function is preserved;
-      substrate is molecular regulatory networks, not neural circuitry.
+      Action-selection-like architecture in organisms with no nervous system.
+      Convergent-divergent molecular pathways implement default-inhibit /
+      selective-disinhibit gating; cell-density-switched behaviour produces
+      sequence construction; operon-regulon-module hierarchy produces
+      contextual reinforcement. Substrate is molecular regulatory networks.
 
   - species: 'Cnidarians (jellyfish, sea anemones)'
     paper:
@@ -64,24 +59,44 @@ natural_exemplars:
     notes: >
       Phylogenetic placement of jellyfish and sea anemones in the
       passive-storage cognitive regime — nerve net, no brain, but documented
-      action selection via sensitisation. Cnidarian nerve-net implementation
-      establishes the third substrate (alongside vertebrate-CBGTC and
-      bacterial-molecular) at which action-selection appears as an
-      architectural pattern.
+      action selection via sensitisation. Third substrate alongside
+      vertebrate-CBGTC and bacterial-molecular.
+
+  - species: 'Cross-phyletic synthesis (Hymenoptera, Cephalopoda, Teleostei, Aves, Mammalia)'
+    paper:
+      title: 'Convergent evolution of complex brains and high intelligence'
+      authors:
+        - 'Roth, Gerhard'
+      venue: 'Philosophical Transactions of the Royal Society B: Biological Sciences'
+      date: '2015-12-19'
+      doi: '10.1098/rstb.2015.0049'
+      url: 'https://doi.org/10.1098/rstb.2015.0049'
+    notes: >
+      Documents convergent emergence of complex associative architecture
+      across five non-homologous neural substrates: insect mushroom body,
+      octopod vertical lobe, cichlid pallium, corvid/psittacid avian pallium,
+      and mammalian isocortex. Adds a fourth substrate vertex to this NEXI's
+      substrate-general claim. Roth's emphasis on spatial-learning /
+      navigation as the dominant evolutionary driver sharpens the link to
+      action-selection-under-environmental-prediction.
 
 abstract_claim: >
   Action selection — the architectural function of choosing what to do next
   given a goal and a context — is a substrate-general invariant. The
   function recurs across substrates as different as bacterial molecular
   regulatory networks (no nervous system at all), cnidarian nerve nets (no
-  brain), and vertebrate cortico-basal ganglia-thalamo-cortical loops
+  brain), vertebrate cortico-basal ganglia-thalamo-cortical loops
   (centralised neural circuitry conserved virtually unchanged for ~560
-  million years). The architectural pattern (default-inhibit / selective-
+  million years), and the convergent-divergent fan motif independently
+  evolved in five phyla (insect mushroom body, octopod vertical lobe,
+  cichlid pallium, corvid/psittacid avian pallium, mammalian isocortex —
+  Roth 2015). The architectural pattern (default-inhibit / selective-
   disinhibit gating, goal-directed sequence construction, contextual
-  reinforcement of successful sequences) is preserved across all three;
-  only the substrate-specific implementation differs. AI architectures
-  should treat action selection as a first-class architectural commitment
-  rather than as an emergent property of an opaque substrate.
+  reinforcement of successful sequences) is preserved across all four
+  substrates; only the substrate-specific implementation differs. AI
+  architectures should treat action selection as a first-class
+  architectural commitment rather than as an emergent property of an opaque
+  substrate.
 
 falsifiable_hypothesis: >
   At matched compute and identical task budgets, AI architectures with an
@@ -98,8 +113,7 @@ falsifiable_hypothesis: >
   duplicate-module architectures. Refutation: if substrate-implicit
   architectures perform indistinguishably on long-horizon goal-pursuit
   benchmarks at matched compute, the substrate-general invariant claim
-  is empirically weak and the NEXI's promotion to canonical should be
-  reconsidered.
+  is empirically weak.
 
 applies_to:
   - agentic-systems
@@ -116,35 +130,29 @@ formats:
 when_to_use: >
   Any deployment where the system must select among alternatives to commit
   to a behavioural sequence — agentic systems, embodied robots, tool-using
-  agents, hierarchical planners, cross-domain agents that select across
-  motor and cognitive operations. Especially valuable when the deployment
-  benefits from making the selection mechanism inspectable, lesionable, and
-  shareable across domains rather than entangled with substrate-specific
-  emergence.
+  agents, hierarchical planners, cross-domain agents. Especially valuable
+  when the deployment benefits from making the selection mechanism
+  inspectable, lesionable, and shareable across domains.
 
 when_not_to_use: >
   Pure-perception or pure-classification systems with no commitment among
   alternatives. Deployments where opaque substrate-implicit selection is
-  performing well and exposing the mechanism would add cost without payoff.
-  Pre-training / foundation-model substrate construction (the NEXI operates
-  at deployment-time architecture, not at substrate-construction layer).
+  performing well. Pre-training / foundation-model substrate construction
+  (the NEXI operates at deployment-time architecture).
 
 tradeoffs: >
   Treating action selection as a first-class architectural commitment costs
   upfront design effort and module-boundary discipline. In return, the
-  selection mechanism becomes inspectable (you can ask: which action did
-  the agent select, and on what evidence?), lesionable (you can ablate
-  selection pressure to test its load-bearing role), and reusable across
-  domains (paired with exaptation, the same module handles motor and
-  cognitive selection without duplication). For deployments where the
-  selection mechanism is implicit-but-working, the discipline is overhead.
-  For deployments where selection failures are the dominant failure mode,
-  the discipline pays.
+  selection mechanism becomes inspectable, lesionable, and reusable across
+  domains. For deployments where the selection mechanism is
+  implicit-but-working, the discipline is overhead. For deployments where
+  selection failures are the dominant failure mode, the discipline pays.
 
 related_nexi:
   - ecological-context-model
   - exaptation-architectural-reuse
   - heuristics-as-habits-fusion
+  - expansion-readout-circuit
 
 clusters:
   - embodied-action-selection
@@ -156,6 +164,7 @@ tags:
   - canonical
   - non-human-template
   - design-time-and-runtime
+  - cross-phyletic
 
 provenance:
   vault_consolidation_hub: 'Non-Human Intelligence Patterns'
@@ -165,4 +174,5 @@ provenance:
     - 'P26 — Convergent-Divergent Molecular Pathways'
     - 'P28 — Cell-Density Switched Behavior'
     - 'P30 — Modular Regulatory Hierarchy (Operon-Regulon-Module)'
+    - 'P50 — Polyphyletic Intelligence via Non-Homologous Modules'
   vault_metamodel: 'MM2 — Generalised Implementation: Motor↔Cognitive Isomorphism (Nordli & Todd)'

@@ -1,0 +1,131 @@
+id: expansion-readout-circuit
+name: Expansion-Readout Circuit
+status: draft
+version: 0.1.0
+created: '2026-05-17'
+audience_voice: builder
+
+natural_exemplars:
+  - species: 'Cross-phyletic synthesis (Hymenoptera, Cephalopoda, Teleostei, Aves, Mammalia)'
+    paper:
+      title: 'Convergent evolution of complex brains and high intelligence'
+      authors:
+        - 'Roth, Gerhard'
+      venue: 'Philosophical Transactions of the Royal Society B: Biological Sciences'
+      date: '2015-12-19'
+      doi: '10.1098/rstb.2015.0049'
+      url: 'https://doi.org/10.1098/rstb.2015.0049'
+    notes: >
+      The same circuit motif independently evolved across five non-homologous
+      neural substrates. Quantitative cytoarchitecture: honeybee mushroom
+      body (300 000 Kenyon cells receiving from ~800 antennal-lobe projection
+      neurons via ~1M presynaptic contacts; sparse-to-dense expansion ~375×);
+      octopus vertical lobe (1.8M afferent fibres penetrating 26M tiny
+      interneurons in an orthogonal en-passant crossbar, converging onto
+      65 000 large projection neurons). Same motif in cichlid pallium,
+      corvid/psittacid avian pallium, mammalian isocortex. The motif:
+      convergent multimodal afferents → high-dimensional expansion sheet of
+      densely packed small interneurons (orthogonal crossbar connectivity) →
+      sparse readout via a small population of large projection neurons.
+      Functionally an *expand-then-readout* architecture: closer to
+      cerebellum-like circuits / reservoir computing / random-projection
+      feature expansion than to either dense feedforward or Hebbian
+      plasticity alone. Vault-internal terminology: convergent-divergent fan.
+
+abstract_claim: >
+  Flexible cognition rests on a specific circuit motif — a sparse population
+  of large projection neurons reading out from a vast expansion sheet of
+  densely packed small interneurons, with input connectivity forming an
+  orthogonal crossbar. The architecture is *expand-then-readout*: input
+  dimensionality is dramatically expanded onto a high-dimensional
+  interneuron substrate, then collapsed onto a sparse projection population
+  that drives downstream behaviour. Roth (2015) documents this motif
+  recurring convergently in five phyla on non-homologous neural substrates,
+  with quantitative cytoarchitecture in bee and octopus. The pattern is a
+  candidate substrate-general design primitive: AI architectures with a
+  fixed-or-random high-dimensional expansion stage followed by a sparse
+  projection readout should support rapid associative generalisation that
+  flat depth-scaled dense networks miss.
+
+falsifiable_hypothesis: >
+  At matched parameter count and matched compute, AI architectures with a
+  fixed-or-random high-dimensional expansion stage feeding a sparse
+  projection readout (cerebellum-like circuits, reservoir computing,
+  mixture-of-experts with sparse routing in the expansion direction)
+  outperform equal-parameter dense feedforward baselines on tasks
+  requiring rapid associative generalisation under bounded compute —
+  specifically on few-shot novel-stimulus generalisation, multi-modal
+  binding under partial input, and associative pattern completion.
+  Operationalisation: on cerebellum-inspired benchmarks (associative-
+  generalisation suite of CIFAR-FS, mini-ImageNet, omniglot-extended) the
+  expansion-readout architecture should outperform equal-parameter dense
+  baselines by ≥10% relative on few-shot accuracy. Refutation: if dense
+  feedforward of equal parameter count matches expansion-readout on
+  associative-generalisation benchmarks at matched compute, this pattern's
+  claim is refuted and the convergent-evolution evidence becomes biological
+  observation without computational implication.
+
+applies_to:
+  - perception
+  - world-models
+  - associative-memory
+  - cerebellum-inspired-models
+  - sparse-coding
+  - reservoir-computing
+  - mixture-of-experts
+
+formats:
+  - architecture
+  - skill
+
+when_to_use: >
+  Architectures that need rapid associative generalisation from few
+  examples, multi-modal binding under partial input, or pattern completion
+  under noise. Substrate-level architectural commitment: design an
+  expansion stage explicitly rather than expecting it to emerge from depth.
+  Particularly valuable for systems that must integrate multiple modalities
+  with limited training data per cross-modal binding.
+
+when_not_to_use: >
+  Tasks dominated by dense feature compositionality (e.g. high-resolution
+  image classification with abundant training data) where a depth-scaled
+  dense feedforward architecture has the right inductive bias. Deployments
+  where parameter budget is severely constrained — the expansion stage adds
+  width, and width has a non-trivial parameter cost even when activations
+  are sparse.
+
+tradeoffs: >
+  The expansion stage adds parameter width that is not always free even
+  with sparse activations. The sparse readout requires either a routing
+  mechanism (mixture-of-experts) or explicit top-k selection — both add
+  inference-time overhead. Debugging shifts from "which layer learned
+  what" (dense-feedforward debugging) to "which subset of the expansion
+  layer was selected by the readout" — a different inspection surface
+  that interpretability tools must be tailored for.
+
+related_nexi:
+  - multi-modal-integration
+  - action-selection-as-common-substrate
+  - ecological-context-model
+
+clusters: []
+
+tags:
+  - circuit-motif
+  - sparse-coding
+  - expansion-readout
+  - substrate-independence
+  - non-human-template
+  - cerebellum-analog
+  - reservoir-computing
+
+provenance:
+  vault_consolidation_hub: 'Convergent-Divergent Fan'
+  vault_principles:
+    - 'P47 — Convergent-Divergent Fan Circuit Motif'
+    - 'P48 — Orthogonal Crossbar Substrate'
+    - 'P49 — Soma Miniaturisation as Capacity Scaling Axis'
+    - 'P50 — Polyphyletic Intelligence via Non-Homologous Modules'
+  vault_metamodel: 'MM1 — Expand-Then-Readout as Substrate-General Circuit Motif (Roth)'
+  vault_internal_terminology: 'convergent-divergent fan'
+  pending_cluster: 'substrate-independent-cognition (held pending third source confirming the circuit motif at the functional level)'
