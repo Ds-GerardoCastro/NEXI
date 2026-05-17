@@ -3,13 +3,16 @@
 ## Primary natural-system literature
 
 - **Nordli, S. A., & Todd, P. M. (2022).** _Embodied and embedded ecological rationality: A common vertebrate mechanism for action selection underlies cognition and heuristic decision-making in humans._ Frontiers in Psychology, **13**, 841972. DOI: [10.3389/fpsyg.2022.841972](https://doi.org/10.3389/fpsyg.2022.841972). License CC BY. Peer-reviewed conceptual-analysis article.
-  _Develops the case that the cortico-basal ganglia-thalamo-cortical (CBGTC) loop is the universal vertebrate mechanism for action selection, conserved virtually unchanged from lamprey (~560 Mya) to modern humans. Provides the vertebrate-substrate exemplar for this NEXI's substrate-general claim. Also develops the Ecological Context Model formalism that anchors the rest of the embodied-action-selection cluster._
+  _Develops the case that the cortico-basal ganglia-thalamo-cortical (CBGTC) loop is the universal vertebrate mechanism for action selection, conserved virtually unchanged from lamprey (~560 Mya) to modern humans. Provides the vertebrate-substrate exemplar for this NEXI's substrate-general claim._
 
 - **Nesin, S. M., & Chandrankunnel, M. (2025).** _The need for a new perspective on decision-making in bacteria._ Communicative & Integrative Biology, **18**(1), 2463926. DOI: [10.1080/19420889.2025.2463926](https://doi.org/10.1080/19420889.2025.2463926). License CC BY 4.0. Peer-reviewed review article.
-  _Documents action-selection-like architecture in bacteria — convergent-divergent molecular pathways implementing the equivalent of default-inhibit / selective-disinhibit gating, cell-density-switched behaviour producing sequence construction, and operon-regulon-module hierarchy producing contextual reinforcement. Provides the bacterial-substrate exemplar; establishes that action-selection architecture appears in organisms with no nervous system at all._
+  _Documents action-selection-like architecture in bacteria — convergent-divergent molecular pathways implementing default-inhibit / selective-disinhibit gating, cell-density-switched sequence construction, and operon-regulon-module hierarchy producing contextual reinforcement. Bacterial-substrate exemplar; establishes that action-selection architecture appears in organisms with no nervous system at all._
 
 - **Turner, C. R., Russek, E. M., Seed, A., McEwen, E. S., Vélez, N., Morgan, T. J. H., & Griffiths, T. L. (2026).** _Cognitive capacity and control in the evolution of intelligence._ bioRxiv preprint. DOI: [10.1101/2026.03.07.710317](https://doi.org/10.1101/2026.03.07.710317).
-  _Phylogenetic placement of jellyfish and sea anemones (cnidarians, nerve net, no brain) in the passive-storage cognitive regime — documented action selection via sensitisation. Provides the cnidarian-substrate exemplar; completes the cross-substrate triangulation (molecular / nerve-net / vertebrate-CBGTC) that lifts this NEXI to canonical status._
+  _Phylogenetic placement of jellyfish and sea anemones (cnidarians, nerve net, no brain) in the passive-storage cognitive regime — documented action selection via sensitisation. Cnidarian-substrate exemplar; completes the cross-substrate triangulation that lifted this NEXI to canonical status in v1.0.0._
+
+- **Roth, G. (2015).** _Convergent evolution of complex brains and high intelligence._ Philosophical Transactions of the Royal Society B: Biological Sciences, **370**(1684), 20150049. DOI: [10.1098/rstb.2015.0049](https://doi.org/10.1098/rstb.2015.0049). Peer-reviewed review article.
+  _Added 2026-05-17 (v1.1.0). Documents convergent emergence of complex associative architecture across five non-homologous neural substrates — insect mushroom body, octopod vertical lobe, cichlid pallium, corvid/psittacid avian pallium, and mammalian isocortex. Adds a fourth substrate vertex to this NEXI's substrate-general claim. Roth's emphasis on spatial-learning / navigation as the dominant evolutionary driver sharpens the link to action-selection-under-environmental-prediction._
 
 ## Supporting vertebrate-neuroscience literature
 
@@ -52,7 +55,7 @@
 
 ## Vault references (private)
 
-- Source ingestion: `Embodied and Embedded Ecological Rationality` (sources/) · `Decision-Making in Bacteria` (sources/) · `Cognitive Capacity and Control in the Evolution of Intelligence` (sources/)
-- Atomic principles: `P39 — CBGTC Loop as Universal Vertebrate Action-Selection Substrate` · `P21 — Phylogenetic Placement of Cognitive Regimes` · `P26 — Convergent-Divergent Molecular Pathways` · `P28 — Cell-Density Switched Behavior` · `P30 — Modular Regulatory Hierarchy (Operon-Regulon-Module)`
-- Metamodels: `MM2 — Generalised Implementation: Motor↔Cognitive Isomorphism` (Nordli & Todd) · `MM1 — Substrate-Independent Architectural Primitives` (Nesin & Chandrankunnel)
-- Consolidation hubs: `Non-Human Intelligence Patterns` · `Embodiment Without Cortex`
+- Source ingestions: `Embodied and Embedded Ecological Rationality` · `Decision-Making in Bacteria` · `Cognitive Capacity and Control in the Evolution of Intelligence` · `Convergent evolution of complex brains and high intelligence` (added 2026-05-17)
+- Atomic principles: `P39 — CBGTC Loop as Universal Vertebrate Action-Selection Substrate` · `P21 — Phylogenetic Placement of Cognitive Regimes` · `P26 — Convergent-Divergent Molecular Pathways` · `P28 — Cell-Density Switched Behavior` · `P30 — Modular Regulatory Hierarchy (Operon-Regulon-Module)` · `P50 — Polyphyletic Intelligence via Non-Homologous Modules` (added 2026-05-17)
+- Metamodels: `MM2 — Generalised Implementation: Motor↔Cognitive Isomorphism` (Nordli & Todd) · `MM1 — Substrate-Independent Architectural Primitives` (Nesin & Chandrankunnel) · `MM2 — Architectural Polyphyly as Substrate-Independence Evidence` (Roth, 2026-05-17)
+- Consolidation hubs: `Non-Human Intelligence Patterns` · `Embodiment Without Cortex` · `Convergent-Divergent Fan` (new 2026-05-17)

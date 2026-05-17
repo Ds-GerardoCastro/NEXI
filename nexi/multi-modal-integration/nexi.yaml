@@ -1,8 +1,9 @@
 id: multi-modal-integration
 name: Multi-Modal Integration
-status: draft
-version: 0.1.0
-created: 2026-05-03
+status: canonical
+version: 1.0.0
+created: '2026-05-03'
+updated: '2026-05-17'
 audience_voice: builder
 
 natural_exemplars:
@@ -21,19 +22,71 @@ natural_exemplars:
       venue: 'bioRxiv preprint'
       date: '2026-04-27'
       doi: '10.1101/2025.09.11.675577'
+      url: 'https://doi.org/10.1101/2025.09.11.675577'
     notes: >
-      Zebra finch song-based social networks mirror spatial co-occurrence
-      networks: vocal signals and movement carry convergent information
-      about the same underlying social state. Male song acts as a proxy
-      for pair co-presence; the two channels are mutually confirming.
+      Behavioural-network scale. Zebra finch song-based social networks
+      mirror spatial co-occurrence networks: vocal signals and movement
+      carry convergent information about the same underlying social
+      state. Male song acts as a proxy for pair co-presence; the two
+      channels are mutually confirming. Multi-modal integration is
+      observable at the population/network level.
+
+  - species: 'Bacteria (Escherichia coli, and others)'
+    paper:
+      title: 'The need for a new perspective on decision-making in bacteria'
+      authors:
+        - 'Nesin, Sibin Mathew'
+        - 'Chandrankunnel, Mathew'
+      venue: 'Communicative & Integrative Biology'
+      date: '2025-02-12'
+      doi: '10.1080/19420889.2025.2463926'
+      url: 'https://doi.org/10.1080/19420889.2025.2463926'
+    notes: >
+      Molecular-substrate scale. ~10,000 chemoreceptors per E. coli cell
+      with multiple binding sites each, integrating light (BphP), pH +
+      temperature (Tsr), temperature (Tar), sugars (Trg), and oxygen
+      (FixL) into a single regulatory state. Multi-modal integration is
+      observable at the molecular-sensor level — same architectural
+      commitment as the zebra finch network exemplar, on a substrate
+      with no nervous system at all.
+
+  - species: 'Cross-phyletic synthesis (Hymenoptera, Cephalopoda, Teleostei, Aves, Mammalia)'
+    paper:
+      title: 'Convergent evolution of complex brains and high intelligence'
+      authors:
+        - 'Roth, Gerhard'
+      venue: 'Philosophical Transactions of the Royal Society B: Biological Sciences'
+      date: '2015-12-19'
+      doi: '10.1098/rstb.2015.0049'
+      url: 'https://doi.org/10.1098/rstb.2015.0049'
+    notes: >
+      Circuit-level scale. Reviews convergent emergence of multi-modal
+      integration centres across five independent lineages: insect
+      mushroom bodies, octopod vertical lobe, cichlid pallium,
+      corvid/psittacid avian pallium, and mammalian isocortex. All five
+      substrates share the architectural commitment of multi-modal
+      sensory integration on a shared latent space; none are anatomical
+      homologues. Quantitative circuit data — honeybee mushroom body
+      (300 000 Kenyon cells receiving from ~800 antennal-lobe projection
+      neurons via ~1M presynaptic contacts) and octopus vertical lobe
+      (26M tiny interneurons + 65 000 large projection neurons + 1.8M
+      afferent fibres in an orthogonal en-passant crossbar) — supports
+      the joint-encoder reading at the substrate level.
 
 abstract_claim: >
   A single underlying state is observable through multiple sensory
-  channels. Joint latent representations that explain multiple streams
-  simultaneously preserve cross-channel coherence (and benefit from it),
-  while late-fusion architectures throw away the structural alignment
-  between modalities. Single-modality systems are structurally
-  incomplete — they can only see what their channel reveals.
+  channels, and the architectural commitment to joint multi-modal
+  encoding (single shared latent space across modalities) recurs
+  convergently across radically different substrates — behavioural
+  networks (zebra finch), molecular sensor arrays (bacteria), and
+  non-homologous neural-circuit substrates across five phyla (insect
+  mushroom body, octopus vertical lobe, teleost pallium, avian pallium,
+  mammalian isocortex). Joint latent representations that explain
+  multiple streams simultaneously preserve cross-channel coherence
+  while late-fusion architectures discard it. Single-modality systems
+  are structurally incomplete: they can only see what their channel
+  reveals. The pattern is substrate-independent across three
+  architectural scales of evidence.
 
 falsifiable_hypothesis: >
   Architectures with joint multi-modal encoders (single shared latent
@@ -81,6 +134,7 @@ related_nexi:
   - eavesdropping
   - context-bound-semantics
   - social-hotspots
+  - expansion-readout-circuit
 
 clusters:
   - distributed-social-cognition
@@ -90,9 +144,15 @@ tags:
   - perception
   - sensory-fusion
   - world-models
+  - substrate-independence
+  - canonical
+  - non-human-template
 
 provenance:
   vault_consolidation_hub: 'Multi-Modal Integration'
   vault_principles:
     - 'P04 — Integration of Communication & Spatial Networks'
+    - 'P35 — Combinatorial Multi-Channel Sensor Array'
+    - 'P47 — Convergent-Divergent Fan Circuit Motif'
+    - 'P50 — Polyphyletic Intelligence via Non-Homologous Modules'
   vault_metamodel: 'MM2 — Multi-Channel × Multi-Level Coherence'
