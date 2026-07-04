@@ -1,0 +1,106 @@
+id: expansion-readout-circuit
+name: Expansion-Readout Circuit
+status: draft
+version: 0.1.0
+created: '2026-07-04'
+audience_voice: builder
+
+natural_exemplars:
+  - species: 'Cross-phyletic synthesis (Hymenoptera, Cephalopoda, Teleostei, Aves, Mammalia)'
+    paper:
+      title: 'Convergent evolution of complex brains and high intelligence'
+      authors:
+        - 'Roth, Gerhard'
+      venue: 'Philosophical Transactions of the Royal Society B'
+      date: '2015-12-19'
+      doi: '10.1098/rstb.2015.0049'
+      url: 'https://doi.org/10.1098/rstb.2015.0049'
+    notes: >
+      The same circuit motif has independently evolved in the honeybee
+      mushroom body (~300,000 densely packed Kenyon cells receiving 800
+      projection neurons via ~1M presynaptic contacts) and the octopus
+      vertical lobe (~1.8M afferent fibres penetrating ~26M tiny
+      interneurons that converge back onto 65,000 large projection
+      neurons in an orthogonal en-passant / crossbar arrangement), and
+      recurs in cichlid pallium, corvid/psittacid avian pallium, and
+      mammalian isocortex. The Kenyon-cell somata are the smallest among
+      insects, packed ~15x denser than the densest vertebrate neurons —
+      density, not absolute count, scales the expansion layer.
+
+abstract_claim: >
+  Flexible cognition rests on an expand-then-read-out circuit motif: a
+  small number of large projection neurons carry convergent multimodal
+  afferents that then diverge onto a vast sheet of tiny, densely packed
+  interneurons whose connectivity forms an orthogonal crossbar, which is
+  read back out through a sparse projection bottleneck. The expansion sheet
+  is the substrate of representational richness; the sparse readout is the
+  substrate of selection. This is functionally a high-dimensional
+  expansion layer feeding a sparse projection readout — sparse coding /
+  expansion-recoding, not merely "many neurons and many connections" — and
+  it recurs convergently across radically different anatomical substrates,
+  making it a candidate substrate-independent design primitive.
+
+falsifiable_hypothesis: >
+  Architectures with a fixed-or-random high-dimensional expansion stage
+  followed by a sparse projection readout (cf. cerebellum-like circuits,
+  reservoir computing, mixture-of-experts with sparse routing, random-
+  feature expansion) outperform flat or depth-only-scaled baselines on
+  tasks requiring rapid associative generalisation under bounded compute,
+  at equal parameter count. Refutation: if equal-parameter dense networks
+  match expansion-plus-sparse-readout on associative-generalisation
+  benchmarks at matched compute, this pattern's claim is refuted.
+
+applies_to:
+  - perception
+  - world-models
+  - associative-memory
+  - cerebellum-inspired-models
+  - sparse-coding
+
+formats:
+  - architecture
+
+when_to_use: >
+  When designing a representational stage for rapid associative
+  generalisation under a bounded parameter or compute budget, and you are
+  choosing between depth/width scaling of a dense network and an explicit
+  expansion-then-sparse-readout stage. Useful where a substrate-general,
+  convergently-evolved circuit motif is preferable to an ad-hoc design.
+
+when_not_to_use: >
+  Tasks with no associative-generalisation demand where a dense network at
+  equal budget is adequate; extreme-latency settings where the expansion
+  stage's width is unaffordable; substrate-construction (pretraining)
+  regimes where this operates below the level being built.
+
+tradeoffs: >
+  The expansion sheet is wide and its width (density) is where the cost
+  sits; the sparse readout controls activation cost but adds routing
+  complexity. Against a dense baseline, the motif trades parameter density
+  in a fixed/random expansion for cheaper, better-generalising associative
+  recall — worthwhile only where associative generalisation is the
+  bottleneck.
+
+related_nexi:
+  - multi-modal-integration
+  - action-selection-as-common-substrate
+
+clusters:
+  - substrate-independent-cognition
+
+tags:
+  - circuit-motif
+  - sparse-coding
+  - expansion-readout
+  - cerebellum-analog
+  - substrate-independence
+  - non-human-template
+
+provenance:
+  vault_consolidation_hub: 'Convergent-Divergent Fan'
+  vault_principles:
+    - 'P47 — Convergent-Divergent Fan Circuit Motif'
+    - 'P48 — Orthogonal Crossbar Substrate'
+    - 'P49 — Soma Miniaturisation as Capacity Scaling Axis'
+    - 'P50 — Polyphyletic Intelligence via Non-Homologous Modules'
+  vault_metamodel: 'MM1 — Expand-then-Readout (Roth)'

@@ -1,10 +1,10 @@
 # Multi-Modal Integration
 
-> **NEXI status:** draft · **Formats available:** architecture, skill · **Audience:** builder
+> **NEXI status:** canonical · **Formats available:** architecture, skill · **Audience:** builder
 >
-> **Member of cluster:** [Distributed Social Cognition](../../clusters/distributed-social-cognition/)
+> **Member of clusters:** [Distributed Social Cognition](../../clusters/distributed-social-cognition/) · [Substrate-Independent Cognition](../../clusters/substrate-independent-cognition/)
 >
-> _Joint latent representations across sensory channels — not late fusion. A single underlying state is observable through multiple channels, and coherence across them is itself information._
+> _Joint latent representations across sensory channels — not late fusion. A single underlying state is observable through multiple channels, and coherence across them is itself information. Now multi-source: behavioural evidence from wild zebra finches and cross-phyletic anatomical evidence from convergent brain evolution point at the same commitment._
 
 ---
 
@@ -19,13 +19,31 @@ A common AI architecture pattern is to encode each modality with a separate mode
 | **What it adds**  | Cross-modal grounding, redundancy under noise, joint world-model state.                                  |
 | **What it costs** | Larger encoders, aligned multi-modal training data, harder debugging.                                    |
 
+This is a **canonical** NEXI, promoted on multi-source, cross-phyletic evidence (see below).
+
 ---
 
-## The natural exemplar
+## The natural exemplars
+
+Two independent sources — one behavioural, one anatomical — converge on the same architectural commitment.
+
+### 1. Behavioural: wild zebra finches
 
 Wild zebra finch social networks built from **acoustic** signals (song-based) closely mirror those built from **spatial** observation (movement / co-occurrence). Male song acts as a proxy for pair co-presence — the two channels carry convergent information about the same underlying social state.
 
 The architectural lesson is not "use both channels" but rather **a single underlying social state is jointly observable through both, and the convergence between them is information-bearing**. A finch (and a system inspired by one) does not run two separate inference pipelines and merge their conclusions; it builds a unified social model that both channels constrain.
+
+### 2. Anatomical: convergent brain evolution across five lineages
+
+A comparative synthesis of the independent evolution of complex brains documents **dedicated multimodal integration centres arising convergently** across five lineages that share no complex-brain common ancestor — insect mushroom bodies, the octopod vertical lobe, the cichlid pallium, the corvid and psittacid avian pallium, and the mammalian isocortex. None are anatomical homologues, yet all share the same architectural commitment: integrate multiple sensory streams on a shared associative substrate.
+
+The circuit data backs the joint-encoder reading at the substrate level — the honeybee mushroom body has ~300,000 Kenyon cells reading roughly 800 projection neurons, and the octopus vertical lobe has ~26 million interneurons converging back onto ~65,000 projection neurons. When five non-homologous substrates independently evolve a dedicated integration centre, the *integration hub itself* looks substrate-general rather than lineage-specific. (The circuit shape that implements these hubs is the subject of the sibling [`expansion-readout-circuit`](../expansion-readout-circuit/) NEXI.)
+
+### Why this makes the NEXI canonical
+
+The behavioural evidence (a single underlying state read through convergent channels) and the anatomical evidence (dedicated integration centres evolving convergently across phyla) approach multi-modal integration from opposite methodological poles — wild ethology and comparative neuroanatomy — and arrive at the same commitment. That convergence, cross-phyletic and cross-method, is the basis for the canonical promotion (2026-07-04). It is also why the NEXI belongs to **two** clusters: [Distributed Social Cognition](../../clusters/distributed-social-cognition/) (the behavioural, multi-agent reading) and [Substrate-Independent Cognition](../../clusters/substrate-independent-cognition/) (the convergent-substrate reading).
+
+See [`references.md`](references.md) for the full citation chain.
 
 ---
 
@@ -50,7 +68,7 @@ The architectural lesson is not "use both channels" but rather **a single underl
          (when needed)        (when needed)
 ```
 
-The shared latent space is the architectural commitment. Late-fusion architectures don't have one; they keep modality-specific spaces and combine outputs.
+The shared latent space is the architectural commitment. Late-fusion architectures don't have one; they keep modality-specific spaces and combine outputs. The natural integration centres are the biological form of exactly this shared associative space.
 
 ---
 
@@ -61,6 +79,8 @@ See [`architecture/overview.md`](architecture/overview.md) for components and ps
 - **Joint encoder** producing a single embedding from multi-modal input.
 - **Cross-modal contrastive objective** during training (e.g. CLIP-style) so the modalities align in the shared space.
 - **Modality-specific projection heads** when downstream tasks need single-modality outputs.
+
+The integration hub composes with [`expansion-readout-circuit`](../expansion-readout-circuit/): this NEXI specifies *what* is integrated (multiple streams in a shared latent space); that one specifies *how* the circuit hosting the integration is shaped (a wide sparse-coded expansion feeding a sparse readout).
 
 ## Skill specification
 
@@ -90,7 +110,7 @@ See [`skill/skill.md`](skill/skill.md).
 
 The pattern is described in **multimodal machine learning** literature broadly, with foundational architectures including CLIP (Radford et al. 2021), ALIGN (Jia et al. 2021), and successors. The architectural choice between _joint encoding_ and _late fusion_ is a long-running debate in the field; this NEXI takes a position on it grounded in animal-cognition evidence.
 
-In animal-communication ecology, the convergence of acoustic and spatial networks (Snijders & Naguib 2017; Hagedoorn et al. 2026) is empirical support for the proposition that nature has solved the multi-modal integration problem by maintaining a single underlying state representation that multiple channels constrain — rather than running per-modality inference pipelines.
+In animal-communication ecology, the convergence of acoustic and spatial networks (Snijders & Naguib 2017; Hagedoorn et al. 2026) is behavioural support for the proposition that nature maintains a single underlying state representation that multiple channels constrain — rather than running per-modality inference pipelines. Comparative neuroanatomy (Roth 2015) adds the anatomical form of the same claim: dedicated integration centres evolved convergently across five non-homologous lineages.
 
 Computational analogs:
 
@@ -120,13 +140,13 @@ Full citations: [`references.md`](references.md).
 
 ## Boundary conditions
 
-This NEXI specifies _encoding_ multiple modalities jointly. It does not specify _what to do_ with the joint embedding — that depends on the downstream task and is the domain of other patterns (identity-by-pattern, eavesdropping, world-modelling).
+This NEXI specifies _encoding_ multiple modalities jointly. It does not specify _what to do_ with the joint embedding — that depends on the downstream task and is the domain of other patterns (identity-by-pattern, eavesdropping, world-modelling). It specifies *what* is integrated but not *how the integrating circuit is shaped* — that is the domain of [`expansion-readout-circuit`](../expansion-readout-circuit/).
 
 ---
 
 ## Related
 
-- **Cluster:** [Distributed Social Cognition](../../clusters/distributed-social-cognition/)
-- **Co-dependent NEXIs:** [`identity-by-pattern`](../identity-by-pattern/), [`eavesdropping`](../eavesdropping/), [`context-bound-semantics`](../context-bound-semantics/), [`social-hotspots`](../social-hotspots/)
-- **Vault provenance (private):** principle `P04 — Integration of Communication & Spatial Networks`; metamodel `MM2 — Multi-Channel × Multi-Level Coherence`.
+- **Clusters:** [Distributed Social Cognition](../../clusters/distributed-social-cognition/) · [Substrate-Independent Cognition](../../clusters/substrate-independent-cognition/)
+- **Co-dependent NEXIs:** [`identity-by-pattern`](../identity-by-pattern/), [`eavesdropping`](../eavesdropping/), [`context-bound-semantics`](../context-bound-semantics/), [`social-hotspots`](../social-hotspots/), [`expansion-readout-circuit`](../expansion-readout-circuit/)
+- **Vault provenance (private):** principles `P04 — Integration of Communication & Spatial Networks`, `P47 — Convergent-Divergent Fan Circuit Motif`, `P50 — Polyphyletic Intelligence via Non-Homologous Modules`; metamodel `MM2 — Multi-Channel × Multi-Level Coherence`.
 - **References:** [`references.md`](references.md)

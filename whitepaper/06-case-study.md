@@ -14,17 +14,19 @@ Hagedoorn et al. 2026, _Communication Networks of Wild Zebra Finches (Taeniopygi
 
 Section-by-section reading of the source produced atomic principles in five clusters of claims, each grounded in specific paper sections (Methods, Results on hotspot density, Discussion of multi-channel signalling): (a) eavesdropping on third-party song interactions; (b) individual identification from distinctive song motifs; (c) acoustic + spatial integration as mutually-confirming channels; (d) context-binding such that the same signal carries different meanings in different settings (breeding colony vs. hotspot); (e) the social hotspot itself as a structured aggregator rather than an anonymous gathering. Each claim was graded CORE under both rubric conditions: it load-bears the architectural pillar (sample-efficient inference about other agents under partial observability) _and_ reveals an intelligence-design pattern that diverges from the human / mammalian template (peer-modelling distributed across observation, identity, context, and spatial substrate).
 
-The consolidation hubs `Eavesdropping`, `Multi-Modal Integration`, and `Context-Dependent Semantics` materialised within this single source — each hub backed by multiple atomic principles drawn from independent measurement contexts within the paper. Full multi-source promotion of any member NEXI awaits additional independent sources at the pattern level.
+The consolidation hubs `Eavesdropping`, `Multi-Modal Integration`, and `Context-Dependent Semantics` materialised within this single source — each hub backed by multiple atomic principles drawn from independent measurement contexts within the paper. Multi-source promotion at the pattern level has since reached one member (`multi-modal-integration`, below); the remaining members await additional independent sources.
+
+Roth 2015 provides the cross-phyletic confirmation that promotes `multi-modal-integration` to canonical. The zebra finch source supplies behavioural evidence that acoustic and spatial channels are fused into mutually-confirming percepts; Roth's comparative neuroanatomy shows that a _dedicated multimodal-integration centre_ has been independently selected across five non-homologous lineages — insect mushroom bodies, the octopus vertical lobe, the cichlid pallium, the corvid and psittacid avian pallium, and the mammalian isocortex. Behavioural evidence from one lineage plus convergent structural evidence across five others converge on the same architectural claim, satisfying the canonical-promotion criterion (§5.7) with the strongest available form of that convergence — cross-phyletic. `multi-modal-integration` is accordingly the catalog's third canonical NEXI.
 
 ### Member NEXIs
 
-| Slug                      | Role                                                                  | Status   |
-| ------------------------- | --------------------------------------------------------------------- | -------- |
-| `eavesdropping`           | Extract information from observed third-party interactions            | template |
-| `identity-by-pattern`     | Attribute observed behaviour to specific individuals from signatures  | draft    |
-| `multi-modal-integration` | Mutually confirm identity and observation through cross-channel pairs | draft    |
-| `context-bound-semantics` | Bind meaning to context, including reasoning from absence             | draft    |
-| `social-hotspots`         | Aggregate observation where interaction density is highest            | draft    |
+| Slug                      | Role                                                                  | Status                |
+| ------------------------- | --------------------------------------------------------------------- | --------------------- |
+| `eavesdropping`           | Extract information from observed third-party interactions            | template              |
+| `identity-by-pattern`     | Attribute observed behaviour to specific individuals from signatures  | draft                 |
+| `multi-modal-integration` | Mutually confirm identity and observation through cross-channel pairs | **canonical** (1.0.0) |
+| `context-bound-semantics` | Bind meaning to context, including reasoning from absence             | draft                 |
+| `social-hotspots`         | Aggregate observation where interaction density is highest            | draft                 |
 
 `eavesdropping` carries `status: template` rather than `draft` because it is the structural exemplar that propagates the per-pattern subfolder layout to the rest of the catalog (§5.7). The template designation is a methodological role, not an evidence claim — the underlying evidence is currently single-source and would otherwise be `draft`.
 
@@ -42,7 +44,7 @@ Operationalisation: a benchmark suite of N ≥ 3-agent partially-observable coop
 
 ### Limitations
 
-Single-source-of-evidence cluster: all five member NEXIs trace back to a single peer-reviewed source. The cluster as a whole therefore carries `status: template` (anchored in the eavesdropping exemplar) rather than `canonical`; promotion to canonical requires at least one additional independent source for each member pattern. The honest reporting here is that the cluster's _shape_ is well-evidenced by the source's network analysis, but the _generality_ of each pattern beyond zebra finches awaits multi-source corroboration. The cluster also assumes _honest_ observation; adversarial robustness (peers actively deceiving observers) is out of scope and a known failure mode.
+Predominantly single-source cluster: four of the five member NEXIs trace back to a single peer-reviewed source, with `multi-modal-integration` the exception (promoted to canonical on cross-phyletic co-sourcing with [Roth 2015]). The cluster as a whole therefore still carries `status: template` (anchored in the eavesdropping exemplar) rather than `canonical`; cluster-level promotion requires multi-source evidence for the cluster as a coherent intelligence model, not for a single member. The honest reporting here is that the cluster's _shape_ is well-evidenced by the source's network analysis, but the _generality_ of each pattern beyond zebra finches awaits multi-source corroboration. The cluster also assumes _honest_ observation; adversarial robustness (peers actively deceiving observers) is out of scope and a known failure mode.
 
 ## 6.2 Pipeline — Bounded Cognitive Architecture
 
@@ -163,7 +165,7 @@ A further observation: the three demonstration clusters span the runtime / desig
 
 Several limitations apply to all three clusters and warrant explicit reporting before the discussion in Section 7:
 
-**Single-source vs. multi-source asymmetry.** Distributed Social Cognition is single-source (Hagedoorn et al. 2026). Bounded Cognitive Architecture is two-source (Turner et al. 2026 plus Hagedoorn et al. 2026 corroboration on niche-conditional design). Acerebrate Decision-Making is two-source (Nesin & Chandrankunnel 2025 plus Turner et al. 2026 phylogenetic placement). Cluster-level promotion to canonical requires multi-source evidence for the cluster as a coherent intelligence model; the only canonical promotion at the time of writing is the pattern-level `niche-specification` (1.0.0). The catalog therefore contains three exemplary clusters, none yet at canonical status — exactly the visibility the methodology mandates.
+**Single-source vs. multi-source asymmetry.** Distributed Social Cognition is single-source (Hagedoorn et al. 2026). Bounded Cognitive Architecture is two-source (Turner et al. 2026 plus Hagedoorn et al. 2026 corroboration on niche-conditional design). Acerebrate Decision-Making is two-source (Nesin & Chandrankunnel 2025 plus Turner et al. 2026 phylogenetic placement). Cluster-level promotion to canonical requires multi-source evidence for the cluster as a coherent intelligence model; the canonical promotions at the time of writing are all pattern-level (`niche-specification`, `action-selection-as-common-substrate`, and `multi-modal-integration`, each 1.0.0). No cluster is yet at canonical status — exactly the visibility the methodology mandates.
 
 **Pre-empirical falsifiability.** Every cluster commits to a system-level falsifiable hypothesis stated in operational form (a metric, a benchmark family, a direction of effect, a threshold). None of the hypotheses has yet been empirically tested. The validation level (per §4.6) is _literature + falsifiable hypothesis_, not _literature + toy implementation_; this is the deliberate v1 trade-off between defensibility and growth velocity. A toy-implementation track is part of the future work in Section 8.
 

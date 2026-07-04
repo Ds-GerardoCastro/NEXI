@@ -1,0 +1,118 @@
+id: substrate-independent-cognition
+name: Substrate-Independent Cognition
+status: draft
+version: 0.1.0
+created: '2026-07-04'
+problem_class: >
+  Which architectural commitments are necessary for flexible cognition
+  independent of the substrate that implements them — and how do we read
+  those commitments off the evidence of convergent evolution? The cluster
+  groups patterns that recur convergently across non-homologous substrates
+  (different neural tissues that share no complex-brain common ancestor),
+  treating that convergent recurrence as evidence that the pattern is a
+  substrate-general design primitive rather than an accident of one
+  lineage. It is a deliberately young cluster: seeded on a single
+  comparative-neuroanatomy source, it exists to accumulate cross-substrate
+  architectural invariants as further sources land.
+
+member_nexis:
+  - expansion-readout-circuit
+  - multi-modal-integration
+
+system_falsifiable_hypothesis: >
+  If a cognitive capability is substrate-general, then the architectural
+  commitments that recur convergently across non-homologous natural
+  substrates (a dedicated multimodal integration centre; an expand-then-
+  read-out circuit motif) should transfer to artificial substrates and
+  improve flexible-generalisation capability there — and a system adopting
+  both commitments together should outperform a system adopting either
+  alone at matched budget on tasks demanding cross-modal, rapidly-
+  generalising behaviour. Refutation: if the two commitments confer no
+  joint benefit beyond the better of the two individually (i.e. the cluster
+  adds nothing over its strongest member) on cross-modal associative-
+  generalisation benchmarks at matched compute, the cluster's
+  substrate-general-composition claim is refuted — the patterns may still
+  be individually useful as standalone NEXIs.
+
+natural_exemplars:
+  - species: 'Cross-phyletic synthesis (Hymenoptera, Cephalopoda, Teleostei, Aves, Mammalia)'
+    paper:
+      title: 'Convergent evolution of complex brains and high intelligence'
+      authors:
+        - 'Roth, Gerhard'
+      venue: 'Philosophical Transactions of the Royal Society B'
+      date: '2015-12-19'
+      doi: '10.1098/rstb.2015.0049'
+      url: 'https://doi.org/10.1098/rstb.2015.0049'
+    notes: >
+      Documents both member patterns co-occurring across five independent
+      lineages: a dedicated multimodal integration centre and the
+      expand-then-read-out circuit motif that implements it, on
+      anatomically non-homologous substrates. Seeds the cluster; a second
+      circuit-level source (e.g. cephalopod electrophysiology, Drosophila
+      mushroom-body computation, or a non-neural substrate documenting
+      expand-then-readout) is the promotion gate.
+
+when_to_adopt: >
+  Design and evaluation work where the question is "which of our
+  architectural commitments are substrate-general and therefore worth
+  porting across very different implementation substrates," and where a
+  convergent-evolution grounding is preferable to a single-substrate
+  design story. Useful when combining a multimodal integration stage with
+  an expansion-readout representational stage in one system.
+
+when_not_to_adopt: >
+  Single-substrate optimisation where portability is not a concern;
+  single-modality systems with nothing to integrate; deployments where
+  neither an integration centre nor an expansion-readout stage addresses
+  an observed bottleneck. The cluster is young and single-source — do not
+  treat its composition claim as settled evidence.
+
+tradeoffs: >
+  Committing to substrate-generality trades the efficiency of a
+  substrate-tuned design for portability and a convergence-grounded design
+  target. The cluster's members can be adopted independently; adopting them
+  as a cluster only pays where a system genuinely needs both cross-modal
+  integration and rapid associative generalisation.
+
+complementarity_notes: >
+  The two members address different layers of the same substrate-general
+  question. `multi-modal-integration` is the *what-is-integrated* layer: a
+  dedicated centre where multiple sensory streams meet in a shared latent
+  space. `expansion-readout-circuit` is the *how-the-circuit-is-shaped*
+  layer: the expand-then-read-out motif (wide sparse-coded expansion sheet
+  feeding a sparse projection readout) that Roth's cytoarchitecture shows
+  implements such integration centres across phyla. Integration says what
+  the hub does; the expansion-readout circuit says how a hub that does it
+  is built. Together they are the substrate-general answer Roth's
+  convergence evidence points to.
+
+  Important framing caveat: the cluster's stance is
+  substrate-independence-of-architectural-pattern, not
+  substrate-irrelevance. Roth's own account is in fact substrate-restrictive
+  (he binds intelligence to associative neuronal networks); the cluster
+  takes the weaker, defensible reading — that the *pattern* recurs across
+  non-homologous neural substrates and is therefore a candidate for porting
+  to artificial ones — without claiming any substrate will do. This
+  distinguishes the cluster from a naive "substrate doesn't matter" claim
+  and connects it to the project-wide substrate-independence-of-pattern
+  position (see the acerebrate and embodied-action-selection clusters for
+  the molecular and vertebrate-CBGTC vertices of the same three-way
+  framing).
+
+tags:
+  - cluster
+  - substrate-independence
+  - convergent-evolution
+  - integration-hub
+  - expansion-readout
+  - non-human-template
+
+provenance:
+  vault_consolidation_hubs:
+    - 'Convergent-Divergent Fan'
+    - 'Multi-Modal Integration'
+    - 'Non-Human Intelligence Patterns'
+  vault_metamodels:
+    - 'MM1 — Expand-then-Readout (Roth)'
+    - 'MM2 — Multi-Channel × Multi-Level Coherence'
