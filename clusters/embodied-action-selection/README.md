@@ -85,7 +85,7 @@ This is a stronger claim than "each pattern helps in isolation." The bet is that
 | [`acerebrate-decision-making`](../acerebrate-decision-making/)         | Composition (3 layered concurrent runtime mechanisms)                  | Single-agent runtime      | Across layers (concurrent)                      |
 | **`embodied-action-selection`** _(this cluster)_                       | **Isomorphism (4 instances of the same machinery under domain shift)** | **Single-agent embodied** | **Across domains (motor / cognitive / search)** |
 
-The catalog now documents **four distinct cluster shapes** — constellation, pipeline, composition, isomorphism — each appropriate for a different problem class. The shape difference is itself architecturally meaningful and reflects the diverse ways nature solves coordination and selection problems.
+The catalog now documents **five distinct cluster shapes** — constellation, pipeline, composition, isomorphism, convergence-fan — each appropriate for a different problem class. The shape difference is itself architecturally meaningful and reflects the diverse ways nature solves coordination and selection problems.
 
 ## When to adopt
 
