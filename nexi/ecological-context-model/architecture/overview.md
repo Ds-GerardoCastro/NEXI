@@ -1,6 +1,6 @@
 # Architecture: Ecological Context Model
 
-This document specifies the architectural primitive for the Ecological Context Model — components, interfaces, data flow, and integration with the rest of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) cluster.
+This document specifies the architectural primitive for the Ecological Context Model — components, interfaces, data flow, and integration with the rest of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) collection.
 
 ## Components
 
@@ -171,9 +171,9 @@ def ecm_step(agent, current_E, current_goal_g):
 - **Failure-attribution complexity.** Distinguishing `P_failure` from `E_failure` from `Ba_failure` requires comparison between current and reference contexts. For tight-loop deployments, this may be too expensive; defer to post-hoc analysis.
 - **Multi-goal extension overhead.** The single-goal simplification (footnote 6 of source) keeps the formalism tractable. Multi-goal continuous-time dynamics require additional machinery (motivation levels, goal-transition logic) — non-trivial extension.
 
-## Interaction with the cluster
+## Interaction with the collection
 
-This NEXI is the **formalism layer** of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) cluster. It composes with:
+This NEXI is the **formalism layer** of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) collection. It composes with:
 
 - [`action-selection-as-common-substrate`](../../action-selection-as-common-substrate/) — the substrate-invariant selection mechanism is defined in terms of the ECM's equations (the competition function uses eq. (2); the reinforcement loop uses eq. (3)).
 - [`exaptation-architectural-reuse`](../../exaptation-architectural-reuse/) — the ECM's domain-agnostic typing of `B` (motor or cognitive) is what makes exaptive reuse feasible. Without the formalism, exaptation is a verbal claim; with it, the same equations operate on either domain.

@@ -2,7 +2,7 @@
 
 > **NEXI status:** draft · **Formats available:** architecture, skill · **Audience:** builder
 >
-> **Member of cluster:** [Distributed Social Cognition](../../clusters/distributed-social-cognition/)
+> **Member of collection:** [Distributed Social Cognition](../../clusters/distributed-social-cognition/)
 >
 > _Meaning as a function of signal × context. Architectures that bind interpretation to context — and reason from what's **not** observed — capture semantics that pure pattern-statistics models miss._
 
@@ -132,13 +132,13 @@ Full citations: [`references.md`](references.md).
 
 ## Boundary conditions
 
-This NEXI specifies _interpretation_ of signals conditional on context. It does not specify _how to acquire_ the context representation — that depends on perception (modalities), identity tracking, and world-model state. The cluster of which this is a member ([Distributed Social Cognition](../../clusters/distributed-social-cognition/)) addresses those upstream concerns.
+This NEXI specifies _interpretation_ of signals conditional on context. It does not specify _how to acquire_ the context representation — that depends on perception (modalities), identity tracking, and world-model state. The collection of which this is a member ([Distributed Social Cognition](../../clusters/distributed-social-cognition/)) addresses those upstream concerns.
 
 ---
 
 ## Related
 
-- **Cluster:** [Distributed Social Cognition](../../clusters/distributed-social-cognition/)
+- **Collection:** [Distributed Social Cognition](../../clusters/distributed-social-cognition/)
 - **Co-dependent NEXIs:** [`eavesdropping`](../eavesdropping/), [`identity-by-pattern`](../identity-by-pattern/), [`multi-modal-integration`](../multi-modal-integration/), [`social-hotspots`](../social-hotspots/)
 - **Vault provenance (private):** principles `P07`, `P08`; metamodel `MM3 — Context-Bound Semantics`.
 - **References:** [`references.md`](references.md)

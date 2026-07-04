@@ -129,7 +129,7 @@ ecm_state:
       attribution: <P_failure | E_failure | Ba_failure | success>
 ```
 
-This state enables transfer-failure-attribution analysis (when failures cluster, what is their attribution distribution? P-failures suggest perception improvements; E-failures suggest training-distribution gaps; Ba-failures suggest reinforcement-update bugs).
+This state enables transfer-failure-attribution analysis (when failures collection, what is their attribution distribution? P-failures suggest perception improvements; E-failures suggest training-distribution gaps; Ba-failures suggest reinforcement-update bugs).
 
 ---
 
@@ -169,5 +169,5 @@ Working examples will be added under `examples/` as the catalog matures. Two nea
 - Pattern README: [`../README.md`](../README.md)
 - Architecture: [`../architecture/overview.md`](../architecture/overview.md)
 - References: [`../references.md`](../references.md)
-- Cluster: [`../../../clusters/embodied-action-selection/`](../../../clusters/embodied-action-selection/)
+- Collection: [`../../../clusters/embodied-action-selection/`](../../../clusters/embodied-action-selection/)
 - Sibling NEXIs: [`../../action-selection-as-common-substrate/`](../../action-selection-as-common-substrate/) · [`../../exaptation-architectural-reuse/`](../../exaptation-architectural-reuse/) · [`../../heuristics-as-habits-fusion/`](../../heuristics-as-habits-fusion/)

@@ -1,6 +1,6 @@
 # Architecture: Expansion-Readout Circuit
 
-This document specifies the architectural primitive for the expand-then-read-out motif — components, interfaces, data flow, and the design decisions each stage forces — and its integration with the [`substrate-independent-cognition`](../../../clusters/substrate-independent-cognition/) cluster.
+This document specifies the architectural primitive for the expand-then-read-out motif — components, interfaces, data flow, and the design decisions each stage forces — and its integration with the [`substrate-independent-cognition`](../../../clusters/substrate-independent-cognition/) collection.
 
 The motif separates two functions that dense scaling entangles: **representation** (a wide, sparse-coded expansion sheet) and **selection** (a narrow, sparse readout). The natural systems that inspired it — insect mushroom bodies, the octopod vertical lobe, cichlid and avian pallium, mammalian isocortex — implement exactly this two-stage separation on non-homologous substrates.
 
@@ -104,11 +104,11 @@ def train_step(afferents, target, W_read, W_exp, k):
 - **The sparse readout bounds activation cost.** Only `k` units are active and only `W_read` is trained, so both compute and adaptation cost are governed by the readout, not the sheet.
 - **Fixed expansion, learned readout.** Keeping the expansion fixed is what gives the motif its rapid associative generalisation and its cheap adaptation — the expensive stage is not on the training path.
 
-## Interaction with the cluster
+## Interaction with the collection
 
-This NEXI is the **how-the-circuit-is-shaped** layer of the [`substrate-independent-cognition`](../../../clusters/substrate-independent-cognition/) cluster. It composes with:
+This NEXI is the **how-the-circuit-is-shaped** layer of the [`substrate-independent-cognition`](../../../clusters/substrate-independent-cognition/) collection. It composes with:
 
 - [`multi-modal-integration`](../../multi-modal-integration/) — the **what-is-integrated** layer. Integration specifies that multiple sensory streams meet in a shared latent space; this NEXI specifies the circuit shape (wide sparse expansion + sparse readout) that the source cytoarchitecture shows implements such integration centres across phyla. The fan-in stage here is the natural home for a joint multi-modal encoder.
 - [`action-selection-as-common-substrate`](../../action-selection-as-common-substrate/) — a downstream selection layer that a sparse readout feeds naturally: the readout produces a small set of candidates; the selection substrate gates among them.
 
-**Framing caveat.** The cluster's stance is substrate-independence *of the pattern*, not substrate-irrelevance. The source account is itself substrate-restrictive; this NEXI takes the weaker, defensible reading — that the expand-then-read-out *motif* recurs across non-homologous neural substrates and is therefore a candidate for porting to artificial ones — without claiming any substrate will do.
+**Framing caveat.** The collection's stance is substrate-independence *of the pattern*, not substrate-irrelevance. The source account is itself substrate-restrictive; this NEXI takes the weaker, defensible reading — that the expand-then-read-out *motif* recurs across non-homologous neural substrates and is therefore a candidate for porting to artificial ones — without claiming any substrate will do.

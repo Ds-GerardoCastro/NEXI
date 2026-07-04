@@ -32,7 +32,7 @@
 
 ## E
 
-**Ester, M., Kriegel, H.-P., Sander, J., & Xu, X. (1996).** _A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise (DBSCAN)._ KDD 1996.
+**Ester, M., Kriegel, H.-P., Sander, J., & Xu, X. (1996).** _A Density-Based Algorithm for Discovering Collections in Large Spatial Databases with Noise (DBSCAN)._ KDD 1996.
 
 ## F
 

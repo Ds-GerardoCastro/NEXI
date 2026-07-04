@@ -206,7 +206,7 @@ The `adjacent_regime` field tells you which way the niche would drift to. Archit
 | **MLOps / ModelOps**                                                           | Persist regime classification per deployment as a versioned artefact. Re-classify on niche-spec changes. Use boundary-distance for drift alarms.                                           |
 | **Architecture-as-code** (architecture configs in version control)             | Regime is part of the architecture spec, not part of hyperparameters. Changing regime = new architecture file.                                                                             |
 
-## Interaction with the cluster
+## Interaction with the collection
 
 This NEXI is the **middle stage** of the [`bounded-cognitive-architecture`](../../../clusters/bounded-cognitive-architecture/) pipeline:
 

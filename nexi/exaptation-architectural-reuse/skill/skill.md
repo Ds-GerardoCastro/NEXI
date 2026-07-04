@@ -187,5 +187,5 @@ Working examples will be added under `examples/` as the catalog matures. Three n
 - Pattern README: [`../README.md`](../README.md)
 - Architecture: [`../architecture/overview.md`](../architecture/overview.md)
 - References: [`../references.md`](../references.md)
-- Cluster: [`../../../clusters/embodied-action-selection/`](../../../clusters/embodied-action-selection/)
+- Collection: [`../../../clusters/embodied-action-selection/`](../../../clusters/embodied-action-selection/)
 - Sibling NEXIs: [`../../action-selection-as-common-substrate/`](../../action-selection-as-common-substrate/) · [`../../ecological-context-model/`](../../ecological-context-model/) · [`../../heuristics-as-habits-fusion/`](../../heuristics-as-habits-fusion/)

@@ -35,7 +35,7 @@ This white paper enforces a **Real Citations Only** policy. The rule and the enf
 
 ### The rule
 
-Every citation in any chapter, in [`REFERENCES.md`](REFERENCES.md), and in any cross-referenced NEXI / cluster `references.md` or `nexi.yaml` must be a **real, verifiable paper found in CrossRef, PubMed, arXiv, or a recognised preprint server**. Specifically:
+Every citation in any chapter, in [`REFERENCES.md`](REFERENCES.md), and in any cross-referenced NEXI / collection `references.md` or `nexi.yaml` must be a **real, verifiable paper found in CrossRef, PubMed, arXiv, or a recognised preprint server**. Specifically:
 
 - **Zero tolerance for placeholder citations.** No "Smith et al. 2023" unless `Smith et al. 2023` resolves to a real paper with the cited title and authors.
 - **DOIs preferred over titles** wherever a DOI exists. Author-year-only citations are acceptable for pre-1995 references and for sources without registered DOIs (e.g., older monographs, philosophical works); these are tracked separately in [`REFERENCES.md`](REFERENCES.md) under a clearly-marked "no-DOI" section.

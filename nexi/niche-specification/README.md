@@ -2,11 +2,11 @@
 
 > **NEXI status:** canonical · **Formats available:** architecture, skill · **Audience:** builder · **Promoted:** 2026-05-09
 >
-> **Cluster:** [`bounded-cognitive-architecture`](../../clusters/bounded-cognitive-architecture/)
+> **Collection:** [`bounded-cognitive-architecture`](../../clusters/bounded-cognitive-architecture/)
 >
-> The most upstream design-time pattern in the cluster: **before any architecture decision, specify the niche**. The niche is a typed bundle of deployment parameters — task structure, signal environment, resource envelope, error profile, social surround, evaluation protocol — that downstream patterns consume as input. There is no architecture without a niche.
+> The most upstream design-time pattern in the collection: **before any architecture decision, specify the niche**. The niche is a typed bundle of deployment parameters — task structure, signal environment, resource envelope, error profile, social surround, evaluation protocol — that downstream patterns consume as input. There is no architecture without a niche.
 >
-> **First `canonical` NEXI in the catalog.** Multi-source evidence: 7 supporting principles spanning two independent sources (Hagedoorn et al. 2026 zebra finch + Turner et al. 2026 mathematical model). Schema has been stable across three subsequent ingestions (Turner cluster, methodology refinement, bacteria cluster). Falsifiable hypothesis is sharply stated and operationally testable. The promotion meets all three `canonical`-status criteria per `docs/methodology.md`.
+> **First `canonical` NEXI in the catalog.** Multi-source evidence: 7 supporting principles spanning two independent sources (Hagedoorn et al. 2026 zebra finch + Turner et al. 2026 mathematical model). Schema has been stable across three subsequent ingestions (Turner collection, methodology refinement, bacteria collection). Falsifiable hypothesis is sharply stated and operationally testable. The promotion meets all three `canonical`-status criteria per `docs/methodology.md`.
 
 ---
 
@@ -37,7 +37,7 @@ Two independent biological sources converge on niche-conditional cognitive desig
 
 The convergence between an evolutionary-modelling paper and an ethological field study on the same architectural claim is non-trivial. They approach niche-binding from opposite methodological poles and arrive at compatible structural commitments.
 
-This makes Niche Specification the catalog's **first multi-source pattern**. It draws evidence from 7 vault principles spanning two source publications and is a candidate for early `canonical` promotion once the cluster's schema settles.
+This makes Niche Specification the catalog's **first multi-source pattern**. It draws evidence from 7 vault principles spanning two source publications and is a candidate for early `canonical` promotion once the collection's schema settles.
 
 See [`references.md`](references.md) for the full citation chain.
 
@@ -138,7 +138,7 @@ Drop-in components for the most upstream design-time skill:
 
 - **Specification cost** — niches are typed, complete, and persisted. That costs upfront effort. The reward is downstream principled-ness.
 - **Tension with foundation-model practice** — pretrained models are deployed across many niches without re-specification. The pattern argues this should change at the fine-tuning / adaptation stage; foundation-model pretraining itself is exempt.
-- **Tension with the g-factor view** ([Turner et al.'s P22](https://doi.org/10.1101/2026.03.07.710317) supports a single shared information-processing axis correlating with brain size). The reconciliation Turner et al. offer is that domain-general substrate is real, but specialisation emerges via canalisation under niche pressure. This NEXI takes the niche-binding side of that synthesis. See the cluster's `complementarity_notes` for the full framing.
+- **Tension with the g-factor view** ([Turner et al.'s P22](https://doi.org/10.1101/2026.03.07.710317) supports a single shared information-processing axis correlating with brain size). The reconciliation Turner et al. offer is that domain-general substrate is real, but specialisation emerges via canalisation under niche pressure. This NEXI takes the niche-binding side of that synthesis. See the collection's `complementarity_notes` for the full framing.
 
 ## Falsifiable hypothesis
 

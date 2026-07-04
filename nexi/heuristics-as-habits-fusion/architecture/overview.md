@@ -1,6 +1,6 @@
 # Architecture: Heuristics as Habits Fusion
 
-This document specifies the architectural primitive for unifying heuristic decision-making and motor-habit-formation under a single mechanism — components, interfaces, data flow, and integration with the rest of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) cluster.
+This document specifies the architectural primitive for unifying heuristic decision-making and motor-habit-formation under a single mechanism — components, interfaces, data flow, and integration with the rest of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) collection.
 
 ## Components
 
@@ -157,9 +157,9 @@ def decide(goal, context, perceptions, cost_budget, repertoire, associations):
 - **Cross-domain pattern detection overhead.** Comparing failure structures across domains adds analysis cost. For tight-loop deployments, defer to post-hoc analysis.
 - **Loss of dual-process descriptive convenience.** Some users / debuggers will find it harder to reason about a unified architecture. Documentation should explicitly map common dual-process language onto the unified-mechanism vocabulary.
 
-## Interaction with the cluster
+## Interaction with the collection
 
-This NEXI is the **behavioural-instance layer** of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) cluster — the concrete demonstration that the cluster's other three NEXIs (formalism / substrate-invariant / reuse) compose to produce a useful unified architecture. It composes with:
+This NEXI is the **behavioural-instance layer** of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) collection — the concrete demonstration that the collection's other three NEXIs (formalism / substrate-invariant / reuse) compose to produce a useful unified architecture. It composes with:
 
 - [`action-selection-as-common-substrate`](../../action-selection-as-common-substrate/) — provides the unified selection mechanism. Heuristics-as-habits is what that mechanism does at the behavioural level when given a unified `Br` spanning domains.
 - [`ecological-context-model`](../../ecological-context-model/) — provides the formalism (equations 1–3) that expresses the heuristic / habit equivalence. Both are instances of `B(C) = f(Br, Ba(g, P))`; both fail via `g+(C) = f(B, E)` when `E` differs from training.

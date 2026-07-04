@@ -9,7 +9,7 @@ problem_class: >
   potentially no nervous system) makes decisions about its environment, its
   internal state, and its commitment to behavioural modes — using only
   molecular regulatory networks or, by analogy, only substrate-flexible
-  control primitives. The cluster addresses substrate-independent
+  control primitives. The collection addresses substrate-independent
   decision-making architecture: patterns that produce flexible, adaptive,
   context-conditional behaviour without relying on a centralised
   controller-substrate.
@@ -20,7 +20,7 @@ member_nexis:
   - meta-regulation
 
 system_falsifiable_hypothesis: >
-  AI architectures that adopt the full acerebrate-decision-making cluster
+  AI architectures that adopt the full acerebrate-decision-making collection
   (multi-stream coincidence-detection gating + stochastic-memory paired
   exploration + explicit meta-regulation) outperform same-budget single-axis
   architectures on decision-making tasks under unpredictability and partial
@@ -28,7 +28,7 @@ system_falsifiable_hypothesis: >
   Refutation: if pipeline-designed systems perform no better than the best
   individual-NEXI baseline at matched compute on appropriately heterogeneous
   benchmarks (varying environmental predictability, multi-stream context
-  availability, and non-stationarity), the cluster's compositional claim is
+  availability, and non-stationarity), the collection's compositional claim is
   refuted (the patterns may still be individually useful as standalone NEXIs).
 
 natural_exemplars:
@@ -45,7 +45,7 @@ natural_exemplars:
     notes: >
       Peer-reviewed review article (CC BY 4.0) synthesising evidence that
       bacterial decision-making is the product of complex, modular, convergent-
-      divergent molecular pathways implementing the full cluster:
+      divergent molecular pathways implementing the full collection:
       coincidence detection (Vibrio cholerae biofilm requires both LuxPQ-AI-2
       and CqsS-CAI-1 to be activated); stochastic-memory coupling (random
       gene-expression switching paired with iron-based cellular memory);
@@ -73,7 +73,7 @@ natural_exemplars:
       storage via sensitisation but lack control functions (no selective
       attention, no shielding from interference). Provides a corroborating
       second source for the substrate-independence claim that motivates this
-      cluster, even though the paper's primary subject is across-species
+      collection, even though the paper's primary subject is across-species
       cognitive evolution rather than bacteria specifically.
 
 when_to_adopt: >
@@ -89,23 +89,23 @@ when_not_to_adopt: >
   Single-stream classification or regression tasks with stable input
   distributions; deployments with reliable centralised controllers and
   strong observability; tasks where computational cost asymmetry favours
-  amplitude-coded representation over the cluster's combination of
+  amplitude-coded representation over the collection's combination of
   coincidence-gating + stochastic-memory + meta-regulation overhead;
   research / exploratory architectures deliberately operating without
   decision-commitment requirements.
 
 tradeoffs: >
-  The cluster trades architectural-overhead cost (additional regulator
+  The collection trades architectural-overhead cost (additional regulator
   components, persistent memory stores, multi-stream input wiring) against
   decision-quality under unpredictability. For deployments with stable inputs
   and strong centralised observability, the overhead is wasted. For
-  deployments where unpredictability is the dominant cost driver, the cluster
+  deployments where unpredictability is the dominant cost driver, the collection
   pays. Engineers should explicitly assess deployment-niche unpredictability
   before adopting.
 
 complementarity_notes: >
   The three patterns compose by layering, not by sequencing (distinct in
-  shape from the bounded-cognitive-architecture pipeline cluster):
+  shape from the bounded-cognitive-architecture pipeline collection):
 
   - coincidence-detection-gating provides the *commitment-gate* layer:
     decisions to enter a major behavioural mode require multiple independent
@@ -130,22 +130,22 @@ complementarity_notes: >
     single-channel evidence.
   - Without stochastic-memory coupling, coincidence-gated decisions still
     operate on a fixed exploration policy.
-  - Without meta-regulation, the cluster's parameters are fixed at deployment
+  - Without meta-regulation, the collection's parameters are fixed at deployment
     rather than dynamically adapted.
 
-  This is the cluster's compositional claim. The cluster shape is therefore
+  This is the collection's compositional claim. The collection shape is therefore
   *composition* (layered concurrent runtime mechanisms within a single agent),
   distinct from both distributed-social-cognition (constellation of mutually-
   enabling patterns across agents) and bounded-cognitive-architecture
   (sequenced design-time pipeline).
 
 tags:
-  - cluster
+  - collection
   - acerebrate
   - decision-making
   - substrate-independent
   - non-neural
-  - composition-cluster
+  - composition-collection
   - non-human-template
 
 provenance:

@@ -47,7 +47,7 @@ tools:
         description: |
           The query location. For physical environments, coordinates;
           for virtual environments, an identifier (channel id, topic
-          cluster id, etc.).
+          collection id, etc.).
       radius:
         type: number
         required: true

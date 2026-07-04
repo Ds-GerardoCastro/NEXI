@@ -2,7 +2,7 @@
 
 > **NEXI status:** draft · **Formats available:** architecture · **Audience:** builder
 >
-> **Cluster:** [`substrate-independent-cognition`](../../clusters/substrate-independent-cognition/)
+> **Collection:** [`substrate-independent-cognition`](../../clusters/substrate-independent-cognition/)
 >
 > _Flexible cognition rests on an expand-then-read-out circuit motif: convergent multimodal afferents fan out onto a vast sheet of tiny interneurons (a high-dimensional expansion layer), then are read back out through a sparse projection bottleneck. The same motif has evolved independently across five non-homologous substrates — a candidate substrate-independent design primitive._
 

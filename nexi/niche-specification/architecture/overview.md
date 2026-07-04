@@ -231,7 +231,7 @@ This declaration is **operational** — it determines what the deployed system a
 | **Evaluation pipelines**              | The niche specifies the in-niche benchmark. Evaluation runs against that benchmark, not against generic leaderboards. Generic-benchmark scores are demoted to secondary diagnostics.                                |
 | **Router-of-specialists deployments** | Each specialist's architecture spec references its own niche; the router classifies incoming requests by niche and dispatches accordingly.                                                                          |
 
-## Interaction with the cluster
+## Interaction with the collection
 
 This NEXI is the **most upstream stage** of the [`bounded-cognitive-architecture`](../../../clusters/bounded-cognitive-architecture/) pipeline:
 
@@ -241,4 +241,4 @@ niche-specification ──► cognitive-regime-selection ──► capacity-firs
 
 Without a niche object, the downstream regime classifier and allocation policy have nothing to consume. The pattern is gating — refusing to produce a niche when the deployment is genuinely vague is the correct behaviour, even if it slows the design conversation.
 
-The pattern also has a **standalone use** independent of the cluster: even without downstream regime selection or capacity-first scaling, having a typed niche specification is what makes evaluation meaningful and out-of-niche behaviour principled. Adopting niche specification first, before deciding whether to commit to the rest of the cluster, is a valid incremental adoption path.
+The pattern also has a **standalone use** independent of the collection: even without downstream regime selection or capacity-first scaling, having a typed niche specification is what makes evaluation meaningful and out-of-niche behaviour principled. Adopting niche specification first, before deciding whether to commit to the rest of the collection, is a valid incremental adoption path.

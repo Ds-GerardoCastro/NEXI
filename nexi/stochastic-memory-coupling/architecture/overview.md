@@ -103,9 +103,9 @@ The architecture must include a **balance monitor** that adjusts `β` (or other 
 | **Multi-agent populations**           | Each agent maintains its own (state, memory). The coupling produces population-level diversity ([[clone-individuality\|P36]]) — same agent template, divergent trajectories.                             |
 | **Production ML with online updates** | Memory = feature-importance estimates updated by online feedback. Stochastic transition = policy randomisation between feature-set configurations.                                                       |
 
-## Interaction with the cluster
+## Interaction with the collection
 
-This NEXI is the **exploration-with-retention layer** of the [`acerebrate-decision-making`](../../../clusters/acerebrate-decision-making/) cluster. It composes with:
+This NEXI is the **exploration-with-retention layer** of the [`acerebrate-decision-making`](../../../clusters/acerebrate-decision-making/) collection. It composes with:
 
 - [`coincidence-detection-gating`](../../coincidence-detection-gating/) — the coincidence-gate decides which proposed stochastic transitions actually commit.
 - [`meta-regulation`](../../meta-regulation/) — the meta-regulator dynamically adjusts the coupling parameter `β` and the memory's decay rate in response to deployment conditions.

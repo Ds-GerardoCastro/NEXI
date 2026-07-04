@@ -17,7 +17,7 @@ Consolidation hub (named pattern; multi-source evidence required)
    ↓ promotion gate (multi-source + falsifiable hypothesis + curation review)
 NEXI pattern entry (layered card + machine-readable schema)
    ↓ aggregation by problem class; structural shape identified
-NEXI cluster (system-level falsifiable hypothesis + complementarity notes)
+NEXI collection (system-level falsifiable hypothesis + complementarity notes)
 ```
 
 Each stage has explicit acceptance criteria and an audit trail. No claim moves downstream without provenance to the source paper preserved through every prior stage.
@@ -68,7 +68,7 @@ The tension between Turner et al.'s domain-general capacity-axis (the g-factor v
 
 The pipeline is supported by four operating surfaces that together provide navigation, audit, prospective tracking, and aggregate signal:
 
-- **Map of Contents (MOC).** A hand-curated entry-point note that links to every active hub, every cluster, and every per-source analysis. Used to onboard new readers and to verify graph connectivity across the vault.
+- **Map of Contents (MOC).** A hand-curated entry-point note that links to every active hub, every collection, and every per-source analysis. Used to onboard new readers and to verify graph connectivity across the vault.
 - **Tensions Log.** As described in §4.7. Append-only; entries are not deleted when resolved, only annotated with the resolution.
 - **Watch List.** A staged queue of candidate NEXIs at three pre-promotion tiers (single-source, multi-source-but-not-yet-hub, hub-but-not-yet-promoted). The Watch List is what makes future-work claims (Section 8) concrete rather than aspirational; at the time of writing it carries nine active candidates across the three tiers.
 - **Signal Dashboard.** A Dataview-driven aggregate view that computes hub counts, multi-source coverage, status-field distribution, and citation-validation status across the vault and the repo simultaneously. Engineering hygiene for a research artefact.
@@ -77,7 +77,7 @@ Together, these four surfaces let the methodology operate at the scale required 
 
 ## 4.9 Citation discipline (Real Citations Only)
 
-The methodology adopts _Real Citations Only_ as a design constraint, not a quality goal. Every citation in any catalog artefact (NEXI entry, cluster, white paper) must resolve to a verifiable record on CrossRef, PubMed, arXiv, or a recognised preprint server. DOIs are preferred over titles wherever a DOI exists. Author-year citations without a DOI are admissible only for pre-1995 references and for sources without registered DOIs (older monographs, philosophical works); these are quarantined in a no-DOI section of the references list and never mixed with verified entries.
+The methodology adopts _Real Citations Only_ as a design constraint, not a quality goal. Every citation in any catalog artefact (NEXI entry, collection, white paper) must resolve to a verifiable record on CrossRef, PubMed, arXiv, or a recognised preprint server. DOIs are preferred over titles wherever a DOI exists. Author-year citations without a DOI are admissible only for pre-1995 references and for sources without registered DOIs (older monographs, philosophical works); these are quarantined in a no-DOI section of the references list and never mixed with verified entries.
 
 A vendored verification toolkit (`tools/citation/`, MIT-licensed) provides deterministic resolution of DOIs, PubMed identifiers, and arXiv identifiers against the relevant API. Validation is run before any citation enters an artefact and again before any external publication. The validator's output is a _signal_, not just a check: a fresh preprint that has not yet been indexed by CrossRef returns a 404, which is a known caveat — the methodology requires that such cases be _documented as deferred-verification_ rather than silently included or silently dropped. This is what distinguishes citation discipline from citation theatre.
 
@@ -86,7 +86,7 @@ A vendored verification toolkit (`tools/citation/`, MIT-licensed) provides deter
 Every claim in the catalog traces back to peer-reviewed literature through an unbroken chain:
 
 ```
-NEXI entry / cluster
+NEXI entry / collection
    ↓ cites
 Vault consolidation hub (named pattern)
    ↓ cites
@@ -95,6 +95,6 @@ Atomic principle (one note, one claim)
 Source paper section (DOI + page reference)
 ```
 
-The white paper cites NEXI entries and clusters; NEXI entries cite vault notes and source papers; vault notes cite the literature directly. There are no circular references and no vault note that floats unanchored. This is the structural property that lets a reviewer audit the catalog without trusting any individual claim — every claim's chain back to a peer-reviewed paper is finite, traceable, and short.
+The white paper cites NEXI entries and collections; NEXI entries cite vault notes and source papers; vault notes cite the literature directly. There are no circular references and no vault note that floats unanchored. This is the structural property that lets a reviewer audit the catalog without trusting any individual claim — every claim's chain back to a peer-reviewed paper is finite, traceable, and short.
 
-The methodology in this section produces a stream of validated patterns. The framework in Section 5 is what those patterns enter — the catalog's structural shape, schema, application formats, and the cluster-shape finding that emerged retrospectively from the construction of the first three clusters.
+The methodology in this section produces a stream of validated patterns. The framework in Section 5 is what those patterns enter — the catalog's structural shape, schema, application formats, and the collection-shape finding that emerged retrospectively from the construction of the first three collections.

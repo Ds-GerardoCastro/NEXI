@@ -28,11 +28,11 @@ Browse patterns first; open a collection when you want the biological system a p
 
 See [`docs/collections.md`](docs/collections.md) for the collection framework and curation rules.
 
-## How to use a cluster or pattern
+## How to use a collection or pattern
 
-A **cluster** under `clusters/<cluster-slug>/` contains:
+A **collection** under `clusters/<collection-slug>/` contains:
 
-- `README.md` — the layered cluster card (system-level claim, member patterns, complementarity notes)
+- `README.md` — the layered collection card (system-level claim, member patterns, complementarity notes)
 - `cluster.yaml` — structured metadata, validated against [`schema/cluster.schema.json`](schema/cluster.schema.json)
 
 A **pattern** under `nexi/<pattern-slug>/` contains:

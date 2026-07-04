@@ -1,6 +1,6 @@
 # Architecture: Exaptation Architectural Reuse
 
-This document specifies the architectural primitive for explicit exaptation-based component reuse — components, interfaces, data flow, and integration with the rest of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) cluster.
+This document specifies the architectural primitive for explicit exaptation-based component reuse — components, interfaces, data flow, and integration with the rest of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) collection.
 
 ## Components
 
@@ -148,9 +148,9 @@ class ExaptationCore:
 - **Substrate maturity prerequisite.** Exaptation pays only when the source mechanism is well-developed. For early-stage AI deployments where the candidate `M` is itself immature, specialise first; redeploy only when `M` is mature.
 - **Cross-domain transfer of improvements.** This is the primary architectural payoff. Track it explicitly: when training on domain Aᵢ, measure performance on Aⱼ. If transfer is consistently zero, `M` is effectively domain-specific.
 
-## Interaction with the cluster
+## Interaction with the collection
 
-This NEXI is the **generative-reuse layer** of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) cluster. It composes with:
+This NEXI is the **generative-reuse layer** of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) collection. It composes with:
 
 - [`action-selection-as-common-substrate`](../../action-selection-as-common-substrate/) — the substrate-invariant selection mechanism is the canonical candidate for `M`. Exaptation is _how_ the same selection module handles motor and cognitive domains; action-selection is _what_ it does.
 - [`ecological-context-model`](../../ecological-context-model/) — the formalism's domain-agnostic typing of `B` (motor or cognitive) is what makes exaptive reuse feasible. Without the formalism, `M_Input` and `M_Output` types are ad-hoc; with it, they are the formal terms `Br`, `Ba(g, P)`, and `B`.

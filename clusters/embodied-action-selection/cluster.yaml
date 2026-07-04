@@ -5,13 +5,13 @@ version: 0.1.0
 created: '2026-05-10'
 problem_class: >
   How an agent selects what to do next, given a goal and a context, when
-  "doing" can mean either physical action or cognitive operation. The cluster
+  "doing" can mean either physical action or cognitive operation. The collection
   addresses the architectural function of action selection as a substrate-
   general invariant — the same default-inhibit / selective-disinhibit gating,
   goal-directed sequence construction, and contextual reinforcement appearing
   across substrates as different as molecular regulatory networks (bacteria),
   nerve nets (cnidarians), and recurrent neural circuits (vertebrate CBGTC).
-  Critically, the cluster also addresses how a single action-selection
+  Critically, the collection also addresses how a single action-selection
   mechanism, originally evolved for motor control, gets redeployed to operate
   on cognitive operations via exaptation — yielding heuristic decision-making
   as a domain-shifted instance of motor habit-formation.
@@ -23,7 +23,7 @@ member_nexis:
   - heuristics-as-habits-fusion
 
 system_falsifiable_hypothesis: >
-  AI architectures that adopt the full embodied-action-selection cluster
+  AI architectures that adopt the full embodied-action-selection collection
   (action-selection as a first-class substrate-general primitive, formalised
   via the Ecological Context Model's agent-goal-environment-behaviour
   relation, with explicit exaptive reuse of the same selection mechanism
@@ -36,7 +36,7 @@ system_falsifiable_hypothesis: >
   and cognitive operations under shared context) and on tasks where the cost
   of premature commitment is high. Refutation: if isomorphism-designed
   systems perform no better than the best individual-NEXI baseline at
-  matched compute on cross-domain benchmarks, the cluster's isomorphism
+  matched compute on cross-domain benchmarks, the collection's isomorphism
   claim is refuted (the patterns may still be individually useful as
   standalone NEXIs).
 
@@ -62,7 +62,7 @@ natural_exemplars:
       vertebrate mechanism for action selection (conserved virtually unchanged
       from lamprey ~560 Mya to human), with cognition and heuristic decision-
       making implemented as exaptations of the same motor-control machinery.
-      Anchors all four cluster member NEXIs.
+      Anchors all four collection member NEXIs.
 
   - species: 'Bacteria (multiple species: Escherichia coli, Vibrio cholerae, Bacillus subtilis)'
     paper:
@@ -122,25 +122,25 @@ when_not_to_adopt: >
   a transformer's autoregressive decoding) is performing well and exposing
   the selection mechanism as a first-class architectural commitment would add
   cost without payoff. Pre-training / foundation-model substrate construction
-  (the cluster operates at deployment-time architecture and design, not at
+  (the collection operates at deployment-time architecture and design, not at
   the substrate-construction layer).
 
 tradeoffs: >
-  The cluster trades architectural-discipline cost (committing to a single
+  The collection trades architectural-discipline cost (committing to a single
   action-selection module shared across domains, formalising context as
   agent-goal-environment-behaviour, treating exaptation as a deployment-time
   reuse pattern) against modularity and separation of concerns. For
   deployments where motor and cognitive domains are genuinely separable and
   share little context, the discipline is wasted. For embodied-agent
   deployments where motor and cognitive control share the agent's goal stack
-  and perceptual state, the cluster pays — duplicated machinery is the
+  and perceptual state, the collection pays — duplicated machinery is the
   default cost; reuse is the saving.
 
 complementarity_notes: >
   The four patterns compose by isomorphism — same machinery, different
-  domains — distinct in shape from the bacteria cluster's layered
-  composition, the bounded-cognitive-architecture cluster's design-time
-  pipeline, and the distributed-social-cognition cluster's mutually-enabling
+  domains — distinct in shape from the bacteria collection's layered
+  composition, the bounded-cognitive-architecture collection's design-time
+  pipeline, and the distributed-social-cognition collection's mutually-enabling
   constellation:
 
   - ecological-context-model is the *formalism layer*: the three numbered
@@ -162,7 +162,7 @@ complementarity_notes: >
     design pressure (reuse over specialisation).
 
   - heuristics-as-habits-fusion is the *behavioural-instance layer*: a
-    specific consequence of the cluster's other three layers — heuristic
+    specific consequence of the collection's other three layers — heuristic
     decision-making formally expressible as habit-style chunked sequences via
     the formalism, on the same substrate, via exaptation.
 
@@ -176,23 +176,23 @@ complementarity_notes: >
     becomes a vertebrate-only claim.
   - Without exaptation-architectural-reuse, the substrate-invariant pattern
     is a parallel-evolution coincidence rather than a usable design pressure.
-  - Without heuristics-as-habits-fusion, the cluster has formalism + invariant
+  - Without heuristics-as-habits-fusion, the collection has formalism + invariant
     + reuse but no concrete behavioural-level instance demonstrating the
-    cluster's predictive content. The fusion NEXI is what makes the
+    collection's predictive content. The fusion NEXI is what makes the
     isomorphism claim falsifiable at task-level evaluation.
 
-  This is the cluster's compositional claim under the *isomorphism* shape:
+  This is the collection's compositional claim under the *isomorphism* shape:
   the same machinery, formalised by a shared framework, redeployed across
   domains, manifests as patterns previously studied as distinct phenomena.
 
 tags:
-  - cluster
+  - collection
   - embodied-cognition
   - action-selection
   - exaptation
   - ecological-rationality
   - vertebrate-deep
-  - isomorphism-cluster
+  - isomorphism-collection
   - non-human-template
 
 provenance:

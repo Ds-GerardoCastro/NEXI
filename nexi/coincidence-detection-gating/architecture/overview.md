@@ -90,9 +90,9 @@ def coincidence_gate(streams, action_proposal):
 - **Stream overhead.** N streams cost N× the input pipeline. For large N, consider hierarchical gating (sub-gates of independent streams feed an outer gate).
 - **Adversarial robustness.** Single-channel adversarial perturbation cannot fire the gate alone — coincidence requirement is an inherent defence.
 
-## Interaction with the cluster
+## Interaction with the collection
 
-This NEXI is the **commitment-gate layer** of the [`acerebrate-decision-making`](../../../clusters/acerebrate-decision-making/) cluster. It composes with:
+This NEXI is the **commitment-gate layer** of the [`acerebrate-decision-making`](../../../clusters/acerebrate-decision-making/) collection. It composes with:
 
 - [`stochastic-memory-coupling`](../../stochastic-memory-coupling/) — stochastic exploration generates candidate transitions that the coincidence-gate then accepts or rejects based on multi-stream evidence.
 - [`meta-regulation`](../../meta-regulation/) — the meta-regulator can dynamically adjust the gate's thresholds and required-stream set in response to deployment-context signals.

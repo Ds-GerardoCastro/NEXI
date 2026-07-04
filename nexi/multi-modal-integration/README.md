@@ -146,7 +146,7 @@ This NEXI specifies _encoding_ multiple modalities jointly. It does not specify 
 
 ## Related
 
-- **Clusters:** [Distributed Social Cognition](../../clusters/distributed-social-cognition/) · [Substrate-Independent Cognition](../../clusters/substrate-independent-cognition/)
+- **Collections:** [Distributed Social Cognition](../../clusters/distributed-social-cognition/) · [Substrate-Independent Cognition](../../clusters/substrate-independent-cognition/)
 - **Co-dependent NEXIs:** [`identity-by-pattern`](../identity-by-pattern/), [`eavesdropping`](../eavesdropping/), [`context-bound-semantics`](../context-bound-semantics/), [`social-hotspots`](../social-hotspots/), [`expansion-readout-circuit`](../expansion-readout-circuit/)
 - **Vault provenance (private):** principles `P04 — Integration of Communication & Spatial Networks`, `P47 — Convergent-Divergent Fan Circuit Motif`, `P50 — Polyphyletic Intelligence via Non-Homologous Modules`; metamodel `MM2 — Multi-Channel × Multi-Level Coherence`.
 - **References:** [`references.md`](references.md)

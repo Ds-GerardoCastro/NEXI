@@ -1,20 +1,20 @@
 # Acerebrate Decision-Making
 
-> **Cluster status:** draft · **Members:** 3 · **Audience:** builder
+> **Collection status:** draft · **Members:** 3 · **Audience:** builder
 >
-> A coherent intelligence model for **decision-making without a centralised processing unit**. The cluster groups three architectural layers that together produce flexible, adaptive, context-conditional behaviour using only substrate-flexible control primitives — observed in organisms with no nervous system at all (bacteria), and in organisms with only nerve nets (cnidarians).
+> A coherent intelligence model for **decision-making without a centralised processing unit**. The collection groups three architectural layers that together produce flexible, adaptive, context-conditional behaviour using only substrate-flexible control primitives — observed in organisms with no nervous system at all (bacteria), and in organisms with only nerve nets (cnidarians).
 
 > **Adopting this collection.** Its patterns are **independently adoptable** — take one, several, or mix them with patterns from other collections. This page groups them because they were read from the same biological system and reinforce each other; it is a **reading path and provenance record, not a required bundle**. The system-level hypothesis below is a **falsifiable research claim** — that the whole outperforms any proper subset — offered as something to test, not a guarantee to the adopting engineer. If it is refuted, the member patterns remain individually valid.
 
 ---
 
-## Why this cluster exists
+## Why this collection exists
 
 Mainstream AI architecture assumes a centralised controller substrate — neurons (real or simulated) with attention, routing, and decision-gating concentrated in a single computational hierarchy. The empirical record from comparative cognition shows this assumption is contingent: bacteria, with no nervous system, implement decision-making via molecular regulatory networks that produce the same architectural patterns (anticipation, coincidence detection, multi-stream integration, frequency-coded control, meta-regulation) without any centralised controller.
 
-If the architectural patterns are substrate-flexible — implementable in molecular networks, nerve nets, or computational substrates — then the perceptron lineage's centralised-controller assumption is a design choice, not a necessity. This cluster catalogues three patterns that bacteria use to make decisions without a brain, in a form AI engineers can adopt directly.
+If the architectural patterns are substrate-flexible — implementable in molecular networks, nerve nets, or computational substrates — then the perceptron lineage's centralised-controller assumption is a design choice, not a necessity. This collection catalogues three patterns that bacteria use to make decisions without a brain, in a form AI engineers can adopt directly.
 
-[Nesin & Chandrankunnel (2025)](https://doi.org/10.1080/19420889.2025.2463926) is the primary source. [Turner et al. (2026)](https://doi.org/10.1101/2026.03.07.710317) provides a corroborating phylogenetic placement (jellyfish, sea anemones — nerve net, no brain). The vault consolidation hub `Embodiment Without Cortex` is the upstream of this cluster.
+[Nesin & Chandrankunnel (2025)](https://doi.org/10.1080/19420889.2025.2463926) is the primary source. [Turner et al. (2026)](https://doi.org/10.1101/2026.03.07.710317) provides a corroborating phylogenetic placement (jellyfish, sea anemones — nerve net, no brain). The vault consolidation hub `Embodiment Without Cortex` is the upstream of this collection.
 
 ## Member NEXIs
 
@@ -54,23 +54,23 @@ The composition is **layered**, not sequenced. All three layers run concurrently
 
 - Without coincidence-gating, stochastic exploration commits prematurely on single-channel evidence.
 - Without stochastic-memory coupling, coincidence-gated decisions still operate on a fixed exploration policy.
-- Without meta-regulation, the cluster's parameters are fixed at deployment rather than adapted to changing conditions.
+- Without meta-regulation, the collection's parameters are fixed at deployment rather than adapted to changing conditions.
 
-## What this cluster claims (system falsifiable hypothesis)
+## What this collection claims (system falsifiable hypothesis)
 
-> AI architectures that adopt the full acerebrate-decision-making cluster (multi-stream coincidence-detection gating + stochastic-memory paired exploration + explicit meta-regulation) outperform same-budget single-axis architectures on decision-making tasks under unpredictability and partial observability, by margins larger than the sum of individual-pattern gains. Refutation: if pipeline-designed systems perform no better than the best individual-NEXI baseline at matched compute on appropriately heterogeneous benchmarks (varying environmental predictability, multi-stream context availability, and non-stationarity), the cluster's compositional claim is refuted.
+> AI architectures that adopt the full acerebrate-decision-making collection (multi-stream coincidence-detection gating + stochastic-memory paired exploration + explicit meta-regulation) outperform same-budget single-axis architectures on decision-making tasks under unpredictability and partial observability, by margins larger than the sum of individual-pattern gains. Refutation: if pipeline-designed systems perform no better than the best individual-NEXI baseline at matched compute on appropriately heterogeneous benchmarks (varying environmental predictability, multi-stream context availability, and non-stationarity), the collection's compositional claim is refuted.
 
 This is a stronger claim than "each pattern helps in isolation." The bet is that **layered composition is load-bearing** — the three layers operating concurrently produce decision quality that none of them in isolation can produce.
 
-## Comparison with the other clusters
+## Comparison with the other collections
 
-| Cluster                                                                | Shape                                                     | Layer                                    | Direction                      |
+| Collection                                                                | Shape                                                     | Layer                                    | Direction                      |
 | ---------------------------------------------------------------------- | --------------------------------------------------------- | ---------------------------------------- | ------------------------------ |
 | [`distributed-social-cognition`](../distributed-social-cognition/)     | Constellation (5 mutually-enabling runtime patterns)      | Multi-agent runtime                      | Across agents                  |
 | [`bounded-cognitive-architecture`](../bounded-cognitive-architecture/) | Pipeline (3 sequenced design-time stages)                 | Single-agent design-time                 | Through time (sequenced)       |
-| **`acerebrate-decision-making`** _(this cluster)_                      | **Composition (3 layered concurrent runtime mechanisms)** | **Single-agent runtime decision-making** | **Across layers (concurrent)** |
+| **`acerebrate-decision-making`** _(this collection)_                      | **Composition (3 layered concurrent runtime mechanisms)** | **Single-agent runtime decision-making** | **Across layers (concurrent)** |
 
-The catalog now documents **three distinct cluster shapes** — constellation, pipeline, composition — each appropriate for a different problem class. The shape difference is itself architecturally meaningful and reflects the diverse ways nature solves coordination problems.
+The catalog now documents **four distinct collection shapes** — constellation, pipeline, composition, and isomorphism — each appropriate for a different problem class; a fifth collection (substrate-independent-cognition) is newly seeded and not yet assigned a shape. The shape difference is itself architecturally meaningful and reflects the diverse ways nature solves coordination problems.
 
 ## When to adopt
 
@@ -83,19 +83,19 @@ The catalog now documents **three distinct cluster shapes** — constellation, p
 
 - Single-stream classification or regression tasks with stable input distributions.
 - Deployments with reliable centralised controllers and strong observability.
-- Tasks where computational cost asymmetry favours simple amplitude-coded representations over the cluster's combined overhead.
+- Tasks where computational cost asymmetry favours simple amplitude-coded representations over the collection's combined overhead.
 - Research / exploratory architectures deliberately operating without decision-commitment requirements.
 
 ## Tradeoffs
 
-The cluster trades architectural-overhead cost (additional regulator components, persistent memory stores, multi-stream input wiring) against decision-quality under unpredictability. For deployments with stable inputs and strong centralised observability, the overhead is wasted. For deployments where unpredictability is the dominant cost driver, the cluster pays. Engineers should explicitly assess deployment-niche unpredictability before adopting.
+The collection trades architectural-overhead cost (additional regulator components, persistent memory stores, multi-stream input wiring) against decision-quality under unpredictability. For deployments with stable inputs and strong centralised observability, the overhead is wasted. For deployments where unpredictability is the dominant cost driver, the collection pays. Engineers should explicitly assess deployment-niche unpredictability before adopting.
 
 ## Natural exemplars
 
 | Source                                                                                                                                           | What it contributes                                                                                                                                                                                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Nesin & Chandrankunnel (2025)](https://doi.org/10.1080/19420889.2025.2463926) — _The need for a new perspective on decision-making in bacteria_ | Primary source. _Vibrio cholerae_ biofilm commitment via coincidence detection (LuxPQ + CqsS); stochastic gene-expression switching paired with iron-based cellular memory; anti-σ proteins as meta-regulators of σ factors. All three primitives operate in organisms with no nervous system at all. |
-| [Turner et al. (2026)](https://doi.org/10.1101/2026.03.07.710317) — _Cognitive capacity and control in the evolution of intelligence_            | Corroborating phylogenetic placement. Jellyfish and sea anemones (nerve net, no brain) in the _passive-storage_ regime — second source for the substrate-independence claim that motivates this cluster.                                                                                              |
+| [Turner et al. (2026)](https://doi.org/10.1101/2026.03.07.710317) — _Cognitive capacity and control in the evolution of intelligence_            | Corroborating phylogenetic placement. Jellyfish and sea anemones (nerve net, no brain) in the _passive-storage_ regime — second source for the substrate-independence claim that motivates this collection.                                                                                              |
 
 ## Related work in current AI
 
@@ -107,7 +107,7 @@ The cluster trades architectural-overhead cost (additional regulator components,
 
 ## See also
 
-- Cluster cousins: [`distributed-social-cognition`](../distributed-social-cognition/) and [`bounded-cognitive-architecture`](../bounded-cognitive-architecture/).
+- Collection cousins: [`distributed-social-cognition`](../distributed-social-cognition/) and [`bounded-cognitive-architecture`](../bounded-cognitive-architecture/).
 - Catalog index: [`../../CATALOG.md`](../../CATALOG.md).
 - Methodology: [`../../docs/methodology.md`](../../docs/methodology.md).
 - What a NEXI is: [`../../docs/what-is-a-nexi.md`](../../docs/what-is-a-nexi.md).

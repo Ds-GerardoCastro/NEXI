@@ -130,9 +130,9 @@ This rule keeps the architecture's runtime control hierarchy at exactly three le
 | **Multi-agent RL**               | The dispatcher is L2. The meta-regulator is L3 — observes population-level outcomes, adjusts dispatcher parameters (population size, exploration policy, reward shaping).                               |
 | **Production ML serving**        | The serving controller (load balancer, fallback router) is L2. The meta-regulator monitors deployment-wide metrics and adjusts the serving controller's behaviour.                                      |
 
-## Interaction with the cluster
+## Interaction with the collection
 
-This NEXI is the **control-over-control layer** of the [`acerebrate-decision-making`](../../../clusters/acerebrate-decision-making/) cluster. It composes with:
+This NEXI is the **control-over-control layer** of the [`acerebrate-decision-making`](../../../clusters/acerebrate-decision-making/) collection. It composes with:
 
 - [`coincidence-detection-gating`](../../coincidence-detection-gating/) — the meta-regulator can dynamically adjust the gate's thresholds and required-stream set in response to deployment-context signals.
 - [`stochastic-memory-coupling`](../../stochastic-memory-coupling/) — the meta-regulator dynamically adjusts the coupling parameter `β` and memory decay rate, keeping both components actively contributing.

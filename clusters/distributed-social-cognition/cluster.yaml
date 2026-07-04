@@ -8,7 +8,7 @@ problem_class: >
   How an agent in a multi-agent setting builds and maintains models of its
   peers (their goals, knowledge, capabilities, relationships) under partial
   observability, without paying the cost of direct interaction with each
-  one. The cluster addresses social-state inference in environments where
+  one. The collection addresses social-state inference in environments where
   direct interaction is costly, observation is partial, and the population
   is too large for exhaustive engagement.
 
@@ -21,13 +21,13 @@ member_nexis:
 
 system_falsifiable_hypothesis: >
   Multi-agent systems that adopt the full distributed-social-cognition
-  cluster (eavesdropping + identity-by-pattern + multi-modal-integration +
+  collection (eavesdropping + identity-by-pattern + multi-modal-integration +
   context-bound-semantics + social-hotspots) outperform systems that adopt
   any proper subset of these patterns on cooperative social-inference
   benchmarks at equal training compute, by a margin larger than the sum of
-  individual-pattern gains. Refutation: if subsetting the cluster produces
+  individual-pattern gains. Refutation: if subsetting the collection produces
   no degradation beyond what is predicted by the individual-pattern losses,
-  the cluster's synergy claim is refuted (the patterns may still be
+  the collection's synergy claim is refuted (the patterns may still be
   individually useful).
 
 natural_exemplars:
@@ -64,14 +64,14 @@ when_to_adopt: >
 when_not_to_adopt: >
   Single-agent systems; adversarial or privacy-sensitive contexts where
   observation creates attack surface; strictly compute-bound deployments
-  (the cluster multiplies cost relative to a baseline agent); tasks where
+  (the collection multiplies cost relative to a baseline agent); tasks where
   direct interaction suffices and inferring others adds no signal.
 
 tradeoffs: >
-  Compute and memory cost scale with the cluster (additional encoders,
+  Compute and memory cost scale with the collection (additional encoders,
   attention over observation streams, spatial memory structures).
   Engineering complexity rises — multiple co-dependent components mean
-  more to debug and tune. In return, the cluster is what enables sample-
+  more to debug and tune. In return, the collection is what enables sample-
   efficient social-state inference; isolated patterns underperform.
 
 complementarity_notes: >
@@ -89,11 +89,11 @@ complementarity_notes: >
     is itself derivable in part from multi-modal context (where, when,
     with whom).
 
-  Removing any one component degrades the others; this is the cluster's
+  Removing any one component degrades the others; this is the collection's
   synergy claim.
 
 tags:
-  - cluster
+  - collection
   - multi-agent
   - social-cognition
   - partial-observability

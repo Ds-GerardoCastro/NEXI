@@ -2,7 +2,7 @@
 
 > **NEXI status:** canonical · **Formats:** architecture, skill · **Audience:** builder
 >
-> **Cluster:** [`embodied-action-selection`](../../clusters/embodied-action-selection/)
+> **Collection:** [`embodied-action-selection`](../../clusters/embodied-action-selection/)
 >
 > A design-time and runtime pattern for **treating action selection as a first-class architectural commitment** — implementing default-inhibit / selective-disinhibit gating, goal-directed sequence construction, and contextual reinforcement as an explicit module rather than as an emergent property of an opaque substrate. Documented across three substrates as different as bacterial molecular regulatory networks, cnidarian nerve nets, and vertebrate CBGTC loops — establishing action selection as a substrate-general invariant.
 
@@ -69,7 +69,7 @@ The non-trivial design choice is **which substrate-implicit selection to _expose
 
 ## Architectural primitive
 
-See [`architecture/overview.md`](architecture/overview.md) for the full design — components, interfaces, data flow, and integration with the rest of the [`embodied-action-selection`](../../clusters/embodied-action-selection/) cluster.
+See [`architecture/overview.md`](architecture/overview.md) for the full design — components, interfaces, data flow, and integration with the rest of the [`embodied-action-selection`](../../clusters/embodied-action-selection/) collection.
 
 In summary, four components:
 

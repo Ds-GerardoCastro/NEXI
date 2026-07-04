@@ -1,14 +1,14 @@
 # Bounded Cognitive Architecture
 
-> **Cluster status:** draft · **Members:** 3 · **Audience:** builder
+> **Collection status:** draft · **Members:** 3 · **Audience:** builder
 >
-> A coherent intelligence model for **designing AI architectures under cost constraint, conditional on the deployment niche**. The cluster groups three patterns that together form a design-time pipeline: niche specification → regime classification → capacity-first allocation.
+> A coherent intelligence model for **designing AI architectures under cost constraint, conditional on the deployment niche**. The collection groups three patterns that together form a design-time pipeline: niche specification → regime classification → capacity-first allocation.
 
 > **Adopting this collection.** Its patterns are **independently adoptable** — take one, several, or mix them with patterns from other collections. This page groups them because they were read from the same biological system and reinforce each other; it is a **reading path and provenance record, not a required bundle**. The system-level hypothesis below is a **falsifiable research claim** — that the whole outperforms any proper subset — offered as something to test, not a guarantee to the adopting engineer. If it is refuted, the member patterns remain individually valid.
 
 ---
 
-## Why this cluster exists
+## Why this collection exists
 
 In current AI practice, "scaling" usually means a single decision: more parameters, more compute, more data. That works on the way up the curve and obscures three structural facts about cognition that hold across biological systems:
 
@@ -16,7 +16,7 @@ In current AI practice, "scaling" usually means a single decision: more paramete
 2. **The deployment niche shapes the optimum.** A small edge model in a low-payoff niche, a mid-tier assistant in a control-rewarding niche, and a flagship in a high-payoff niche are _structurally distinct_ designs — not points on the same scaling curve.
 3. **Storage capacity is prerequisite.** Regulation (attention, reasoning, agentic loops) cannot operate without storage to act on. Capacity contributes linearly to recall efficacy; control contributes sublinearly.
 
-Turner et al. (2026) [Cognitive capacity and control in the evolution of intelligence](https://doi.org/10.1101/2026.03.07.710317) derive these facts as evolutionary-optimality results in a mathematical model of working-memory selection, then cross-validate with retro-cue task data from humans and rhesus macaques. Independently, the zebra-finch communication-networks literature shows niche-conditional cognitive design in a wild non-mammalian system. This cluster translates the convergent biological pattern into an engineerable AI design-time pipeline.
+Turner et al. (2026) [Cognitive capacity and control in the evolution of intelligence](https://doi.org/10.1101/2026.03.07.710317) derive these facts as evolutionary-optimality results in a mathematical model of working-memory selection, then cross-validate with retro-cue task data from humans and rhesus macaques. Independently, the zebra-finch communication-networks literature shows niche-conditional cognitive design in a wild non-mammalian system. This collection translates the convergent biological pattern into an engineerable AI design-time pipeline.
 
 ## Member NEXIs
 
@@ -54,17 +54,17 @@ Turner et al. (2026) [Cognitive capacity and control in the evolution of intelli
 
 The pipeline is **strict** in the sense that each stage's output is the next stage's typed input. Skipping niche specification leaves regime selection without an input. Skipping regime selection leaves capacity-first allocation without an architectural target. Skipping capacity-first leaves the regime as a tier-label without an allocation policy.
 
-## What this cluster claims (system falsifiable hypothesis)
+## What this collection claims (system falsifiable hypothesis)
 
-> Architectures designed using the full pipeline (niche specification → regime classification → capacity-first allocation) outperform same-budget architectures designed via single-axis scaling on niche-specific evaluation, by a margin larger than the sum of individual-NEXI gains. Refutation: if pipeline-designed systems perform no better than the best individual-NEXI baseline at matched compute, the cluster's compositional claim is refuted (the patterns may still be individually useful as standalone NEXIs).
+> Architectures designed using the full pipeline (niche specification → regime classification → capacity-first allocation) outperform same-budget architectures designed via single-axis scaling on niche-specific evaluation, by a margin larger than the sum of individual-NEXI gains. Refutation: if pipeline-designed systems perform no better than the best individual-NEXI baseline at matched compute, the collection's compositional claim is refuted (the patterns may still be individually useful as standalone NEXIs).
 
 This is a stronger claim than "each pattern helps in isolation." The bet is that **composition is load-bearing** — the design-time discipline of forcing niche specification before regime selection before allocation, in that order, produces architectures that single-pattern application does not.
 
-## Comparison with the other cluster
+## Comparison with the other collection
 
-The catalog's first cluster, [`distributed-social-cognition`](../distributed-social-cognition/), is a **constellation** — five mutually-enabling runtime patterns that all run during inference (eavesdropping, identity-by-pattern, multi-modal-integration, context-bound-semantics, social-hotspots). Removing any one degrades the rest, but they execute in parallel in a deployed system.
+The catalog's first collection, [`distributed-social-cognition`](../distributed-social-cognition/), is a **constellation** — five mutually-enabling runtime patterns that all run during inference (eavesdropping, identity-by-pattern, multi-modal-integration, context-bound-semantics, social-hotspots). Removing any one degrades the rest, but they execute in parallel in a deployed system.
 
-This cluster is structurally different: a **pipeline** of _design-time_ patterns. They run before the deployed system exists, in sequence, each producing the input for the next. The two cluster shapes — constellation and pipeline — are both legitimate and the schema accommodates both via `complementarity_notes`.
+This collection is structurally different: a **pipeline** of _design-time_ patterns. They run before the deployed system exists, in sequence, each producing the input for the next. The two collection shapes — constellation and pipeline — are both legitimate and the schema accommodates both via `complementarity_notes`.
 
 ## When to adopt
 
@@ -85,7 +85,7 @@ This cluster is structurally different: a **pipeline** of _design-time_ patterns
 
 Pipeline-discipline imposes design-time overhead — niche specification, regime classification, capacity-tagging — that ad-hoc scaling avoids. Architectural discontinuities across deployment tiers complicate code-sharing and shared maintenance. In return, decisions become principled, evaluation becomes meaningful, and downstream components compose rather than collide.
 
-The cluster's strongest critique of common practice is that **"scaling" as currently framed elides niche-binding**. A single scaling curve abstracted from deployment context is exactly the framing this cluster rejects.
+The collection's strongest critique of common practice is that **"scaling" as currently framed elides niche-binding**. A single scaling curve abstracted from deployment context is exactly the framing this collection rejects.
 
 ## Natural exemplars
 
@@ -104,7 +104,7 @@ The cluster's strongest critique of common practice is that **"scaling" as curre
 
 ## See also
 
-- Cluster cousin: [`distributed-social-cognition`](../distributed-social-cognition/) — the constellation-shaped runtime cluster from the zebra-finch source.
+- Collection cousin: [`distributed-social-cognition`](../distributed-social-cognition/) — the constellation-shaped runtime collection from the zebra-finch source.
 - Catalog index: [`../../CATALOG.md`](../../CATALOG.md).
 - Methodology: [`../../docs/methodology.md`](../../docs/methodology.md).
 - What a NEXI is: [`../../docs/what-is-a-nexi.md`](../../docs/what-is-a-nexi.md).

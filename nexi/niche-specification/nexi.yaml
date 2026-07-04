@@ -86,7 +86,7 @@ when_to_use: >
 
 when_not_to_use: >
   Foundation-model pretraining (substrate construction, not niche-bound — see
-  bounded-cognitive-architecture cluster's complementarity_notes for the canalisation
+  bounded-cognitive-architecture collection's complementarity_notes for the canalisation
   framing). Single-architecture services that genuinely must serve many niches — use
   a router-of-niche-specialists pattern instead, where each specialist is niche-bound
   and the router classifies incoming requests. Research / exploratory architectures

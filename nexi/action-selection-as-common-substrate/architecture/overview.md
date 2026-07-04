@@ -1,6 +1,6 @@
 # Architecture: Action Selection as Common Substrate
 
-This document specifies the architectural primitive for treating action selection as a first-class architectural commitment — components, interfaces, data flow, and integration with the rest of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) cluster.
+This document specifies the architectural primitive for treating action selection as a first-class architectural commitment — components, interfaces, data flow, and integration with the rest of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) collection.
 
 ## Components
 
@@ -139,11 +139,11 @@ def post_outcome_update(selection, outcome, context, associations):
 
 - **Module boundary overhead.** Exposing the four components adds inspection points and adds typed-data passing between them. For deployments where decision provenance is valuable (debugging, audit, lesion experiments), this overhead pays. For tight-loop deployments where every microsecond matters, the overhead is non-trivial.
 - **Reinforcement loop persistence.** `Ba(g, P)` must be persisted across decisions for chunking to work. Persistence overhead is low for individual sessions; non-trivial for long-running deployments.
-- **Cross-domain reuse efficiency.** When the same module handles motor and cognitive selection (paired with exaptation NEXI), the marginal cost per new domain drops sharply. This is the cluster's primary architectural payoff.
+- **Cross-domain reuse efficiency.** When the same module handles motor and cognitive selection (paired with exaptation NEXI), the marginal cost per new domain drops sharply. This is the collection's primary architectural payoff.
 
-## Interaction with the cluster
+## Interaction with the collection
 
-This NEXI is the **substrate-invariant layer** of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) cluster. It composes with:
+This NEXI is the **substrate-invariant layer** of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) collection. It composes with:
 
 - [`ecological-context-model`](../../ecological-context-model/) — provides the formal substrate (equations 1–3) on which this NEXI's components are defined. The competition function uses equation (2); the reinforcement loop uses equation (3).
 - [`exaptation-architectural-reuse`](../../exaptation-architectural-reuse/) — the generative principle by which a single instance of this NEXI's module can be redeployed across motor and cognitive domains. Without exaptation, this NEXI would require domain-duplicate modules.

@@ -45,7 +45,7 @@ HotspotDetector {
 A hotspot is a location with persistently elevated density of observation events. Implementations:
 
 - **Spatial clustering** — DBSCAN, kernel-density estimation over recent positions.
-- **Temporal persistence threshold** — a cluster becomes a hotspot only after sustained density.
+- **Temporal persistence threshold** — a collection becomes a hotspot only after sustained density.
 - **Decay** — hotspots fade if density drops; they are not permanent.
 
 ---

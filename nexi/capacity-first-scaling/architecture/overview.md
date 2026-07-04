@@ -176,7 +176,7 @@ The rule's strongest form assumes capacity-cost and control-cost are roughly pro
 - **Cheap-control regime.** If control is _substantially_ cheaper than capacity per unit of effective recall improvement, the rule is reversed. Empirically rare — rare enough that Turner et al. note it as the only condition under which capacity-first is overturned.
 - **Already-saturated capacity.** Once capacity is well above the niche threshold, control investment dominates marginal returns until it too saturates. The rule degenerates into balanced allocation in this regime, with capacity-leaning weight (~70% per the high-investment regime) only when well above threshold.
 
-## Interaction with the cluster
+## Interaction with the collection
 
 This NEXI is the most downstream stage of the [`bounded-cognitive-architecture`](../../../clusters/bounded-cognitive-architecture/) pipeline:
 

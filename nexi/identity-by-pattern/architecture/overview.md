@@ -77,7 +77,7 @@ class IdentityModule:
 ## Performance considerations
 
 - **Embedding dimension** is a tunable: larger preserves more particularity but costs more memory and compute. 128–512 dims is typical.
-- **Memory growth** with population: O(N × embeddings_per_individual). Periodic compression (cluster + centroid) is useful at large scale.
+- **Memory growth** with population: O(N × embeddings_per_individual). Periodic compression (collection + centroid) is useful at large scale.
 - **Cold-start** on new individuals requires at least one enrollment signal; few-shot adaptation is a research frontier.
 
 ## Edge cases and failure modes

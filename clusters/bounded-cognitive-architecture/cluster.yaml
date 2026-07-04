@@ -7,7 +7,7 @@ created: 2026-05-03
 problem_class: >
   How to design a cognitive architecture under metabolic / compute / memory cost
   constraint, when the deployment niche dictates which architectural commitments are
-  optimal. The cluster addresses architecture-design decisions for any AI system that
+  optimal. The collection addresses architecture-design decisions for any AI system that
   must allocate finite cognitive resources across capacity and control components
   within a specific deployment niche — and explicitly rejects the framing in which
   one architecture is universally optimal across niches.
@@ -23,7 +23,7 @@ system_falsifiable_hypothesis: >
   designed via single-axis scaling on niche-specific evaluation, by a margin larger
   than the sum of individual-NEXI gains. Refutation: if pipeline-designed systems
   perform no better than the best individual-NEXI baseline on equivalent tasks at
-  matched compute, the cluster's compositional claim is refuted (the patterns may
+  matched compute, the collection's compositional claim is refuted (the patterns may
   still be individually useful as standalone NEXIs).
 
 natural_exemplars:
@@ -105,13 +105,13 @@ complementarity_notes: >
     selection produces a component mix but not an allocation policy under a specific
     budget increase.
 
-  Removing any one component degrades the others; this is the cluster's compositional
+  Removing any one component degrades the others; this is the collection's compositional
   claim. The pipeline is also distinct in shape from the existing distributed-social-
-  cognition cluster, which is a constellation of mutually-enabling runtime patterns
+  cognition collection, which is a constellation of mutually-enabling runtime patterns
   rather than a sequenced design-time pipeline.
 
 tags:
-  - cluster
+  - collection
   - design-time
   - architecture-design
   - niche-conditional

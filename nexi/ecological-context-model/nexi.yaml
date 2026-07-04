@@ -29,7 +29,7 @@ natural_exemplars:
       explicit terms for environment, agent-perceptible features, behavioural
       repertoire, perceptions, and goal-context-behaviour associations. The
       formalism unifies motor and cognitive control under one framework and
-      anchors the rest of the embodied-action-selection cluster.
+      anchors the rest of the embodied-action-selection collection.
 
 abstract_claim: >
   Architectures for embodied agents should commit to a single unified state

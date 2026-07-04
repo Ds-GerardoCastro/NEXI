@@ -2,7 +2,7 @@
 
 A drop-in **design-time specification** skill for an engineering agent (or human-in-the-loop architecture-design assistant) that elicits a typed niche object from a deployment description and refuses to proceed until the niche is complete. Framework-neutral — see translation notes for stack-specific mappings.
 
-> **Skill kind:** `design-time-specification`. The most upstream skill in the [`bounded-cognitive-architecture`](../../../clusters/bounded-cognitive-architecture/) cluster. Produces the typed input that downstream design-time skills (regime selection, capacity-first allocation) consume.
+> **Skill kind:** `design-time-specification`. The most upstream skill in the [`bounded-cognitive-architecture`](../../../clusters/bounded-cognitive-architecture/) collection. Produces the typed input that downstream design-time skills (regime selection, capacity-first allocation) consume.
 
 ---
 
@@ -195,7 +195,7 @@ The elicitation dialogue is preserved with the niche so future re-specifications
 
 The skill's specifications should pass these falsification tests:
 
-1. **Niche-specified architectures outperform general-purpose architectures on matched in-niche evaluation.** When the skill produces a complete niche object and downstream design follows the cluster pipeline, the resulting architecture should outperform a same-budget general-purpose architecture on the niche's in-niche benchmark. Failure: weakens the niche-binding claim.
+1. **Niche-specified architectures outperform general-purpose architectures on matched in-niche evaluation.** When the skill produces a complete niche object and downstream design follows the collection pipeline, the resulting architecture should outperform a same-budget general-purpose architecture on the niche's in-niche benchmark. Failure: weakens the niche-binding claim.
 2. **Vague specifications get rejected.** When the deployment description is genuinely vague, the skill refuses to produce a niche object rather than synthesising plausible values. Failure: the pushback discipline is not load-bearing — and the resulting "niche" is worth no more than the implicit assumptions it papers over.
 3. **Multi-niche detection triggers router pattern.** Deployments with genuinely heterogeneous use cases get routed-of-specialists recommendations, not single-architecture recommendations. Failure: the multi-niche detector is misclassifying genuine heterogeneity as a single niche.
 4. **Out-of-niche behaviour is operationally implemented.** Architectures shipped with explicit niche specifications support the declared out-of-niche behaviour at inference time (graceful decline, refusal, or routing actually happens when inputs cross the boundary). Failure: niche specifications are descriptive but not actionable.
@@ -213,6 +213,6 @@ Working examples will be added under [`examples/`](examples/) as the catalog mat
 - Pattern README: [`../README.md`](../README.md)
 - Architectural primitive: [`../architecture/overview.md`](../architecture/overview.md)
 - References: [`../references.md`](../references.md)
-- Cluster: [`../../clusters/bounded-cognitive-architecture/`](../../../clusters/bounded-cognitive-architecture/)
+- Collection: [`../../clusters/bounded-cognitive-architecture/`](../../../clusters/bounded-cognitive-architecture/)
 - Downstream skill: [`cognitive-regime-selection`](../../cognitive-regime-selection/)
 - Downstream skill: [`capacity-first-scaling`](../../capacity-first-scaling/)

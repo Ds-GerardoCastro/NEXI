@@ -6,12 +6,12 @@ created: '2026-07-04'
 problem_class: >
   Which architectural commitments are necessary for flexible cognition
   independent of the substrate that implements them — and how do we read
-  those commitments off the evidence of convergent evolution? The cluster
+  those commitments off the evidence of convergent evolution? The collection
   groups patterns that recur convergently across non-homologous substrates
   (different neural tissues that share no complex-brain common ancestor),
   treating that convergent recurrence as evidence that the pattern is a
   substrate-general design primitive rather than an accident of one
-  lineage. It is a deliberately young cluster: seeded on a single
+  lineage. It is a deliberately young collection: seeded on a single
   comparative-neuroanatomy source, it exists to accumulate cross-substrate
   architectural invariants as further sources land.
 
@@ -28,9 +28,9 @@ system_falsifiable_hypothesis: >
   both commitments together should outperform a system adopting either
   alone at matched budget on tasks demanding cross-modal, rapidly-
   generalising behaviour. Refutation: if the two commitments confer no
-  joint benefit beyond the better of the two individually (i.e. the cluster
+  joint benefit beyond the better of the two individually (i.e. the collection
   adds nothing over its strongest member) on cross-modal associative-
-  generalisation benchmarks at matched compute, the cluster's
+  generalisation benchmarks at matched compute, the collection's
   substrate-general-composition claim is refuted — the patterns may still
   be individually useful as standalone NEXIs.
 
@@ -48,7 +48,7 @@ natural_exemplars:
       Documents both member patterns co-occurring across five independent
       lineages: a dedicated multimodal integration centre and the
       expand-then-read-out circuit motif that implements it, on
-      anatomically non-homologous substrates. Seeds the cluster; a second
+      anatomically non-homologous substrates. Seeds the collection; a second
       circuit-level source (e.g. cephalopod electrophysiology, Drosophila
       mushroom-body computation, or a non-neural substrate documenting
       expand-then-readout) is the promotion gate.
@@ -65,14 +65,14 @@ when_not_to_adopt: >
   Single-substrate optimisation where portability is not a concern;
   single-modality systems with nothing to integrate; deployments where
   neither an integration centre nor an expansion-readout stage addresses
-  an observed bottleneck. The cluster is young and single-source — do not
+  an observed bottleneck. The collection is young and single-source — do not
   treat its composition claim as settled evidence.
 
 tradeoffs: >
   Committing to substrate-generality trades the efficiency of a
   substrate-tuned design for portability and a convergence-grounded design
-  target. The cluster's members can be adopted independently; adopting them
-  as a cluster only pays where a system genuinely needs both cross-modal
+  target. The collection's members can be adopted independently; adopting them
+  as a collection only pays where a system genuinely needs both cross-modal
   integration and rapid associative generalisation.
 
 complementarity_notes: >
@@ -87,21 +87,21 @@ complementarity_notes: >
   is built. Together they are the substrate-general answer Roth's
   convergence evidence points to.
 
-  Important framing caveat: the cluster's stance is
+  Important framing caveat: the collection's stance is
   substrate-independence-of-architectural-pattern, not
   substrate-irrelevance. Roth's own account is in fact substrate-restrictive
-  (he binds intelligence to associative neuronal networks); the cluster
+  (he binds intelligence to associative neuronal networks); the collection
   takes the weaker, defensible reading — that the *pattern* recurs across
   non-homologous neural substrates and is therefore a candidate for porting
   to artificial ones — without claiming any substrate will do. This
-  distinguishes the cluster from a naive "substrate doesn't matter" claim
+  distinguishes the collection from a naive "substrate doesn't matter" claim
   and connects it to the project-wide substrate-independence-of-pattern
-  position (see the acerebrate and embodied-action-selection clusters for
+  position (see the acerebrate and embodied-action-selection collections for
   the molecular and vertebrate-CBGTC vertices of the same three-way
   framing).
 
 tags:
-  - cluster
+  - collection
   - substrate-independence
   - convergent-evolution
   - integration-hub

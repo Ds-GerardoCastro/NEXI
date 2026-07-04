@@ -2,7 +2,7 @@
 
 > **NEXI status:** draft · **Formats available:** architecture, skill · **Audience:** builder
 >
-> **Member of cluster:** [Distributed Social Cognition](../../clusters/distributed-social-cognition/)
+> **Member of collection:** [Distributed Social Cognition](../../clusters/distributed-social-cognition/)
 >
 > _Information density concentrates at the locations (or virtual loci) where agents converge. Architectures that explicitly model these hotspots and weight by spatial-or-virtual proximity outperform uniform-attention baselines on spatially structured tasks._
 
@@ -10,7 +10,7 @@
 
 ## At a glance
 
-In multi-agent settings with shared environments, information is **not uniformly distributed**. It clusters at the places where bodies (or processes) converge — what biologists call **social hotspots**. A multi-agent system that treats all locations and all peers as equivalently informative ignores a structural property of its world.
+In multi-agent settings with shared environments, information is **not uniformly distributed**. It collections at the places where bodies (or processes) converge — what biologists call **social hotspots**. A multi-agent system that treats all locations and all peers as equivalently informative ignores a structural property of its world.
 
 | Question          | Short answer                                                                                                      |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------- |
@@ -124,13 +124,13 @@ Full citations: [`references.md`](references.md).
 
 ## Boundary conditions
 
-This NEXI specifies _spatial information aggregation_. It does not specify what to _do_ with the aggregated information — that depends on downstream patterns (eavesdropping, identity-by-pattern). Hotspots are where the cluster operates most efficiently; they do not by themselves constitute social inference.
+This NEXI specifies _spatial information aggregation_. It does not specify what to _do_ with the aggregated information — that depends on downstream patterns (eavesdropping, identity-by-pattern). Hotspots are where the collection operates most efficiently; they do not by themselves constitute social inference.
 
 ---
 
 ## Related
 
-- **Cluster:** [Distributed Social Cognition](../../clusters/distributed-social-cognition/)
+- **Collection:** [Distributed Social Cognition](../../clusters/distributed-social-cognition/)
 - **Co-dependent NEXIs:** [`eavesdropping`](../eavesdropping/), [`identity-by-pattern`](../identity-by-pattern/), [`multi-modal-integration`](../multi-modal-integration/), [`context-bound-semantics`](../context-bound-semantics/)
 - **Vault provenance (private):** principle `P10 — Social Hotspots as Information Hubs`; metamodel `MM1 — Distributed Information Substrate`.
 - **References:** [`references.md`](references.md)
