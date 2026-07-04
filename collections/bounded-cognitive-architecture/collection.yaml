@@ -2,7 +2,7 @@ id: bounded-cognitive-architecture
 name: Bounded Cognitive Architecture
 status: draft
 version: 0.1.0
-created: 2026-05-03
+created: '2026-05-03'
 
 problem_class: >
   How to design a cognitive architecture under metabolic / compute / memory cost

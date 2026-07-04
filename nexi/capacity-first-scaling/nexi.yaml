@@ -2,7 +2,7 @@ id: capacity-first-scaling
 name: Capacity-First Scaling
 status: draft
 version: 0.1.0
-created: 2026-05-03
+created: '2026-05-03'
 audience_voice: builder
 
 natural_exemplars:

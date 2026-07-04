@@ -160,6 +160,17 @@ def _parse_blocks(md: str):
                 yield ("p", text)
 
 
+def _doc_title(md: str) -> str:
+    m = re.search(r"^# (.+)$", md, re.MULTILINE)
+    head = re.sub(r"[*_`]", "", m.group(1)).strip() if m else "Open letter"
+    return head + " - Nature Intelligence Project"
+
+
+def _default_md(here: Path) -> Path:
+    cands = sorted(here.glob("*-open-letter.md"))
+    return cands[0] if cands else here / "open-letter.md"
+
+
 def render(md_path: Path, pdf_path: Path) -> dict:
     md = md_path.read_text(encoding="utf-8")
     styles = _build_styles()
@@ -193,9 +204,9 @@ def render(md_path: Path, pdf_path: Path) -> dict:
         rightMargin=0.9 * inch,
         topMargin=0.85 * inch,
         bottomMargin=0.85 * inch,
-        title="Open letter — Turner et al. — Nature Intelligence Project",
+        title=_doc_title(md),
         author="Juan Gerardo Castro Sánchez",
-        subject="Architectural primitives extracted from your 2026 working-memory evolution model",
+        subject="Open letter - Nature Intelligence Project",
     )
 
     page_count = {"n": 0}
@@ -212,13 +223,13 @@ def main():
     parser.add_argument(
         "input",
         nargs="?",
-        default=str(here / "turner-et-al-open-letter.md"),
+        default=str(_default_md(here)),
         help="Input markdown file (default: ./turner-et-al-open-letter.md)",
     )
     parser.add_argument(
         "output",
         nargs="?",
-        default=str(here / "turner-et-al-open-letter.pdf"),
+        default=str(_default_md(here).with_suffix(".pdf")),
         help="Output PDF path (default: ./turner-et-al-open-letter.pdf)",
     )
     args = parser.parse_args()

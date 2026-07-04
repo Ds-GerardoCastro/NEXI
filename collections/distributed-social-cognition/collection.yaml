@@ -2,7 +2,7 @@ id: distributed-social-cognition
 name: Distributed Social Cognition
 status: template
 version: 0.1.0
-created: 2026-05-03
+created: '2026-05-03'
 
 problem_class: >
   How an agent in a multi-agent setting builds and maintains models of its

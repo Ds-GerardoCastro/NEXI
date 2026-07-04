@@ -2,7 +2,7 @@ id: acerebrate-decision-making
 name: Acerebrate Decision-Making
 status: draft
 version: 0.1.0
-created: 2026-05-09
+created: '2026-05-09'
 
 problem_class: >
   How an agent without a centralised processing unit (no brain, no controller,

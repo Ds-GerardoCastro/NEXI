@@ -2,7 +2,7 @@ id: identity-by-pattern
 name: Identity by Pattern
 status: draft
 version: 0.1.0
-created: 2026-05-03
+created: '2026-05-03'
 audience_voice: builder
 
 natural_exemplars:
