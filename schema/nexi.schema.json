@@ -125,7 +125,7 @@
         "type": "string",
         "pattern": "^[a-z][a-z0-9-]*$"
       },
-      "description": "Slugs of clusters this NEXI belongs to. A cluster is a coherent intelligence model — see docs/clusters.md."
+      "description": "Slugs of the collections this NEXI belongs to (field name 'clusters' retained for now). A collection groups patterns by the biological system they were read from — see docs/collections.md."
     },
     "tags": {
       "type": "array",

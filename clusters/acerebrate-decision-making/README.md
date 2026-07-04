@@ -4,6 +4,8 @@
 >
 > A coherent intelligence model for **decision-making without a centralised processing unit**. The cluster groups three architectural layers that together produce flexible, adaptive, context-conditional behaviour using only substrate-flexible control primitives — observed in organisms with no nervous system at all (bacteria), and in organisms with only nerve nets (cnidarians).
 
+> **Adopting this collection.** Its patterns are **independently adoptable** — take one, several, or mix them with patterns from other collections. This page groups them because they were read from the same biological system and reinforce each other; it is a **reading path and provenance record, not a required bundle**. The system-level hypothesis below is a **falsifiable research claim** — that the whole outperforms any proper subset — offered as something to test, not a guarantee to the adopting engineer. If it is refuted, the member patterns remain individually valid.
+
 ---
 
 ## Why this cluster exists

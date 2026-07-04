@@ -17,16 +17,16 @@ The project mines peer-reviewed research on intelligence across biological speci
 
 **Private. Pre-release.** This repository will be made public once a critical mass of patterns has been populated and reviewed.
 
-## Clusters and patterns
+## Patterns and collections
 
-The catalog has two layers:
+The catalog's unit is the **pattern (NEXI)**:
 
-- **Clusters** (under `clusters/`) are _intelligence models_ — coherent systems of co-dependent patterns that solve a class of cognitive problems together. A cluster is the recommended unit of adoption: it tells builders what to combine, not just what exists.
-- **Patterns** (under `nexi/`) are individual NEXIs — the architectural primitives that constitute clusters. A pattern can belong to one or more clusters.
+- **Patterns** (under `nexi/`) are individual NEXIs — architectural primitives you can adopt directly, one at a time or in combination. Start here.
+- **Collections** (under `clusters/`) group patterns by the biological system they were read from, and record how those patterns interlock. A collection is an optional lens and provenance record — a reading path, not a required bundle. A pattern can belong to more than one collection.
 
-Most builders should browse clusters first. Patterns are the engineering ingredient layer; clusters are the architecture-and-theory layer.
+Browse patterns first; open a collection when you want the biological system a pattern came from and its sibling patterns.
 
-See [`docs/clusters.md`](docs/clusters.md) for the cluster framework and curation rules.
+See [`docs/collections.md`](docs/collections.md) for the collection framework and curation rules.
 
 ## How to use a cluster or pattern
 
@@ -45,7 +45,7 @@ A **pattern** under `nexi/<pattern-slug>/` contains:
 
 Browse [`CATALOG.md`](CATALOG.md) for the full index.
 
-For methodology and curation rules, see [`docs/methodology.md`](docs/methodology.md) and [`docs/clusters.md`](docs/clusters.md).
+For methodology and curation rules, see [`docs/methodology.md`](docs/methodology.md) and [`docs/collections.md`](docs/collections.md).
 
 ## Audience
 

@@ -4,6 +4,8 @@
 >
 > A coherent intelligence model for **designing AI architectures under cost constraint, conditional on the deployment niche**. The cluster groups three patterns that together form a design-time pipeline: niche specification → regime classification → capacity-first allocation.
 
+> **Adopting this collection.** Its patterns are **independently adoptable** — take one, several, or mix them with patterns from other collections. This page groups them because they were read from the same biological system and reinforce each other; it is a **reading path and provenance record, not a required bundle**. The system-level hypothesis below is a **falsifiable research claim** — that the whole outperforms any proper subset — offered as something to test, not a guarantee to the adopting engineer. If it is refuted, the member patterns remain individually valid.
+
 ---
 
 ## Why this cluster exists
@@ -90,7 +92,7 @@ The cluster's strongest critique of common practice is that **"scaling" as curre
 | Source                                                                                                                              | What it contributes                                                                                                                                                                                                                                                                                    |
 | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [Turner et al. 2026](https://doi.org/10.1101/2026.03.07.710317) — _Cognitive capacity and control in the evolution of intelligence_ | Mathematical model deriving regime structure + capacity-first ordering + metabolic-cost framing. Empirical validation via retro-cue task on humans and macaques. Phylogenetic placements across jellyfish, sea anemones, nematodes, flatworms, tardigrades, corvids, elephants, cetaceans, great apes. |
-| Hagedoorn et al. 2026 — _Communication Networks of Wild Zebra Finches_ (bioRxiv preprint)                                              | Independent biological evidence for niche-conditional cognitive design — fission-fusion social architecture as response to arid-zone non-stationarity; same signal type takes different function in different contexts.                                                                                |
+| Hagedoorn et al. 2026 — _Communication Networks of Wild Zebra Finches_ (bioRxiv preprint)                                           | Independent biological evidence for niche-conditional cognitive design — fission-fusion social architecture as response to arid-zone non-stationarity; same signal type takes different function in different contexts.                                                                                |
 
 ## Related work in current AI
 

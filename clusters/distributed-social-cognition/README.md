@@ -4,6 +4,8 @@
 >
 > *An intelligence model in which an agent builds and maintains models of its peers under partial observability, by combining observation of third-party interactions, identity-from-pattern, multi-modal grounding, context-bound interpretation, and spatial information aggregation.*
 
+> **Adopting this collection.** Its patterns are **independently adoptable** — take one, several, or mix them with patterns from other collections. This page groups them because they were read from the same biological system and reinforce each other; it is a **reading path and provenance record, not a required bundle**. The system-level hypothesis below is a **falsifiable research claim** — that the whole outperforms any proper subset — offered as something to test, not a guarantee to the adopting engineer. If it is refuted, the member patterns remain individually valid.
+
 ---
 
 ## At a glance
