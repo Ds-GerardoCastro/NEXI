@@ -2,7 +2,7 @@
 
 > **NEXI status:** canonical · **Formats available:** architecture, skill · **Audience:** builder · **Promoted:** 2026-05-09
 >
-> **Collection:** [`bounded-cognitive-architecture`](../../clusters/bounded-cognitive-architecture/)
+> **Collection:** [`bounded-cognitive-architecture`](../../collections/bounded-cognitive-architecture/)
 >
 > The most upstream design-time pattern in the collection: **before any architecture decision, specify the niche**. The niche is a typed bundle of deployment parameters — task structure, signal environment, resource envelope, error profile, social surround, evaluation protocol — that downstream patterns consume as input. There is no architecture without a niche.
 >

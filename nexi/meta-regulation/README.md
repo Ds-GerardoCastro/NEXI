@@ -2,7 +2,7 @@
 
 > **NEXI status:** draft · **Formats:** architecture, skill · **Audience:** builder
 >
-> **Collection:** [`acerebrate-decision-making`](../../clusters/acerebrate-decision-making/)
+> **Collection:** [`acerebrate-decision-making`](../../collections/acerebrate-decision-making/)
 >
 > A pattern for **explicit runtime regulators-of-regulators as a first-class architectural layer**. Anti-σ proteins control σ factors which control RNA polymerase which controls genes — three-level regulatory hierarchy with explicit meta-control over the control system itself. AI's nearest analog (meta-learning) is a training-time technique; this NEXI argues meta-regulation should be a runtime architectural commitment, not a research subfield.
 

@@ -2,7 +2,7 @@
 
 > **NEXI status:** canonical · **Formats available:** architecture, skill · **Audience:** builder
 >
-> **Member of clusters:** [Distributed Social Cognition](../../clusters/distributed-social-cognition/) · [Substrate-Independent Cognition](../../clusters/substrate-independent-cognition/)
+> **Member of collections:** [Distributed Social Cognition](../../collections/distributed-social-cognition/) · [Substrate-Independent Cognition](../../collections/substrate-independent-cognition/)
 >
 > _Joint latent representations across sensory channels — not late fusion. A single underlying state is observable through multiple channels, and coherence across them is itself information. Now multi-source: behavioural evidence from wild zebra finches and cross-phyletic anatomical evidence from convergent brain evolution point at the same commitment._
 
@@ -41,7 +41,7 @@ The circuit data backs the joint-encoder reading at the substrate level — the 
 
 ### Why this makes the NEXI canonical
 
-The behavioural evidence (a single underlying state read through convergent channels) and the anatomical evidence (dedicated integration centres evolving convergently across phyla) approach multi-modal integration from opposite methodological poles — wild ethology and comparative neuroanatomy — and arrive at the same commitment. That convergence, cross-phyletic and cross-method, is the basis for the canonical promotion (2026-07-04). It is also why the NEXI belongs to **two** clusters: [Distributed Social Cognition](../../clusters/distributed-social-cognition/) (the behavioural, multi-agent reading) and [Substrate-Independent Cognition](../../clusters/substrate-independent-cognition/) (the convergent-substrate reading).
+The behavioural evidence (a single underlying state read through convergent channels) and the anatomical evidence (dedicated integration centres evolving convergently across phyla) approach multi-modal integration from opposite methodological poles — wild ethology and comparative neuroanatomy — and arrive at the same commitment. That convergence, cross-phyletic and cross-method, is the basis for the canonical promotion (2026-07-04). It is also why the NEXI belongs to **two** collections: [Distributed Social Cognition](../../collections/distributed-social-cognition/) (the behavioural, multi-agent reading) and [Substrate-Independent Cognition](../../collections/substrate-independent-cognition/) (the convergent-substrate reading).
 
 See [`references.md`](references.md) for the full citation chain.
 
@@ -146,7 +146,7 @@ This NEXI specifies _encoding_ multiple modalities jointly. It does not specify 
 
 ## Related
 
-- **Collections:** [Distributed Social Cognition](../../clusters/distributed-social-cognition/) · [Substrate-Independent Cognition](../../clusters/substrate-independent-cognition/)
+- **Collections:** [Distributed Social Cognition](../../collections/distributed-social-cognition/) · [Substrate-Independent Cognition](../../collections/substrate-independent-cognition/)
 - **Co-dependent NEXIs:** [`identity-by-pattern`](../identity-by-pattern/), [`eavesdropping`](../eavesdropping/), [`context-bound-semantics`](../context-bound-semantics/), [`social-hotspots`](../social-hotspots/), [`expansion-readout-circuit`](../expansion-readout-circuit/)
 - **Vault provenance (private):** principles `P04 — Integration of Communication & Spatial Networks`, `P47 — Convergent-Divergent Fan Circuit Motif`, `P50 — Polyphyletic Intelligence via Non-Homologous Modules`; metamodel `MM2 — Multi-Channel × Multi-Level Coherence`.
 - **References:** [`references.md`](references.md)

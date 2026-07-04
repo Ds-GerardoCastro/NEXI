@@ -132,7 +132,7 @@ This rule keeps the architecture's runtime control hierarchy at exactly three le
 
 ## Interaction with the collection
 
-This NEXI is the **control-over-control layer** of the [`acerebrate-decision-making`](../../../clusters/acerebrate-decision-making/) collection. It composes with:
+This NEXI is the **control-over-control layer** of the [`acerebrate-decision-making`](../../../collections/acerebrate-decision-making/) collection. It composes with:
 
 - [`coincidence-detection-gating`](../../coincidence-detection-gating/) — the meta-regulator can dynamically adjust the gate's thresholds and required-stream set in response to deployment-context signals.
 - [`stochastic-memory-coupling`](../../stochastic-memory-coupling/) — the meta-regulator dynamically adjusts the coupling parameter `β` and memory decay rate, keeping both components actively contributing.

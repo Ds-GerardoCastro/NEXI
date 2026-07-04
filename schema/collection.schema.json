@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/Ds-GerardoCastro/NEXI/schema/cluster.schema.json",
-  "title": "NEXI cluster metadata",
-  "description": "Schema for cluster.yaml — structured metadata for one NEXI cluster. A cluster is a coherent intelligence model: a system of co-dependent patterns that together solve a class of cognitive problems.",
+  "$id": "https://github.com/Ds-GerardoCastro/NEXI/schema/collection.schema.json",
+  "title": "NEXI collection metadata",
+  "description": "Schema for collection.yaml — structured metadata for one NEXI collection. A collection is a coherent intelligence model: a system of co-dependent patterns that together solve a class of cognitive problems.",
   "type": "object",
   "required": [
     "id",
@@ -18,7 +18,7 @@
     "id": {
       "type": "string",
       "pattern": "^[a-z][a-z0-9-]*$",
-      "description": "Kebab-case slug. Must match the cluster's folder name."
+      "description": "Kebab-case slug. Must match the collection's folder name."
     },
     "name": {
       "type": "string",
@@ -42,7 +42,7 @@
     "problem_class": {
       "type": "string",
       "minLength": 50,
-      "description": "What class of cognitive problems this cluster addresses."
+      "description": "What class of cognitive problems this collection addresses."
     },
     "member_nexis": {
       "type": "array",
@@ -52,12 +52,12 @@
         "type": "string",
         "pattern": "^[a-z][a-z0-9-]*$"
       },
-      "description": "Slugs of NEXI patterns that constitute this cluster. A cluster has at least 2 members."
+      "description": "Slugs of NEXI patterns that constitute this collection. A collection has at least 2 members."
     },
     "system_falsifiable_hypothesis": {
       "type": "string",
       "minLength": 80,
-      "description": "A testable claim about the cluster's combined effect — distinct from the falsifiable hypotheses of individual member NEXIs. Required."
+      "description": "A testable claim about the collection's combined effect — distinct from the falsifiable hypotheses of individual member NEXIs. Required."
     },
     "natural_exemplars": {
       "type": "array",

@@ -192,6 +192,6 @@ Working examples will be added under [`examples/`](examples/) as the catalog mat
 - Pattern README: [`../README.md`](../README.md)
 - Architectural primitive: [`../architecture/overview.md`](../architecture/overview.md)
 - References: [`../references.md`](../references.md)
-- Collection: [`../../clusters/bounded-cognitive-architecture/`](../../../clusters/bounded-cognitive-architecture/)
+- Collection: [`../../collections/bounded-cognitive-architecture/`](../../../collections/bounded-cognitive-architecture/)
 - Upstream skill: [`niche-specification`](../../niche-specification/)
 - Downstream skill: [`capacity-first-scaling`](../../capacity-first-scaling/)

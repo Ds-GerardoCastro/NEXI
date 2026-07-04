@@ -2,7 +2,7 @@
 
 > **NEXI status:** draft · **Formats available:** architecture, skill · **Audience:** builder
 >
-> **Collection:** [`bounded-cognitive-architecture`](../../clusters/bounded-cognitive-architecture/)
+> **Collection:** [`bounded-cognitive-architecture`](../../collections/bounded-cognitive-architecture/)
 >
 > A scaling rule for cognitive systems: **expand storage capacity before scaling control sophistication**. Capacity contributes linearly to a system's effective ability to maintain useful representations under noise; control contributes sublinearly with severe diminishing returns. Without capacity, control has no substrate to operate on.
 

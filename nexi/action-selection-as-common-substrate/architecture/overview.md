@@ -1,6 +1,6 @@
 # Architecture: Action Selection as Common Substrate
 
-This document specifies the architectural primitive for treating action selection as a first-class architectural commitment — components, interfaces, data flow, and integration with the rest of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) collection.
+This document specifies the architectural primitive for treating action selection as a first-class architectural commitment — components, interfaces, data flow, and integration with the rest of the [`embodied-action-selection`](../../../collections/embodied-action-selection/) collection.
 
 ## Components
 
@@ -143,7 +143,7 @@ def post_outcome_update(selection, outcome, context, associations):
 
 ## Interaction with the collection
 
-This NEXI is the **substrate-invariant layer** of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) collection. It composes with:
+This NEXI is the **substrate-invariant layer** of the [`embodied-action-selection`](../../../collections/embodied-action-selection/) collection. It composes with:
 
 - [`ecological-context-model`](../../ecological-context-model/) — provides the formal substrate (equations 1–3) on which this NEXI's components are defined. The competition function uses equation (2); the reinforcement loop uses equation (3).
 - [`exaptation-architectural-reuse`](../../exaptation-architectural-reuse/) — the generative principle by which a single instance of this NEXI's module can be redeployed across motor and cognitive domains. Without exaptation, this NEXI would require domain-duplicate modules.

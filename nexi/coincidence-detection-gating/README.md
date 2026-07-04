@@ -2,7 +2,7 @@
 
 > **NEXI status:** draft · **Formats:** architecture, skill · **Audience:** builder
 >
-> **Collection:** [`acerebrate-decision-making`](../../clusters/acerebrate-decision-making/)
+> **Collection:** [`acerebrate-decision-making`](../../collections/acerebrate-decision-making/)
 >
 > A design-time and runtime pattern for **gating major behavioural transitions on alignment of multiple independent context streams**. Single-channel evidence is insufficient; coincidence detection across qualitatively different streams prevents premature commitment under noisy or partial input. Originally documented in _Vibrio cholerae_ biofilm commitment, where BOTH LuxPQ (responding to AI-2) AND CqsS (responding to CAI-1) must activate before colony behaviour engages.
 

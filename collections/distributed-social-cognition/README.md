@@ -142,4 +142,4 @@ The collection reframes peer-modelling as a *first-class architectural commitmen
 
 - **Vault provenance (private):** consolidation hubs `Eavesdropping`, `Multi-Modal Integration`, `Context-Dependent Semantics`; metamodels MM1, MM2, MM3, MM4.
 - **Member NEXIs:** see the table above.
-- **Related clusters:** *(none yet — will populate as catalog grows)*
+- **Related collections:** *(none yet — will populate as catalog grows)*

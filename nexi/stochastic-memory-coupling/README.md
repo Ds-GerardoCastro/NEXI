@@ -2,7 +2,7 @@
 
 > **NEXI status:** draft · **Formats:** architecture, skill · **Audience:** builder
 >
-> **Collection:** [`acerebrate-decision-making`](../../clusters/acerebrate-decision-making/)
+> **Collection:** [`acerebrate-decision-making`](../../collections/acerebrate-decision-making/)
 >
 > A pattern for **decision-making under environmental unpredictability** via the load-bearing pairing of (a) stochastic state-switching and (b) persistent memory of which states proved beneficial. The catalog's biggest architectural-vocabulary gap to fill: AI design treats stochasticity and memory as separate concerns; bacteria treat them as a single coupled primitive.
 

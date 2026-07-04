@@ -2,7 +2,7 @@
 
 > **NEXI status:** draft · **Formats:** architecture, skill · **Audience:** builder
 >
-> **Collection:** [`embodied-action-selection`](../../clusters/embodied-action-selection/)
+> **Collection:** [`embodied-action-selection`](../../collections/embodied-action-selection/)
 >
 > A design-time architectural commitment to a **named formal framework with three numbered equations** for embodied-agent action selection. Rather than describing agent-environment interaction informally, the model specifies context, behaviour selection, and goal-achievement as relational structures with explicit terms — and treats the agent's internal state (cognitive architecture, behavioural repertoire, circadian rhythm, memories, interoceptions) as _part of_ the environment `E`, not a separate inner stage.
 
@@ -14,7 +14,7 @@ The default mental model in AI is to describe agent-environment interaction info
 
 The model's commitment is small but consequential: **context, behaviour selection, and goal-achievement get three numbered equations**, and the agent's internal state is part of the environment `E` rather than a separate hidden layer. The result is a citable framework that downstream design choices (action-selection module, habit-formation logic, transfer-of-learning evaluation) can reference directly.
 
-The architectural translation: AI systems committing to the ECM formalism gain decision-provenance auditability (which goal, which context, which behaviour, which outcome — all with typed structure), transfer-failure attribution (was the failure due to inadequate perception `P`, or to environment `E` differing in goal-relevant ways the agent couldn't perceive?), and a foundation that supports the rest of the [`embodied-action-selection`](../../clusters/embodied-action-selection/) collection.
+The architectural translation: AI systems committing to the ECM formalism gain decision-provenance auditability (which goal, which context, which behaviour, which outcome — all with typed structure), transfer-failure attribution (was the failure due to inadequate perception `P`, or to environment `E` differing in goal-relevant ways the agent couldn't perceive?), and a foundation that supports the rest of the [`embodied-action-selection`](../../collections/embodied-action-selection/) collection.
 
 ---
 
@@ -115,7 +115,7 @@ Drop-in components for an engineering-agent or runtime decision system:
 - Systems where goal-context-action provenance is a deliverable (debugging, audit, lesion experiments).
 - Long-horizon agents where transfer of learned behavioural associations across contexts is a primary efficiency lever.
 - Research / engineering work where a citable formal framework with verbatim equations is preferable to ad-hoc descriptions.
-- As the foundation layer of the [`embodied-action-selection`](../../clusters/embodied-action-selection/) collection — the other three NEXIs depend on the ECM formalism for their own definitions.
+- As the foundation layer of the [`embodied-action-selection`](../../collections/embodied-action-selection/) collection — the other three NEXIs depend on the ECM formalism for their own definitions.
 
 ## When not to use
 

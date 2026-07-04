@@ -97,7 +97,7 @@ related_nexi:
   - niche-specification
   - capacity-first-scaling
 
-clusters:
+collections:
   - bounded-cognitive-architecture
 
 tags:

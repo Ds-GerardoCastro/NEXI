@@ -233,7 +233,7 @@ This declaration is **operational** — it determines what the deployed system a
 
 ## Interaction with the collection
 
-This NEXI is the **most upstream stage** of the [`bounded-cognitive-architecture`](../../../clusters/bounded-cognitive-architecture/) pipeline:
+This NEXI is the **most upstream stage** of the [`bounded-cognitive-architecture`](../../../collections/bounded-cognitive-architecture/) pipeline:
 
 ```
 niche-specification ──► cognitive-regime-selection ──► capacity-first-scaling

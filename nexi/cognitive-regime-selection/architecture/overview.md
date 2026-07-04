@@ -208,7 +208,7 @@ The `adjacent_regime` field tells you which way the niche would drift to. Archit
 
 ## Interaction with the collection
 
-This NEXI is the **middle stage** of the [`bounded-cognitive-architecture`](../../../clusters/bounded-cognitive-architecture/) pipeline:
+This NEXI is the **middle stage** of the [`bounded-cognitive-architecture`](../../../collections/bounded-cognitive-architecture/) pipeline:
 
 ```
 niche-specification ──► cognitive-regime-selection ──► capacity-first-scaling

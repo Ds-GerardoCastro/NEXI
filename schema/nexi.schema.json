@@ -119,13 +119,13 @@
       },
       "description": "Slugs of related NEXIs in the catalog."
     },
-    "clusters": {
+    "collections": {
       "type": "array",
       "items": {
         "type": "string",
         "pattern": "^[a-z][a-z0-9-]*$"
       },
-      "description": "Slugs of the collections this NEXI belongs to (field name 'clusters' retained for now). A collection groups patterns by the biological system they were read from — see docs/collections.md."
+      "description": "Slugs of the collections this NEXI belongs to. A collection groups patterns by the biological system they were read from — see docs/collections.md."
     },
     "tags": {
       "type": "array",

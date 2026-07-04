@@ -56,7 +56,7 @@ The framework-neutral skill specification is itself a contribution beyond conven
 
 ## 5.5 Collection definition and schema
 
-A NEXI _collection_ is a grouping of two or more patterns read from one biological system, plus a system-level falsifiable hypothesis about their conjectured synergy. Collections are validated against `schema/cluster.schema.json` (filename retained for now), with required fields:
+A NEXI _collection_ is a grouping of two or more patterns read from one biological system, plus a system-level falsifiable hypothesis about their conjectured synergy. Collections are validated against `schema/collection.schema.json` (filename retained for now), with required fields:
 
 | Field                             | Constraint                                               |
 | --------------------------------- | -------------------------------------------------------- |
@@ -102,7 +102,7 @@ The third canonical promotion is `multi-modal-integration` (version 1.0.0), whic
 
 ## 5.8 The repository as catalog artefact
 
-The catalog is a public artefact, not a paper supplement. Each NEXI sits in a per-pattern subfolder (`nexi/<slug>/`) containing a layered `README.md`, a machine-validatable `nexi.yaml`, application-format files where populated (`architecture/overview.md`, `skill/skill.md`), and a `references.md` with citations grounded in the discipline of Section 4.9. Each collection sits in `clusters/<slug>/` with a `cluster.yaml` and a layered `README.md`. Schemas are first-class repository content (`schema/`), not buried in tool configuration.
+The catalog is a public artefact, not a paper supplement. Each NEXI sits in a per-pattern subfolder (`nexi/<slug>/`) containing a layered `README.md`, a machine-validatable `nexi.yaml`, application-format files where populated (`architecture/overview.md`, `skill/skill.md`), and a `references.md` with citations grounded in the discipline of Section 4.9. Each collection sits in `collections/<slug>/` with a `collection.yaml` and a layered `README.md`. Schemas are first-class repository content (`schema/`), not buried in tool configuration.
 
 The repository structure is contribution-friendly by design: a new pattern is one new folder, validated against an existing schema, with a clear path through the methodology of Section 4. The catalog grows by addition rather than by central editing — but every addition crosses the canonical-promotion criterion before the entry can claim canonical status, so growth does not dilute. This is the engineering form of selectivity-over-volume: a small catalog of well-grounded patterns is more useful than a sprawling one.
 

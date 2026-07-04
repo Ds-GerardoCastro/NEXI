@@ -1,6 +1,6 @@
 # Architecture: Exaptation Architectural Reuse
 
-This document specifies the architectural primitive for explicit exaptation-based component reuse — components, interfaces, data flow, and integration with the rest of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) collection.
+This document specifies the architectural primitive for explicit exaptation-based component reuse — components, interfaces, data flow, and integration with the rest of the [`embodied-action-selection`](../../../collections/embodied-action-selection/) collection.
 
 ## Components
 
@@ -150,7 +150,7 @@ class ExaptationCore:
 
 ## Interaction with the collection
 
-This NEXI is the **generative-reuse layer** of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) collection. It composes with:
+This NEXI is the **generative-reuse layer** of the [`embodied-action-selection`](../../../collections/embodied-action-selection/) collection. It composes with:
 
 - [`action-selection-as-common-substrate`](../../action-selection-as-common-substrate/) — the substrate-invariant selection mechanism is the canonical candidate for `M`. Exaptation is _how_ the same selection module handles motor and cognitive domains; action-selection is _what_ it does.
 - [`ecological-context-model`](../../ecological-context-model/) — the formalism's domain-agnostic typing of `B` (motor or cognitive) is what makes exaptive reuse feasible. Without the formalism, `M_Input` and `M_Output` types are ad-hoc; with it, they are the formal terms `Br`, `Ba(g, P)`, and `B`.

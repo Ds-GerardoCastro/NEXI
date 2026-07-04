@@ -22,7 +22,7 @@ The project mines peer-reviewed research on intelligence across biological speci
 The catalog's unit is the **pattern (NEXI)**:
 
 - **Patterns** (under `nexi/`) are individual NEXIs — architectural primitives you can adopt directly, one at a time or in combination. Start here.
-- **Collections** (under `clusters/`) group patterns by the biological system they were read from, and record how those patterns interlock. A collection is an optional lens and provenance record — a reading path, not a required bundle. A pattern can belong to more than one collection.
+- **Collections** (under `collections/`) group patterns by the biological system they were read from, and record how those patterns interlock. A collection is an optional lens and provenance record — a reading path, not a required bundle. A pattern can belong to more than one collection.
 
 Browse patterns first; open a collection when you want the biological system a pattern came from and its sibling patterns.
 
@@ -30,10 +30,10 @@ See [`docs/collections.md`](docs/collections.md) for the collection framework an
 
 ## How to use a collection or pattern
 
-A **collection** under `clusters/<collection-slug>/` contains:
+A **collection** under `collections/<collection-slug>/` contains:
 
 - `README.md` — the layered collection card (system-level claim, member patterns, complementarity notes)
-- `cluster.yaml` — structured metadata, validated against [`schema/cluster.schema.json`](schema/cluster.schema.json)
+- `collection.yaml` — structured metadata, validated against [`schema/collection.schema.json`](schema/collection.schema.json)
 
 A **pattern** under `nexi/<pattern-slug>/` contains:
 

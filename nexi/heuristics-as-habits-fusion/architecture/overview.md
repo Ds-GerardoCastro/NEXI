@@ -1,6 +1,6 @@
 # Architecture: Heuristics as Habits Fusion
 
-This document specifies the architectural primitive for unifying heuristic decision-making and motor-habit-formation under a single mechanism — components, interfaces, data flow, and integration with the rest of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) collection.
+This document specifies the architectural primitive for unifying heuristic decision-making and motor-habit-formation under a single mechanism — components, interfaces, data flow, and integration with the rest of the [`embodied-action-selection`](../../../collections/embodied-action-selection/) collection.
 
 ## Components
 
@@ -159,7 +159,7 @@ def decide(goal, context, perceptions, cost_budget, repertoire, associations):
 
 ## Interaction with the collection
 
-This NEXI is the **behavioural-instance layer** of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) collection — the concrete demonstration that the collection's other three NEXIs (formalism / substrate-invariant / reuse) compose to produce a useful unified architecture. It composes with:
+This NEXI is the **behavioural-instance layer** of the [`embodied-action-selection`](../../../collections/embodied-action-selection/) collection — the concrete demonstration that the collection's other three NEXIs (formalism / substrate-invariant / reuse) compose to produce a useful unified architecture. It composes with:
 
 - [`action-selection-as-common-substrate`](../../action-selection-as-common-substrate/) — provides the unified selection mechanism. Heuristics-as-habits is what that mechanism does at the behavioural level when given a unified `Br` spanning domains.
 - [`ecological-context-model`](../../ecological-context-model/) — provides the formalism (equations 1–3) that expresses the heuristic / habit equivalence. Both are instances of `B(C) = f(Br, Ba(g, P))`; both fail via `g+(C) = f(B, E)` when `E` differs from training.

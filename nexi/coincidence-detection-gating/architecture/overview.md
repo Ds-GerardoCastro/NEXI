@@ -92,7 +92,7 @@ def coincidence_gate(streams, action_proposal):
 
 ## Interaction with the collection
 
-This NEXI is the **commitment-gate layer** of the [`acerebrate-decision-making`](../../../clusters/acerebrate-decision-making/) collection. It composes with:
+This NEXI is the **commitment-gate layer** of the [`acerebrate-decision-making`](../../../collections/acerebrate-decision-making/) collection. It composes with:
 
 - [`stochastic-memory-coupling`](../../stochastic-memory-coupling/) — stochastic exploration generates candidate transitions that the coincidence-gate then accepts or rejects based on multi-stream evidence.
 - [`meta-regulation`](../../meta-regulation/) — the meta-regulator can dynamically adjust the gate's thresholds and required-stream set in response to deployment-context signals.

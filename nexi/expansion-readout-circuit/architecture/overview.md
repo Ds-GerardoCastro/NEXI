@@ -1,6 +1,6 @@
 # Architecture: Expansion-Readout Circuit
 
-This document specifies the architectural primitive for the expand-then-read-out motif — components, interfaces, data flow, and the design decisions each stage forces — and its integration with the [`substrate-independent-cognition`](../../../clusters/substrate-independent-cognition/) collection.
+This document specifies the architectural primitive for the expand-then-read-out motif — components, interfaces, data flow, and the design decisions each stage forces — and its integration with the [`substrate-independent-cognition`](../../../collections/substrate-independent-cognition/) collection.
 
 The motif separates two functions that dense scaling entangles: **representation** (a wide, sparse-coded expansion sheet) and **selection** (a narrow, sparse readout). The natural systems that inspired it — insect mushroom bodies, the octopod vertical lobe, cichlid and avian pallium, mammalian isocortex — implement exactly this two-stage separation on non-homologous substrates.
 
@@ -106,7 +106,7 @@ def train_step(afferents, target, W_read, W_exp, k):
 
 ## Interaction with the collection
 
-This NEXI is the **how-the-circuit-is-shaped** layer of the [`substrate-independent-cognition`](../../../clusters/substrate-independent-cognition/) collection. It composes with:
+This NEXI is the **how-the-circuit-is-shaped** layer of the [`substrate-independent-cognition`](../../../collections/substrate-independent-cognition/) collection. It composes with:
 
 - [`multi-modal-integration`](../../multi-modal-integration/) — the **what-is-integrated** layer. Integration specifies that multiple sensory streams meet in a shared latent space; this NEXI specifies the circuit shape (wide sparse expansion + sparse readout) that the source cytoarchitecture shows implements such integration centres across phyla. The fan-in stage here is the natural home for a joint multi-modal encoder.
 - [`action-selection-as-common-substrate`](../../action-selection-as-common-substrate/) — a downstream selection layer that a sparse readout feeds naturally: the readout produces a small set of candidates; the selection substrate gates among them.

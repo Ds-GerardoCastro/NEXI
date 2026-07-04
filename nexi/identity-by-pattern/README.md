@@ -2,7 +2,7 @@
 
 > **NEXI status:** draft · **Formats available:** architecture, skill · **Audience:** builder
 >
-> **Member of collection:** [Distributed Social Cognition](../../clusters/distributed-social-cognition/)
+> **Member of collection:** [Distributed Social Cognition](../../collections/distributed-social-cognition/)
 >
 > _Identifying specific individuals from distinctive sensory patterns — embeddings that preserve particularity, not just category._
 
@@ -131,7 +131,7 @@ This NEXI specifies **recognising** individuals, not **modelling** them. Buildin
 
 ## Related
 
-- **Collection:** [Distributed Social Cognition](../../clusters/distributed-social-cognition/)
+- **Collection:** [Distributed Social Cognition](../../collections/distributed-social-cognition/)
 - **Co-dependent NEXIs:** [`eavesdropping`](../eavesdropping/), [`multi-modal-integration`](../multi-modal-integration/), [`context-bound-semantics`](../context-bound-semantics/), [`social-hotspots`](../social-hotspots/)
 - **Vault provenance (private):** principles `P03`, `P09`; metamodel `MM4 — Identity Through Distinctive Patterning`.
 - **References:** [`references.md`](references.md)

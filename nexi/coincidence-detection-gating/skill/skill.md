@@ -140,4 +140,4 @@ Working examples will be added under [`examples/`](examples/) as the catalog mat
 - Pattern README: [`../README.md`](../README.md)
 - Architecture: [`../architecture/overview.md`](../architecture/overview.md)
 - References: [`../references.md`](../references.md)
-- Collection: [`../../clusters/acerebrate-decision-making/`](../../../clusters/acerebrate-decision-making/)
+- Collection: [`../../collections/acerebrate-decision-making/`](../../../collections/acerebrate-decision-making/)

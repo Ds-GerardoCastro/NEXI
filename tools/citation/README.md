@@ -1,6 +1,6 @@
 # `tools/citation/` — Deterministic citation verification
 
-A small toolkit for **verifying that every citation in NEXI artefacts (NEXI entries, cluster entries, white paper) refers to a paper that actually exists**, with the metadata we claim. The scripts make external API calls to CrossRef, PubMed, arXiv, and Google Scholar. They are deterministic — they catch the kind of plausible-looking-but-slightly-wrong citation that an LLM can generate confidently.
+A small toolkit for **verifying that every citation in NEXI artefacts (NEXI entries, collection entries, white paper) refers to a paper that actually exists**, with the metadata we claim. The scripts make external API calls to CrossRef, PubMed, arXiv, and Google Scholar. They are deterministic — they catch the kind of plausible-looking-but-slightly-wrong citation that an LLM can generate confidently.
 
 > **Provenance:** vendored from [K-Dense-AI/claude-scientific-writer](https://github.com/K-Dense-AI/claude-scientific-writer) under MIT License (upstream commit `5bf6b59`, version 2.13.0). See [`UPSTREAM.md`](UPSTREAM.md) for credits, license, and rationale.
 
@@ -24,7 +24,7 @@ The discipline (per `whitepaper/README.md`'s **Real Citations Only** policy):
 1. **Before** any citation is added to:
    - A NEXI entry's `references.md`
    - A NEXI entry's `nexi.yaml` `natural_exemplars[].paper.doi`
-   - A cluster's `references` or `cluster.yaml`
+   - A collection's `references` or `collection.yaml`
    - A white-paper chapter or `whitepaper/REFERENCES.md`
 
    → run `extract_metadata.py` or `doi_to_bibtex.py` to confirm the paper exists with the metadata claimed.

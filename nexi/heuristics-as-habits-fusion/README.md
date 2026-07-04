@@ -2,7 +2,7 @@
 
 > **NEXI status:** draft · **Formats:** architecture, skill · **Audience:** builder
 >
-> **Collection:** [`embodied-action-selection`](../../clusters/embodied-action-selection/)
+> **Collection:** [`embodied-action-selection`](../../collections/embodied-action-selection/)
 >
 > A design-time architectural commitment to **unifying heuristic decision-making and motor-habit-formation under a single context-overlap-driven selection mechanism** — rather than implementing them as separate Type 1 (fast / heuristic) and Type 2 (deliberative / chunked) modules. The pattern argues that the dichotomy is misframed at the architectural level: both are the same mechanism operating on different repertoires.
 

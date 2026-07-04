@@ -27,8 +27,8 @@ A collection names:
 ## How collections and patterns relate
 
 - A collection references 2 or more patterns; a pattern can belong to 1 or more collections.
-- Patterns are documented in `nexi/<pattern-slug>/`. Collections are documented in `clusters/<collection-slug>/` _(directory name retained for now; see "Naming" below)_.
-- Each pattern's `nexi.yaml` lists the collections it belongs to (the `clusters:` field). Each collection's `cluster.yaml` lists its member patterns (`member_nexis:`).
+- Patterns are documented in `nexi/<pattern-slug>/`. Collections are documented in `collections/<collection-slug>/`.
+- Each pattern's `nexi.yaml` lists the collections it belongs to (the `collections:` field). Each collection's `collection.yaml` lists its member patterns (`member_nexis:`).
 - The pattern layer is the **engineering ingredient** layer; the collection layer is the **architecture-and-theory lens.**
 
 ## Recommended use
@@ -54,4 +54,4 @@ Mirrors the NEXI status model: `template` (structure-propagating exemplar) · `d
 
 ## Naming
 
-The on-disk directory is `clusters/` and the metadata files are `cluster.yaml` for historical reasons. The user-facing term is **collection**. A future structural pass may rename the directory and fields; until then, "cluster" in a path or field name means "collection."
+The on-disk structure and the user-facing term now agree: patterns live under `nexi/`, collections under `collections/` (each with a `collection.yaml`), validated against `schema/collection.schema.json`. A pattern's `collections:` field lists the collections it belongs to.

@@ -1,6 +1,6 @@
 # Architecture: Ecological Context Model
 
-This document specifies the architectural primitive for the Ecological Context Model — components, interfaces, data flow, and integration with the rest of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) collection.
+This document specifies the architectural primitive for the Ecological Context Model — components, interfaces, data flow, and integration with the rest of the [`embodied-action-selection`](../../../collections/embodied-action-selection/) collection.
 
 ## Components
 
@@ -173,7 +173,7 @@ def ecm_step(agent, current_E, current_goal_g):
 
 ## Interaction with the collection
 
-This NEXI is the **formalism layer** of the [`embodied-action-selection`](../../../clusters/embodied-action-selection/) collection. It composes with:
+This NEXI is the **formalism layer** of the [`embodied-action-selection`](../../../collections/embodied-action-selection/) collection. It composes with:
 
 - [`action-selection-as-common-substrate`](../../action-selection-as-common-substrate/) — the substrate-invariant selection mechanism is defined in terms of the ECM's equations (the competition function uses eq. (2); the reinforcement loop uses eq. (3)).
 - [`exaptation-architectural-reuse`](../../exaptation-architectural-reuse/) — the ECM's domain-agnostic typing of `B` (motor or cognitive) is what makes exaptive reuse feasible. Without the formalism, exaptation is a verbal claim; with it, the same equations operate on either domain.

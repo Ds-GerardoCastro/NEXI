@@ -2,7 +2,7 @@
 
 > **NEXI status:** draft · **Formats:** architecture, skill · **Audience:** builder
 >
-> **Collection:** [`embodied-action-selection`](../../clusters/embodied-action-selection/)
+> **Collection:** [`embodied-action-selection`](../../collections/embodied-action-selection/)
 >
 > A design-time architectural commitment to **reuse a single well-developed mechanism across multiple domains via explicit exaptation**, rather than building duplicate domain-specific modules. The pattern argues that architectural reuse is a first-class deployment-time design pressure, observable in nature wherever a mechanism originally evolved for one purpose gets redeployed to serve another.
 

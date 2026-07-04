@@ -103,7 +103,7 @@ related_nexi:
   - cognitive-regime-selection
   - capacity-first-scaling
 
-clusters:
+collections:
   - bounded-cognitive-architecture
 
 tags:

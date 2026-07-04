@@ -147,4 +147,4 @@ Working examples under [`examples/`](examples/) as the catalog matures.
 ## See also
 
 - [`../README.md`](../README.md), [`../architecture/overview.md`](../architecture/overview.md), [`../references.md`](../references.md)
-- Collection: [`../../clusters/acerebrate-decision-making/`](../../../clusters/acerebrate-decision-making/)
+- Collection: [`../../collections/acerebrate-decision-making/`](../../../collections/acerebrate-decision-making/)

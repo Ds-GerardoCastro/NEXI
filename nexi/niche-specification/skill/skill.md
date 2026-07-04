@@ -2,7 +2,7 @@
 
 A drop-in **design-time specification** skill for an engineering agent (or human-in-the-loop architecture-design assistant) that elicits a typed niche object from a deployment description and refuses to proceed until the niche is complete. Framework-neutral — see translation notes for stack-specific mappings.
 
-> **Skill kind:** `design-time-specification`. The most upstream skill in the [`bounded-cognitive-architecture`](../../../clusters/bounded-cognitive-architecture/) collection. Produces the typed input that downstream design-time skills (regime selection, capacity-first allocation) consume.
+> **Skill kind:** `design-time-specification`. The most upstream skill in the [`bounded-cognitive-architecture`](../../../collections/bounded-cognitive-architecture/) collection. Produces the typed input that downstream design-time skills (regime selection, capacity-first allocation) consume.
 
 ---
 
@@ -213,6 +213,6 @@ Working examples will be added under [`examples/`](examples/) as the catalog mat
 - Pattern README: [`../README.md`](../README.md)
 - Architectural primitive: [`../architecture/overview.md`](../architecture/overview.md)
 - References: [`../references.md`](../references.md)
-- Collection: [`../../clusters/bounded-cognitive-architecture/`](../../../clusters/bounded-cognitive-architecture/)
+- Collection: [`../../collections/bounded-cognitive-architecture/`](../../../collections/bounded-cognitive-architecture/)
 - Downstream skill: [`cognitive-regime-selection`](../../cognitive-regime-selection/)
 - Downstream skill: [`capacity-first-scaling`](../../capacity-first-scaling/)

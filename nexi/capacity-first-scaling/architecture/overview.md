@@ -178,7 +178,7 @@ The rule's strongest form assumes capacity-cost and control-cost are roughly pro
 
 ## Interaction with the collection
 
-This NEXI is the most downstream stage of the [`bounded-cognitive-architecture`](../../../clusters/bounded-cognitive-architecture/) pipeline:
+This NEXI is the most downstream stage of the [`bounded-cognitive-architecture`](../../../collections/bounded-cognitive-architecture/) pipeline:
 
 ```
 niche-specification ──► cognitive-regime-selection ──► capacity-first-scaling

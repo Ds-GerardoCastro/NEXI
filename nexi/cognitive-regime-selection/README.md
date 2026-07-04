@@ -2,7 +2,7 @@
 
 > **NEXI status:** draft · **Formats available:** architecture, skill · **Audience:** builder
 >
-> **Collection:** [`bounded-cognitive-architecture`](../../clusters/bounded-cognitive-architecture/)
+> **Collection:** [`bounded-cognitive-architecture`](../../collections/bounded-cognitive-architecture/)
 >
 > A design-time pattern for **classifying a deployment niche into one of three structurally distinct cognitive regimes** — passive-storage, control-enhanced, capacity-heavy — and committing to that regime's characteristic component mix. Architectures matched to their regime outperform a single architecture deployed across niches.
 
