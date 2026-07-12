@@ -54,13 +54,25 @@ A hotspot is a location with persistently elevated density of observation events
 
 ```python
 class HotspotAwareMemory:
-    def __init__(self, spatial_memory, detector):
+    def __init__(self, spatial_memory, detector, batch_size=64):
         self.memory = spatial_memory
         self.detector = detector
+        self.batch_size = batch_size
+        self._pending = []  # buffer observations for the batched detector
 
     def observe(self, location, observation, t):
+        # Store immediately, but feed the detector in batches: the
+        # detector runs its clustering over a window of observations,
+        # not one point at a time.
         self.memory.store(location, observation, t)
-        self.detector.update([(location, t)])
+        self._pending.append((location, t))
+        if len(self._pending) >= self.batch_size:
+            self.flush()
+
+    def flush(self):
+        if self._pending:
+            self.detector.update(self._pending)
+            self._pending = []
 
     def query(self, location, radius, time_window, weighting="proximity"):
         results = self.memory.query(location, radius, time_window)
@@ -69,18 +81,22 @@ class HotspotAwareMemory:
         return results
 
     def attention_focus(self, current_location):
-        # If we're in or near a hotspot, attend more to its observations
+        # Attend to observations from every hotspot we're in or near,
+        # not just the first one that matches.
+        focused = []
         for hotspot in self.detector.current_hotspots():
             if dist(current_location, hotspot.location) < hotspot.radius:
-                return self.memory.query(
-                    hotspot.location, hotspot.radius,
-                    time_window=recent
+                focused.extend(
+                    self.memory.query(
+                        hotspot.location, hotspot.radius,
+                        time_window=recent
+                    )
                 )
-        return []  # not in a hotspot, default attention applies
+        return focused  # empty if not near any hotspot -> default attention
 
     def _proximity_weight(self, query_loc, observations):
         return [
-            (obs, weight=1.0 / (1.0 + dist(query_loc, obs.location)**2))
+            (obs, 1.0 / (1.0 + dist(query_loc, obs.location)**2))
             for obs in observations
         ]
 ```

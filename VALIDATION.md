@@ -8,3 +8,4 @@ Each NEXI is validated from two standpoints: the **AI-research** standpoint asks
 | identity-by-pattern         | Grounded    | Aligned            | validated | 2026-07-12 |
 | context-bound-semantics     | Relevant    | Aligned            | validated | 2026-07-12 |
 | negative-evidence-reasoning | Grounded    | Aligned            | validated | 2026-07-12 |
+| social-hotspots             | Relevant    | Aligned            | validated | 2026-07-12 |

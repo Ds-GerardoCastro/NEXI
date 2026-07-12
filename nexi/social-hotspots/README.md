@@ -10,7 +10,7 @@
 
 ## At a glance
 
-In multi-agent settings with shared environments, information is **not uniformly distributed**. It collections at the places where bodies (or processes) converge — what biologists call **social hotspots**. A multi-agent system that treats all locations and all peers as equivalently informative ignores a structural property of its world.
+In multi-agent settings with shared environments, information is **not uniformly distributed**. It collects at the places where bodies (or processes) converge — what biologists call **social hotspots**. A multi-agent system that treats all locations and all peers as equivalently informative ignores a structural property of its world.
 
 | Question          | Short answer                                                                                                      |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------- |
@@ -27,7 +27,7 @@ Wild zebra finch **social hotspots** in the arid zone are not anonymous gatherin
 
 - Repeated encounters between specific individuals (not strangers passing through).
 - Mix of known and unknown individuals — both familiar peers and new arrivals.
-- A bundle of co-occurring functions: foraging information, predation dilution, breeding synchronisation, condition signalling.
+- A set of functions the source paper frames tentatively (not an established bundle): hotspots **may** support foraging information and condition signalling directly, and — following the secondary literature the paper cites, rather than as direct findings of the finch study — **could** also aid predation dilution and breeding synchronisation.
 
 The architectural lesson: **convergence in space is itself information**. Where bodies aggregate, observations multiply, and the eavesdropping pattern becomes empirically valuable rather than incidental.
 
@@ -94,7 +94,7 @@ See [`skill/skill.md`](skill/skill.md).
 
 ## Theoretical background & evidence
 
-The pattern connects to **collective behaviour in animal-communication ecology** (information centre hypothesis; Ward & Zahavi 1973), to **swarm robotics** (where agent-density is a first-class signal), and to **distributed cognition** more broadly (Hutchins 1995). The zebra finch literature (Hagedoorn et al. 2026; Waas et al. 2005) provides direct empirical evidence that hotspots are structured information hubs, not anonymous aggregations.
+The pattern connects to **collective behaviour in animal-communication ecology** (information centre hypothesis; Ward & Zahavi 1973), to **swarm robotics** (where agent-density is a first-class signal), and to **distributed cognition** more broadly (Hutchins 1995). The wild zebra finch study (Hagedoorn et al. 2025) documents hotspots as structured information hubs rather than anonymous aggregations; comparative, cross-species support that convergence-plus-colony-sound is functional comes from colonial seabirds (Waas et al. 2000, royal penguins) — an analog, not evidence in zebra finches.
 
 Computational analogs:
 
@@ -104,15 +104,19 @@ Computational analogs:
 
 Full citations: [`references.md`](references.md).
 
+### Relation to existing methods
+
+This pattern's weighting mechanism overlaps substantially with **Prioritized Experience Replay** (PER; Schaul et al. 2016) combined with spatial attention and a density-clustering backend such as DBSCAN. Like PER, it weights stored experience non-uniformly by a salience signal rather than sampling uniformly, and it should not be read as a novel idea in isolation. The residual novelty is threefold: (1) the weighting is keyed to **shared cross-agent loci** — hotspots visible to the whole population — whereas PER prioritises a single agent's own replay buffer; (2) **density-of-convergence is promoted to a first-class signal** the architecture detects and maintains, not merely a byproduct of TD-error; and (3) the mechanism carries a **virtual/topical analog** (topic-clusters, channels) that extends it beyond physical space. Absent these, the pattern would reduce to re-labelled PER.
+
 ---
 
 ## Falsifiable hypothesis
 
 > **H_hotspot.** Multi-agent systems with location-keyed memory and proximity-weighted retrieval outperform agents with uniform memory access on tasks where the distribution of relevant information is spatially structured, at equal training compute.
 >
-> **Operationalisation.** On benchmarks of multi-agent navigation, foraging-with-information-sharing, and crowd-density inference, hotspot-aware agents should reach target performance in ≥10% fewer training episodes.
+> **Operationalisation (pre-registered, compute-matched).** On the DeepMind Melting Pot 2.0 cooperative-foraging substrates **"Coins"** and **"Clean Up"** (fixed evaluation scenarios), hotspot-aware agents should reach the uniform-memory baseline's final mean episode return in **≥10% fewer training episodes**, at equal wall-clock compute and identical network capacity.
 >
-> **Refutation.** If uniform-memory baselines match hotspot-aware agents on spatially structured tasks at equal compute, this pattern's claim is refuted.
+> **Refutation.** If uniform-memory baselines match or beat hotspot-aware agents on these Melting Pot substrates at equal compute — i.e. the ≥10% episode-efficiency gain does not appear — this pattern's claim is refuted.
 
 ---
 

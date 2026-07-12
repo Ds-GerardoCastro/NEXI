@@ -1,7 +1,7 @@
 id: social-hotspots
 name: Social Hotspots
 status: draft
-version: 0.1.0
+version: 0.1.1
 created: '2026-05-03'
 audience_voice: builder
 
@@ -19,34 +19,40 @@ natural_exemplars:
         - 'Naguib, M.'
         - 'Loning, H.'
       venue: 'bioRxiv preprint'
-      date: '2026-04-27'
+      date: '2025-09-11'
       doi: '10.1101/2025.09.11.675577'
     notes: >
       Wild zebra finch social hotspots are not anonymous gathering points
       but structured information hubs where repeated encounters mix
-      known and unknown individuals. Functions span foraging-info,
-      predation dilution, breeding synchronisation, and condition
-      signalling. Information density concentrates spatially.
+      known and unknown individuals. The paper hedges the possible
+      functions: hotspots may support foraging information and condition
+      signalling directly, and — via the secondary literature it cites —
+      could plausibly aid predation dilution and breeding synchronisation.
+      Information density concentrates spatially.
 
 abstract_claim: >
   In multi-agent systems with shared environments, information density
   concentrates at specific locations (or virtual loci) where many
-  agents converge — not uniformly across the environment. Architectures
-  that explicitly model these hotspots and weight observation /
-  retrieval / attention by spatial-or-virtual proximity outperform
-  architectures that treat the population uniformly. Where bodies
-  converge, information aggregates.
+  agents converge — not uniformly across the environment. We hypothesise
+  that architectures which explicitly model these hotspots and weight
+  observation / retrieval / attention by spatial-or-virtual proximity
+  outperform architectures that treat the population uniformly; this is
+  a falsifiable prediction (see falsifiable_hypothesis), not an
+  established result. Where bodies converge, information aggregates.
 
 falsifiable_hypothesis: >
   Multi-agent systems with location-keyed memory and proximity-weighted
   retrieval outperform agents with uniform memory access on tasks where
   the distribution of relevant information is spatially structured, at
-  equal training compute. Operationalised on benchmarks of multi-agent
-  navigation, foraging-with-information-sharing, and crowd-density
-  inference, hotspot-aware agents should reach target performance in
-  >=10% fewer episodes. Refutation: if uniform-memory baselines match
-  hotspot-aware agents on spatially-structured tasks at equal compute,
-  this pattern's claim is refuted.
+  equal training compute. Pre-registered, compute-matched target: on the
+  Melting Pot "Coins" / "Clean Up" cooperative-foraging substrates
+  (DeepMind Melting Pot 2.0, fixed evaluation scenarios), hotspot-aware
+  agents reach the uniform-memory baseline's final mean episode return in
+  >=10% fewer training episodes at equal wall-clock compute and identical
+  network capacity. Refutation: if uniform-memory baselines match or beat
+  hotspot-aware agents on these Melting Pot substrates at equal compute
+  (the >=10% episode-efficiency gain does not appear), this pattern's
+  claim is refuted.
 
 applies_to:
   - multi-agent-systems
