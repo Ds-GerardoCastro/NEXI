@@ -2,6 +2,8 @@
 
 > A curated catalog of design patterns for AI systems, drawn from how intelligence is expressed across biological species.
 
+**Live project overview → [ds-gerardocastro.github.io/NEXI](https://ds-gerardocastro.github.io/NEXI/)** — an interactive walkthrough of the two-pillar thesis, the four-asset pipeline, and an end-to-end worked example, with dedicated lenses for AI engineers and scientific researchers.
+
 ## What is this
 
 NEXI is the application catalog produced by the **Nature Intelligence Project**, a research effort by [_Juan Gerardo Castro Sanchez_](https://www.linkedin.com/in/juan-gerardo-castro-s%C3%A1nchez-7b85b21b6/).
@@ -59,6 +61,7 @@ See [`docs/positioning.md`](docs/positioning.md) for the full mapping of NEXI pa
 
 ## Companion artifacts
 
+- The [**project overview site**](https://ds-gerardocastro.github.io/NEXI/) presents this program visually — the thesis, the discovery-to-architecture pipeline, and a worked example — for AI engineers, researchers, and decision-makers.
 - A research vault (private) holds the upstream literature review and principle-extraction work that feeds this catalog.
 - A forthcoming white paper presents the full theoretical argument behind the catalog.
 
