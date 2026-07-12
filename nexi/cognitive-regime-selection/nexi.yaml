@@ -1,8 +1,9 @@
 id: cognitive-regime-selection
 name: Cognitive Regime Selection
 status: draft
-version: 0.1.0
+version: 0.1.1
 created: '2026-05-03'
+updated: '2026-07-12'
 audience_voice: builder
 
 natural_exemplars:
@@ -17,46 +18,54 @@ natural_exemplars:
         - 'Vélez, Natalia'
         - 'Morgan, Thomas J. H.'
         - 'Griffiths, Thomas L.'
-      venue: 'bioRxiv preprint'
+      venue: 'bioRxiv preprint (unrefereed, CC-BY 4.0)'
       date: '2026-03-09'
       doi: '10.1101/2026.03.07.710317'
     notes: >
       The interaction of capacity-control synergy non-monotonicity with metabolic-cost
-      selection produces three discrete attractors in the cognitive design space:
-      passive-storage, control-enhanced, and capacity-heavy. Phylogenetic placements
-      span jellyfish and sea anemones (passive-storage), nematodes / flatworms /
-      tardigrades (transitional), corvids / elephants / cetaceans / great apes /
-      humans / rhesus macaques (control-enhanced).
+      selection produces three qualitatively distinct regimes on a continuous optimality
+      surface: passive-storage, control-enhanced, and capacity-heavy. The model is
+      explicitly continuous; the three regimes are regions with soft boundaries, not
+      discrete points. Phylogenetic placements span jellyfish and sea anemones
+      (passive-storage); nematodes / flatworms / tardigrades the authors describe as
+      harder to place (rudimentary brain-like ganglion, multi-cue context tracking,
+      apparent representation shielding, but retro-cue manipulation likely out of reach);
+      corvids / elephants / cetaceans / great apes / humans / rhesus macaques
+      (control-enhanced).
 
   - species: 'Homo sapiens and Macaca mulatta (rhesus macaque)'
     paper:
       title: 'Cognitive capacity and control in the evolution of intelligence (retro-cue task validation)'
       authors:
         - 'Turner et al.'
-      venue: 'bioRxiv preprint (same source, empirical validation section)'
+      venue: 'bioRxiv preprint (unrefereed, CC-BY 4.0; same source, empirical validation section)'
       date: '2026-03-09'
       doi: '10.1101/2026.03.07.710317'
     notes: >
       Empirical hierarchical Bayesian fit on retro-cue task: humans 0.26 [0.19, 0.34]
       proportion control; rhesus macaques 0.05 [0.02, 0.16] — both fall in the
-      control-enhanced regime, contradicting the information-capacity hypothesis's
-      prediction that humans would be capacity-heavy.
+      control-enhanced regime. The authors frame their approach as complementary to the
+      information-capacity hypothesis: a naive capacity-only reading might have predicted
+      humans to be capacity-heavy, so placing humans and macaques in the control-enhanced
+      region refines and complements that hypothesis by adding a control dimension.
 
 abstract_claim: >
-  Cognitive design space contains three discrete attractors — passive-storage,
-  control-enhanced, and capacity-heavy — and the deployment niche selects which one
-  is optimal. Architectures should be classified into a regime at design time and
-  committed to that regime's characteristic component mix; selecting one architecture
-  for all niches under-performs regime-matched architectures because the regimes are
-  structurally distinct, not points on a continuous scaling axis.
+  Cognitive design space is a continuous optimality surface on which three qualitatively
+  distinct regimes emerge — passive-storage, control-enhanced, and capacity-heavy — and
+  the deployment niche selects which region is optimal. Architectures should be classified
+  into a regime at design time and committed to that regime's characteristic component mix;
+  selecting one architecture for all niches under-performs regime-matched architectures
+  because the regime-appropriate component mixes differ qualitatively, even though the
+  regimes sit on a continuous surface with soft boundaries rather than being smaller/larger
+  versions of one shape.
 
 falsifiable_hypothesis: >
   At matched cost budget, regime-matched architectures (passive-storage, control-enhanced,
   or capacity-heavy as appropriate) outperform a single one-size-fits-all architecture
   deployed across distinct niches on niche-specific evaluation. Refutation: if regime-
   matched and uniform architectures perform indistinguishably across genuinely distinct
-  niches at matched cost, the discrete-regime structure is not architecturally
-  consequential — only continuous scaling matters. A second falsifiable claim: regime
+  niches at matched cost, the regime structure is not architecturally
+  consequential — only monotone continuous scaling matters. A second falsifiable claim: regime
   changes produce qualitative — not just quantitative — architectural component-mix
   differences; if re-classifying a deployment from one regime to another produces only
   hyperparameter shifts (no structural component changes), the regime taxonomy is

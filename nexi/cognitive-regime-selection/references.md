@@ -2,8 +2,8 @@
 
 ## Primary natural-system literature
 
-- **Turner, C. R., Russek, E. M., Seed, A., McEwen, E. S., Vélez, N., Morgan, T. J. H., & Griffiths, T. L. (2026).** _Cognitive capacity and control in the evolution of intelligence._ bioRxiv preprint, posted 2026-03-09. DOI: [10.1101/2026.03.07.710317](https://doi.org/10.1101/2026.03.07.710317). License CC-BY 4.0.
-  _Mathematical model deriving three discrete regimes (passive-storage, control-enhanced, capacity-heavy) from the interaction of capacity-control synergy non-monotonicity with metabolic-cost selection. Empirical validation via retro-cue task on humans and rhesus macaques shows both species fall in the control-enhanced regime — a notable null result against the information-capacity hypothesis._
+- **Turner, C. R., Russek, E. M., Seed, A., McEwen, E. S., Vélez, N., Morgan, T. J. H., & Griffiths, T. L. (2026).** _Cognitive capacity and control in the evolution of intelligence._ bioRxiv preprint (unrefereed; not certified by peer review), posted 2026-03-09. DOI: [10.1101/2026.03.07.710317](https://doi.org/10.1101/2026.03.07.710317). License CC-BY 4.0.
+  _Mathematical model deriving three qualitatively distinct regimes (passive-storage, control-enhanced, capacity-heavy) as regions on a continuous optimality surface, from the interaction of capacity-control synergy non-monotonicity with metabolic-cost selection. The model is explicitly continuous. Empirical validation via retro-cue task on humans and rhesus macaques shows both species fall in the control-enhanced regime; the authors present their approach as complementary to the information-capacity hypothesis, refining it by adding a control dimension rather than overturning it._
 
 ## Phylogenetic placement literature (Turner et al. references)
 
@@ -11,9 +11,9 @@
 
 - Comparative-cognition treatments of cnidarian (jellyfish, sea anemone) and basal-metazoan nervous systems supporting sensitisation-style storage without selective attention or interference shielding (see Turner et al. references 65, 66 for the specific citations).
 
-### Transitional regime — nematodes, flatworms, tardigrades
+### Harder-to-place taxa — nematodes, flatworms, tardigrades
 
-- Comparative neuroscience documenting rudimentary brain-like ganglion structures in nematodes, flatworms, and tardigrades, with multi-cue context tracking and representation shielding (see Turner et al. references 67, 68).
+- Comparative neuroscience documenting rudimentary brain-like ganglion structures in nematodes, flatworms, and tardigrades, with multi-cue context tracking and representation shielding (see Turner et al. references 67, 68). Turner et al. describe these taxa as _harder to place_ and do not assign them a distinct regime.
 
 ### Control-enhanced regime — corvids, elephants, cetaceans, great apes
 
@@ -30,9 +30,9 @@
 
 ## Computational analogs
 
-### Phase transitions and discrete attractors
+### Regions on a continuous optimality surface
 
-- Phase-transition models in optimisation landscapes provide formal language for the "discrete attractors with phase boundaries" claim. While no specific paper directly mirrors Turner et al.'s three regimes for AI architectures, the underlying mathematics (regime-switching dynamical systems, discrete-attractor models) is well-established and applicable.
+- Optimisation-landscape and regime-switching models provide formal language for "qualitatively distinct regions with soft boundaries on a continuous surface." While no specific paper directly mirrors Turner et al.'s three regimes for AI architectures, the underlying mathematics (optimal control, continuous optimality surfaces with regime-like regions) is well-established and applicable. Note: Turner et al.'s model is explicitly continuous — the three regimes are soft-bounded regions on that surface, not dynamically separate states, and the paper does not frame them as such.
 
 ### Deployment-tier reasoning in production ML
 
