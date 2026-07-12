@@ -271,8 +271,15 @@ document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
 
 def write_html(out):
     html = HTML_TEMPLATE.replace("__DATA__", json.dumps(out, ensure_ascii=False))
-    with open(os.path.join(HERE, "coverage-heatmap.html"), "w", encoding="utf-8") as f:
-        f.write(html)
+    targets = [os.path.join(HERE, "coverage-heatmap.html")]
+    # Also publish to the GitHub Pages source (docs/) when the tool lives in NEXI,
+    # so the map is viewable as a live page like the overview site.
+    docs = os.path.normpath(os.path.join(HERE, "..", "..", "docs"))
+    if os.path.isdir(docs):
+        targets.append(os.path.join(docs, "coverage-grid.html"))
+    for t in targets:
+        with open(t, "w", encoding="utf-8") as f:
+            f.write(html)
 
 
 if __name__ == "__main__":
