@@ -11,3 +11,4 @@ Each NEXI is validated from two standpoints: the **AI-research** standpoint asks
 | social-hotspots             | Relevant    | Aligned            | validated | 2026-07-12 |
 | multi-modal-integration     | Relevant    | Aligned            | validated | 2026-07-12 |
 | cognitive-regime-selection  | Relevant    | Aligned            | validated | 2026-07-12 |
+| capacity-first-scaling      | Relevant    | Aligned            | validated | 2026-07-12 |

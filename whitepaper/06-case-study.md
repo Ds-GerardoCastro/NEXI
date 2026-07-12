@@ -52,21 +52,21 @@ Predominantly single-source collection: four of the five member NEXIs trace back
 
 ### Source
 
-Turner, C. R., Russek, E. M., Seed, A., McEwen, E. S., Vélez, N., Morgan, T. J. H., & Griffiths, T. L. (2026), _Cognitive capacity and control in the evolution of intelligence_, bioRxiv preprint posted 2026-03-09 (DOI 10.1101/2026.03.07.710317, license CC-BY 4.0). The paper develops a mathematical model of working-memory selection under metabolic cost, derives three discrete cognitive regimes as evolutionary attractors, and cross-validates with retro-cue task data from humans and rhesus macaques. Phylogenetic placements span jellyfish, sea anemones, nematodes, flatworms, tardigrades, corvids, elephants, cetaceans, and great apes. The DOI's CrossRef indexing is pending at the time of writing; verification is deferred to the biorxiv resolver and re-validated before any external submission (§4.9).
+Turner, C. R., Russek, E. M., Seed, A., McEwen, E. S., Vélez, N., Morgan, T. J. H., & Griffiths, T. L. (2026), _Cognitive capacity and control in the evolution of intelligence_, bioRxiv preprint posted 2026-03-09 (DOI 10.1101/2026.03.07.710317, license CC-BY 4.0). The paper develops a mathematical model of working-memory selection under metabolic cost, derives three cognitive regimes as distinct regions of a continuous optimality surface (the model is explicitly continuous), and cross-validates with retro-cue task data from humans and rhesus macaques. Phylogenetic placements span jellyfish, sea anemones, nematodes, flatworms, tardigrades, corvids, elephants, cetaceans, and great apes. The DOI's CrossRef indexing is pending at the time of writing; verification is deferred to the biorxiv resolver and re-validated before any external submission (§4.9).
 
 ### Atomic principles and consolidation
 
-The mathematical core of the source produced three architecturally-consequential atomic principles: (a) cognition is allocation under cost — finite metabolic budget shapes optimal architecture; (b) the deployment niche shapes the optimum — three discrete regimes (passive-storage, control-enhanced, capacity-heavy) emerge as attractors of the optimisation, not as tier-labels on a single scaling curve; (c) storage capacity is prerequisite to regulation — capacity contributes linearly to recall efficacy while control contributes sublinearly. Each principle was graded CORE under condition (a) of the rubric (architectural-pillar load) and most also under condition (b) (the regime structure is a non-mammalian-template architectural claim).
+The mathematical core of the source produced three architecturally-consequential atomic principles: (a) cognition is allocation under cost — finite metabolic budget shapes optimal architecture; (b) the deployment niche shapes the optimum — three regimes (passive-storage, control-enhanced, capacity-heavy) emerge as distinct regions of the continuous optimisation surface, not as tier-labels on a single scaling curve; (c) storage capacity is prerequisite to regulation — capacity contributes linearly to concentrating resources around the optimal allocation while control contributes sublinearly. Each principle was graded CORE under condition (a) of the rubric (architectural-pillar load) and most also under condition (b) (the regime structure is a non-mammalian-template architectural claim).
 
 Independent corroboration arrived from the Hagedoorn et al. 2026 source — niche-conditional cognitive design appears as a fission-fusion social architecture in zebra finches, with the same signal type carrying different functions in different niches. This is the cross-source convergence that promoted `niche-specification` to `canonical` (§5.7).
 
 ### Member NEXIs
 
-| Slug                         | Role in the pipeline                                                                     | Status                |
-| ---------------------------- | ---------------------------------------------------------------------------------------- | --------------------- |
-| `niche-specification`        | Specify the deployment niche as a typed object (entry point of the pipeline)             | **canonical** (1.0.0) |
-| `cognitive-regime-selection` | Map the niche to one of three regime attractors and recommend the regime's component mix | draft                 |
-| `capacity-first-scaling`     | Within the regime, allocate budget to capacity components before control components      | draft                 |
+| Slug                         | Role in the pipeline                                                                | Status                |
+| ---------------------------- | ----------------------------------------------------------------------------------- | --------------------- |
+| `niche-specification`        | Specify the deployment niche as a typed object (entry point of the pipeline)        | **canonical** (1.0.0) |
+| `cognitive-regime-selection` | Map the niche to one of three regimes and recommend the regime's component mix      | draft                 |
+| `capacity-first-scaling`     | Within the regime, allocate budget to capacity components before control components | draft                 |
 
 ### The pipeline shape
 

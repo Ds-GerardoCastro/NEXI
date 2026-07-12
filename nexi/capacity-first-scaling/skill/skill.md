@@ -70,7 +70,13 @@ tools:
             name: { type: string }
             tag: { enum: [capacity, control, mixed] }
             rationale: { type: string }
-            decomposition: { type: array, description: 'If mixed, sub-components' }
+            capacity_bits:
+              {
+                type: number,
+                description: 'Estimated storage in bits; populated for capacity components (and capacity sub-parts of a decomposed mixed component), used by recommend_allocation to compare against task_complexity_bits',
+              }
+            decomposition:
+              { type: array, description: 'If mixed, sub-components (each itself tagged)' }
 
   - name: estimate_task_complexity
     description: >

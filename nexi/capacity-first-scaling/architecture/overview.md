@@ -6,11 +6,19 @@ This document specifies the architectural primitive for the capacity-first scali
 
 ### 1. Component tagger
 
-A function that classifies each named component of an architecture as `capacity`, `control`, or `mixed`:
+A function that classifies each named component of an architecture as `capacity`, `control`, or `mixed`, and — for capacity components — estimates the storage it contributes in bits:
 
 ```
-tag(component) -> {capacity | control | mixed, rationale, decomposition?}
+tag(component) -> {
+  tag: capacity | control | mixed,
+  rationale,
+  capacity_bits?,   # estimated bits contributed; populated for `capacity` (and each
+                    # `capacity` sub-part of a decomposed `mixed` component)
+  decomposition?    # for `mixed`: list of sub-components, each itself tagged
+}
 ```
+
+`capacity_bits` is what the allocation policy sums to compare against the niche threshold, so the tagger must populate it for every capacity component (from the component's declared budget — context length, store size, slot count, expert count — via a bits-per-unit estimate). Control components leave it unset.
 
 Canonical tags:
 
@@ -104,18 +112,31 @@ The policy is:
 ```python
 def capacity_first_allocate(architecture, delta_budget, niche, regime):
     tagged = [tag_component(c) for c in architecture.components]
-    capacity_components = [c for c in tagged if c.tag == "capacity"]
-    control_components  = [c for c in tagged if c.tag == "control"]
-    mixed_components    = [c for c in tagged if c.tag == "mixed"]
 
-    if mixed_components:
-        # require sub-decomposition before proceeding
+    # Decompose mixed components into their capacity/control sub-parts
+    # (e.g. a transformer block -> KV-cache = capacity, attention compute = control),
+    # so the rule operates on common architectures (a vanilla transformer is `mixed`)
+    # instead of refusing them. Only error if a mixed component cannot be decomposed.
+    resolved, undecomposable = [], []
+    for c in tagged:
+        if c.tag == "mixed":
+            if c.decomposition:
+                resolved.extend(c.decomposition)   # each sub-part is capacity or control
+            else:
+                undecomposable.append(c)
+        else:
+            resolved.append(c)
+    if undecomposable:
         return AllocationError(
-            "Mixed components must be decomposed: "
-            f"{[c.name for c in mixed_components]}"
+            "Mixed components could not be decomposed into capacity/control sub-parts: "
+            f"{[c.name for c in undecomposable]}"
         )
 
-    threshold_bits = estimate_threshold(niche)
+    capacity_components = [c for c in resolved if c.tag == "capacity"]
+    control_components  = [c for c in resolved if c.tag == "control"]
+
+    threshold_bits = estimate_threshold(niche).bits
+    # tag_component populates capacity_bits for every capacity component
     current_capacity_bits = sum(c.capacity_bits for c in capacity_components)
 
     if current_capacity_bits < threshold_bits:
@@ -144,7 +165,7 @@ def rl_capacity_first(env, total_budget, niche):
     tagged = [tag_component(c) for c in components]
 
     # Initial allocation: minimum-viable capacity to clear the threshold
-    threshold_bits = estimate_threshold(niche)
+    threshold_bits = estimate_threshold(niche).bits
     capacity_alloc = bring_to_threshold(tagged, threshold_bits)
 
     remaining = total_budget - sum(capacity_alloc.values())

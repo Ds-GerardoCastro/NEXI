@@ -1,7 +1,7 @@
 id: capacity-first-scaling
 name: Capacity-First Scaling
 status: draft
-version: 0.1.0
+version: 0.1.1
 created: '2026-05-03'
 audience_voice: builder
 
@@ -22,9 +22,12 @@ natural_exemplars:
       doi: '10.1101/2026.03.07.710317'
     notes: >
       Mathematical evolutionary-optimality model in which capacity contributes linearly
-      to recall efficacy while control contributes sublinearly, producing severe
-      diminishing returns on regulation once representational space is saturated.
-      Capacity-prioritization is robust across all examined metabolic-benefit levels.
+      to the system's ability to concentrate resources around the optimal allocation,
+      while control contributes sublinearly, producing severe diminishing returns on
+      regulation. (Recall itself remains concave/synergistic; the linear-vs-sublinear
+      asymmetry is about resource-concentration efficacy.) Capacity-prioritization
+      broadly holds across the examined metabolic-benefit levels, reversing only if
+      control is substantially cheaper per unit than capacity.
 
   - species: 'Major brain-evolution transitions (across phyla)'
     paper:
@@ -35,28 +38,34 @@ natural_exemplars:
       date: 'multi-decade'
     notes: >
       Independent of the formal model, the comparative-neuroscience record of major
-      transitions in the control of information over brain evolution broadly coheres
-      with capacity-first ordering — storage capabilities expand before regulation
-      sophistication does.
+      transitions in the control of information over brain evolution is reported by
+      Turner et al. to "broadly cohere" with capacity-first ordering. This is the
+      authors' own hedged speculation, not a settled result — they flag that the
+      specific phylogenetic timing of when storage vs. regulation appeared remains an
+      open empirical question. Treat as corroborating context, not independent
+      confirmation.
 
 abstract_claim: >
   When scaling a cognitive system, expand storage capacity before scaling control or
-  regulation sophistication. Capacity contributes linearly to the system's effective
-  ability to maintain useful representations; control contributes sublinearly, with
-  severe diminishing returns once capacity is sufficient. Without capacity, control
-  has no substrate to operate on — making capacity the prerequisite primitive in any
-  cognitive architecture.
+  regulation sophistication. In the source model, capacity contributes linearly to the
+  system's ability to concentrate resources around the optimal allocation, while control
+  contributes sublinearly, with severe diminishing returns once capacity is sufficient.
+  Without capacity, control has no substrate to operate on — making capacity the
+  prerequisite primitive in any cognitive architecture.
 
 falsifiable_hypothesis: >
   At matched parameter / FLOP / cost budget, AI architectures that allocate marginal
-  resources to capacity components (context window length, retrieval store size,
-  KV-cache budget, memory-token slots, MoE expert count) outperform identical systems
-  that allocate marginal resources to control components (attention-head count,
+  resources to SUB-QUADRATIC capacity components (retrieval store size, KV-cache
+  budget, memory-token slots, MoE expert count — and context length only where sparse
+  / linear / streaming attention keeps its cost sub-quadratic) outperform identical
+  systems that allocate marginal resources to control components (attention-head count,
   attention-routing sophistication, agentic-loop iteration depth, planner branching
   factor, reasoning-chain depth) on memory-intensive and long-context evaluations
-  by a measurable margin (>=10% improvement at matched budget). Refutation: if no
-  systematic margin appears across an appropriate task suite, this NEXI is refuted
-  as a scaling primitive.
+  by a measurable margin (>=10% improvement at matched budget). The quadratic
+  full-attention context dial is explicitly excluded (see when_not_to_use), since its
+  O(n^2) cost breaks the linear-capacity assumption. Refutation: if no systematic
+  margin appears across an appropriate task suite of sub-quadratic capacity dials,
+  this NEXI is refuted as a scaling primitive.
 
 applies_to:
   - scaling-laws

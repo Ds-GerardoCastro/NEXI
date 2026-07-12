@@ -4,7 +4,7 @@
 >
 > **Collection:** [`bounded-cognitive-architecture`](../../collections/bounded-cognitive-architecture/)
 >
-> A scaling rule for cognitive systems: **expand storage capacity before scaling control sophistication**. Capacity contributes linearly to a system's effective ability to maintain useful representations under noise; control contributes sublinearly with severe diminishing returns. Without capacity, control has no substrate to operate on.
+> A scaling rule for cognitive systems: **expand storage capacity before scaling control sophistication**. In the source model, capacity contributes linearly to the system's ability to concentrate resources around the optimal allocation; control contributes sublinearly with severe diminishing returns. Without capacity, control has no substrate to operate on.
 
 ---
 
@@ -14,7 +14,7 @@ When you have a fixed budget increase to spend on an AI architecture — more pa
 
 The capacity-first rule says that's backwards near the capacity-bound regime. When the deployment niche has task complexity at or above existing capacity, an additional unit of capacity (longer context, larger retrieval store, more memory tokens, more MoE experts) returns more recall efficacy than an additional unit of control (more attention heads, deeper reasoning, more agentic-loop iterations).
 
-The reason is structural, not empirical. In the formal model, capacity contributes **linearly** to the system's ability to concentrate resources around an optimal allocation; control contributes **sublinearly**. The asymmetry is not a tuning quirk — it falls out of how stochastic processes behave when the resource budget is finite.
+The reason is structural — a property of the model rather than a tuning artifact. In the formal model, capacity contributes **linearly** to the system's ability to concentrate resources around an optimal allocation; control contributes **sublinearly**. The asymmetry falls out of how the modeled stochastic allocation process behaves when the resource budget is finite (given the model's assumptions). Note the linear claim is about resource-concentration efficacy, not raw recall — recall itself is concave and synergistic in capacity and control.
 
 ---
 
@@ -24,10 +24,10 @@ Turner et al. (2026) build a mathematical model of working-memory evolution. Cap
 
 Two results from the model are directly load-bearing for this NEXI:
 
-1. **Capacity is prioritised across all metabolic-benefit levels.** Evolution invests in capacity before it invests in control because control without storage has no substrate. This holds robustly except in a regime where control is _substantially_ cheaper per unit than capacity — empirically unlikely for nervous tissue.
-2. **Capacity contributes linearly to recall, control sublinearly.** Specifically, with regard to the system's ability to concentrate resources around the optimal allocation, capacity scaling produces linear gains while control scaling hits severe diminishing returns.
+1. **Capacity is prioritised broadly across metabolic-benefit levels.** Evolution invests in capacity before it invests in control because control without storage has no substrate. This holds robustly except in a regime where control is _substantially_ cheaper per unit than capacity — empirically unlikely for nervous tissue.
+2. **Capacity contributes linearly, control sublinearly.** Specifically, with regard to the system's ability to concentrate resources around the optimal allocation, capacity scaling produces linear gains while control scaling hits severe diminishing returns. (This is distinct from raw recall, which the model treats as concave.)
 
-The model also coheres with the comparative-neuroscience record of major brain-evolution transitions, where storage capabilities expand before regulation sophistication does.
+Turner et al. also note that their regimes "broadly cohere" with the comparative-neuroscience record of major brain-evolution transitions, under which storage capabilities are argued to expand before regulation sophistication. The authors present this as hedged speculation, not a settled ordering — the specific phylogenetic timing remains an open empirical question — so it is corroborating context here, not independent confirmation.
 
 See [`references.md`](references.md) for the full citation chain.
 
@@ -101,6 +101,10 @@ Drop-in components for an engineering-agent or human-in-the-loop architecture-re
 - **Translation notes** for mapping the spec onto Claude skills, OpenAI function calling, MCP tools, and LangChain / LlamaIndex agents.
 
 ---
+
+## Relationship to established practice
+
+Much of the LLM-stack framing here re-expresses scaling practice the field already applies: **compute-optimal allocation** (Hoffmann et al. 2022 / Chinchilla) already rebalances toward data (a capacity axis); **retrieval augmentation** (REALM / RAG / RETRO) already treats an external store as a capacity dial; and **Mixture-of-Experts** (Switch / Mixtral) already scales expert-pool capacity sparsely. Where the pattern earns its keep is not in re-deriving these — it is in supplying a single **capacity/control-separation principle**, imported from an independent biological optimality result, for settings where that separation is _not_ yet routine: world-model / RL controllers where representation and the credit-assigned controller should scale on different budgets, and any architecture where a single parameter-count number hides the capacity/control split. Read it as a design-time _decomposition-and-ordering_ discipline, not a novel scaling law.
 
 ## When to use
 
