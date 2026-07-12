@@ -1,6 +1,6 @@
 # Skill: Context-Bound Semantics (framework-neutral)
 
-A drop-in agent skill that adds context-conditional interpretation and negative-evidence reasoning to an LLM-based agent.
+A drop-in agent skill that adds context-conditional interpretation — meaning = f(signal, context) — to an LLM-based agent.
 
 ---
 
@@ -15,9 +15,6 @@ or signal:
    role this signal plays in the current setting.
 2. Interpret the signal *conditionally* on that context. Do not collapse
    to its most-frequent meaning if context suggests otherwise.
-3. Reason about what is *not* there. Use the `check_for_absences` tool
-   to identify expected signals that are missing. Absences are
-   diagnostic information, not gaps in your perception.
 
 When reporting your interpretation, surface the context you used and
 flag if the signal would have a different meaning in another context
@@ -52,34 +49,6 @@ tools:
         confidence: number
         context_used: object
         alternative_meanings: array # interpretations valid in adjacent contexts
-
-  - name: check_for_absences
-    description: |
-      Given the current context, returns the set of signals or
-      observations that would be expected but are not present.
-      Absences are themselves diagnostic.
-    parameters:
-      context:
-        type: object
-        required: true
-      observed_signals:
-        type: array
-        required: true
-        description: List of signals actually observed.
-    returns:
-      type: object
-      properties:
-        missing_expected:
-          type: array
-          items:
-            type: object
-            properties:
-              expected_signal: string
-              implication_of_absence: string
-              confidence: number
-        unexpected_present:
-          type: array
-          description: Signals present that are not normally expected in this context.
 
   - name: list_context_alternatives
     description: |
@@ -125,9 +94,9 @@ Querying memory by `(signal_signature, context_similarity)` lets the agent recal
 
 ## Translation notes
 
-| Target stack                     | How to translate                                                                                                                                                                          |
-| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Claude / OpenAI agent stacks** | The system-prompt fragment guides interpretation; tools above are wrapped as function-calls / MCP tools.                                                                                  |
-| **MCP**                          | Define an MCP server that exposes `interpret_signal` and `check_for_absences` as tools, with the interpretation memory as a resource.                                                     |
-| **LangChain / LlamaIndex**       | Wrap the tools as `BaseTool`; add the prompt fragment to the agent's prompt template; back the interpretation memory with a context-keyed retriever.                                      |
-| **Multi-agent RL**               | Context-conditional policy implemented via FiLM modulation on the action head. Negative-evidence module emits an additional reward signal for spotting expected-but-missing observations. |
+| Target stack                     | How to translate                                                                                                                                     |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Claude / OpenAI agent stacks** | The system-prompt fragment guides interpretation; tools above are wrapped as function-calls / MCP tools.                                             |
+| **MCP**                          | Define an MCP server that exposes `interpret_signal` as a tool, with the interpretation memory as a resource.                                        |
+| **LangChain / LlamaIndex**       | Wrap the tools as `BaseTool`; add the prompt fragment to the agent's prompt template; back the interpretation memory with a context-keyed retriever. |
+| **Multi-agent RL**               | Context-conditional policy implemented via FiLM modulation on the action head.                                                                       |

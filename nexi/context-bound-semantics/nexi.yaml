@@ -1,7 +1,7 @@
 id: context-bound-semantics
 name: Context-Bound Semantics
 status: draft
-version: 0.1.0
+version: 0.1.1
 created: '2026-05-03'
 audience_voice: builder
 
@@ -19,36 +19,36 @@ natural_exemplars:
         - 'Naguib, M.'
         - 'Loning, H.'
       venue: 'bioRxiv preprint'
-      date: '2026-04-27'
+      date: '2025-09-11'
       doi: '10.1101/2025.09.11.675577'
+      status: 'unrefereed bioRxiv preprint; observational'
     notes: >
-      Zebra finch song serves different functions in different social
-      contexts — pair-bond reinforcement and reproductive cueing in the
-      breeding colony, broader social bonding and breeding synchronisation
-      at the social hotspot. The same signal carries different meaning
-      depending on context. The paper also documents inference from
-      *absence* of signal: the lack of a dawn-song peak distinguishes
-      this species' non-territorial system from territorial ones.
+      The same zebra finch song appears to carry different candidate
+      functions across social contexts. In the breeding colony the authors
+      suggest song may primarily reinforce pair bonds and act as
+      reproductive cues; at the social hotspot they suggest it might have a
+      wider social trigger, potentially coordinating breeding. The signal
+      is the same; its interpreted function shifts with context. Serves as
+      a natural analog for context-conditional interpretation, not as
+      empirical support for the ML hypothesis.
 
 abstract_claim: >
   Meaning is a function of signal × context, not of signal alone.
-  Architectures that bind interpretation to context — including the
-  state of the world, the participants involved, and what is *not*
-  observed (negative evidence) — capture semantics that token-statistical
-  models systematically miss. Absence of expected signal carries
-  information equal to presence of unexpected signal.
+  Architectures that bind interpretation to context — the state of the
+  world, the participants involved, and the role the signal plays in
+  that setting — can capture semantics that token-statistical models can
+  miss.
 
 falsifiable_hypothesis: >
-  Architectures with explicit context-conditional decoders and
-  negative-evidence reasoning capacity outperform context-independent
-  baselines on tasks where semantic interpretation shifts across
-  contexts, at equal training compute. Operationalised on benchmarks
-  of pragmatic language understanding, contextual classification under
-  distribution shift, and counterfactual reasoning, context-bound
-  architectures should achieve >=10% relative gain on context-shift
-  metrics. Refutation: if context-independent baselines match context-
-  conditional ones at equal compute on explicitly context-shifted
-  evaluations, this pattern's claim is refuted.
+  Architectures with explicit context-conditional decoders outperform
+  context-independent baselines on tasks where semantic interpretation
+  shifts across contexts, at equal training compute. Operationalised on a
+  named, pre-registered, compute-matched pragmatic-implicature / context-
+  shift NLU benchmark and split, context-conditional decoders should
+  achieve >=10% relative gain on the benchmark's context-shift metric.
+  Refutation: if a context-independent baseline of matched compute equals
+  the context-conditional model on that pre-registered context-shift split,
+  this pattern's claim is refuted.
 
 applies_to:
   - llm-agents
@@ -64,9 +64,9 @@ formats:
 when_to_use: >
   Tasks where the same signal can mean different things in different
   contexts (multi-domain agents, pragmatic dialogue, role-aware tools);
-  systems that need to reason about absences (what should be there but
-  is not) and counterfactuals (what would change the meaning); domains
-  with non-stationary semantics.
+  domains with non-stationary semantics where interpretation must be
+  conditioned on the current setting rather than read off the signal
+  alone.
 
 when_not_to_use: >
   Tasks where signals have stable, context-independent meaning (most
@@ -75,17 +75,21 @@ when_not_to_use: >
   be reliably observed.
 
 tradeoffs: >
-  Context-conditional decoders have larger effective parameter counts
-  (the conditional distribution over interpretations is richer than
-  the marginal). Training data must include the same signal in
-  multiple contexts, which is harder to curate than i.i.d. samples.
-  Negative-evidence reasoning is computationally expensive (you have
-  to enumerate or sample what you would expect to see).
+  Context-conditional decoders span a larger function class than
+  context-independent ones (they realise a family of input-output
+  mappings indexed by context); a FiLM-style modulation adds only a few
+  parameters, so the cost is expressiveness discipline, not raw parameter
+  count. Training data must include the same signal in multiple contexts,
+  which is harder to curate than i.i.d. samples. Semantic/context routing
+  for mixture-of-experts is not a solved problem, so FiLM-style modulation
+  or cross-attention is the more reliable default; MoE routing remains
+  aspirational.
 
 related_nexi:
   - eavesdropping
   - identity-by-pattern
   - multi-modal-integration
+  - negative-evidence-reasoning
   - social-hotspots
 
 collections:
@@ -95,12 +99,10 @@ tags:
   - semantics
   - context
   - pragmatics
-  - negative-evidence
   - llm-limitations
 
 provenance:
   vault_consolidation_hub: 'Context-Dependent Semantics'
   vault_principles:
     - 'P07 — Context-Dependent Song Function'
-    - 'P08 — No Dawn Song as Non-Territorial Signal'
   vault_metamodel: 'MM3 — Context-Bound Semantics'

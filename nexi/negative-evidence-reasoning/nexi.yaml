@@ -1,0 +1,120 @@
+id: negative-evidence-reasoning
+name: Negative-Evidence Reasoning
+status: draft
+version: 0.1.0
+created: '2026-05-03'
+audience_voice: builder
+
+natural_exemplars:
+  - species: 'Taeniopygia castanotis (zebra finch)'
+    paper:
+      title: 'Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)'
+      authors:
+        - 'Hagedoorn, K.'
+        - 'Tschirren, N.'
+        - 'ter Avest, E.'
+        - 'Tyson, C.'
+        - 'Snijders, L.'
+        - 'Griffith, S. C.'
+        - 'Naguib, M.'
+        - 'Loning, H.'
+      venue: 'bioRxiv preprint'
+      date: '2025-09-11'
+      doi: '10.1101/2025.09.11.675577'
+      status: 'unrefereed bioRxiv preprint; observational'
+    notes: >
+      The informative observation here is an absence. Many territorial
+      songbirds show a strong dawn-song peak tied to territory defence;
+      in wild zebra finches the authors report no dawn-song peak, and
+      themselves read that missing peak as consistent with a
+      non-territorial social system. The distinguishing signal is not a
+      song that was heard but a song that was expected and was not there.
+      Serves as a natural analog for reasoning from absence, not as
+      empirical support for the ML hypothesis.
+
+abstract_claim: >
+  The absence of an expected signal can be as informative as the
+  presence of an unexpected one. Meaning includes what is
+  expected-but-missing: systems that maintain explicit expectations,
+  detect deviations from them, and interpret gaps can recover
+  information that models weighting only present tokens discard. This
+  is the complement of negation — reasoning about what is not true or
+  not there — treated as first-class evidence rather than as a hole in
+  perception.
+
+falsifiable_hypothesis: >
+  Architectures with explicit expectation machinery plus a
+  deviation/negation-handling operator outperform baselines that weight
+  only present tokens, at equal training compute, on tasks whose answer
+  turns on negation or absence. Pre-registered operationalisation: on
+  the negated-LAMA probes of Kassner & Schuetze (2020) — a fact-probing
+  set on which pretrained language models assign higher probability to
+  the false completion of negated statements than to the true one — an
+  expectation-plus-deviation model should reduce the negation error rate
+  (share of negated probes where the false completion outscores the
+  true one) by >=20% relative to a matched-compute baseline that only
+  weights present tokens; a negation NLI set (contradiction detection on
+  negated premise/hypothesis pairs) may be used as a second bound with
+  the same >=20% relative error-reduction target. Refutation: if the
+  present-token baseline of matched compute equals the expectation model
+  on that pre-registered negation split, this pattern's claim is refuted.
+
+applies_to:
+  - llm-agents
+  - grounded-language
+  - multi-agent-systems
+  - world-models
+  - anomaly-detection
+
+formats:
+  - architecture
+  - skill
+
+when_to_use: >
+  Tasks where the diagnostic information is in what is missing rather
+  than what is present: anomaly and fault detection, diagnostic
+  reasoning where absent findings rule things in or out, security
+  monitoring where the missing heartbeat is the alarm, and any language
+  task that turns on negation (what is not true, not permitted, not
+  present). Also whenever a system must not silently treat "not
+  observed" as "not relevant".
+
+when_not_to_use: >
+  Tasks where the expected-signal set cannot be characterised (no model
+  of what should be present, so absence carries no information);
+  settings where observation is so incomplete that missing and
+  unobserved cannot be distinguished; strict latency budgets that
+  preclude maintaining and diffing an expectation model.
+
+tradeoffs: >
+  Reasoning about what is not there requires enumerating or sampling
+  expected signals, which is more expensive than scoring present tokens.
+  The expectation model must be trained and calibrated on held-out data,
+  or it fabricates absences. There is an irreducible tension: a
+  more-sensitive expectation model finds more diagnostic gaps but also
+  hallucinates more; the abstention threshold trades these off and must
+  be tuned per deployment.
+
+related_nexi:
+  - context-bound-semantics
+  - eavesdropping
+  - identity-by-pattern
+  - multi-modal-integration
+  - social-hotspots
+
+collections:
+  - distributed-social-cognition
+
+tags:
+  - negative-evidence
+  - negation
+  - absence
+  - prediction-error
+  - anomaly-detection
+  - llm-limitations
+
+provenance:
+  vault_consolidation_hub: 'Context-Dependent Semantics'
+  vault_principles:
+    - 'P08 — No Dawn Song as Non-Territorial Signal'
+  vault_metamodel: 'MM3 — Context-Bound Semantics'

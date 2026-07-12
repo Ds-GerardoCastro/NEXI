@@ -77,7 +77,8 @@ This is the empirical case for treating these patterns as a *system* rather than
 | [`eavesdropping`](../../nexi/eavesdropping/) | Mechanism: extract information from observed third-party interactions. | template |
 | [`identity-by-pattern`](../../nexi/identity-by-pattern/) | Identity layer: attribute what is observed to specific individuals from sensory signatures. | draft |
 | [`multi-modal-integration`](../../nexi/multi-modal-integration/) | Cross-channel grounding: combine acoustic and spatial (or other modality pairs) so identity and observation are mutually confirmed. | draft |
-| [`context-bound-semantics`](../../nexi/context-bound-semantics/) | Interpretation layer: bind meaning to context, including reasoning from absence (negative evidence). | draft |
+| [`context-bound-semantics`](../../nexi/context-bound-semantics/) | Interpretation layer: bind meaning to context (the same signal means different things in different settings). | draft |
+| [`negative-evidence-reasoning`](../../nexi/negative-evidence-reasoning/) | Absence layer: read information from expected-but-missing signals — treat an absence as first-class evidence. | draft |
 | [`social-hotspots`](../../nexi/social-hotspots/) | Spatial substrate: aggregate observation where interaction density is highest. | draft |
 
 ---

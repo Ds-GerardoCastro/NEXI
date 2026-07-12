@@ -17,12 +17,14 @@ member_nexis:
   - identity-by-pattern
   - multi-modal-integration
   - context-bound-semantics
+  - negative-evidence-reasoning
   - social-hotspots
 
 system_falsifiable_hypothesis: >
   Multi-agent systems that adopt the full distributed-social-cognition
   collection (eavesdropping + identity-by-pattern + multi-modal-integration +
-  context-bound-semantics + social-hotspots) outperform systems that adopt
+  context-bound-semantics + negative-evidence-reasoning + social-hotspots)
+  outperform systems that adopt
   any proper subset of these patterns on cooperative social-inference
   benchmarks at equal training compute, by a margin larger than the sum of
   individual-pattern gains. Refutation: if subsetting the collection produces
@@ -44,15 +46,17 @@ natural_exemplars:
         - "Naguib, M."
         - "Loning, H."
       venue: "bioRxiv preprint"
-      date: "2026-04-27"
+      date: "2025-09-11"
       doi: "10.1101/2025.09.11.675577"
     notes: >
       Wild zebra finches in arid-zone social hotspots demonstrate the
-      integrated operation of all five member patterns: they eavesdrop on
-      third-party interactions, identify individuals from distinctive song
-      motifs, integrate acoustic and spatial channels, bind meaning to
-      context (breeding colony vs. hotspot), and concentrate interactions
-      at hotspots. Removing any one capability would degrade the others.
+      integrated operation of the member patterns: they eavesdrop on
+      third-party interactions, identify individuals from distinctive song,
+      integrate acoustic and spatial channels, bind meaning to
+      context (breeding colony vs. hotspot), reason from an expected-but-
+      missing signal (the absent dawn-song peak marks a non-territorial
+      system), and concentrate interactions at hotspots. Removing any one
+      capability would degrade the others.
 
 when_to_adopt: >
   Multi-agent settings with partial observability, where building accurate
@@ -88,6 +92,10 @@ complementarity_notes: >
   - Context-bound-semantics modulates what every observation means, and
     is itself derivable in part from multi-modal context (where, when,
     with whom).
+  - Negative-evidence-reasoning (split from context-bound-semantics) reads
+    information from expected-but-missing signals; it makes an absent
+    observation informative rather than invisible. Its precise place in the
+    collection's synergy claim is pending the collection-level review.
 
   Removing any one component degrades the others; this is the collection's
   synergy claim.
