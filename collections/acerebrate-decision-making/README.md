@@ -64,13 +64,13 @@ This is a stronger claim than "each pattern helps in isolation." The bet is that
 
 ## Comparison with the other collections
 
-| Collection                                                                | Shape                                                     | Layer                                    | Direction                      |
+| Collection                                                             | Shape                                                     | Layer                                    | Direction                      |
 | ---------------------------------------------------------------------- | --------------------------------------------------------- | ---------------------------------------- | ------------------------------ |
 | [`distributed-social-cognition`](../distributed-social-cognition/)     | Constellation (5 mutually-enabling runtime patterns)      | Multi-agent runtime                      | Across agents                  |
 | [`bounded-cognitive-architecture`](../bounded-cognitive-architecture/) | Pipeline (3 sequenced design-time stages)                 | Single-agent design-time                 | Through time (sequenced)       |
-| **`acerebrate-decision-making`** _(this collection)_                      | **Composition (3 layered concurrent runtime mechanisms)** | **Single-agent runtime decision-making** | **Across layers (concurrent)** |
+| **`acerebrate-decision-making`** _(this collection)_                   | **Composition (3 layered concurrent runtime mechanisms)** | **Single-agent runtime decision-making** | **Across layers (concurrent)** |
 
-The catalog now documents **four distinct collection shapes** — constellation, pipeline, composition, and isomorphism — each appropriate for a different problem class; a fifth collection (substrate-independent-cognition) is newly seeded and not yet assigned a shape. The shape difference is itself architecturally meaningful and reflects the diverse ways nature solves coordination problems.
+The catalog now documents **three distinct collection shapes** — constellation, pipeline, and composition — each appropriate for a different problem class; a fourth collection (substrate-independent-cognition) is newly seeded and not yet assigned a shape. The shape difference is itself architecturally meaningful and reflects the diverse ways nature solves coordination problems.
 
 ## When to adopt
 
@@ -95,7 +95,7 @@ The collection trades architectural-overhead cost (additional regulator componen
 | Source                                                                                                                                           | What it contributes                                                                                                                                                                                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Nesin & Chandrankunnel (2025)](https://doi.org/10.1080/19420889.2025.2463926) — _The need for a new perspective on decision-making in bacteria_ | Primary source. _Vibrio cholerae_ biofilm commitment via coincidence detection (LuxPQ + CqsS); stochastic gene-expression switching paired with iron-based cellular memory; anti-σ proteins as meta-regulators of σ factors. All three primitives operate in organisms with no nervous system at all. |
-| [Turner et al. (2026)](https://doi.org/10.1101/2026.03.07.710317) — _Cognitive capacity and control in the evolution of intelligence_            | Corroborating phylogenetic placement. Jellyfish and sea anemones (nerve net, no brain) in the _passive-storage_ regime — second source for the substrate-independence claim that motivates this collection.                                                                                              |
+| [Turner et al. (2026)](https://doi.org/10.1101/2026.03.07.710317) — _Cognitive capacity and control in the evolution of intelligence_            | Corroborating phylogenetic placement. Jellyfish and sea anemones (nerve net, no brain) in the _passive-storage_ regime — second source for the substrate-independence claim that motivates this collection.                                                                                           |
 
 ## Related work in current AI
 

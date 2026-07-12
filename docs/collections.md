@@ -13,7 +13,7 @@ A collection names:
 - A **source system** — the biological system the patterns were read from.
 - A **set of member patterns** — the NEXIs read from that system (≥ 2).
 - **Complementarity notes** — how the member patterns enable each other.
-- A **shape** — the topology of how the patterns relate (e.g. constellation, pipeline, composition, isomorphism). The shape is the reusable theoretical unit; the full taxonomy is developed in the white paper.
+- A **shape** — the topology of how the patterns relate (e.g. constellation, pipeline, composition). The shape is the reusable theoretical unit; the full taxonomy is developed in the white paper.
 - _(Optional)_ A **synergy hypothesis** — a falsifiable research claim that adopting the whole outperforms any proper subset. Clearly labelled as unproven. Not required for the collection to exist, and **not a promise to the adopting engineer.**
 
 ## What a collection is not

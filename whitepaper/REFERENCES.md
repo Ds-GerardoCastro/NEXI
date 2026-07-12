@@ -104,8 +104,6 @@
 
 **Nesin, S. M., & Chandrankunnel, M. (2025).** _The need for a new perspective on decision-making in bacteria._ Communicative & Integrative Biology, 18(1), 2463926. DOI: [10.1080/19420889.2025.2463926](https://doi.org/10.1080/19420889.2025.2463926). License CC BY 4.0. Peer-reviewed review article.
 
-**Nordli, S. A., & Todd, P. M. (2022).** _Embodied and embedded ecological rationality: A common vertebrate mechanism for action selection underlies cognition and heuristic decision-making in humans._ Frontiers in Psychology, 13, 841972. DOI: [10.3389/fpsyg.2022.841972](https://doi.org/10.3389/fpsyg.2022.841972). License CC BY. Peer-reviewed conceptual-analysis article.
-
 ## O
 
 **Oliehoek, F. A., & Amato, C. (2016).** _A Concise Introduction to Decentralized POMDPs._ Springer Briefs in Intelligent Systems.

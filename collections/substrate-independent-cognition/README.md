@@ -56,7 +56,7 @@ The two members address different layers of the same substrate-general question.
 
 This is the collection's load-bearing distinction. The stance is **substrate-independence of the architectural pattern**, not substrate-irrelevance. The source account is itself _substrate-restrictive_ — it binds intelligence to associative neuronal networks and does not claim any medium will do. The collection takes the weaker, defensible reading: the _pattern_ recurs across non-homologous **neural** substrates and is therefore a candidate for porting to artificial ones, without asserting that any substrate whatsoever suffices.
 
-This distinguishes the collection from a naïve "substrate doesn't matter" claim and connects it to the project-wide substrate-independence-of-pattern position. The [`acerebrate-decision-making`](../acerebrate-decision-making/) collection (molecular / non-neural) and the [`embodied-action-selection`](../embodied-action-selection/) collection (vertebrate CBGTC) supply the other two vertices of the same three-way framing; this collection is the convergent-neural vertex.
+This distinguishes the collection from a naïve "substrate doesn't matter" claim and connects it to the project-wide substrate-independence-of-pattern position. The [`acerebrate-decision-making`](../acerebrate-decision-making/) collection (molecular / non-neural) supplies the other vertex of the same substrate framing; this collection is the convergent-neural vertex.
 
 ## When to adopt
 
@@ -76,25 +76,24 @@ Committing to substrate-generality trades the efficiency of a substrate-tuned de
 
 ## Comparison with the other collections
 
-| Collection                                                                | Shape / framing vertex                                     | Layer                           |
+| Collection                                                             | Shape / framing vertex                                     | Layer                           |
 | ---------------------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------- |
 | [`distributed-social-cognition`](../distributed-social-cognition/)     | Constellation (mutually-enabling runtime patterns)         | Multi-agent runtime             |
 | [`bounded-cognitive-architecture`](../bounded-cognitive-architecture/) | Pipeline (sequenced design-time stages)                    | Single-agent design-time        |
 | [`acerebrate-decision-making`](../acerebrate-decision-making/)         | Composition — molecular vertex of the substrate framing    | Single-agent runtime            |
-| [`embodied-action-selection`](../embodied-action-selection/)           | Isomorphism — vertebrate-CBGTC vertex of the framing       | Single-agent embodied           |
-| **`substrate-independent-cognition`** _(this collection)_                 | **Convergent-neural vertex — what/how integration layers** | **Cross-substrate design-time** |
+| **`substrate-independent-cognition`** _(this collection)_              | **Convergent-neural vertex — what/how integration layers** | **Cross-substrate design-time** |
 
 ## Natural exemplars
 
-| Source                                                                                                                 | What it contributes                                                                                                                                                                                                                                                                                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Source                                                                                                                 | What it contributes                                                                                                                                                                                                                                                                                                                                                                         |
+| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Roth (2015)](https://doi.org/10.1098/rstb.2015.0049) — _Convergent evolution of complex brains and high intelligence_ | Primary source and collection seed. Documents both member patterns co-occurring across five independent lineages (insect mushroom bodies, octopod vertical lobe, cichlid pallium, corvid/psittacid avian pallium, mammalian isocortex): a dedicated multimodal integration centre and the expand-then-read-out circuit motif that implements it, on anatomically non-homologous substrates. |
 
 **Promotion gate.** A second circuit-level source — e.g. cephalopod electrophysiology, Drosophila mushroom-body computation, or a non-neural substrate documenting expand-then-readout — would lift the collection past its single-source seeding.
 
 ## See also
 
-- Collection cousins: [`distributed-social-cognition`](../distributed-social-cognition/) · [`acerebrate-decision-making`](../acerebrate-decision-making/) · [`embodied-action-selection`](../embodied-action-selection/).
+- Collection cousins: [`distributed-social-cognition`](../distributed-social-cognition/) · [`acerebrate-decision-making`](../acerebrate-decision-making/).
 - Catalog index: [`../../CATALOG.md`](../../CATALOG.md).
 - Methodology: [`../../docs/methodology.md`](../../docs/methodology.md).
 - What a NEXI is: [`../../docs/what-is-a-nexi.md`](../../docs/what-is-a-nexi.md).

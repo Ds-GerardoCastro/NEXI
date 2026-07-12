@@ -83,7 +83,6 @@ tradeoffs: >
 
 related_nexi:
   - multi-modal-integration
-  - action-selection-as-common-substrate
 
 collections:
   - substrate-independent-cognition
