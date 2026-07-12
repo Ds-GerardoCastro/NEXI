@@ -45,6 +45,8 @@ The ultimate value proposition, and the reason this repository is now public. A 
 
 **Early adopters: this is the invitation — use a NEXI, put it under load, break it, and tell us what happened.**
 
+**[`eavesdropping`](nexi/eavesdropping/) is the first validated pattern** — it addresses documented AI needs (machine theory of mind, partial-observability third-party state inference); see [`VALIDATION.md`](VALIDATION.md).
+
 ## Patterns and collections
 
 The catalog's unit is the **pattern (NEXI)**:

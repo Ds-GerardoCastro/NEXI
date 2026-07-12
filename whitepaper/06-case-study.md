@@ -46,6 +46,8 @@ Operationalisation: a benchmark suite of N ≥ 3-agent partially-observable coop
 
 Predominantly single-source collection: four of the five member NEXIs trace back to a single peer-reviewed source, with `multi-modal-integration` the exception (promoted to canonical on cross-phyletic co-sourcing with [Roth 2015]). The collection as a whole therefore still carries `status: template` (anchored in the eavesdropping exemplar) rather than `canonical`; collection-level promotion requires multi-source evidence for the collection as a coherent intelligence model, not for a single member. The honest reporting here is that the collection's _shape_ is well-evidenced by the source's network analysis, but the _generality_ of each pattern beyond zebra finches awaits multi-source corroboration. The collection also assumes _honest_ observation; adversarial robustness (peers actively deceiving observers) is out of scope and a known failure mode.
 
+**New evidence — `eavesdropping` validated against AI needs.** The collection's exemplar member has since been validated to address documented needs of current AI systems. `eavesdropping` maps directly onto machine theory of mind (peer-belief modelling under the observer's own partial observability) and onto partial-observability coordination — inferring third-party latent state that a decentralised agent cannot directly observe — with partial contributions to multi-agent credit assignment and opponent modelling. This grounds the constellation's transfer claim in named, documented AI failure modes rather than biological analogy alone. See [`validation/eavesdropping.md`](../validation/eavesdropping.md) for the full record.
+
 ## 6.2 Pipeline — Bounded Cognitive Architecture
 
 ### Source
@@ -148,7 +150,7 @@ Collection status is `draft`: although the upstream consolidation hub `Embodimen
 
 The three collections can be compared on four axes that together describe what makes the shape difference architecturally meaningful:
 
-| Collection                        | Shape         | Composition mode                                  | Time mode             | Direction      |
+| Collection                     | Shape         | Composition mode                                  | Time mode             | Direction      |
 | ------------------------------ | ------------- | ------------------------------------------------- | --------------------- | -------------- |
 | Distributed Social Cognition   | Constellation | Graph of mutual dependencies                      | Runtime               | Across agents  |
 | Bounded Cognitive Architecture | Pipeline      | Sequenced typed inputs / outputs                  | Design-time           | Through time   |

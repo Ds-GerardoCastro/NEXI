@@ -4,4 +4,4 @@ Each NEXI is validated from two standpoints: the **AI-research** standpoint asks
 
 | NEXI          | AI-research | Scientific-writing | Status    | Date       |
 | ------------- | ----------- | ------------------ | --------- | ---------- |
-| eavesdropping | Grounded    | Revised (v0.1.1)   | validated | 2026-07-12 |
+| eavesdropping | Grounded    | Aligned            | validated | 2026-07-12 |

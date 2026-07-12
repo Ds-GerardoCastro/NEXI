@@ -30,9 +30,9 @@
 
 ### Template — structure-propagating exemplar
 
-| NEXI                                   | What it gives you                                                                                                      | Drawn from  |
-| -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ----------- |
-| [`eavesdropping`](nexi/eavesdropping/) | Extract information from signals not addressed to you — monitor third-party interactions to build peer models cheaply. | Zebra finch |
+| NEXI                                   | What it gives you                                                                                                                                                                                                                                                                              | Drawn from  |
+| -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [`eavesdropping`](nexi/eavesdropping/) | Extract information from signals not addressed to you — monitor third-party interactions to build peer models cheaply. ✓ Validated 2026-07-12 — addresses documented AI needs (machine theory of mind, partial-observability inference); see [validation record](validation/eavesdropping.md). | Zebra finch |
 
 ### Draft — single-source, included for visibility
 
@@ -57,12 +57,12 @@
 
 A **collection** groups patterns by the biological system they were read from, and records how those patterns interlock in nature. Collections are a _reading path and a provenance record_, not a required unit of adoption — you are free to take a single pattern out of any collection. Each collection's page carries the deeper theoretical claim (including its _shape_: how the member patterns relate). See [`docs/collections.md`](docs/collections.md).
 
-| Collection                                                                     | Reads from            | Patterns                                                                                                                       | Shape                                                 |
-| ------------------------------------------------------------------------------ | --------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------- |
-| [`distributed-social-cognition`](collections/distributed-social-cognition/)       | Zebra finch           | eavesdropping · identity-by-pattern · multi-modal-integration · context-bound-semantics · social-hotspots                      | Constellation (mutually-enabling)                     |
-| [`bounded-cognitive-architecture`](collections/bounded-cognitive-architecture/)   | Comparative cognition | niche-specification · cognitive-regime-selection · capacity-first-scaling                                                      | Pipeline (sequenced)                                  |
-| [`acerebrate-decision-making`](collections/acerebrate-decision-making/)           | Bacteria              | coincidence-detection-gating · stochastic-memory-coupling · meta-regulation                                                    | Composition (layered concurrent)                      |
-| [`embodied-action-selection`](collections/embodied-action-selection/)             | Embodied cognition    | action-selection-as-common-substrate · ecological-context-model · exaptation-architectural-reuse · heuristics-as-habits-fusion | Isomorphism (same machinery under domain shift)       |
-| [`substrate-independent-cognition`](collections/substrate-independent-cognition/) | Cross-phyletic        | expansion-readout-circuit · multi-modal-integration                                                                            | — _(shape not yet assigned; single-source)_ |
+| Collection                                                                        | Reads from            | Patterns                                                                                                                       | Shape                                           |
+| --------------------------------------------------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------- |
+| [`distributed-social-cognition`](collections/distributed-social-cognition/)       | Zebra finch           | eavesdropping · identity-by-pattern · multi-modal-integration · context-bound-semantics · social-hotspots                      | Constellation (mutually-enabling)               |
+| [`bounded-cognitive-architecture`](collections/bounded-cognitive-architecture/)   | Comparative cognition | niche-specification · cognitive-regime-selection · capacity-first-scaling                                                      | Pipeline (sequenced)                            |
+| [`acerebrate-decision-making`](collections/acerebrate-decision-making/)           | Bacteria              | coincidence-detection-gating · stochastic-memory-coupling · meta-regulation                                                    | Composition (layered concurrent)                |
+| [`embodied-action-selection`](collections/embodied-action-selection/)             | Embodied cognition    | action-selection-as-common-substrate · ecological-context-model · exaptation-architectural-reuse · heuristics-as-habits-fusion | Isomorphism (same machinery under domain shift) |
+| [`substrate-independent-cognition`](collections/substrate-independent-cognition/) | Cross-phyletic        | expansion-readout-circuit · multi-modal-integration                                                                            | — _(shape not yet assigned; single-source)_     |
 
 > Note: `multi-modal-integration` appears in two collections. Patterns are primary; a pattern can be read through more than one lens. This is expected — it is why patterns, not collections, are the unit.
