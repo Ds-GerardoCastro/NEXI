@@ -95,6 +95,15 @@ See [`docs/positioning.md`](docs/positioning.md) for the full mapping of NEXI pa
 
 Contribution gate is documented in [`docs/methodology.md`](docs/methodology.md). New entries require multi-source evidence and a falsifiable architectural hypothesis.
 
+## License
+
+NEXI is dual-licensed to fit what it contains:
+
+- **Code, schemas, and skill specifications** (`nexi.yaml`, `schema/`, pseudocode, `skill/`) — [MIT License](LICENSE).
+- **Catalog content, documentation, and the white paper** (pattern cards, `docs/`, `whitepaper/`, prose) — [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE-CONTENT).
+
+In practice: build on the patterns freely, including commercially — just **keep the attribution.** Credit _"NEXI — Nature Expression of Intelligence, by Juan Gerardo Castro Sanchez"_ and link back to this repository.
+
 ## Disclaimer
 
 This is a research project, shared for research and educational purposes. Its contents are **falsifiable design hypotheses grounded in published science — not established facts, engineering guarantees, or professional advice** — and they summarise and interpret third-party peer-reviewed work whose findings remain the responsibility of those studies' original authors. The material is provided "as is", without warranty of any kind, under the terms of the repository's [MIT License](LICENSE); adopt, adapt, and test it at your own discretion and risk.
