@@ -25,11 +25,11 @@ This pattern argues that **identity is encoded in distinctive signal patterns** 
 
 ## The natural exemplar
 
-Wild zebra finches identify each other from **distinctive song motifs**. Each finch has a stable, individually-distinctive song; researchers map social networks acoustically by individual signature alone, without physical tagging.
+Wild zebra finches identify each other from **distinctive song**. Each finch has a stable, individually-distinctive song; researchers map social networks acoustically by individual signature alone, without physical tagging.
 
 Two important nuances from the source paper:
 
-- The discrimination works well at **species level** (BirdNET-class classifiers) but at the **individual level** is described as _"promising but not yet case-by-case reliable"_. This is the same gap LLMs exhibit at the level of categories vs. particulars — convergent failure mode across modalities.
+- The authors use pretrained **species-level BirdNET embeddings** only as an _impartial validator_ of manually assigned individual IDs — songs from the same individual are measurably more similar than songs from different individuals (intra < inter cosine distance) — and describe this as _"a promising approach to scale up"_ individual-level study, while cautioning that recording conditions confound the signal. Off-the-shelf, species-trained embeddings were **not** developed into a standalone individual classifier. That distinction — category-level statistics carrying, but not yet operationalising, particular-level identity — is the same gap this pattern targets.
 - Identity is in the _pattern itself_, not in any external label. Nothing tags the bird. The signature is recoverable from observation.
 
 ---
@@ -93,7 +93,9 @@ See [`skill/skill.md`](skill/skill.md).
 
 ## Theoretical background & evidence
 
-The pattern draws on **animal-communication ecology** (Snijders & Naguib 2017; Hagedoorn et al. 2026) and on parallel ML research on **face recognition and re-identification**, where within-class discriminability is the central problem. Convergent: nature and ML face the same gap — pattern statistics aggregate well at category level, fail at particular level.
+The pattern draws on **animal-communication ecology** (Snijders & Naguib 2017; Hagedoorn et al. 2025) and on parallel ML research on **face recognition and re-identification**, where within-class discriminability is the central problem. Convergent: nature and ML face the same gap — pattern statistics aggregate well at category level, fail at particular level.
+
+> **Exemplar status.** Hagedoorn et al. (2025) is an **unrefereed bioRxiv preprint** and is **observational / correlational**. It functions here as a _natural analog_ of the category-vs-particular gap, not as empirical support for the ML training-objective hypothesis below — that hypothesis is grounded in the face- and speaker-re-identification literature and is tested on its own terms.
 
 Computational analogs:
 
@@ -111,9 +113,9 @@ Full citations: [`references.md`](references.md).
 
 > **H_identity.** Embedding architectures trained with within-class-discriminability objectives (margin-based contrastive losses, triplet objectives, ArcFace-style margins) achieve higher accuracy on individual-level re-identification tasks than embeddings trained only on category-level objectives, at equal training compute.
 >
-> **Operationalisation.** On benchmarks of speaker / person / individual-animal re-identification, particularity-preserving embeddings should achieve ≥10% relative gain in top-1 accuracy at equal compute.
+> **Operationalisation (pre-registered).** On the **VoxCeleb1 speaker re-identification** benchmark under an **open-set verification split** (test identities disjoint from training identities), a particularity-preserving embedding should achieve ≥10% relative gain in top-1 identification accuracy over a category-only baseline trained at equal compute on the same data.
 >
-> **Refutation.** If category-only embeddings match within-class-discrimination embeddings on individual-level tasks at equal compute, this pattern's claim is refuted.
+> **Refutation.** If the category-only baseline matches the particularity-preserving embedding on that open-set split at equal compute, this pattern's claim is refuted.
 
 ---
 

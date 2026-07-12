@@ -1,7 +1,7 @@
 id: identity-by-pattern
 name: Identity by Pattern
 status: draft
-version: 0.1.0
+version: 0.1.1
 created: '2026-05-03'
 audience_voice: builder
 
@@ -19,33 +19,44 @@ natural_exemplars:
         - 'Naguib, M.'
         - 'Loning, H.'
       venue: 'bioRxiv preprint'
-      date: '2026-04-27'
+      date: '2025-09-11'
       doi: '10.1101/2025.09.11.675577'
     notes: >
-      Wild zebra finches are individually identifiable from distinctive song
-      motifs. Researchers map social networks acoustically by individual
-      signature alone, without physical tagging. The same paper reports the
-      empirical wall: BirdNET embeddings work at species level but are not
-      yet case-by-case reliable at individual level.
+      Wild zebra finches are individually identifiable from distinctive song.
+      Researchers map social networks acoustically by individual signature
+      alone, without physical tagging. In the same paper, pretrained
+      species-level BirdNET embeddings are used only as an impartial validator
+      of manually assigned individual IDs — songs from the same individual are
+      measurably more similar than songs from different individuals (intra <
+      inter cosine distance) — which the authors describe as "a promising
+      approach to scale up" individual-level study, while cautioning that
+      recording conditions confound the signal. Those off-the-shelf,
+      species-trained embeddings carry enough individual-level signal to
+      validate manual identity assignments, but the paper does not build or
+      benchmark a standalone individual classifier.
 
 abstract_claim: >
   Individual identity is encoded in distinctive sensory patterns and is
   recoverable from observation alone — but only with embedding spaces
   explicitly trained for within-class discriminability. Models that
   aggregate at category level systematically lose particular-level
-  information; the gap is structural, not a function of dataset size alone.
+  information; we hypothesise this gap is structural — driven by the
+  training objective rather than dataset size alone — a claim the
+  falsifiable hypothesis below is designed to test.
 
 falsifiable_hypothesis: >
   Embedding architectures trained with within-class-discriminability
   objectives (margin-based contrastive losses, triplet objectives,
   ArcFace-style margins) achieve higher accuracy on individual-level
   re-identification tasks than embeddings trained only on category-level
-  objectives, at equal training compute. Operationalised on benchmarks
-  of speaker / person / individual-animal re-identification, the
-  particularity-preserving embeddings should achieve >=10% relative gain
-  in top-1 accuracy. Refutation: if category-only embeddings match
-  particularity-preserving ones on individual-level tasks at equal
-  compute, this pattern's claim is refuted.
+  objectives, at equal training compute. Pre-registered operationalisation:
+  on the VoxCeleb1 speaker re-identification benchmark under an open-set
+  verification split (test identities disjoint from training identities),
+  a particularity-preserving embedding should achieve >=10% relative gain
+  in top-1 identification accuracy over a category-only baseline trained
+  at equal compute on the same data. Refutation: if the category-only
+  baseline matches the particularity-preserving embedding on that
+  open-set split at equal compute, this pattern's claim is refuted.
 
 applies_to:
   - multi-agent-systems
