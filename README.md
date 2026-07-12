@@ -17,7 +17,33 @@ The project mines peer-reviewed research on intelligence across biological speci
 
 ## Status
 
-**Private. Pre-release.** This repository will be made public once a critical mass of patterns has been populated and reviewed.
+**Public — early access.** The catalog is open for **early-adopter feedback**. It is pre-1.0: patterns are still being populated and reviewed, and the schemas may evolve. If you build AI systems, this is the moment your input shapes the catalog most — see [Contributing](#contributing), or open an issue with a critique, a request, or a pattern you would use.
+
+## Authorship and AI transparency
+
+NEXI is the **intellectual design of [Juan Gerardo Castro Sanchez](https://www.linkedin.com/in/juan-gerardo-castro-s%C3%A1nchez-7b85b21b6/)** — the research questions, the framework, the curation standards, and every editorial decision are his, and he is accountable for all claims in this repository.
+
+It is built **systematically with Claude (Anthropic) as an AI collaborator.** Following good practice on disclosing AI assistance in scholarly work, we state this plainly: Claude supports the literature processing, deep analysis and meta-modeling, principle and pattern identification, candidate NEXI drafting, and much of the prose. An AI cannot be an author — it is a tool operated under human direction, and every claim, citation, and falsifiable hypothesis is reviewed and verified by the author before it enters the catalog.
+
+This division of labor is not incidental — it _is_ the method, and the ladder below makes it explicit.
+
+## How the catalog earns its claims: Baseline → Benchmark → Benchbreak
+
+NEXI treats validation as a three-stage ladder. Each stage moves a pattern's authority from _proposed_ to _evidenced_ to _proven in use._
+
+### Baseline — what AI can produce
+
+The starting point: what Claude, under human direction, can generate — literature processing, deep analysis and meta-modeling, principle extraction, pattern identification, and candidate NEXI propositions. This is fast, broad, and generative — but on its own it is a **well-formed hypothesis, not evidence.** A baseline NEXI is a proposal awaiting corroboration.
+
+### Benchmark — corroboration by independent evidence
+
+A NEXI reaches **benchmark** when it is corroborated by **several independent scientific publications** — when principles drawn from different papers converge on the same mechanism. That cross-source agreement is the validation signal: the pattern is not an artifact of one study or one model's reasoning, but a repeatedly observed feature of biological intelligence. This is the promotion gate documented in [`docs/methodology.md`](docs/methodology.md).
+
+### Benchbreak — validation by the community
+
+The ultimate value proposition, and the reason this repository is now public. A **benchbreak** happens when the catalog is _consumed_: an AI engineer accesses a NEXI, uses it as a baseline in their own design process, tests it against a real problem, and returns feedback — or modifies the pattern and contributes the improvement back. That is the catalog doing real work in the world and being refined by it — an innovation, not just a citation.
+
+**Early adopters: this is the invitation — use a NEXI, put it under load, break it, and tell us what happened.**
 
 ## Patterns and collections
 
