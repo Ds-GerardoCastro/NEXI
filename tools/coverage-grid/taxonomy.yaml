@@ -1,0 +1,589 @@
+# =============================================================================
+# REFERENCE TAXONOMY v2 — the "map of the territory" (A-to-Z design space).
+# Seeded from external authoritative frameworks (deep-research pass, 2026-07),
+# NOT from vault contents, so un-ingested / unstudied cells are visible as gaps.
+# Grounding: Newell 1990 UTC; Marr 1982; Standard Model of the Mind (Laird,
+# Lebiere & Rosenbloom 2017); Kotseruba & Tsotsos 2020 (cognitive-arch survey);
+# Bommasani et al. 2021 (foundation models); Roth & Dicke 2013 / Lyon et al.
+# 2021 (evolution of nervous systems & basal cognition). Full citations +
+# field-known references: scratchpad coverage-taxonomy_AI.md / _NATURE.md.
+# Cell states derived in build.py: 1 covered / 2 field-known / 3 frontier.
+# =============================================================================
+
+# Shared cognitive-function axis (ROWS) — the bridge, used by both spaces (19).
+functions:
+  - {
+      id: perception-sensing,
+      label: Perception & Sensing,
+      def: 'Transduce raw input signals into structured features and percepts.',
+      cite: 'Marr 1982; Kotseruba & Tsotsos 2020',
+    }
+  - {
+      id: multimodal-integration,
+      label: Multimodal Integration,
+      def: 'Bind and fuse information across channels/modalities into a common representation.',
+      cite: 'Newell 1990; Baltrušaitis et al. 2019',
+    }
+  - {
+      id: attention-resource-allocation,
+      label: Attention & Resource Allocation,
+      def: 'Selectively prioritize inputs/computation/memory under limited resources.',
+      cite: 'Tsotsos 2011; Kotseruba & Tsotsos 2020',
+    }
+  - {
+      id: memory-knowledge,
+      label: Memory & Knowledge,
+      def: 'Encode, retain, retrieve information across time-scales (working/declarative/procedural).',
+      cite: 'Anderson 2007 (ACT-R); SMM 2017',
+    }
+  - {
+      id: world-modeling-prediction,
+      label: World-Modeling & Prediction,
+      def: 'Build internal generative/predictive models of environment dynamics.',
+      cite: 'Ha & Schmidhuber 2018; Friston 2010',
+    }
+  - {
+      id: reasoning-planning,
+      label: Reasoning & Planning,
+      def: 'Compose inferences and multi-step action sequences over structured state.',
+      cite: 'Newell & Simon 1976; Russell & Norvig 2020',
+    }
+  - {
+      id: action-selection-gating,
+      label: Action Selection & Decision-Gating,
+      def: 'Choose and gate which action/operation to execute at each decision point.',
+      cite: 'Laird 2012 (Soar); Redgrave et al. 1999',
+    }
+  - {
+      id: credit-assignment-learning,
+      label: Learning & Credit Assignment,
+      def: 'Adjust knowledge from experience, assigning credit for outcomes to causes.',
+      cite: 'Sutton & Barto 2018; Rumelhart et al. 1986',
+    }
+  - {
+      id: social-inference-tom,
+      label: Social Inference & Theory-of-Mind,
+      def: "Infer other agents' hidden states, beliefs, goals, intentions.",
+      cite: 'Premack & Woodruff 1978; Rabinowitz et al. 2018',
+    }
+  - {
+      id: communication-language,
+      label: Communication & Language,
+      def: 'Encode/decode meaning in shared symbolic/linguistic signals for coordination.',
+      cite: 'Newell 1990; Bender & Koller 2020',
+    }
+  - {
+      id: adaptation-regulation,
+      label: Adaptation & Self-Regulation,
+      def: 'Maintain stability and re-tune behavior to change (homeostasis, control).',
+      cite: 'Ashby 1960; Friston 2010',
+    }
+  - {
+      id: representation-grounding,
+      label: Representation & Grounding,
+      def: 'Form internal representations and tie symbols to sensorimotor referents.',
+      cite: 'Harnad 1990; Marr 1982',
+    }
+  - {
+      id: navigation-search,
+      label: Navigation & Search,
+      def: 'Explore and traverse physical or abstract state spaces toward targets.',
+      cite: 'Newell & Simon 1976; Hills et al. 2015',
+    }
+  - {
+      id: metacognition-monitoring,
+      label: Metacognition & Monitoring,
+      def: "Monitor, evaluate, control one's own cognitive processes and confidence.",
+      cite: 'Nelson & Narens 1990; Cox 2005',
+    }
+  - {
+      id: alignment-values-safety,
+      label: Value / Homeostatic Regulation & Safety,
+      def: 'Represent and act on goals/values/constraints (biol.: valence, harm-avoidance) so behavior stays viable/safe.',
+      cite: 'Russell 2019; Amodei et al. 2016; Lyon & Kuchling 2021 (valence)',
+    }
+  - {
+      id: emotion-affect,
+      label: Emotion & Affect,
+      def: 'Appraisal-driven affective states that bias attention, memory, action.',
+      cite: 'Marsella & Gratch 2009; Picard 1997',
+    }
+  - {
+      id: motivation-goals,
+      label: Motivation & Goal Management,
+      def: 'Generate, prioritize, arbitrate among competing goals and drives over time.',
+      cite: 'Newell 1990; Sun 2016 (CLARION)',
+    }
+  - {
+      id: motor-control,
+      label: Motor Control & Embodiment,
+      def: 'Translate intentions into coordinated, feedback-corrected physical action.',
+      cite: 'Wolpert et al. 2011; Marr 1982',
+    }
+  - {
+      id: identity-individuality,
+      label: Identity & Individuality,
+      def: 'Maintain a persistent self-model distinguishing agent from others and across time.',
+      cite: 'SMM 2017; Metzinger 2003',
+    }
+
+# AI space COLUMNS — architecture / method families (25).
+ai_architectures:
+  - {
+      id: transformer-attention,
+      label: Transformer / Attention,
+      def: 'Self-attention sequence model; backbone of modern foundation models.',
+      cite: 'Vaswani et al. 2017',
+    }
+  - {
+      id: ssm-recurrent,
+      label: SSM / Recurrent (RNN·LSTM·Mamba),
+      def: 'Sequential state-carrying models incl. gated RNNs and selective SSMs.',
+      cite: 'Hochreiter & Schmidhuber 1997; Gu & Dao 2023',
+    }
+  - {
+      id: moe-sparse,
+      label: Mixture-of-Experts / Sparse,
+      def: 'Conditional computation routing tokens to sparse expert subnetworks.',
+      cite: 'Shazeer et al. 2017; Fedus et al. 2022',
+    }
+  - {
+      id: cnn-conv,
+      label: CNN / Convolutional,
+      def: 'Weight-shared local convolution/pooling hierarchies for grid data.',
+      cite: 'LeCun et al. 1998; Krizhevsky et al. 2012',
+    }
+  - {
+      id: gnn-graph,
+      label: GNN / Graph,
+      def: 'Message-passing over graph-structured relational data.',
+      cite: 'Kipf & Welling 2017; Gilmer et al. 2017',
+    }
+  - {
+      id: diffusion,
+      label: Diffusion Models,
+      def: 'Iterative denoising generative models reversing a noising process.',
+      cite: 'Ho et al. 2020 (DDPM); Song et al. 2021',
+    }
+  - {
+      id: vae,
+      label: Variational Autoencoders,
+      def: 'Latent-variable generative models trained by variational lower bound.',
+      cite: 'Kingma & Welling 2014',
+    }
+  - {
+      id: gan,
+      label: Generative Adversarial Nets,
+      def: 'Generator/discriminator minimax game producing samples.',
+      cite: 'Goodfellow et al. 2014',
+    }
+  - {
+      id: rl-single,
+      label: Reinforcement Learning (single-agent),
+      def: 'Reward-driven policy/value learning in an MDP.',
+      cite: 'Sutton & Barto 2018; Mnih et al. 2015',
+    }
+  - {
+      id: marl-multiagent,
+      label: Multi-Agent RL,
+      def: 'Learning policies among multiple interacting agents.',
+      cite: 'Lowe et al. 2017; Foerster et al. 2018',
+    }
+  - {
+      id: world-model,
+      label: World-Models / Model-Based,
+      def: 'Learn environment dynamics and plan/imagine within it.',
+      cite: 'Ha & Schmidhuber 2018; Hafner et al. 2023',
+    }
+  - {
+      id: retrieval-rag,
+      label: Retrieval / RAG,
+      def: 'Augment a parametric model with non-parametric external retrieval.',
+      cite: 'Lewis et al. 2020; Karpukhin et al. 2020',
+    }
+  - {
+      id: neuro-symbolic-planning,
+      label: Neuro-Symbolic / Planning,
+      def: 'Combine learned representations with explicit symbolic structure/planners.',
+      cite: 'Garcez & Lamb 2023; Mao et al. 2019',
+    }
+  - {
+      id: active-inference-fep,
+      label: Active Inference / Free-Energy,
+      def: 'Action & perception as minimization of variational free energy.',
+      cite: 'Friston 2010; Da Costa et al. 2020',
+    }
+  - {
+      id: prompting-icl,
+      label: Prompting / In-Context,
+      def: 'Steer a frozen model via context examples without weight updates.',
+      cite: 'Brown et al. 2020',
+    }
+  - {
+      id: finetuning-peft,
+      label: Fine-Tuning / RLHF / PEFT,
+      def: 'Post-training adaptation via full/parameter-efficient tuning + preference opt.',
+      cite: 'Ouyang et al. 2022; Hu et al. 2021 (LoRA)',
+    }
+  - {
+      id: agentic-scaffold,
+      label: Agentic Scaffolds / Tool-Use,
+      def: 'Orchestrate LLM reasoning with tools, memory, action loops.',
+      cite: 'Yao et al. 2023 (ReAct); Schick et al. 2023',
+    }
+  - {
+      id: evolutionary-search,
+      label: Evolutionary / Tree-Search / Program-Synthesis,
+      def: 'Population/search/synthesis optimization over discrete solution spaces.',
+      cite: 'Silver et al. 2018 (AlphaZero); Romera-Paredes et al. 2024',
+    }
+  - {
+      id: pgm-bayesian,
+      label: Probabilistic Graphical / Bayesian,
+      def: 'Structured probabilistic inference over latent variables & dependencies.',
+      cite: 'Koller & Friedman 2009; Ghahramani 2015',
+    }
+  - {
+      id: classical-ml,
+      label: Kernel / SVM / Classical ML,
+      def: 'Margin/kernel/tree-ensemble & other pre-deep statistical learners.',
+      cite: 'Cortes & Vapnik 1995; Breiman 2001',
+    }
+  - {
+      id: energy-based,
+      label: Energy-Based Models,
+      def: 'Learn an unnormalized energy function scoring configurations.',
+      cite: 'LeCun et al. 2006; Du & Mordatch 2019',
+    }
+  - {
+      id: equivariant,
+      label: Capsule / Equivariant Nets,
+      def: 'Architectures with built-in symmetry/equivariance (groups, capsules).',
+      cite: 'Cohen & Welling 2016; Sabour et al. 2017',
+    }
+  - {
+      id: spiking-neuromorphic,
+      label: Spiking / Neuromorphic,
+      def: 'Event-driven spiking neural networks & neuromorphic hardware.',
+      cite: 'Maass 1997; Roy et al. 2019',
+    }
+  - {
+      id: memory-augmented,
+      label: Memory-Augmented / NTM,
+      def: 'Neural controllers coupled to external differentiable read/write memory.',
+      cite: 'Graves et al. 2014; Graves et al. 2016 (DNC)',
+    }
+  - {
+      id: self-supervised,
+      label: Contrastive / Self-Supervised,
+      def: 'Learn representations from unlabeled data via pretext/contrastive objectives.',
+      cite: 'Chen et al. 2020 (SimCLR); He et al. 2020',
+    }
+
+# Nature space COLUMNS — clade / substrate (tree-of-life) (16). (Phase 4 render.)
+nature_clades:
+  - {
+      id: molecular-prokaryote,
+      label: Molecular & Prokaryote,
+      def: 'Sub-cellular signalling networks & bacteria/archaea; sensing/memory/decision via gene-regulatory & quorum circuits.',
+      cite: 'Lyon et al. 2021 (PMC7935032)',
+    }
+  - {
+      id: protist,
+      label: Protist / Single-Cell Eukaryote,
+      def: 'Ciliates/amoebae showing habituation, associative-like learning without a nervous system.',
+      cite: 'Manicka & Levin 2019 (PMC6553590)',
+    }
+  - {
+      id: slime-mould,
+      label: Slime Mould (Physarum),
+      def: 'Acellular slime moulds solving mazes and externalizing spatial memory.',
+      cite: 'Manicka & Levin 2019; Nakagaki maze studies',
+    }
+  - {
+      id: fungus,
+      label: Fungus / Mycelial Networks,
+      def: 'Fungal mycelia showing distributed resource allocation & adaptive growth decisions.',
+      cite: 'Baluška & Mancuso 2021 (PMC7934911)',
+    }
+  - {
+      id: plant,
+      label: Plant / Vascular Plant,
+      def: 'Rooted photosynthetic organisms: environmental sensing, signalling, habituation.',
+      cite: 'Baluška & Mancuso 2021',
+    }
+  - {
+      id: cnidarian,
+      label: Cnidarian (Nerve Net),
+      def: 'Jellyfish/hydra/anemones with diffuse nerve nets; earliest neural substrate.',
+      cite: 'Bielecki et al. 2023 (box-jellyfish learning)',
+    }
+  - {
+      id: nematode,
+      label: Nematode (C. elegans),
+      def: 'Compact fully-mapped 302-neuron connectome; canonical circuit model of learning/decision.',
+      cite: 'Hawk et al. 2018 (Neuron)',
+    }
+  - {
+      id: annelid-mollusc-basal,
+      label: Annelids & Basal Molluscs (Aplysia),
+      def: 'Segmented worms & gastropods; cellular/synaptic basis of learning.',
+      cite: 'Roth & Dicke 2013 (Springer)',
+    }
+  - {
+      id: arthropod-insect,
+      label: Arthropod / Insect,
+      def: 'Compact powerful brains; path integration, concept learning, numerosity.',
+      cite: 'Giurfa 2015 (WIREs Cogn. Sci.)',
+    }
+  - {
+      id: cephalopod,
+      label: Mollusc / Cephalopod,
+      def: 'Octopus/cuttlefish/squid; complex cognition evolved independently of vertebrates.',
+      cite: 'Godfrey-Smith 2016; Mather et al. 2014',
+    }
+  - {
+      id: fish,
+      label: Fish,
+      def: 'Ray-finned & cartilaginous fishes; social cognition, cooperation, learning.',
+      cite: 'Bshary et al. 2002 (Anim. Cogn.)',
+    }
+  - {
+      id: amphibian-reptile,
+      label: Amphibian & Reptile,
+      def: 'Ectothermic tetrapods; spatial & associative learning, social behaviour.',
+      cite: 'Roth & Dicke 2013',
+    }
+  - {
+      id: bird,
+      label: Bird,
+      def: 'Avian dinosaurs; vocal learning, tool use, episodic-like memory, planning.',
+      cite: 'Raby et al. 2007 (Nature)',
+    }
+  - {
+      id: mammal-rodent,
+      label: Mammal — Rodent,
+      def: 'Dominant lab model for navigation, RL, memory, value-based decision.',
+      cite: 'Roth & Dicke 2013',
+    }
+  - {
+      id: mammal-primate,
+      label: Mammal — Primate,
+      def: 'Theory of mind, social inference, planning, metacognition.',
+      cite: 'Premack & Woodruff 1978',
+    }
+  - {
+      id: mammal-cetacean,
+      label: Mammal — Cetacean,
+      def: 'Large brains, vocal communication, social cognition, self-recognition.',
+      cite: 'Smith et al. 2003 (uncertainty monitoring)',
+    }
+  - {
+      id: cross-phyletic,
+      label: Cross-Phyletic / Substrate-General,
+      def: 'Principles claimed to hold across substrates (basal cognition, UAL, valence).',
+      cite: 'Levin, Keijzer, Lyon et al. 2021 (PMC7935018)',
+    }
+
+# --- FIELD-KNOWN (state 2): AI cells where canonical research EXISTS => search targets.
+field_known_ai:
+  - { fn: perception-sensing, arch: cnn-conv, ref: 'AlexNet (Krizhevsky et al. 2012)' }
+  - { fn: perception-sensing, arch: transformer-attention, ref: 'ViT (Dosovitskiy et al. 2021)' }
+  - { fn: perception-sensing, arch: diffusion, ref: 'Stable Diffusion (Rombach et al. 2022)' }
+  - { fn: perception-sensing, arch: gan, ref: 'StyleGAN (Karras et al. 2019)' }
+  - { fn: multimodal-integration, arch: transformer-attention, ref: 'CLIP (Radford et al. 2021)' }
+  - { fn: memory-knowledge, arch: ssm-recurrent, ref: 'Mamba (Gu & Dao 2023)' }
+  - {
+      fn: memory-knowledge,
+      arch: memory-augmented,
+      ref: 'Neural Turing Machine (Graves et al. 2014)',
+    }
+  - { fn: memory-knowledge, arch: retrieval-rag, ref: 'RAG (Lewis et al. 2020)' }
+  - {
+      fn: world-modeling-prediction,
+      arch: diffusion,
+      ref: 'Video Diffusion / Sora (Ho et al. 2022; Brooks et al. 2024)',
+    }
+  - { fn: world-modeling-prediction, arch: world-model, ref: 'DreamerV3 (Hafner et al. 2023)' }
+  - {
+      fn: world-modeling-prediction,
+      arch: active-inference-fep,
+      ref: 'Free-energy prediction (Friston 2010)',
+    }
+  - { fn: navigation-search, arch: rl-single, ref: 'DQN (Mnih et al. 2015)' }
+  - { fn: reasoning-planning, arch: evolutionary-search, ref: 'AlphaGo MCTS (Silver et al. 2016)' }
+  - { fn: reasoning-planning, arch: prompting-icl, ref: 'Chain-of-Thought (Wei et al. 2022)' }
+  - {
+      fn: reasoning-planning,
+      arch: neuro-symbolic-planning,
+      ref: 'Neuro-Symbolic Concept Learner (Mao et al. 2019)',
+    }
+  - { fn: reasoning-planning, arch: agentic-scaffold, ref: 'ReAct (Yao et al. 2023)' }
+  - { fn: reasoning-planning, arch: world-model, ref: 'MuZero (Schrittwieser et al. 2020)' }
+  - { fn: action-selection-gating, arch: rl-single, ref: 'PPO (Schulman et al. 2017)' }
+  - { fn: credit-assignment-learning, arch: cnn-conv, ref: 'Backprop (Rumelhart et al. 1986)' }
+  - { fn: credit-assignment-learning, arch: self-supervised, ref: 'SimCLR (Chen et al. 2020)' }
+  - {
+      fn: credit-assignment-learning,
+      arch: moe-sparse,
+      ref: 'Sparsely-Gated MoE (Shazeer et al. 2017)',
+    }
+  - {
+      fn: social-inference-tom,
+      arch: marl-multiagent,
+      ref: 'Machine ToM (Rabinowitz 2018); MADDPG (Lowe 2017)',
+    }
+  - { fn: communication-language, arch: transformer-attention, ref: 'GPT-3 (Brown et al. 2020)' }
+  - { fn: communication-language, arch: ssm-recurrent, ref: 'Seq2Seq (Sutskever et al. 2014)' }
+  - { fn: representation-grounding, arch: transformer-attention, ref: 'BERT (Devlin et al. 2019)' }
+  - { fn: representation-grounding, arch: gnn-graph, ref: 'GCN (Kipf & Welling 2017)' }
+  - {
+      fn: attention-resource-allocation,
+      arch: transformer-attention,
+      ref: 'Attention Is All You Need (Vaswani 2017)',
+    }
+  - {
+      fn: alignment-values-safety,
+      arch: finetuning-peft,
+      ref: 'InstructGPT / RLHF (Ouyang et al. 2022)',
+    }
+  - { fn: adaptation-regulation, arch: finetuning-peft, ref: 'LoRA (Hu et al. 2021)' }
+  - {
+      fn: metacognition-monitoring,
+      arch: prompting-icl,
+      ref: 'Self-Consistency (Wang 2023); Reflexion (Shinn 2023)',
+    }
+  - { fn: motor-control, arch: rl-single, ref: 'DDPG (Lillicrap et al. 2016)' }
+
+# --- FIELD-KNOWN (state 2): NATURE cells with substantial documented literature. (Phase 4.)
+field_known_nature:
+  - {
+      fn: perception-sensing,
+      clade: molecular-prokaryote,
+      ref: 'Bacterial chemoreception (Lyon et al. 2021)',
+    }
+  - {
+      fn: communication-language,
+      clade: molecular-prokaryote,
+      ref: 'Quorum sensing (Bassler & Losick 2006)',
+    }
+  - {
+      fn: action-selection-gating,
+      clade: molecular-prokaryote,
+      ref: 'Quorum-gated decision (Henke & Bassler 2004)',
+    }
+  - { fn: adaptation-regulation, clade: protist, ref: 'Protist habituation (Manicka & Levin 2019)' }
+  - {
+      fn: navigation-search,
+      clade: slime-mould,
+      ref: 'Physarum maze-solving (Nakagaki; Manicka & Levin 2019)',
+    }
+  - {
+      fn: memory-knowledge,
+      clade: slime-mould,
+      ref: 'Externalized spatial memory (Manicka & Levin 2019)',
+    }
+  - {
+      fn: adaptation-regulation,
+      clade: plant,
+      ref: 'Mimosa habituation (Gagliano; Baciadonna et al. 2023)',
+    }
+  - {
+      fn: perception-sensing,
+      clade: plant,
+      ref: 'Plant environmental sensing (Baluška & Mancuso 2021)',
+    }
+  - {
+      fn: representation-grounding,
+      clade: cross-phyletic,
+      ref: 'Basal-cognition grounding (Levin et al. 2021)',
+    }
+  - {
+      fn: adaptation-regulation,
+      clade: cross-phyletic,
+      ref: 'Valence / biogenic value (Lyon & Kuchling 2021)',
+    }
+  - {
+      fn: credit-assignment-learning,
+      clade: cnidarian,
+      ref: 'Box-jellyfish associative learning (Bielecki et al. 2023)',
+    }
+  - {
+      fn: perception-sensing,
+      clade: cnidarian,
+      ref: 'Cubozoan visual sensing (Nielsen et al. 2021)',
+    }
+  - { fn: memory-knowledge, clade: nematode, ref: 'C. elegans memory (Hawk et al. 2018)' }
+  - {
+      fn: credit-assignment-learning,
+      clade: nematode,
+      ref: 'C. elegans aversive learning (Ha et al. 2010)',
+    }
+  - {
+      fn: action-selection-gating,
+      clade: nematode,
+      ref: 'C. elegans decision modulation (Liu et al. 2026)',
+    }
+  - {
+      fn: credit-assignment-learning,
+      clade: annelid-mollusc-basal,
+      ref: 'Aplysia synaptic learning (Roth & Dicke 2013)',
+    }
+  - { fn: navigation-search, clade: arthropod-insect, ref: 'Insect path integration (Wehner 2008)' }
+  - {
+      fn: reasoning-planning,
+      clade: arthropod-insect,
+      ref: 'Bee concept/rule learning (Giurfa 2015)',
+    }
+  - {
+      fn: communication-language,
+      clade: arthropod-insect,
+      ref: 'Honeybee waggle dance (Giurfa 2025)',
+    }
+  - {
+      fn: memory-knowledge,
+      clade: cephalopod,
+      ref: 'Octopus learning & memory (Mather et al. 2014)',
+    }
+  - {
+      fn: representation-grounding,
+      clade: cephalopod,
+      ref: 'Cephalopod distributed control (Godfrey-Smith 2016)',
+    }
+  - {
+      fn: social-inference-tom,
+      clade: fish,
+      ref: 'Cleaner-fish cooperation (Bshary & Grutter 2005)',
+    }
+  - {
+      fn: credit-assignment-learning,
+      clade: fish,
+      ref: 'Fish associative learning (Bshary et al. 2002)',
+    }
+  - { fn: communication-language, clade: bird, ref: 'Birdsong vocal learning (Mooney 2014)' }
+  - { fn: world-modeling-prediction, clade: bird, ref: 'Corvid future planning (Raby et al. 2007)' }
+  - {
+      fn: memory-knowledge,
+      clade: bird,
+      ref: 'Scrub-jay episodic-like memory (Clayton et al. 2006)',
+    }
+  - {
+      fn: social-inference-tom,
+      clade: mammal-primate,
+      ref: 'Primate theory of mind (Premack & Woodruff 1978)',
+    }
+  - {
+      fn: metacognition-monitoring,
+      clade: mammal-primate,
+      ref: 'Primate uncertainty monitoring (Smith et al. 2003)',
+    }
+  - {
+      fn: navigation-search,
+      clade: mammal-rodent,
+      ref: 'Rodent place/grid-cell maps (Roth & Dicke 2013)',
+    }
+  - {
+      fn: credit-assignment-learning,
+      clade: mammal-rodent,
+      ref: 'Rodent RL / dopamine prediction-error (Roth & Dicke 2013)',
+    }

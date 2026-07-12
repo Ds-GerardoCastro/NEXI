@@ -1,0 +1,7069 @@
+{
+  "functions": [
+    {
+      "id": "perception-sensing",
+      "label": "Perception & Sensing",
+      "def": "Transduce raw input signals into structured features and percepts.",
+      "cite": "Marr 1982; Kotseruba & Tsotsos 2020"
+    },
+    {
+      "id": "multimodal-integration",
+      "label": "Multimodal Integration",
+      "def": "Bind and fuse information across channels/modalities into a common representation.",
+      "cite": "Newell 1990; Baltrušaitis et al. 2019"
+    },
+    {
+      "id": "attention-resource-allocation",
+      "label": "Attention & Resource Allocation",
+      "def": "Selectively prioritize inputs/computation/memory under limited resources.",
+      "cite": "Tsotsos 2011; Kotseruba & Tsotsos 2020"
+    },
+    {
+      "id": "memory-knowledge",
+      "label": "Memory & Knowledge",
+      "def": "Encode, retain, retrieve information across time-scales (working/declarative/procedural).",
+      "cite": "Anderson 2007 (ACT-R); SMM 2017"
+    },
+    {
+      "id": "world-modeling-prediction",
+      "label": "World-Modeling & Prediction",
+      "def": "Build internal generative/predictive models of environment dynamics.",
+      "cite": "Ha & Schmidhuber 2018; Friston 2010"
+    },
+    {
+      "id": "reasoning-planning",
+      "label": "Reasoning & Planning",
+      "def": "Compose inferences and multi-step action sequences over structured state.",
+      "cite": "Newell & Simon 1976; Russell & Norvig 2020"
+    },
+    {
+      "id": "action-selection-gating",
+      "label": "Action Selection & Decision-Gating",
+      "def": "Choose and gate which action/operation to execute at each decision point.",
+      "cite": "Laird 2012 (Soar); Redgrave et al. 1999"
+    },
+    {
+      "id": "credit-assignment-learning",
+      "label": "Learning & Credit Assignment",
+      "def": "Adjust knowledge from experience, assigning credit for outcomes to causes.",
+      "cite": "Sutton & Barto 2018; Rumelhart et al. 1986"
+    },
+    {
+      "id": "social-inference-tom",
+      "label": "Social Inference & Theory-of-Mind",
+      "def": "Infer other agents' hidden states, beliefs, goals, intentions.",
+      "cite": "Premack & Woodruff 1978; Rabinowitz et al. 2018"
+    },
+    {
+      "id": "communication-language",
+      "label": "Communication & Language",
+      "def": "Encode/decode meaning in shared symbolic/linguistic signals for coordination.",
+      "cite": "Newell 1990; Bender & Koller 2020"
+    },
+    {
+      "id": "adaptation-regulation",
+      "label": "Adaptation & Self-Regulation",
+      "def": "Maintain stability and re-tune behavior to change (homeostasis, control).",
+      "cite": "Ashby 1960; Friston 2010"
+    },
+    {
+      "id": "representation-grounding",
+      "label": "Representation & Grounding",
+      "def": "Form internal representations and tie symbols to sensorimotor referents.",
+      "cite": "Harnad 1990; Marr 1982"
+    },
+    {
+      "id": "navigation-search",
+      "label": "Navigation & Search",
+      "def": "Explore and traverse physical or abstract state spaces toward targets.",
+      "cite": "Newell & Simon 1976; Hills et al. 2015"
+    },
+    {
+      "id": "metacognition-monitoring",
+      "label": "Metacognition & Monitoring",
+      "def": "Monitor, evaluate, control one's own cognitive processes and confidence.",
+      "cite": "Nelson & Narens 1990; Cox 2005"
+    },
+    {
+      "id": "alignment-values-safety",
+      "label": "Value / Homeostatic Regulation & Safety",
+      "def": "Represent and act on goals/values/constraints (biol.: valence, harm-avoidance) so behavior stays viable/safe.",
+      "cite": "Russell 2019; Amodei et al. 2016; Lyon & Kuchling 2021 (valence)"
+    },
+    {
+      "id": "emotion-affect",
+      "label": "Emotion & Affect",
+      "def": "Appraisal-driven affective states that bias attention, memory, action.",
+      "cite": "Marsella & Gratch 2009; Picard 1997"
+    },
+    {
+      "id": "motivation-goals",
+      "label": "Motivation & Goal Management",
+      "def": "Generate, prioritize, arbitrate among competing goals and drives over time.",
+      "cite": "Newell 1990; Sun 2016 (CLARION)"
+    },
+    {
+      "id": "motor-control",
+      "label": "Motor Control & Embodiment",
+      "def": "Translate intentions into coordinated, feedback-corrected physical action.",
+      "cite": "Wolpert et al. 2011; Marr 1982"
+    },
+    {
+      "id": "identity-individuality",
+      "label": "Identity & Individuality",
+      "def": "Maintain a persistent self-model distinguishing agent from others and across time.",
+      "cite": "SMM 2017; Metzinger 2003"
+    }
+  ],
+  "ai": {
+    "cols": [
+      {
+        "id": "transformer-attention",
+        "label": "Transformer / Attention",
+        "def": "Self-attention sequence model; backbone of modern foundation models.",
+        "cite": "Vaswani et al. 2017"
+      },
+      {
+        "id": "ssm-recurrent",
+        "label": "SSM / Recurrent (RNN·LSTM·Mamba)",
+        "def": "Sequential state-carrying models incl. gated RNNs and selective SSMs.",
+        "cite": "Hochreiter & Schmidhuber 1997; Gu & Dao 2023"
+      },
+      {
+        "id": "moe-sparse",
+        "label": "Mixture-of-Experts / Sparse",
+        "def": "Conditional computation routing tokens to sparse expert subnetworks.",
+        "cite": "Shazeer et al. 2017; Fedus et al. 2022"
+      },
+      {
+        "id": "cnn-conv",
+        "label": "CNN / Convolutional",
+        "def": "Weight-shared local convolution/pooling hierarchies for grid data.",
+        "cite": "LeCun et al. 1998; Krizhevsky et al. 2012"
+      },
+      {
+        "id": "gnn-graph",
+        "label": "GNN / Graph",
+        "def": "Message-passing over graph-structured relational data.",
+        "cite": "Kipf & Welling 2017; Gilmer et al. 2017"
+      },
+      {
+        "id": "diffusion",
+        "label": "Diffusion Models",
+        "def": "Iterative denoising generative models reversing a noising process.",
+        "cite": "Ho et al. 2020 (DDPM); Song et al. 2021"
+      },
+      {
+        "id": "vae",
+        "label": "Variational Autoencoders",
+        "def": "Latent-variable generative models trained by variational lower bound.",
+        "cite": "Kingma & Welling 2014"
+      },
+      {
+        "id": "gan",
+        "label": "Generative Adversarial Nets",
+        "def": "Generator/discriminator minimax game producing samples.",
+        "cite": "Goodfellow et al. 2014"
+      },
+      {
+        "id": "rl-single",
+        "label": "Reinforcement Learning (single-agent)",
+        "def": "Reward-driven policy/value learning in an MDP.",
+        "cite": "Sutton & Barto 2018; Mnih et al. 2015"
+      },
+      {
+        "id": "marl-multiagent",
+        "label": "Multi-Agent RL",
+        "def": "Learning policies among multiple interacting agents.",
+        "cite": "Lowe et al. 2017; Foerster et al. 2018"
+      },
+      {
+        "id": "world-model",
+        "label": "World-Models / Model-Based",
+        "def": "Learn environment dynamics and plan/imagine within it.",
+        "cite": "Ha & Schmidhuber 2018; Hafner et al. 2023"
+      },
+      {
+        "id": "retrieval-rag",
+        "label": "Retrieval / RAG",
+        "def": "Augment a parametric model with non-parametric external retrieval.",
+        "cite": "Lewis et al. 2020; Karpukhin et al. 2020"
+      },
+      {
+        "id": "neuro-symbolic-planning",
+        "label": "Neuro-Symbolic / Planning",
+        "def": "Combine learned representations with explicit symbolic structure/planners.",
+        "cite": "Garcez & Lamb 2023; Mao et al. 2019"
+      },
+      {
+        "id": "active-inference-fep",
+        "label": "Active Inference / Free-Energy",
+        "def": "Action & perception as minimization of variational free energy.",
+        "cite": "Friston 2010; Da Costa et al. 2020"
+      },
+      {
+        "id": "prompting-icl",
+        "label": "Prompting / In-Context",
+        "def": "Steer a frozen model via context examples without weight updates.",
+        "cite": "Brown et al. 2020"
+      },
+      {
+        "id": "finetuning-peft",
+        "label": "Fine-Tuning / RLHF / PEFT",
+        "def": "Post-training adaptation via full/parameter-efficient tuning + preference opt.",
+        "cite": "Ouyang et al. 2022; Hu et al. 2021 (LoRA)"
+      },
+      {
+        "id": "agentic-scaffold",
+        "label": "Agentic Scaffolds / Tool-Use",
+        "def": "Orchestrate LLM reasoning with tools, memory, action loops.",
+        "cite": "Yao et al. 2023 (ReAct); Schick et al. 2023"
+      },
+      {
+        "id": "evolutionary-search",
+        "label": "Evolutionary / Tree-Search / Program-Synthesis",
+        "def": "Population/search/synthesis optimization over discrete solution spaces.",
+        "cite": "Silver et al. 2018 (AlphaZero); Romera-Paredes et al. 2024"
+      },
+      {
+        "id": "pgm-bayesian",
+        "label": "Probabilistic Graphical / Bayesian",
+        "def": "Structured probabilistic inference over latent variables & dependencies.",
+        "cite": "Koller & Friedman 2009; Ghahramani 2015"
+      },
+      {
+        "id": "classical-ml",
+        "label": "Kernel / SVM / Classical ML",
+        "def": "Margin/kernel/tree-ensemble & other pre-deep statistical learners.",
+        "cite": "Cortes & Vapnik 1995; Breiman 2001"
+      },
+      {
+        "id": "energy-based",
+        "label": "Energy-Based Models",
+        "def": "Learn an unnormalized energy function scoring configurations.",
+        "cite": "LeCun et al. 2006; Du & Mordatch 2019"
+      },
+      {
+        "id": "equivariant",
+        "label": "Capsule / Equivariant Nets",
+        "def": "Architectures with built-in symmetry/equivariance (groups, capsules).",
+        "cite": "Cohen & Welling 2016; Sabour et al. 2017"
+      },
+      {
+        "id": "spiking-neuromorphic",
+        "label": "Spiking / Neuromorphic",
+        "def": "Event-driven spiking neural networks & neuromorphic hardware.",
+        "cite": "Maass 1997; Roy et al. 2019"
+      },
+      {
+        "id": "memory-augmented",
+        "label": "Memory-Augmented / NTM",
+        "def": "Neural controllers coupled to external differentiable read/write memory.",
+        "cite": "Graves et al. 2014; Graves et al. 2016 (DNC)"
+      },
+      {
+        "id": "self-supervised",
+        "label": "Contrastive / Self-Supervised",
+        "def": "Learn representations from unlabeled data via pretext/contrastive objectives.",
+        "cite": "Chen et al. 2020 (SimCLR); He et al. 2020"
+      }
+    ],
+    "cells": [
+      {
+        "fn": "perception-sensing",
+        "col": "transformer-attention",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "ssm-recurrent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "moe-sparse",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "cnn-conv",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "gnn-graph",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "diffusion",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "vae",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "gan",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "rl-single",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "marl-multiagent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "world-model",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "retrieval-rag",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "neuro-symbolic-planning",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "active-inference-fep",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "prompting-icl",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "finetuning-peft",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "agentic-scaffold",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "evolutionary-search",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "pgm-bayesian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "classical-ml",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "energy-based",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "equivariant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "spiking-neuromorphic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "memory-augmented",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "self-supervised",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "transformer-attention",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "ssm-recurrent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "moe-sparse",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "cnn-conv",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "gnn-graph",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "diffusion",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "vae",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "gan",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "rl-single",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "marl-multiagent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "world-model",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "retrieval-rag",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "neuro-symbolic-planning",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "active-inference-fep",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "prompting-icl",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "finetuning-peft",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "agentic-scaffold",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "evolutionary-search",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "pgm-bayesian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "classical-ml",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "energy-based",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "equivariant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "spiking-neuromorphic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "memory-augmented",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "self-supervised",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "transformer-attention",
+        "state": 1,
+        "source_count": 2,
+        "principle_count": 18,
+        "sources": [
+          "attention",
+          "flashattention"
+        ]
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "ssm-recurrent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "moe-sparse",
+        "state": 1,
+        "source_count": 3,
+        "principle_count": 25,
+        "sources": [
+          "shazeer-moe",
+          "switch",
+          "mixtral"
+        ]
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "cnn-conv",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "gnn-graph",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "diffusion",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "vae",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "gan",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "rl-single",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "marl-multiagent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "world-model",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "retrieval-rag",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "neuro-symbolic-planning",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "active-inference-fep",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "prompting-icl",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "finetuning-peft",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "agentic-scaffold",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "evolutionary-search",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "pgm-bayesian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "classical-ml",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "energy-based",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "equivariant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "spiking-neuromorphic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "memory-augmented",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "self-supervised",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "transformer-attention",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "ssm-recurrent",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "moe-sparse",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "cnn-conv",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "gnn-graph",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "diffusion",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "vae",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "gan",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "rl-single",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "marl-multiagent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "world-model",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "retrieval-rag",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 9,
+        "sources": [
+          "rag"
+        ]
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "neuro-symbolic-planning",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "active-inference-fep",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "prompting-icl",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "finetuning-peft",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "agentic-scaffold",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 10,
+        "sources": [
+          "generative-agents"
+        ]
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "evolutionary-search",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "pgm-bayesian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "classical-ml",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "energy-based",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "equivariant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "spiking-neuromorphic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "memory-augmented",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "self-supervised",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "transformer-attention",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "ssm-recurrent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "moe-sparse",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "cnn-conv",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "gnn-graph",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "diffusion",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "vae",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "gan",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "rl-single",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "marl-multiagent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "world-model",
+        "state": 1,
+        "source_count": 2,
+        "principle_count": 20,
+        "sources": [
+          "world-models",
+          "lecun-ami"
+        ]
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "retrieval-rag",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "neuro-symbolic-planning",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "active-inference-fep",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 10,
+        "sources": [
+          "active-inference"
+        ]
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "prompting-icl",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "finetuning-peft",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "agentic-scaffold",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "evolutionary-search",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "pgm-bayesian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "classical-ml",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "energy-based",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "equivariant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "spiking-neuromorphic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "memory-augmented",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "self-supervised",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "transformer-attention",
+        "state": 1,
+        "source_count": 3,
+        "principle_count": 24,
+        "sources": [
+          "what-bert-is-not",
+          "ettinger",
+          "kassner"
+        ]
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "ssm-recurrent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "moe-sparse",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 10,
+        "sources": [
+          "qwen3"
+        ]
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "cnn-conv",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "gnn-graph",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "diffusion",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "vae",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "gan",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "rl-single",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 11,
+        "sources": [
+          "deepseek-r1"
+        ]
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "marl-multiagent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "world-model",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 10,
+        "sources": [
+          "lecun-ami"
+        ]
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "retrieval-rag",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "neuro-symbolic-planning",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 10,
+        "sources": [
+          "pddl-instruct"
+        ]
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "active-inference-fep",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "prompting-icl",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 10,
+        "sources": [
+          "cot"
+        ]
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "finetuning-peft",
+        "state": 1,
+        "source_count": 2,
+        "principle_count": 21,
+        "sources": [
+          "deepseek-r1",
+          "rlvr-limits"
+        ]
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "agentic-scaffold",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "evolutionary-search",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 10,
+        "sources": [
+          "era"
+        ]
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "pgm-bayesian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "classical-ml",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "energy-based",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "equivariant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "spiking-neuromorphic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "memory-augmented",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "self-supervised",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "transformer-attention",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "ssm-recurrent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "moe-sparse",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "cnn-conv",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "gnn-graph",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "diffusion",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "vae",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "gan",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "rl-single",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "marl-multiagent",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 10,
+        "sources": [
+          "qmix"
+        ]
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "world-model",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "retrieval-rag",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "neuro-symbolic-planning",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "active-inference-fep",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 10,
+        "sources": [
+          "active-inference"
+        ]
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "prompting-icl",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "finetuning-peft",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "agentic-scaffold",
+        "state": 1,
+        "source_count": 2,
+        "principle_count": 4,
+        "sources": [
+          "toolemu",
+          "st-webagentbench"
+        ]
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "evolutionary-search",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "pgm-bayesian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "classical-ml",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "energy-based",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "equivariant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "spiking-neuromorphic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "memory-augmented",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "self-supervised",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "transformer-attention",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "ssm-recurrent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "moe-sparse",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "cnn-conv",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "gnn-graph",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "diffusion",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "vae",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "gan",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "rl-single",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "marl-multiagent",
+        "state": 1,
+        "source_count": 2,
+        "principle_count": 20,
+        "sources": [
+          "coma",
+          "qmix"
+        ]
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "world-model",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 10,
+        "sources": [
+          "world-models"
+        ]
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "retrieval-rag",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "neuro-symbolic-planning",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "active-inference-fep",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "prompting-icl",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "finetuning-peft",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "agentic-scaffold",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "evolutionary-search",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "pgm-bayesian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "classical-ml",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "energy-based",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "equivariant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "spiking-neuromorphic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "memory-augmented",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "self-supervised",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "transformer-attention",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "ssm-recurrent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "moe-sparse",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "cnn-conv",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "gnn-graph",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "diffusion",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "vae",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "gan",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "rl-single",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "marl-multiagent",
+        "state": 1,
+        "source_count": 2,
+        "principle_count": 20,
+        "sources": [
+          "lola",
+          "tomnet"
+        ]
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "world-model",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "retrieval-rag",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "neuro-symbolic-planning",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "active-inference-fep",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "prompting-icl",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "finetuning-peft",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "agentic-scaffold",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 10,
+        "sources": [
+          "generative-agents"
+        ]
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "evolutionary-search",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "pgm-bayesian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "classical-ml",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "energy-based",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "equivariant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "spiking-neuromorphic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "memory-augmented",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "self-supervised",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "transformer-attention",
+        "state": 1,
+        "source_count": 3,
+        "principle_count": 21,
+        "sources": [
+          "attention",
+          "what-bert-is-not",
+          "ettinger"
+        ]
+      },
+      {
+        "fn": "communication-language",
+        "col": "ssm-recurrent",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "moe-sparse",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "cnn-conv",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "gnn-graph",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "diffusion",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "vae",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "gan",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "rl-single",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "marl-multiagent",
+        "state": 1,
+        "source_count": 2,
+        "principle_count": 20,
+        "sources": [
+          "dial-rial",
+          "grounded-comp-lang"
+        ]
+      },
+      {
+        "fn": "communication-language",
+        "col": "world-model",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "retrieval-rag",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "neuro-symbolic-planning",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "active-inference-fep",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "prompting-icl",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "finetuning-peft",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "agentic-scaffold",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "evolutionary-search",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "pgm-bayesian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "classical-ml",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "energy-based",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "equivariant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "spiking-neuromorphic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "memory-augmented",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "self-supervised",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "transformer-attention",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "ssm-recurrent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "moe-sparse",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "cnn-conv",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "gnn-graph",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "diffusion",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "vae",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "gan",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "rl-single",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "marl-multiagent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "world-model",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "retrieval-rag",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "neuro-symbolic-planning",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "active-inference-fep",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 10,
+        "sources": [
+          "active-inference"
+        ]
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "prompting-icl",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "finetuning-peft",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 11,
+        "sources": [
+          "peft-enterprise"
+        ]
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "agentic-scaffold",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 10,
+        "sources": [
+          "self-harness"
+        ]
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "evolutionary-search",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "pgm-bayesian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "classical-ml",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "energy-based",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "equivariant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "spiking-neuromorphic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "memory-augmented",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "self-supervised",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "transformer-attention",
+        "state": 1,
+        "source_count": 4,
+        "principle_count": 41,
+        "sources": [
+          "attention",
+          "llama",
+          "textbooks",
+          "platonic"
+        ]
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "ssm-recurrent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "moe-sparse",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "cnn-conv",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "gnn-graph",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "diffusion",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "vae",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "gan",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "rl-single",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "marl-multiagent",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 10,
+        "sources": [
+          "grounded-comp-lang"
+        ]
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "world-model",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "retrieval-rag",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "neuro-symbolic-planning",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "active-inference-fep",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "prompting-icl",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "finetuning-peft",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "agentic-scaffold",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "evolutionary-search",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "pgm-bayesian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "classical-ml",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "energy-based",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "equivariant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "spiking-neuromorphic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "memory-augmented",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "self-supervised",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "transformer-attention",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "ssm-recurrent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "moe-sparse",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "cnn-conv",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "gnn-graph",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "diffusion",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "vae",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "gan",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "rl-single",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "marl-multiagent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "world-model",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "retrieval-rag",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "neuro-symbolic-planning",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "active-inference-fep",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "prompting-icl",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "finetuning-peft",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "agentic-scaffold",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "evolutionary-search",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 10,
+        "sources": [
+          "era"
+        ]
+      },
+      {
+        "fn": "navigation-search",
+        "col": "pgm-bayesian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "classical-ml",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "energy-based",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "equivariant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "spiking-neuromorphic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "memory-augmented",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "self-supervised",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "transformer-attention",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "ssm-recurrent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "moe-sparse",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "cnn-conv",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "gnn-graph",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "diffusion",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "vae",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "gan",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "rl-single",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "marl-multiagent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "world-model",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "retrieval-rag",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "neuro-symbolic-planning",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "active-inference-fep",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "prompting-icl",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "finetuning-peft",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 10,
+        "sources": [
+          "rlvr-limits"
+        ]
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "agentic-scaffold",
+        "state": 1,
+        "source_count": 2,
+        "principle_count": 12,
+        "sources": [
+          "self-harness",
+          "r-judge"
+        ]
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "evolutionary-search",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "pgm-bayesian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "classical-ml",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "energy-based",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "equivariant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "spiking-neuromorphic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "memory-augmented",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "self-supervised",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "transformer-attention",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "ssm-recurrent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "moe-sparse",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "cnn-conv",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "gnn-graph",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "diffusion",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "vae",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "gan",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "rl-single",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "marl-multiagent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "world-model",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "retrieval-rag",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "neuro-symbolic-planning",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "active-inference-fep",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "prompting-icl",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "finetuning-peft",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "agentic-scaffold",
+        "state": 1,
+        "source_count": 3,
+        "principle_count": 6,
+        "sources": [
+          "toolemu",
+          "r-judge",
+          "st-webagentbench"
+        ]
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "evolutionary-search",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "pgm-bayesian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "classical-ml",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "energy-based",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "equivariant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "spiking-neuromorphic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "memory-augmented",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "self-supervised",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "transformer-attention",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "ssm-recurrent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "moe-sparse",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "cnn-conv",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "gnn-graph",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "diffusion",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "vae",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "gan",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "rl-single",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "marl-multiagent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "world-model",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "retrieval-rag",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "neuro-symbolic-planning",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "active-inference-fep",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "prompting-icl",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "finetuning-peft",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "agentic-scaffold",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "evolutionary-search",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "pgm-bayesian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "classical-ml",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "energy-based",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "equivariant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "spiking-neuromorphic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "memory-augmented",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "self-supervised",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "transformer-attention",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "ssm-recurrent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "moe-sparse",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "cnn-conv",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "gnn-graph",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "diffusion",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "vae",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "gan",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "rl-single",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "marl-multiagent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "world-model",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "retrieval-rag",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "neuro-symbolic-planning",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "active-inference-fep",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "prompting-icl",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "finetuning-peft",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "agentic-scaffold",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "evolutionary-search",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "pgm-bayesian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "classical-ml",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "energy-based",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "equivariant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "spiking-neuromorphic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "memory-augmented",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "self-supervised",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "transformer-attention",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "ssm-recurrent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "moe-sparse",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "cnn-conv",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "gnn-graph",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "diffusion",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "vae",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "gan",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "rl-single",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "marl-multiagent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "world-model",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "retrieval-rag",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "neuro-symbolic-planning",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "active-inference-fep",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "prompting-icl",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "finetuning-peft",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "agentic-scaffold",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "evolutionary-search",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "pgm-bayesian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "classical-ml",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "energy-based",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "equivariant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "spiking-neuromorphic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "memory-augmented",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "self-supervised",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "transformer-attention",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "ssm-recurrent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "moe-sparse",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "cnn-conv",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "gnn-graph",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "diffusion",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "vae",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "gan",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "rl-single",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "marl-multiagent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "world-model",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "retrieval-rag",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "neuro-symbolic-planning",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "active-inference-fep",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "prompting-icl",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "finetuning-peft",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "agentic-scaffold",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 10,
+        "sources": [
+          "generative-agents"
+        ]
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "evolutionary-search",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "pgm-bayesian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "classical-ml",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "energy-based",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "equivariant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "spiking-neuromorphic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "memory-augmented",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "self-supervised",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      }
+    ],
+    "totals": {
+      "grid_cells": 475,
+      "covered": 33,
+      "field_known": 19,
+      "frontier": 423,
+      "sources_mapped": 33,
+      "principles_counted": 296
+    }
+  },
+  "nature": {
+    "cols": [
+      {
+        "id": "molecular-prokaryote",
+        "label": "Molecular & Prokaryote",
+        "def": "Sub-cellular signalling networks & bacteria/archaea; sensing/memory/decision via gene-regulatory & quorum circuits.",
+        "cite": "Lyon et al. 2021 (PMC7935032)"
+      },
+      {
+        "id": "protist",
+        "label": "Protist / Single-Cell Eukaryote",
+        "def": "Ciliates/amoebae showing habituation, associative-like learning without a nervous system.",
+        "cite": "Manicka & Levin 2019 (PMC6553590)"
+      },
+      {
+        "id": "slime-mould",
+        "label": "Slime Mould (Physarum)",
+        "def": "Acellular slime moulds solving mazes and externalizing spatial memory.",
+        "cite": "Manicka & Levin 2019; Nakagaki maze studies"
+      },
+      {
+        "id": "fungus",
+        "label": "Fungus / Mycelial Networks",
+        "def": "Fungal mycelia showing distributed resource allocation & adaptive growth decisions.",
+        "cite": "Baluška & Mancuso 2021 (PMC7934911)"
+      },
+      {
+        "id": "plant",
+        "label": "Plant / Vascular Plant",
+        "def": "Rooted photosynthetic organisms: environmental sensing, signalling, habituation.",
+        "cite": "Baluška & Mancuso 2021"
+      },
+      {
+        "id": "cnidarian",
+        "label": "Cnidarian (Nerve Net)",
+        "def": "Jellyfish/hydra/anemones with diffuse nerve nets; earliest neural substrate.",
+        "cite": "Bielecki et al. 2023 (box-jellyfish learning)"
+      },
+      {
+        "id": "nematode",
+        "label": "Nematode (C. elegans)",
+        "def": "Compact fully-mapped 302-neuron connectome; canonical circuit model of learning/decision.",
+        "cite": "Hawk et al. 2018 (Neuron)"
+      },
+      {
+        "id": "annelid-mollusc-basal",
+        "label": "Annelids & Basal Molluscs (Aplysia)",
+        "def": "Segmented worms & gastropods; cellular/synaptic basis of learning.",
+        "cite": "Roth & Dicke 2013 (Springer)"
+      },
+      {
+        "id": "arthropod-insect",
+        "label": "Arthropod / Insect",
+        "def": "Compact powerful brains; path integration, concept learning, numerosity.",
+        "cite": "Giurfa 2015 (WIREs Cogn. Sci.)"
+      },
+      {
+        "id": "cephalopod",
+        "label": "Mollusc / Cephalopod",
+        "def": "Octopus/cuttlefish/squid; complex cognition evolved independently of vertebrates.",
+        "cite": "Godfrey-Smith 2016; Mather et al. 2014"
+      },
+      {
+        "id": "fish",
+        "label": "Fish",
+        "def": "Ray-finned & cartilaginous fishes; social cognition, cooperation, learning.",
+        "cite": "Bshary et al. 2002 (Anim. Cogn.)"
+      },
+      {
+        "id": "amphibian-reptile",
+        "label": "Amphibian & Reptile",
+        "def": "Ectothermic tetrapods; spatial & associative learning, social behaviour.",
+        "cite": "Roth & Dicke 2013"
+      },
+      {
+        "id": "bird",
+        "label": "Bird",
+        "def": "Avian dinosaurs; vocal learning, tool use, episodic-like memory, planning.",
+        "cite": "Raby et al. 2007 (Nature)"
+      },
+      {
+        "id": "mammal-rodent",
+        "label": "Mammal — Rodent",
+        "def": "Dominant lab model for navigation, RL, memory, value-based decision.",
+        "cite": "Roth & Dicke 2013"
+      },
+      {
+        "id": "mammal-primate",
+        "label": "Mammal — Primate",
+        "def": "Theory of mind, social inference, planning, metacognition.",
+        "cite": "Premack & Woodruff 1978"
+      },
+      {
+        "id": "mammal-cetacean",
+        "label": "Mammal — Cetacean",
+        "def": "Large brains, vocal communication, social cognition, self-recognition.",
+        "cite": "Smith et al. 2003 (uncertainty monitoring)"
+      },
+      {
+        "id": "cross-phyletic",
+        "label": "Cross-Phyletic / Substrate-General",
+        "def": "Principles claimed to hold across substrates (basal cognition, UAL, valence).",
+        "cite": "Levin, Keijzer, Lyon et al. 2021 (PMC7935018)"
+      }
+    ],
+    "cells": [
+      {
+        "fn": "perception-sensing",
+        "col": "molecular-prokaryote",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "protist",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "slime-mould",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "fungus",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "plant",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "cnidarian",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "nematode",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "annelid-mollusc-basal",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "arthropod-insect",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "cephalopod",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "fish",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "amphibian-reptile",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "bird",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "mammal-rodent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "mammal-primate",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "mammal-cetacean",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "perception-sensing",
+        "col": "cross-phyletic",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 8,
+        "sources": [
+          "roth-convergent"
+        ]
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "molecular-prokaryote",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "protist",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "slime-mould",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "fungus",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "plant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "cnidarian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "nematode",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "annelid-mollusc-basal",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "arthropod-insect",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 8,
+        "sources": [
+          "roth-convergent"
+        ]
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "cephalopod",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 8,
+        "sources": [
+          "roth-convergent"
+        ]
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "fish",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 8,
+        "sources": [
+          "roth-convergent"
+        ]
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "amphibian-reptile",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "bird",
+        "state": 1,
+        "source_count": 2,
+        "principle_count": 20,
+        "sources": [
+          "zebra-finch",
+          "roth-convergent"
+        ]
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "mammal-rodent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "mammal-primate",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "mammal-cetacean",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "multimodal-integration",
+        "col": "cross-phyletic",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 8,
+        "sources": [
+          "roth-convergent"
+        ]
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "molecular-prokaryote",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "protist",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "slime-mould",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "fungus",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "plant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "cnidarian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "nematode",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "annelid-mollusc-basal",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "arthropod-insect",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "cephalopod",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "fish",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "amphibian-reptile",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "bird",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "mammal-rodent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "mammal-primate",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "mammal-cetacean",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "attention-resource-allocation",
+        "col": "cross-phyletic",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 13,
+        "sources": [
+          "turner-capacity"
+        ]
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "molecular-prokaryote",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 13,
+        "sources": [
+          "bacteria-decision"
+        ]
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "protist",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "slime-mould",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "fungus",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "plant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "cnidarian",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 13,
+        "sources": [
+          "turner-capacity"
+        ]
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "nematode",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "annelid-mollusc-basal",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "arthropod-insect",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "cephalopod",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "fish",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "amphibian-reptile",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "bird",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 12,
+        "sources": [
+          "zebra-finch"
+        ]
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "mammal-rodent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "mammal-primate",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "mammal-cetacean",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "memory-knowledge",
+        "col": "cross-phyletic",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 13,
+        "sources": [
+          "turner-capacity"
+        ]
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "molecular-prokaryote",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "protist",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "slime-mould",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "fungus",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "plant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "cnidarian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "nematode",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "annelid-mollusc-basal",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "arthropod-insect",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "cephalopod",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "fish",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "amphibian-reptile",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "bird",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "mammal-rodent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "mammal-primate",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "mammal-cetacean",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "world-modeling-prediction",
+        "col": "cross-phyletic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "molecular-prokaryote",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "protist",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "slime-mould",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "fungus",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "plant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "cnidarian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "nematode",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "annelid-mollusc-basal",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "arthropod-insect",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "cephalopod",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "fish",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "amphibian-reptile",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "bird",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "mammal-rodent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "mammal-primate",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "mammal-cetacean",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "reasoning-planning",
+        "col": "cross-phyletic",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 0,
+        "sources": [
+          "nordli-cbgtc"
+        ]
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "molecular-prokaryote",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 13,
+        "sources": [
+          "bacteria-decision"
+        ]
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "protist",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "slime-mould",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "fungus",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "plant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "cnidarian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "nematode",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "annelid-mollusc-basal",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "arthropod-insect",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "cephalopod",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "fish",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "amphibian-reptile",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "bird",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "mammal-rodent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "mammal-primate",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "mammal-cetacean",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "action-selection-gating",
+        "col": "cross-phyletic",
+        "state": 1,
+        "source_count": 2,
+        "principle_count": 13,
+        "sources": [
+          "turner-capacity",
+          "nordli-cbgtc"
+        ]
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "molecular-prokaryote",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 13,
+        "sources": [
+          "bacteria-decision"
+        ]
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "protist",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "slime-mould",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "fungus",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "plant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "cnidarian",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "nematode",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "annelid-mollusc-basal",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "arthropod-insect",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "cephalopod",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "fish",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "amphibian-reptile",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "bird",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "mammal-rodent",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "mammal-primate",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "mammal-cetacean",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "credit-assignment-learning",
+        "col": "cross-phyletic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "molecular-prokaryote",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "protist",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "slime-mould",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "fungus",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "plant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "cnidarian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "nematode",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "annelid-mollusc-basal",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "arthropod-insect",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "cephalopod",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "fish",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "amphibian-reptile",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "bird",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 12,
+        "sources": [
+          "zebra-finch"
+        ]
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "mammal-rodent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "mammal-primate",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "mammal-cetacean",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "social-inference-tom",
+        "col": "cross-phyletic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "molecular-prokaryote",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 13,
+        "sources": [
+          "bacteria-decision"
+        ]
+      },
+      {
+        "fn": "communication-language",
+        "col": "protist",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "slime-mould",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "fungus",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "plant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "cnidarian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "nematode",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "annelid-mollusc-basal",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "arthropod-insect",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "cephalopod",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "fish",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "amphibian-reptile",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "bird",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 12,
+        "sources": [
+          "zebra-finch"
+        ]
+      },
+      {
+        "fn": "communication-language",
+        "col": "mammal-rodent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "mammal-primate",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "mammal-cetacean",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "communication-language",
+        "col": "cross-phyletic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "molecular-prokaryote",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 13,
+        "sources": [
+          "bacteria-decision"
+        ]
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "protist",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "slime-mould",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "fungus",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "plant",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "cnidarian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "nematode",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "annelid-mollusc-basal",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "arthropod-insect",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "cephalopod",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "fish",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "amphibian-reptile",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "bird",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "mammal-rodent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "mammal-primate",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "mammal-cetacean",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "adaptation-regulation",
+        "col": "cross-phyletic",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "molecular-prokaryote",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "protist",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "slime-mould",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "fungus",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "plant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "cnidarian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "nematode",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "annelid-mollusc-basal",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "arthropod-insect",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "cephalopod",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "fish",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "amphibian-reptile",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "bird",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "mammal-rodent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "mammal-primate",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "mammal-cetacean",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "representation-grounding",
+        "col": "cross-phyletic",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 8,
+        "sources": [
+          "roth-convergent"
+        ]
+      },
+      {
+        "fn": "navigation-search",
+        "col": "molecular-prokaryote",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "protist",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "slime-mould",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "fungus",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "plant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "cnidarian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "nematode",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "annelid-mollusc-basal",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "arthropod-insect",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "cephalopod",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "fish",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "amphibian-reptile",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "bird",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 12,
+        "sources": [
+          "zebra-finch"
+        ]
+      },
+      {
+        "fn": "navigation-search",
+        "col": "mammal-rodent",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "mammal-primate",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "mammal-cetacean",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "navigation-search",
+        "col": "cross-phyletic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "molecular-prokaryote",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "protist",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "slime-mould",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "fungus",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "plant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "cnidarian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "nematode",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "annelid-mollusc-basal",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "arthropod-insect",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "cephalopod",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "fish",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "amphibian-reptile",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "bird",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "mammal-rodent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "mammal-primate",
+        "state": 2,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "mammal-cetacean",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "metacognition-monitoring",
+        "col": "cross-phyletic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "molecular-prokaryote",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "protist",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "slime-mould",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "fungus",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "plant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "cnidarian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "nematode",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "annelid-mollusc-basal",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "arthropod-insect",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "cephalopod",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "fish",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "amphibian-reptile",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "bird",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "mammal-rodent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "mammal-primate",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "mammal-cetacean",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "alignment-values-safety",
+        "col": "cross-phyletic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "molecular-prokaryote",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "protist",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "slime-mould",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "fungus",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "plant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "cnidarian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "nematode",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "annelid-mollusc-basal",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "arthropod-insect",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "cephalopod",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "fish",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "amphibian-reptile",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "bird",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "mammal-rodent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "mammal-primate",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "mammal-cetacean",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "emotion-affect",
+        "col": "cross-phyletic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "molecular-prokaryote",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "protist",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "slime-mould",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "fungus",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "plant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "cnidarian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "nematode",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "annelid-mollusc-basal",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "arthropod-insect",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "cephalopod",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "fish",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "amphibian-reptile",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "bird",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "mammal-rodent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "mammal-primate",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "mammal-cetacean",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motivation-goals",
+        "col": "cross-phyletic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "molecular-prokaryote",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "protist",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "slime-mould",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "fungus",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "plant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "cnidarian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "nematode",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "annelid-mollusc-basal",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "arthropod-insect",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "cephalopod",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "fish",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "amphibian-reptile",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "bird",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "mammal-rodent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "mammal-primate",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "mammal-cetacean",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "motor-control",
+        "col": "cross-phyletic",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 0,
+        "sources": [
+          "nordli-cbgtc"
+        ]
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "molecular-prokaryote",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "protist",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "slime-mould",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "fungus",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "plant",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "cnidarian",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "nematode",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "annelid-mollusc-basal",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "arthropod-insect",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "cephalopod",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "fish",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "amphibian-reptile",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "bird",
+        "state": 1,
+        "source_count": 1,
+        "principle_count": 12,
+        "sources": [
+          "zebra-finch"
+        ]
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "mammal-rodent",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "mammal-primate",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "mammal-cetacean",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      },
+      {
+        "fn": "identity-individuality",
+        "col": "cross-phyletic",
+        "state": 3,
+        "source_count": 0,
+        "principle_count": 0,
+        "sources": []
+      }
+    ],
+    "totals": {
+      "grid_cells": 323,
+      "covered": 23,
+      "field_known": 25,
+      "frontier": 275,
+      "sources_mapped": 5,
+      "principles_counted": 46
+    }
+  },
+  "bridge": [
+    {
+      "fn": "perception-sensing",
+      "ai_cov": 0,
+      "ai_p": 0,
+      "nat_cov": 1,
+      "nat_p": 8,
+      "flag": "nature-hot-ai-cold"
+    },
+    {
+      "fn": "multimodal-integration",
+      "ai_cov": 0,
+      "ai_p": 0,
+      "nat_cov": 5,
+      "nat_p": 52,
+      "flag": "nature-hot-ai-cold"
+    },
+    {
+      "fn": "attention-resource-allocation",
+      "ai_cov": 2,
+      "ai_p": 43,
+      "nat_cov": 1,
+      "nat_p": 13,
+      "flag": "both"
+    },
+    {
+      "fn": "memory-knowledge",
+      "ai_cov": 2,
+      "ai_p": 19,
+      "nat_cov": 4,
+      "nat_p": 51,
+      "flag": "both"
+    },
+    {
+      "fn": "world-modeling-prediction",
+      "ai_cov": 2,
+      "ai_p": 30,
+      "nat_cov": 0,
+      "nat_p": 0,
+      "flag": "ai-hot-nature-cold"
+    },
+    {
+      "fn": "reasoning-planning",
+      "ai_cov": 8,
+      "ai_p": 106,
+      "nat_cov": 1,
+      "nat_p": 0,
+      "flag": "both"
+    },
+    {
+      "fn": "action-selection-gating",
+      "ai_cov": 3,
+      "ai_p": 24,
+      "nat_cov": 2,
+      "nat_p": 26,
+      "flag": "both"
+    },
+    {
+      "fn": "credit-assignment-learning",
+      "ai_cov": 2,
+      "ai_p": 30,
+      "nat_cov": 1,
+      "nat_p": 13,
+      "flag": "both"
+    },
+    {
+      "fn": "social-inference-tom",
+      "ai_cov": 2,
+      "ai_p": 30,
+      "nat_cov": 1,
+      "nat_p": 12,
+      "flag": "both"
+    },
+    {
+      "fn": "communication-language",
+      "ai_cov": 2,
+      "ai_p": 41,
+      "nat_cov": 2,
+      "nat_p": 25,
+      "flag": "both"
+    },
+    {
+      "fn": "adaptation-regulation",
+      "ai_cov": 3,
+      "ai_p": 31,
+      "nat_cov": 1,
+      "nat_p": 13,
+      "flag": "both"
+    },
+    {
+      "fn": "representation-grounding",
+      "ai_cov": 2,
+      "ai_p": 51,
+      "nat_cov": 1,
+      "nat_p": 8,
+      "flag": "both"
+    },
+    {
+      "fn": "navigation-search",
+      "ai_cov": 1,
+      "ai_p": 10,
+      "nat_cov": 1,
+      "nat_p": 12,
+      "flag": "both"
+    },
+    {
+      "fn": "metacognition-monitoring",
+      "ai_cov": 2,
+      "ai_p": 22,
+      "nat_cov": 0,
+      "nat_p": 0,
+      "flag": "ai-hot-nature-cold"
+    },
+    {
+      "fn": "alignment-values-safety",
+      "ai_cov": 1,
+      "ai_p": 6,
+      "nat_cov": 0,
+      "nat_p": 0,
+      "flag": "ai-hot-nature-cold"
+    },
+    {
+      "fn": "emotion-affect",
+      "ai_cov": 0,
+      "ai_p": 0,
+      "nat_cov": 0,
+      "nat_p": 0,
+      "flag": "both-empty"
+    },
+    {
+      "fn": "motivation-goals",
+      "ai_cov": 0,
+      "ai_p": 0,
+      "nat_cov": 0,
+      "nat_p": 0,
+      "flag": "both-empty"
+    },
+    {
+      "fn": "motor-control",
+      "ai_cov": 0,
+      "ai_p": 0,
+      "nat_cov": 1,
+      "nat_p": 0,
+      "flag": "nature-hot-ai-cold"
+    },
+    {
+      "fn": "identity-individuality",
+      "ai_cov": 1,
+      "ai_p": 10,
+      "nat_cov": 1,
+      "nat_p": 12,
+      "flag": "both"
+    }
+  ]
+}

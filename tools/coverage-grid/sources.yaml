@@ -1,0 +1,257 @@
+# =============================================================================
+# SOURCE -> CELL mapping (source-level binning; v1). One entry per DISTINCT paper.
+# `aliases` list both the full source-note title and the phase1 card-id so
+# build.py can attribute principle counts regardless of which link form a
+# principle's `source:` field uses. `cells` = {fn (function id), arch (ai arch id)}.
+# =============================================================================
+
+ai_sources:
+  # --- Core architecture / efficiency ---
+  - id: attention
+    title: Attention Is All You Need
+    aliases: [Attention Is All You Need, vaswani-2017]
+    cells:
+      - { fn: attention-resource-allocation, arch: transformer-attention }
+      - { fn: representation-grounding, arch: transformer-attention }
+      - { fn: communication-language, arch: transformer-attention }
+  - id: flashattention
+    title: FlashAttention
+    aliases: [FlashAttention, dao-2022]
+    cells:
+      - { fn: attention-resource-allocation, arch: transformer-attention }
+
+  # --- Mixture-of-Experts / sparse ---
+  - id: shazeer-moe
+    title: Outrageously Large Neural Networks
+    aliases: [Outrageously Large Neural Networks, shazeer-2017]
+    cells:
+      - { fn: attention-resource-allocation, arch: moe-sparse }
+  - id: switch
+    title: Switch Transformers
+    aliases: [Switch Transformers, fedus-2021]
+    cells:
+      - { fn: attention-resource-allocation, arch: moe-sparse }
+  - id: mixtral
+    title: Mixtral of Experts
+    aliases: [Mixtral of Experts, mixtral-2024]
+    cells:
+      - { fn: attention-resource-allocation, arch: moe-sparse }
+
+  # --- Scaling / data / representation ---
+  - id: llama
+    title: LLaMA
+    aliases: [LLaMA, touvron-2023]
+    cells:
+      - { fn: representation-grounding, arch: transformer-attention }
+  - id: textbooks
+    title: Textbooks Are All You Need
+    aliases: [Textbooks Are All You Need, gunasekar-2023]
+    cells:
+      - { fn: representation-grounding, arch: transformer-attention }
+  - id: platonic
+    title: The Platonic Representation Hypothesis
+    aliases: [The Platonic Representation Hypothesis, huh-2024]
+    cells:
+      - { fn: representation-grounding, arch: transformer-attention }
+
+  # --- Reasoning / planning ---
+  - id: cot
+    title: Chain-of-Thought Prompting Elicits Reasoning in Large Language Models
+    aliases: [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models, wei-2022-cot]
+    cells:
+      - { fn: reasoning-planning, arch: prompting-icl }
+  - id: deepseek-r1
+    title: DeepSeek-R1
+    aliases: [DeepSeek-R1, deepseek-r1-2025]
+    cells:
+      - { fn: reasoning-planning, arch: finetuning-peft }
+      - { fn: reasoning-planning, arch: rl-single }
+  - id: rlvr-limits
+    title: Does RL Really Incentivize Reasoning Capacity Beyond the Base Model
+    aliases:
+      [Does RL Really Incentivize Reasoning Capacity Beyond the Base Model, yue-2025-rlvr-limits]
+    cells:
+      - { fn: reasoning-planning, arch: finetuning-peft }
+      - { fn: metacognition-monitoring, arch: finetuning-peft }
+  - id: qwen3
+    title: Qwen3 Technical Report
+    aliases: [Qwen3 Technical Report, qwen-team-2025]
+    cells:
+      - { fn: reasoning-planning, arch: moe-sparse }
+  - id: pddl-instruct
+    title: PDDL-INSTRUCT
+    aliases: [PDDL-INSTRUCT, verma-2025]
+    cells:
+      - { fn: reasoning-planning, arch: neuro-symbolic-planning }
+
+  # --- Multi-agent / social ---
+  - id: coma
+    title: COMA
+    aliases: [COMA, foerster-2018]
+    cells:
+      - { fn: credit-assignment-learning, arch: marl-multiagent }
+  - id: qmix
+    title: QMIX
+    aliases: [QMIX, rashid-2018]
+    cells:
+      - { fn: credit-assignment-learning, arch: marl-multiagent }
+      - { fn: action-selection-gating, arch: marl-multiagent }
+  - id: dial-rial
+    title: Learning to Communicate with Deep MARL
+    aliases: [Learning to Communicate with Deep MARL, foerster-2016]
+    cells:
+      - { fn: communication-language, arch: marl-multiagent }
+  - id: lola
+    title: Learning with Opponent-Learning Awareness
+    aliases: [Learning with Opponent-Learning Awareness, foerster-2018-lola]
+    cells:
+      - { fn: social-inference-tom, arch: marl-multiagent }
+  - id: tomnet
+    title: Machine Theory of Mind
+    aliases: [Machine Theory of Mind, rabinowitz-2018]
+    cells:
+      - { fn: social-inference-tom, arch: marl-multiagent }
+  - id: grounded-comp-lang
+    title: Emergence of Grounded Compositional Language
+    aliases: [Emergence of Grounded Compositional Language, mordatch-2018]
+    cells:
+      - { fn: communication-language, arch: marl-multiagent }
+      - { fn: representation-grounding, arch: marl-multiagent }
+
+  # --- Agents / world models / active inference ---
+  - id: generative-agents
+    title: Generative Agents
+    aliases: [Generative Agents, park-2023]
+    cells:
+      - { fn: memory-knowledge, arch: agentic-scaffold }
+      - { fn: social-inference-tom, arch: agentic-scaffold }
+      - { fn: identity-individuality, arch: agentic-scaffold }
+  - id: rag
+    title: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
+    aliases: [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, lewis-2020]
+    cells:
+      - { fn: memory-knowledge, arch: retrieval-rag }
+  - id: world-models
+    title: World Models
+    aliases: [World Models, ha-2018]
+    cells:
+      - { fn: world-modeling-prediction, arch: world-model }
+      - { fn: credit-assignment-learning, arch: world-model }
+  - id: lecun-ami
+    title: A Path Towards Autonomous Machine Intelligence
+    aliases: [A Path Towards Autonomous Machine Intelligence, lecun-2022]
+    cells:
+      - { fn: world-modeling-prediction, arch: world-model }
+      - { fn: reasoning-planning, arch: world-model }
+  - id: active-inference
+    title: Active Inference
+    aliases: [Active Inference — A Process Theory, Active Inference, friston-2017]
+    cells:
+      - { fn: action-selection-gating, arch: active-inference-fep }
+      - { fn: adaptation-regulation, arch: active-inference-fep }
+      - { fn: world-modeling-prediction, arch: active-inference-fep }
+  - id: era
+    title: An AI system to help scientists write expert-level empirical software
+    aliases: [An AI system to help scientists write expert-level empirical software, aygun-2026]
+    cells:
+      - { fn: reasoning-planning, arch: evolutionary-search }
+      - { fn: navigation-search, arch: evolutionary-search }
+  - id: self-harness
+    title: Self-Harness — Harnesses That Improve Themselves
+    aliases: [Self-Harness — Harnesses That Improve Themselves, zhang-2026-self-harness]
+    cells:
+      - { fn: adaptation-regulation, arch: agentic-scaffold }
+      - { fn: metacognition-monitoring, arch: agentic-scaffold }
+  - id: peft-enterprise
+    title: Fine Tuning LLMs for Enterprise
+    aliases: [Fine Tuning LLMs for Enterprise, mathavraj-2024]
+    cells:
+      - { fn: adaptation-regulation, arch: finetuning-peft }
+
+  # --- Language understanding / negation limits ---
+  - id: what-bert-is-not
+    title: What BERT Is Not
+    aliases: [What BERT Is Not]
+    cells:
+      - { fn: reasoning-planning, arch: transformer-attention }
+      - { fn: communication-language, arch: transformer-attention }
+  - id: ettinger
+    title: Ettinger 2020
+    aliases: [ettinger-2020]
+    cells:
+      - { fn: reasoning-planning, arch: transformer-attention }
+      - { fn: communication-language, arch: transformer-attention }
+  - id: kassner
+    title: Negated and Misprimed Probes for Pretrained Language Models
+    aliases:
+      [Negated and Misprimed Probes for Pretrained Language Models, kassner-2020-negated-misprimed]
+    cells:
+      - { fn: reasoning-planning, arch: transformer-attention }
+
+  # --- Agentic safety (agentic-safety gap, ingested this program) ---
+  - id: toolemu
+    title: ToolEmu
+    aliases: [ToolEmu — Identifying the Risks of LM Agents with an LM-Emulated Sandbox]
+    cells:
+      - { fn: alignment-values-safety, arch: agentic-scaffold }
+      - { fn: action-selection-gating, arch: agentic-scaffold }
+  - id: r-judge
+    title: R-Judge
+    aliases: [R-Judge — Benchmarking Safety Risk Awareness for LLM Agents]
+    cells:
+      - { fn: alignment-values-safety, arch: agentic-scaffold }
+      - { fn: metacognition-monitoring, arch: agentic-scaffold }
+  - id: st-webagentbench
+    title: ST-WebAgentBench
+    aliases: [ST-WebAgentBench — A Benchmark for Safety and Trustworthiness in Web Agents]
+    cells:
+      - { fn: alignment-values-safety, arch: agentic-scaffold }
+      - { fn: action-selection-gating, arch: agentic-scaffold }
+
+# --- NATURE space: source -> (function x clade) cells. Binned from NIP vault. ---
+nature_sources:
+  - id: zebra-finch
+    title: Wild Zebra Finch Communication Networks
+    aliases: [Wild Zebra Finch Communication Networks]
+    cells:
+      - { fn: communication-language, clade: bird }
+      - { fn: social-inference-tom, clade: bird }
+      - { fn: multimodal-integration, clade: bird }
+      - { fn: memory-knowledge, clade: bird }
+      - { fn: navigation-search, clade: bird }
+      - { fn: identity-individuality, clade: bird }
+  - id: bacteria-decision
+    title: Decision-Making in Bacteria
+    aliases: [Decision-Making in Bacteria]
+    cells:
+      - { fn: action-selection-gating, clade: molecular-prokaryote }
+      - { fn: communication-language, clade: molecular-prokaryote }
+      - { fn: adaptation-regulation, clade: molecular-prokaryote }
+      - { fn: credit-assignment-learning, clade: molecular-prokaryote }
+      - { fn: memory-knowledge, clade: molecular-prokaryote }
+  - id: turner-capacity
+    title: Cognitive Capacity and Control in the Evolution of Intelligence
+    aliases: [Cognitive Capacity and Control in the Evolution of Intelligence]
+    cells:
+      - { fn: memory-knowledge, clade: cross-phyletic }
+      - { fn: attention-resource-allocation, clade: cross-phyletic }
+      - { fn: action-selection-gating, clade: cross-phyletic }
+      - { fn: memory-knowledge, clade: cnidarian }
+  - id: roth-convergent
+    title: Convergent evolution of complex brains and high intelligence
+    aliases: [Convergent evolution of complex brains and high intelligence, roth-2015]
+    cells:
+      - { fn: multimodal-integration, clade: cross-phyletic }
+      - { fn: multimodal-integration, clade: arthropod-insect }
+      - { fn: multimodal-integration, clade: cephalopod }
+      - { fn: multimodal-integration, clade: fish }
+      - { fn: multimodal-integration, clade: bird }
+      - { fn: representation-grounding, clade: cross-phyletic }
+      - { fn: perception-sensing, clade: cross-phyletic }
+  - id: nordli-cbgtc
+    title: Embodied and Embedded Ecological Rationality
+    aliases: [Embodied and Embedded Ecological Rationality]
+    cells:
+      - { fn: action-selection-gating, clade: cross-phyletic }
+      - { fn: motor-control, clade: cross-phyletic }
+      - { fn: reasoning-planning, clade: cross-phyletic }
