@@ -70,12 +70,12 @@ def encode(modality, x):
 
 ## Integration notes
 
-| Stack                                                 | How to integrate                                                                                                                                   |
-| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Vision + language (LLM agent)**                     | Use a CLIP-family encoder or ImageBind for the joint space; the agent's observation includes joint embeddings, not separate per-modality features. |
-| **Robotics (vision + audio + proprioception)**        | Train a per-channel projection into a shared space; downstream policy network operates on the joint embedding.                                     |
-| **Multi-agent text + structured data**                | Project text and structured features (events, actions) into a shared space so reasoning can fuse them coherently.                                  |
-| **Audio + spatial (closest to the natural exemplar)** | Spatial features (proximity graph) projected jointly with acoustic embeddings; the joint space captures social state.                              |
+| Stack                                          | How to integrate                                                                                                                                   |
+| ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Vision + language (LLM agent)**              | Use a CLIP-family encoder or ImageBind for the joint space; the agent's observation includes joint embeddings, not separate per-modality features. |
+| **Robotics (vision + audio + proprioception)** | Train a per-channel projection into a shared space; downstream policy network operates on the joint embedding.                                     |
+| **Multi-agent text + structured data**         | Project text and structured features (events, actions) into a shared space so reasoning can fuse them coherently.                                  |
+| **Audio + spatial**                            | Spatial features (proximity graph) projected jointly with acoustic embeddings; the joint space captures social state.                              |
 
 ---
 

@@ -1,32 +1,12 @@
 id: multi-modal-integration
 name: Multi-Modal Integration
-status: canonical
-version: 1.0.0
+status: draft
+version: 0.2.0
 created: '2026-05-03'
-updated: '2026-07-04'
+updated: '2026-07-12'
 audience_voice: builder
 
 natural_exemplars:
-  - species: 'Taeniopygia castanotis (zebra finch)'
-    paper:
-      title: 'Communication Networks of Wild Zebra Finches (Taeniopygia castanotis)'
-      authors:
-        - 'Hagedoorn, K.'
-        - 'Tschirren, N.'
-        - 'ter Avest, E.'
-        - 'Tyson, C.'
-        - 'Snijders, L.'
-        - 'Griffith, S. C.'
-        - 'Naguib, M.'
-        - 'Loning, H.'
-      venue: 'bioRxiv preprint'
-      date: '2026-04-27'
-      doi: '10.1101/2025.09.11.675577'
-    notes: >
-      Zebra finch song-based social networks mirror spatial co-occurrence
-      networks: vocal signals and movement carry convergent information
-      about the same underlying social state. Male song acts as a proxy
-      for pair co-presence; the two channels are mutually confirming.
   - species: 'Cross-phyletic synthesis (Hymenoptera, Cephalopoda, Teleostei, Aves, Mammalia)'
     paper:
       title: 'Convergent evolution of complex brains and high intelligence'
@@ -42,33 +22,44 @@ natural_exemplars:
       octopod vertical lobe, cichlid pallium, corvid/psittacid avian
       pallium, and mammalian isocortex. None are anatomical homologues, yet
       all share the architectural commitment of integrating multiple sensory
-      streams on a shared associative substrate. Quantitative circuit data
-      (honeybee mushroom body: ~300,000 Kenyon cells reading 800 projection
-      neurons; octopus vertical lobe: ~26M interneurons converging on 65,000
-      projection neurons) supports the joint-encoder reading at the substrate
-      level. Second independent source, cross-phyletic and anatomical, on top
-      of the zebra-finch behavioural evidence — the basis for canonical
-      promotion (2026-07-04).
+      streams on a shared associative substrate — in Roth's own framing,
+      "multimodal centres … highly ordered associative networks". Quantitative
+      circuit figures, as reviewed by Roth (2015), read at the substrate level
+      as expansion-and-convergence: the honeybee mushroom body has ~300,000
+      Kenyon cells receiving from ~800 projection neurons (an expansion, few PN
+      → many KC; note the ~300,000 figure is given by Roth as a personal
+      communication from Menzel, not a published primary count), and the
+      octopus vertical lobe has ~26 million interneurons converging on ~65,000
+      projection neurons (a convergence, which Roth reviews from primary
+      sources — Young; Shomrat & Hochner). A single natural source,
+      cross-phyletic and anatomical; with no second independent natural leg,
+      this NEXI is a single-source draft.
 
 abstract_claim: >
   A single underlying state is observable through multiple sensory
   channels. Joint latent representations that explain multiple streams
-  simultaneously preserve cross-channel coherence (and benefit from it),
-  while late-fusion architectures throw away the structural alignment
-  between modalities. Single-modality systems are structurally
-  incomplete — they can only see what their channel reveals.
+  simultaneously preserve cross-channel coherence (and benefit from it);
+  the decisive axis is whether a training-time cross-modal alignment
+  objective is present, not whether fusion happens early or late —
+  jointly-trained late fusion aligns too. The open convergence question
+  this NEXI hypothesises: whether single-modality systems are structurally
+  incomplete, seeing only what their channel reveals. That is a conjecture,
+  not an established fact.
 
 falsifiable_hypothesis: >
-  Architectures with joint multi-modal encoders (single shared latent
-  space across modalities) achieve better cross-modal grounding than
-  late-fusion architectures (separate per-modality encoders, fused at
-  output) on tasks requiring cross-modal inference, at equal training
-  compute. Operationalised on benchmarks of cross-modal retrieval,
-  audio-visual grounding, and embodied navigation, joint architectures
-  should outperform late-fusion ones by >=10% relative on cross-modal
-  metrics. Refutation: if late-fusion matches joint encoding on
-  cross-modal benchmarks at equal compute, this pattern's claim is
-  refuted.
+  Architectures trained with a cross-modal alignment objective (a shared
+  latent space aligned across modalities at training time) achieve better
+  cross-modal grounding than architectures without one (per-modality
+  encoders fused at output with no alignment term), on tasks requiring
+  cross-modal inference, at equal and compute-matched training budget.
+  Operationalised on a named, pre-registered cross-modal retrieval
+  benchmark and split (e.g. Flickr30K 1K test image↔text retrieval),
+  the aligned architecture should outperform the unaligned baseline by
+  >=10% relative on the cross-modal retrieval metric (Recall@1).
+  Caveat: a calibrated cross-modal-alignment metric is itself contested,
+  so the benchmark and split must be fixed in advance. Refutation: if the
+  unaligned baseline matches the aligned architecture on the pre-registered
+  benchmark at compute-matched budget, this pattern's claim is refuted.
 
 applies_to:
   - multi-agent-systems
