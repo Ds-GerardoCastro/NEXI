@@ -6,7 +6,7 @@ This document specifies the architectural primitive for the coincidence-detectio
 
 ### 1. Multi-stream input mux
 
-A wiring layer that brings qualitatively different evidence streams into the gating logic. Streams must be **genuinely independent** in their failure modes — two attention heads on the same modality do not qualify; vision + audio + retrieved-context do.
+A wiring layer that brings qualitatively different evidence streams into the gating logic. Streams must be **genuinely independent** in their failure modes — operationally, low cross-stream error correlation, so single-channel error or single-channel adversarial perturbation cannot align them. Two attention heads on the same modality do not qualify; vision + audio + retrieved-context do.
 
 ```
 mux(streams: list[Stream]) -> StreamCoordinator
@@ -29,7 +29,7 @@ accumulator(stream_id, evidence_token, timestamp) -> bool active_now
 
 ### 3. AND-gate logic with degraded-stream handling
 
-The gate fires when all required streams are simultaneously active within a coincidence window. Critical: graceful degradation when streams become unavailable.
+The gate fires when all required streams are simultaneously active within a coincidence window. Critical: graceful degradation when streams become unavailable must **never reduce the gate below two independent streams** — a one-stream "coincidence" is just single-channel gating. If fewer than two required streams are available, the gate holds (or aborts) rather than committing.
 
 ```
 gate(active_states: dict[stream_id, bool], stream_health: dict[stream_id, Health]) -> CommitDecision
@@ -53,17 +53,31 @@ Outputs: `commit | hold | abort`. Abort is reserved for inconsistent or adversar
 ## Pseudocode — runtime gating decision
 
 ```python
+# Hard floor: a coincidence gate must NEVER operate on fewer than two
+# independent streams, or graceful degradation silently makes it single-channel
+# — the exact failure this pattern exists to prevent.
+MIN_INDEPENDENT_STREAMS = 2
+
 def coincidence_gate(streams, action_proposal):
     # Each stream maintains its own accumulator state
     active_now = {s.id: s.accumulator.is_active(time_now) for s in streams}
     health = {s.id: s.health for s in streams}
 
-    # Required streams must all be active for commit
     required = action_proposal.required_streams
     available_required = [s for s in required if health[s] != "down"]
 
-    if len(available_required) < REQUIRED_QUORUM:
-        return Decision.hold(reason="insufficient streams available")
+    # Degradation must not drop the gate below the two-stream floor.
+    quorum = max(MIN_INDEPENDENT_STREAMS, action_proposal.required_quorum)
+    if len(available_required) < quorum:
+        # Cannot form a genuine coincidence gate — refuse to commit; never
+        # fall through to a single available stream.
+        return Decision.hold(reason="insufficient independent streams; "
+                                    "will not degrade to single-channel")
+
+    # Abort on contradictory / adversarial states: a stream asserts the commit
+    # precondition is violated while others assert it holds.
+    if any(s.accumulator.contradicts(action_proposal) for s in available_required):
+        return Decision.abort(reason="inconsistent / adversarial stream states")
 
     # AND-gate over available required streams
     if all(active_now[s] for s in available_required):

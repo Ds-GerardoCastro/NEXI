@@ -4,6 +4,7 @@
 
 - **Nesin, S. M., & Chandrankunnel, M. (2025).** _The need for a new perspective on decision-making in bacteria._ Communicative & Integrative Biology, **18**(1), 2463926. DOI: [10.1080/19420889.2025.2463926](https://doi.org/10.1080/19420889.2025.2463926). License CC BY 4.0. Peer-reviewed review article.
   _Documents the bacterial coincidence-detection mechanism: V. cholerae biofilm formation requires BOTH LuxPQ (responding to AI-2) AND CqsS (responding to CAI-1) to be activated. Uses the explicit phrase "coincidence detection" for the gating logic. Section: Multiple pathways in bacteria and their interconnectedness._
+  _Faithfulness note: as a review, the source states the high-cell-density → both-receptors-active → biofilm/colony-commitment direction and omits the canonical LuxO/HapR repressor pathway of V. cholerae quorum sensing (under which biofilm is often modelled as a lower-density behaviour). This NEXI follows the source's framing; the simplification is the source's, not the pattern's._
 
 ## Computational analogs
 

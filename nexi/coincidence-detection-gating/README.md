@@ -4,7 +4,7 @@
 >
 > **Collection:** [`acerebrate-decision-making`](../../collections/acerebrate-decision-making/)
 >
-> A design-time and runtime pattern for **gating major behavioural transitions on alignment of multiple independent context streams**. Single-channel evidence is insufficient; coincidence detection across qualitatively different streams prevents premature commitment under noisy or partial input. Originally documented in _Vibrio cholerae_ biofilm commitment, where BOTH LuxPQ (responding to AI-2) AND CqsS (responding to CAI-1) must activate before colony behaviour engages.
+> A design-time and runtime pattern for **gating major behavioural transitions on alignment of multiple independent context streams**. Single-channel evidence is insufficient; coincidence detection across qualitatively different streams prevents premature commitment under noisy or partial input. Described by Nesin & Chandrankunnel (2025) in _Vibrio cholerae_ biofilm commitment, where BOTH LuxPQ (responding to AI-2) AND CqsS (responding to CAI-1) must activate before colony behaviour engages.
 
 ---
 
@@ -104,9 +104,9 @@ In return: lower premature-commitment rate; higher decision quality after commit
 
 ## Falsifiable hypothesis
 
-> At matched compute and identical task budgets, AI architectures with explicit multi-stream coincidence-detection gating on major behavioural transitions outperform single-channel-gated architectures on tasks where decision regret is high and single-stream evidence is noisy. Specifically, on benchmarks where the cost of premature commitment is high (irreversible tool calls, write actions to external systems, multi-step agentic loops without rollback), coincidence-gated systems should show a measurably lower premature-commitment rate (≥20% reduction) and a measurably higher average decision quality after commitment, compared to single-channel baselines. Refutation: if no such margin appears across an appropriate task suite, this NEXI is refuted.
-
-A second testable claim: **lesion experiment robustness.** Removing any one required stream from a coincidence-gated system should produce a measurable degradation; if removing a stream leaves performance unchanged, that stream was not load-bearing and the gate was effectively single-channel.
+> **Primary (lesion) test.** In a coincidence-gated architecture, removing any one required evidence stream measurably degrades decision quality on high-regret, irreversible-action tasks; if removing a stream leaves performance unchanged, that stream was not load-bearing and the gate was effectively single-channel.
+>
+> **Comparative test.** At matched compute _and matched task-completion level_ — controlling for the base-rate shift, since an AND-gate trivially lowers the raw commitment rate — multi-stream coincidence-gated systems commit fewer unsafe / policy-violating irreversible actions than single-channel-gated baselines on agentic-safety task families (irreversible tool calls, write actions to external systems, agentic loops without rollback). Refutation: if the lesion test shows no per-stream degradation, or if coincidence-gating yields no reduction in unsafe irreversible commitments at matched completion, this NEXI is refuted.
 
 ## References
 
