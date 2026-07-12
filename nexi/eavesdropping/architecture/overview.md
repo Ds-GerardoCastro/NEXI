@@ -62,9 +62,16 @@ For LLM-based agents, the belief updater is typically a memory write at percepti
 
 ---
 
-## Pseudocode — LLM-agent flavour
+## Two flavours, two mechanisms
 
-Each agent's perception step:
+The pattern has two distinct implementations that must not be conflated:
+
+- **LLM-agent flavour — context injection.** Observed interactions are appended to the agent's memory and surfaced in the prompt. The only "attention" involved is the frozen LLM's self-attention over a longer context window; nothing is trained to attend over interactions. **This flavour is _not_ evidence for the falsifiable hypothesis H₁** (which is about trained attention over observed third-party interactions). It is a cheap, deployable heuristic, not a test of the architectural claim.
+- **RL-agent flavour — trained attention over interactions.** This is the flavour H₁ actually refers to. Its load-bearing step is an encoder over observed dyadic interactions; that step is specified below.
+
+## Pseudocode — LLM-agent flavour (context injection)
+
+Each agent's perception step. Note this is context injection: observed interactions become extra prompt content, not a trained attention mechanism.
 
 ```python
 def perceive(agent, bus, t):
@@ -108,7 +115,13 @@ class EavesdroppingObservationWrapper(gym.Wrapper):
         return obs, reward, done, info
 ```
 
-The agent's policy network receives the eavesdropped transitions as an additional input channel. Encode them with a separate encoder (often a transformer or graph attention) before fusing into the main state representation.
+The agent's policy network receives the eavesdropped transitions as an additional input channel. The load-bearing step is the encoder over these observed **dyadic interactions**, and it must be specified honestly:
+
+- **Graph / relational structure.** Each eavesdropped item is a directed interaction (actor → target) with an interaction feature (the observed message/transition). Represent the observed set as a small relational graph whose _edges_ carry features, with the observer as a distinguished node.
+- **Attention variant.** A vanilla Graph Attention Network attends over neighbour **nodes** and is therefore insufficient: the object here is an **edge/interaction** the observer does not participate in. Use an **edge-featured / relational (line-graph) attention** variant — i.e. attention whose keys/values are the observed dyadic edges (or the nodes of the line graph), not just the participant nodes. This is the mechanism H₁ names.
+- **Fusion step (do not leave undefined).** Pool the per-interaction encodings (attention-weighted sum or set-transformer readout) into a fixed-width "social context" vector `z_social`, then **concatenate** `z_social` with the agent's own observation embedding `z_self` and pass the concatenation through the policy/value trunk: `policy(concat(z_self, z_social))`. Gated fusion (e.g. `z_self + g ⊙ z_social`) is an acceptable alternative; the requirement is that fusion is an explicit, trained operator, not an unspecified stub.
+
+<!-- TODO (deferred, out of scope for this revision): the H₁ benchmark suite needs redesign — replace 2-agent / all-public tasks (Overcooked 2-agent, Hanabi) with genuine N>=3 partially-observable non-public-action tasks, pin threshold/seeds/CIs, resolve equal-compute-vs-equal-episodes, and add a shuffled-third-party-channel control. Tracked separately; not addressed here. -->
 
 ---
 

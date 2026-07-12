@@ -1,7 +1,7 @@
 id: eavesdropping
 name: Eavesdropping
 status: template
-version: 0.1.0
+version: 0.1.1
 created: '2026-05-03'
 audience_voice: builder
 
@@ -18,13 +18,20 @@ natural_exemplars:
         - 'Griffith, S. C.'
         - 'Naguib, M.'
         - 'Loning, H.'
-      venue: 'bioRxiv preprint'
-      date: '2026-04-27'
+      venue: 'bioRxiv preprint (non-peer-reviewed)'
+      date: '2025-09-11'
       doi: '10.1101/2025.09.11.675577'
     notes: >
-      Wild zebra finches in arid-zone social hotspots extract information from
-      observed third-party song interactions, informing mate choice, breeding
-      synchronisation, and social hotspot formation.
+      Correlational field study of wild zebra finches in arid-zone social
+      hotspots, measuring co-singing proximity to reconstruct low-strength
+      communication networks (the authors note overall low network strength,
+      "birds mostly move around"). Consistent with population-level information
+      flow among individuals; the study does not itself test eavesdropping or
+      third-party inference. Observed proximity structure may facilitate
+      breeding synchronisation and coincides with social hotspots (shown to
+      exist, not shown to be formed by eavesdropping). The paper ties dawn-song
+      / mate-choice functions to territorial songbirds and explicitly contrasts
+      zebra finches, so mate choice is not a documented finch finding here.
 
   - species: 'Multiple songbird species'
     paper:
@@ -37,11 +44,20 @@ natural_exemplars:
       potential information flow among individuals — in animal-communication ecology.
 
 abstract_claim: >
-  Agents that observe but do not directly participate in interactions can still
-  extract information about the participants — their goals, knowledge, capabilities,
-  relationships. By granting agents structured access to third-party communications
-  they observe (rather than restricting input to self-addressed messages), multi-agent
-  systems can build richer models of social state with less direct interaction cost.
+  Three layers, kept distinct. (a) Natural evidence: Hagedoorn et al. (2025)
+  reconstruct low-strength communication networks in wild zebra finches from
+  co-singing proximity — consistent with population-level information flow about
+  breeding-state, resources, and predation among individuals who observe but do
+  not directly participate in nearby interactions (hedged; the study is
+  correlational and does not itself test eavesdropping or inference). (b) The
+  broader communication-networks tradition (McGregor & Dabelsteen 1996) frames
+  signalling interactions as observable to non-target receivers, a general
+  substrate for information flow beyond addressed messages. (c) AI design claim
+  (this NEXI's hypothesis, not shown by the biology): granting agents structured
+  access to third-party communications they observe — rather than restricting
+  input to self-addressed messages — may let multi-agent systems build richer
+  models of social state (at most weak, hedged inferences about others'
+  relationships or associations) with less direct interaction cost.
 
 falsifiable_hypothesis: >
   Multi-agent reinforcement-learning systems with attention over observed third-party

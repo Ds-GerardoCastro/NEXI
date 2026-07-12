@@ -8,9 +8,9 @@
 
 ## At a glance
 
-In a typical multi-agent system, each agent receives only messages addressed to it. The **eavesdropping pattern** changes that: agents also process _messages they observe between other agents_ under a defined visibility policy. Used well, this lets an agent build a model of others (their goals, knowledge, relationships) without paying the cost of direct interaction with each one.
+In a typical multi-agent system, each agent receives only messages addressed to it. The **eavesdropping pattern** changes that: agents also process _messages they observe between other agents_ under a defined visibility policy. Used well, this can let an agent build a richer model of others (at most weak, hedged inferences about their relationships or associations) without paying the cost of direct interaction with each one.
 
-It is one of the cheapest, most general primitives nature uses for social cognition — and it is **not** the default in current AI agent designs.
+It is a low-cost, widely observed observation strategy in animal social cognition. As an AI design, it is a **named, deliberate observation-design choice** — not an emergent property of attention architectures — and one that many current LLM-agent stacks do not enable by default (broadcast / shared-observability MARL already enlarges each agent's observation with others' transitions, so eavesdropping is a design choice, not a novel primitive).
 
 | Question          | Short answer                                                                                           |
 | ----------------- | ------------------------------------------------------------------------------------------------------ |
@@ -23,16 +23,18 @@ It is one of the cheapest, most general primitives nature uses for social cognit
 
 ## The natural exemplar
 
-In wild zebra finch colonies (_Taeniopygia castanotis_) in the Australian arid zone, individuals do not just sing to or listen for direct partners — they **eavesdrop** on the songs and exchanges around them. From observed third-party interactions, a finch can infer:
+In wild zebra finch colonies (_Taeniopygia castanotis_) in the Australian arid zone, individuals sing and countersing in close proximity, and Hagedoorn et al. (2025) reconstruct low-strength **communication networks** from that co-singing structure. The animal-communication tradition (McGregor & Dabelsteen 1996) treats such observable signalling as a substrate for information flow beyond directly-addressed exchanges.
 
-- Who is paired with whom
-- Where breeding is active
-- Where information-rich social hotspots are forming
-- Who is healthy and well-conditioned enough to sing
+That substrate **motivates** — it does not, on its own, demonstrate — the following as _testable hypotheses_ about what an observer might in principle recover from third-party interactions. None of these is shown to be a finch capability by the source paper:
 
-This information shapes mate choice, territory decisions, and breeding synchronisation — _without the eavesdropper having any direct interaction with the observed individuals._ See [`references.md`](references.md) for the full literature.
+- Who is associated with whom (weak relational structure)
+- Where breeding activity is concentrated
+- Where information-rich social hotspots are located
+- Which individuals are signalling and in what condition
 
-The architectural insight: **information about an agent is partly accessible from observing that agent's interactions with others, not just from interacting with it directly.** Eavesdropping is how nature makes social-state inference cheap.
+> **Epistemic caveat — read before relying on this exemplar.** The source (Hagedoorn et al., 2025) is a **non-peer-reviewed preprint** and a **correlational field study**. It measures **co-singing proximity**, not eavesdropping or inference — it does not itself test whether finches extract information from observed third-party interactions. The authors report **explicitly low network strength** ("birds mostly move around"). The paper ties dawn-song and **mate-choice** functions to _territorial_ songbirds and explicitly contrasts zebra finches, so mate choice is **not** a documented finch finding here; breeding synchronisation is framed as something proximity **may facilitate**, and social hotspots are shown to _exist_, not to be _formed_ by eavesdropping. Treat the bullets above as design motivations, not evidence. See [`references.md`](references.md) for the full literature.
+
+The architectural insight (a design hypothesis, not a biological result): **information about an agent may be partly accessible from observing that agent's interactions with others, not just from interacting with it directly.** Eavesdropping is proposed as a way to make social-state inference cheaper.
 
 ---
 
@@ -114,15 +116,16 @@ The skill spec includes translation notes for Claude skills, OpenAI function cal
 
 ## Theoretical background & evidence
 
-The pattern is described in animal-communication ecology under the term _communication networks_ — networks of potential information flow among individuals, in which signalling interactions are observable to non-target receivers. The foundational reference is **McGregor & Dabelsteen (1996)**. Recent work in wild zebra finches documents the role of eavesdropping in social hotspots and breeding-colony coordination (**Hagedoorn et al., bioRxiv preprint 2026-04-27**).
+The pattern is described in animal-communication ecology under the term _communication networks_ — networks of potential information flow among individuals, in which signalling interactions are observable to non-target receivers. The foundational reference is **McGregor & Dabelsteen (1996)**. Recent correlational work in wild zebra finches reconstructs low-strength communication networks from co-singing proximity in arid-zone social hotspots (**Hagedoorn et al., bioRxiv preprint 2025-09-11**); it does not itself test eavesdropping or inference (see the epistemic caveat above).
 
-In computational AI literature, eavesdropping has analogs in:
+In computational AI literature, eavesdropping has _partial_ analogs (none instantiated here as a method — they are framings, not implementations):
 
-- **Graph attention networks (GATs)** (Veličković et al., 2018) — agents attend over edges in which they don't directly participate.
-- **Decentralised POMDPs with shared observability** (Oliehoek & Amato, 2016) — agents update local beliefs from joint observation streams.
-- **Multi-agent reinforcement learning with broadcast observability** — opponent and teammate modelling from observed transitions.
+- **Graph attention networks (GATs)** (Veličković et al., 2018) — standard GAT attends over a node's neighbour **nodes**. Eavesdropping's object is a dyadic **edge/interaction** (A↔B) observed by a third party C, so it maps to GAT only via an **edge-featured / relational (line-graph) attention** variant, not vanilla node-neighbourhood attention.
+- **Decentralised POMDPs with shared observability** (Oliehoek & Amato, 2016) — formalises what eavesdropping changes as an enlargement of each agent's observation set Oᵢ.
+- **Bayesian Action Decoder** (Foerster et al., 2019) — _related_, not identical: agents reason about a cooperative partner's private information via a public belief over observed actions (self-directed partner observation), whereas eavesdropping is third-party observation of interactions the observer is not part of.
+- **Multi-agent reinforcement learning with broadcast / shared observability** — opponent and teammate modelling from observed transitions.
 
-NEXI's contribution is to package this as a **named, deliberate design choice** for AI engineers — not as an emergent property of attention architectures. Most LLM-agent stacks today restrict each agent to its own message history; eavesdropping has to be _enabled_ by an architectural decision.
+NEXI's contribution is to package this as a **named, deliberate observation-design choice** for AI engineers — not as an emergent property of attention architectures, and not a novel primitive (shared-observability MARL already enlarges each agent's observation with others' transitions). Many LLM-agent stacks today restrict each agent to its own message history; eavesdropping has to be _enabled_ by an architectural decision.
 
 Full citation list: [`references.md`](references.md).
 
