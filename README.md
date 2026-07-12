@@ -21,9 +21,9 @@ The project mines peer-reviewed research on intelligence across biological speci
 
 ## Authorship and AI transparency
 
-NEXI is the **intellectual design of [Juan Gerardo Castro Sanchez](https://www.linkedin.com/in/juan-gerardo-castro-s%C3%A1nchez-7b85b21b6/)** — the research questions, the framework, the curation standards, and every editorial decision are his, and he is accountable for all claims in this repository.
+NEXI is the **intellectual design of [Juan Gerardo Castro Sanchez](https://www.linkedin.com/in/juan-gerardo-castro-s%C3%A1nchez-7b85b21b6/)** — the research questions, the framework, the curation standards, and every editorial decision are his, and he stewards the direction and scholarly integrity of the inquiry. This is a research endeavour in the spirit of the scientific method: it explores a broad design space in search of nature's expressions of intelligence, building on the peer-reviewed work of the global research community. Its outputs are **interpretations and falsifiable hypotheses offered for scientific scrutiny and community validation — not assertions of settled fact.**
 
-It is built **systematically with Claude (Anthropic) as an AI collaborator.** Following good practice on disclosing AI assistance in scholarly work, we state this plainly: Claude supports the literature processing, deep analysis and meta-modeling, principle and pattern identification, candidate NEXI drafting, and much of the prose. An AI cannot be an author — it is a tool operated under human direction, and every claim, citation, and falsifiable hypothesis is reviewed and verified by the author before it enters the catalog.
+It is built **systematically with Claude (Anthropic) as an AI collaborator.** Following good practice on disclosing AI assistance in scholarly work, we state this plainly: Claude supports the literature processing, deep analysis and meta-modeling, principle and pattern identification, candidate NEXI drafting, and much of the prose. An AI cannot be an author — it is a tool operated under human direction, and each pattern is **reviewed for fidelity to its cited sources** before it enters the catalog. Responsibility for the findings of the primary research cited here rests with those studies' original authors.
 
 This division of labor is not incidental — it _is_ the method, and the ladder below makes it explicit.
 
@@ -94,3 +94,7 @@ See [`docs/positioning.md`](docs/positioning.md) for the full mapping of NEXI pa
 ## Contributing
 
 Contribution gate is documented in [`docs/methodology.md`](docs/methodology.md). New entries require multi-source evidence and a falsifiable architectural hypothesis.
+
+## Disclaimer
+
+This is a research project, shared for research and educational purposes. Its contents are **falsifiable design hypotheses grounded in published science — not established facts, engineering guarantees, or professional advice** — and they summarise and interpret third-party peer-reviewed work whose findings remain the responsibility of those studies' original authors. The material is provided "as is", without warranty of any kind, under the terms of the repository's [MIT License](LICENSE); adopt, adapt, and test it at your own discretion and risk.
