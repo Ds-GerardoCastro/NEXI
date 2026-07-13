@@ -91,7 +91,7 @@ See [`docs/positioning.md`](docs/positioning.md) for the full mapping of NEXI pa
 
 Which patterns to look for next should not be decided by citation trails. [`tools/coverage-grid/`](tools/coverage-grid/) builds a **coverage / design-space map** that makes the sampling explicit and auditable.
 
-The idea: treat both the **AI SOTA space** and the **natural-intelligence space** as grids. Rows are a shared axis of **cognitive functions** (perception, memory, world-modeling, action-selection, social inference, …); columns are **AI architecture/method families** for one grid and **biological clades/substrates** for the other. Crucially, the axes are seeded from **external reference taxonomies** (Newell / Marr / the Standard Model of the Mind; standard deep-learning surveys; the evolution-of-nervous-systems literature) — _not_ from what has already been ingested — so the map enumerates the **full design space** and what is missing shows up as empty cells rather than being invisibly absent.
+The idea: treat both the **AI State-Of-The-Art (SOTA) space** and the **natural-intelligence space** as grids. Rows are a shared axis of **cognitive functions** (perception, memory, world-modeling, action-selection, social inference, …); columns are **AI architecture/method families** for one grid and **biological clades/substrates** for the other. Crucially, the axes are seeded from **external reference taxonomies** (Newell / Marr / the Standard Model of the Mind; standard deep-learning surveys; the evolution-of-nervous-systems literature) — _not_ from what has already been ingested — so the map enumerates the **full design space** and what is missing shows up as empty cells rather than being invisibly absent.
 
 Every cell is one of three states:
 
